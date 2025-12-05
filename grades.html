@@ -8,15 +8,36 @@
   <link rel="stylesheet" href="css/grades.css">
 </head>
 <body>
-  <header class="header">
-    <div class="logo">
-      <div class="brand-square">DB</div>
-      <div class="site-title">DonBoscoPrep</div>
-    </div>
-    <nav>
-      <a href="index.html" class="nav-link">Home</a>
-    </nav>
-  </header>
+  <!-- Global background slideshow -->
+  <div class="slideshow-bg"></div>
+
+  <!-- HEADER -->
+<header class="header">
+  <div class="logo">
+    <div class="brand-square">DB</div>
+    <div class="site-title">DonBoscoPrep</div>
+  </div>
+
+  <nav class="main-nav" aria-label="Primary">
+    <ul class="navbar">
+      <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
+      <li class="nav-item"><a href="grades.html" class="nav-link btn">Practice</a></li>
+
+      <li class="nav-item dropdown">
+        <button class="dropdown-toggle" aria-expanded="false" aria-haspopup="true">Text-book ⌵</button>
+        <ul class="dropdown-menu" role="menu">
+          <li><a href="grade9.html" class="dropdown-link">Grade 9</a></li>
+          <li><a href="grade10.html" class="dropdown-link">Grade 10</a></li>
+          <li><a href="grade11.html" class="dropdown-link">Grade 11</a></li>
+          <li><a href="grade12.html" class="dropdown-link">Grade 12</a></li>
+        </ul>
+      </li>
+
+      <li class="nav-item"><a href="videos.html" class="nav-link">Video Lessons</a></li>
+      
+    </ul>
+  </nav>
+</header>
 
   <main class="main">
 
@@ -25,9 +46,7 @@
 
   <section class="grades-section content-overlay">
     <!-- 🔥 Background Slideshow Wrapper -->
-  <div class="slideshow-bg">
-    <!-- No content needed here, backgrounds are controlled by CSS -->
-  </div>
+  
     <h2>Select Your Grade</h2>
     <div class="grades-grid" id="grades-container">
       <!-- Grades will be injected here by grades.js -->
