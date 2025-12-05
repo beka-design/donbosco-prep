@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz Results - EduFlow</title>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <!-- Re-using your existing CSS files -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/quiz.css">
+    <style>
+        /* Specific Styles for Results Page to match Quiz Theme */
+        body { background-color: #f4f6f8; }
+        
+        .results-container {
+            max-width: 800px;
+            margin: 3rem auto;
+            background: white;
+            padding: 3rem;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+            text-align: center;
+        }
+
+        .score-circle-large {
+            width: 150px; height: 150px;
+            border-radius: 50%;
+            background: conic-gradient(var(--primary-blue) 0%, #e0e0e0 0%);
+            display: flex; justify-content: center; align-items: center;
+            margin: 0 auto 2rem auto;
+            position: relative;
+        }
+        
+        .score-inner {
+            width: 130px; height: 130px;
+            background: white;
+            border-radius: 50%;
+            display: flex; flex-direction: column;
+            justify-content: center; align-items: center;
+        }
+
+        .score-number { font-size: 2.5rem; font-weight: 700; color: var(--primary-blue); }
+        .score-label { font-size: 0.9rem; color: #666; }
+
+        .message-box { margin-bottom: 2rem; }
+        .message-box h2 { color: #333; margin-bottom: 0.5rem; }
+        .message-box p { color: #666; }
+
+        .weak-topics-box {
+            text-align: left;
+            background: #fff0f0;
+            border: 1px solid #ffcdd2;
+            padding: 1.5rem;
+            border-radius: 8px;
+            margin-bottom: 2rem;
+        }
+        .weak-topics-box h4 { color: #d32f2f; margin-bottom: 10px; display: flex; align-items: center; gap: 10px; }
+        
+        .action-buttons { display: flex; gap: 15px; justify-content: center; }
+    </style>
+</head>
+<body>
+
+    <!-- Top Bar (Visual Consistency) -->
+    <div class="quiz-top-bar">
+        <div class="top-left">
+            <span style="font-weight:bold; font-size:1.2rem;">EduFlow Results</span>
+        </div>
+    </div>
+
+    <main class="results-container">
+        
+        <!-- Score Visual -->
+        <div class="score-circle-large" id="score-circle">
+            <div class="score-inner">
+                <span class="score-number" id="score-display">0%</span>
+                <span class="score-label">Accuracy</span>
+            </div>
+        </div>
+
+        <div class="message-box">
+            <h2 id="feedback-title">Good Job!</h2>
+            <p id="feedback-text">You have completed the assessment.</p>
+        </div>
+
+        <!-- Weak Topics Section (Hidden if perfect score) -->
+        <div id="weak-area" class="weak-topics-box" style="display: none;">
+            <h4>⚠️ Focus Areas</h4>
+            <p>You missed questions related to these topics. We recommend reviewing them:</p>
+            <ul id="weak-list" style="margin-top: 10px; padding-left: 20px; color: #d32f2f;"></ul>
+        </div>
+
+        <div class="action-buttons">
+            <button onclick="window.location.href='subjects.html'" class="nav-btn prev">Back to Subjects</button>
+            <button onclick="window.location.href='quiz.html'" class="nav-btn next">Retry Quiz</button>
+        </div>
+
+    </main>
+
+    <script>
+        // Embedded JS to handle Results Logic
+        document.addEventListener('DOMContentLoaded', () => {
+            // 1. Get Data
+            const data = JSON.parse(localStorage.getItem('lastResults'));
+            const weakTopics = JSON.parse(localStorage.getItem('dbp_weakTopics') || '{}');
+
+            if (!data) {
+                window.location.href = 'index.html'; // Redirect if no data
+                return;
+            }
+
+            // 2. Calculate Score
+            const percentage = Math.round((data.score / data.total) * 100);
+            
+            // 3. Update DOM
+            document.getElementById('score-display').innerText = `${percentage}%`;
+            document.getElementById('feedback-text').innerText = `You scored ${data.score} out of ${data.total} questions correctly.`;
+
+            // 4. Update Circle Progress
+            const circle = document.getElementById('score-circle');
+            const color = percentage >= 70 ? '#4b61ff' : (percentage >= 40 ? '#ffa726' : '#ef5350');
+            circle.style.background = `conic-gradient(${color} ${percentage}%, #e0e0e0 ${percentage}%)`;
+            document.querySelector('.score-number').style.color = color;
+
+            // 5. Set Feedback Message
+            const title = document.getElementById('feedback-title');
+            if(percentage === 100) title.innerText = "Perfect Score! 🌟";
+            else if(percentage >= 80) title.innerText = "Excellent Work! 🎉";
+            else if(percentage >= 50) title.innerText = "Good Effort! 👍";
+            else title.innerText = "Keep Practicing! 💪";
+
+            // 6. Show Weak Topics (If any)
+            const weakArea = document.getElementById('weak-area');
+            const weakList = document.getElementById('weak-list');
+            
+            // Convert object to array and sort by most missed
+            const sortedWeak = Object.entries(weakTopics)
+                .sort((a,b) => b[1] - a[1]) // Sort by count descending
+                .slice(0, 3); // Top 3
+
+            if(percentage < 100 && sortedWeak.length > 0) {
+                weakArea.style.display = 'block';
+                sortedWeak.forEach(([topic, count]) => {
+                    const li = document.createElement('li');
+                    li.innerText = `${topic} (${count} mistakes)`;
+                    weakList.appendChild(li);
+                });
+            }
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,38 @@
+
+
+
+
+body {
+  font-family: Arial, sans-serif;
+  background: #f4f4f4;
+  text-align: center;
+}
+
+h1 {
+  margin-top: 40px;
+  font-size: 2em;
+  color: #3498db; /* Blue theme */
+}
+
+.subject-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 20px;
+  padding: 40px;
+  max-width: 900px;
+  margin: auto;
+}
+
+.subject {
+  background-color: #3498db;
+  color: white;
+  padding: 20px;
+  text-decoration: none;
+  border-radius: 8px;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.subject:hover {
+  background-color: #2980b9;
+}

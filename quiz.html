@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DonBoscoPrep — Quiz</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/subject.css">
+  <style>
+    .quiz-container { max-width: 700px; margin: 24px auto; }
+    .question-card { background:#ffffff; padding:16px; border-radius:12px; box-shadow:0 6px 20px rgba(0,0,0,0.08); margin-bottom:16px; }
+    .options button { display:block; margin:8px 0; padding:8px 16px; border:none; border-radius:8px; cursor:pointer; transition:0.2s; width:100%; text-align:left;}
+    .options button.correct {background:#4CAF50; color:#3933e7;}
+    .options button.wrong {background:#F44336; color:#fff;}
+    .ai-explanation {display:none; margin-top:8px; background:#f5f5f5; padding:8px; border-radius:8px;}
+    .btn-next {margin-top:12px; padding:8px 16px; background:var(--primary); color:#fff; border:none; border-radius:8px; cursor:pointer;}
+  </style>
+</head>
+<body>
+  <header class="header">
+    <div class="logo">
+      <div class="brand-square">DB</div>
+      <div class="site-title">DonBoscoPrep</div>
+    </div>
+    <nav>
+      <a href="subject.html" class="nav-link">Back to Subjects</a>
+    </nav>
+  </header>
+
+  
+<div class="quiz-top-bar">
+  <div class="top-left">
+    <!-- Back Button -->
+    <span class="back-arrow" onclick="window.location.href='subjects.html'" style="cursor:pointer;">&larr;</span>
+    
+    <!-- Toggle Switch -->
+    <div class="toggle-wrapper" style="display: flex; align-items: center; gap: 10px;">
+      <span id="mode-label">Dark Mode</span>
+      <label class="switch">
+        <input type="checkbox" id="dark-mode-toggle">
+        <span class="slider round"></span>
+      </label>
+    </div>
+    
+    <!-- Timer -->
+    <div class="timer" style="margin-left: 15px;">⏱ 00:00</div>
+  </div>
+  
+  <!-- Progress Bar -->
+  <div class="progress-wrapper">
+    <div class="progress-track">
+      <div class="progress-fill" style="width: 0%;"></div>
+    </div>
+    <span class="progress-text">Loading...</span>
+  </div>
+
+  <!-- Hide Questions Button -->
+  <button class="btn-warning" id="hide-sidebar-btn">Hide Questions</button>
+</div>
+
+<!-- 2. MAIN LAYOUT CONTAINER -->
+<div class="quiz-layout-wrapper">
+  
+  <!-- LEFT COLUMN: QUESTION AREA -->
+  <main class="quiz-main-content">
+    <div class="question-header">
+      <h3>Question 1</h3>
+      <span class="star-icon">☆</span>
+    </div>
+
+    <h2 class="question-text">Which one of the following is an irrational number?</h2>
+
+    <!-- Options Container -->
+    <div class="options-list">
+      
+      <!-- Option A: WRONG STATE (Example) -->
+      <label class="option-card wrong">
+        <input type="radio" name="q1" disabled>
+        <span class="custom-radio wrong-mark"></span>
+        <span class="option-text">√0.04</span>
+      </label>
+
+      <!-- Option B: NEUTRAL STATE -->
+      <label class="option-card">
+        <input type="radio" name="q1">
+        <span class="custom-radio"></span>
+        <span class="option-text">1.16222...</span>
+      </label>
+
+      <!-- Option C: CORRECT STATE (Example) -->
+      <label class="option-card correct">
+        <input type="radio" name="q1" checked disabled>
+        <span class="custom-radio correct-mark"></span>
+        <span class="option-text">√29</span>
+      </label>
+
+      <!-- Option D: NEUTRAL STATE -->
+      <label class="option-card">
+        <input type="radio" name="q1">
+        <span class="custom-radio"></span>
+        <span class="option-text">3.4000</span>
+      </label>
+
+    </div>
+
+    <!-- Explanation Box -->
+    <div class="explanation-box">
+      <h4>Explanation:</h4>
+      <p>An irrational number cannot be expressed as a simple fraction and has a non-repeating, non-terminating decimal expansion.</p>
+    </div>
+
+    <!-- Navigation Buttons -->
+    <div class="nav-buttons">
+      <button class="nav-btn prev">Previous</button>
+      <button class="nav-btn next">Next Question</button>
+    </div>
+  
+
+  <!-- RIGHT COLUMN: QUESTION NAVIGATOR -->
+  <aside class="quiz-sidebar">
+    <h3>Questions</h3>
+    <div class="question-grid">
+      <button class="grid-btn active">1</button>
+      <button class="grid-btn">2</button>
+      <button class="grid-btn">3</button>
+      <button class="grid-btn">4</button>
+      <button class="grid-btn">5</button>
+      <button class="grid-btn">6</button>
+      <button class="grid-btn">7</button>
+      <button class="grid-btn">8</button>
+      <button class="grid-btn">9</button>
+      <button class="grid-btn">10</button>
+      <button class="grid-btn">11</button>
+      <button class="grid-btn">12</button>
+    </div>
+  </aside>
+
+</div>Questions will load here -->
+  </main>
+
+  <footer>
+    <p>© <span id="year"></span> DonBoscoPrep • Privacy • Terms • Contact</p>
+  </footer>
+
+  <script src="js/quiz.js"></script>
+</body>
+</html>

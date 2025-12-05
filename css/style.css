@@ -1,0 +1,2330 @@
+/* ---- BASE ---- */
+:root{
+  --primary:#2E7DFA;
+  --secondary:#FFC727;
+  --accent:#FF5F5F;
+  --bg:#F5F7FA;
+  --card:#FFFFFF;
+  --text-dark:#1C1C1C;
+  --muted:#6B7280;
+  --font-heading:'Poppins', sans-serif;
+  --font-body:'Inter', sans-serif;
+}
+
+*{box-sizing:border-box; margin:0; padding:0;}
+html,body{font-family:var(--font-body); background:var(--bg); color:var(--text-dark); margin: 0;
+  padding: 0;
+  height: 100%; width:100%; box-sizing: border-box;}
+a{text-decoration:none; color:inherit;}
+ul{list-style:none;}
+button{cursor:pointer; font-family:var(--font-body);}
+
+/* ---- HEADER ---- */
+.header{
+  display:flex; justify-content:space-between; align-items:center; padding:20px 30px; background:#ffffff !important;
+  box-shadow:0 4px 12px rgba(0,0,0,0.05); position:sticky; top:0; z-index:100;
+}
+.logo{display:flex;align-items:center; gap:12px;}
+.brand-square{width:44px;height:44px;background:linear-gradient(135deg,var(--primary),#6378ff);color:#fff;font-weight:700;display:grid;place-items:center;border-radius:10px;}
+.site-title{font-family:var(--font-heading); font-weight:600; font-size:18px;}
+.nav-link, .nav-link:visited, .btn{font-weight:600;}
+.nav-link{margin-top: 15px; margin-left:16px; color:var(--text-dark);}
+.btn{padding:5px 16px; border-radius:10px; border:none; background:var(--primary); color:#fff; transition:0.3s;}
+.btn:hover{transform:scale(1.05); box-shadow:0 6px 20px rgba(46,125,250,0.3);}
+
+/* ---- MAIN ---- */
+.main >.hero{padding:0px; max-width:100%; margin:0 auto; width: 100%;}
+
+/* ---- GRID CARDS ---- */
+.grades-grid, .subjects-grid{display:grid; gap:16px; margin-top:16px;}
+.grades-grid{grid-template-columns:repeat(auto-fit, minmax(120px,1fr));}
+.subjects-grid{grid-template-columns:repeat(auto-fit, minmax(140px,1fr));}
+
+.grade-card, .subject-card{
+  background:linear-gradient(145deg,#fff,#f0f5ff);
+  border-radius:16px; padding:20px; display:flex; flex-direction:column; align-items:center; justify-content:center;
+  text-align:center; font-weight:600; box-shadow:0 6px 20px rgba(11,32,92,0.04); transition:0.3s;
+}
+.grade-card:hover, .subject-card:hover{
+  transform:translateY(-5px) scale(1.03);
+  box-shadow:0 10px 25px rgba(7, 8, 9, 0.2);
+}
+
+/* ---- ICONS ---- */
+.sub-icon{width:56px;height:56px;border-radius:12px;background:var(--primary);color:#fff; display:grid; place-items:center; font-weight:700; margin-bottom:8px;}
+
+/* ---- QUIZ CARDS ---- */
+.quiz-container{max-width:700px;margin:24px auto;}
+.question-card{
+  background:#fff; padding:20px; border-radius:16px; box-shadow:0 6px 20px rgba(0,0,0,0.08); margin-bottom:20px; transition:0.3s;
+}
+.question-card:hover{transform:scale(1.02); box-shadow:0 10px 25px rgba(46,125,250,0.15);}
+.options button{
+  display:block; width:100%; padding:12px 16px; margin:8px 0; border:none; border-radius:12px; transition:0.2s; text-align:left; background:#676666;
+}
+.options button:hover{background:#6345ea;}
+.options button.correct{background:#4CAF50; color:#fff;}
+.options button.wrong{background:#F44336; color:#fff;}
+.ai-explanation{display:none; margin-top:8px; background:#f0f5ff; padding:8px; border-radius:8px;}
+
+/* ---- ADMIN ---- */
+.admin-container{max-width:900px;margin:24px auto; padding:16px;}
+.section{background:#fff; padding:20px; border-radius:16px; box-shadow:0 6px 20px rgba(0,0,0,0.08); margin-bottom:24px; transition:0.3s;}
+.section:hover{transform:translateY(-3px);}
+.form-group{margin-bottom:12px;}
+input, select, textarea{width:100%; padding:10px; border-radius:10px; border:1px solid #ccc;}
+button{margin-top:8px; background:var(--primary); color:#fff; border-radius:10px; padding:10px 16px; transition:0.3s;}
+button:hover{transform:scale(1.03); box-shadow:0 6px 20px rgba(46,125,250,0.3);}
+
+/* ---- FOOTER ---- */
+footer{padding:16px 24px; text-align:center; color:var(--muted); font-size:14px;}
+
+/* ---- MEDIA QUERIES ---- */
+@media(max-width:768px){
+  .grades-grid, .subjects-grid{grid-template-columns:repeat(auto-fit, minmax(120px,1fr));}
+  .header{flex-direction:column; align-items:flex-start;}
+}
+@media(max-width:480px){
+  .grades-grid, .subjects-grid{grid-template-columns:1fr;}
+  .btn{width:100%; text-align:center;}
+}
+/* Page transition wrapper */
+.page {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.4s ease, transform 0.4s ease;
+}
+.page.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+/* === GENERAL PAGE SPACING === */
+body {
+  padding-top: 0px; /* Push content down from header */
+}
+
+/* Section spacing */
+section {
+  padding: 60px 0;
+}
+
+/* === HERO SECTION BIGGER FULL-SCREEN FEEL === */
+.hero {
+  min-height: 70vh; /* Makes the top section tall */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 25px;
+}
+
+/* Buttons + Title space */
+.hero h1 {
+  margin-bottom: 20px;
+}
+
+.hero p {
+  font-size: 1.2rem;
+}
+
+/* === SUBJECT GRID MORE SPACED & BIGGER === */
+.subjects-grid {
+  margin-top: 40px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 35px; /* More space between cards */
+}
+
+/* Subject cards bigger */
+.subject-card {
+  width: 220px;          /* wider */
+  height: 120px;         /* taller */
+  font-size: 1.2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 18px;
+}
+
+/* === ADD SPACE BELOW EVERYTHING === */
+footer {
+  margin-top: 100px;
+}
+
+/* === MOBILE FIXES === */
+@media (max-width: 768px) {
+  .hero {
+    min-height: 60vh;
+    text-align: center;
+  }
+
+  .subject-card {
+    width: 90%;
+    height: 90px;
+    font-size: 1rem;
+  }
+
+  .subjects-grid {
+    gap: 20px;
+  }
+}
+/* ============ HERO ANIMATION CONTAINER ============ */
+.hero-animated {
+  position: relative;
+  width: 100%;
+  padding: 80px 20px 80px;
+  text-align: left;
+  overflow: hidden;
+}
+
+/* ============ Gradient Wave Background ============ */
+.gradient-wave {
+  position: absolute;
+  top: -120px;
+  left: 0;
+  width: 140%;
+  height: 350px;
+  background: linear-gradient(135deg, #3b82f6, #60a5fa, #93c5fd);
+  border-bottom-left-radius: 50% 40%;
+  border-bottom-right-radius: 50% 40%;
+  animation: waveMove 8s ease-in-out infinite alternate;
+  z-index: -1;
+  filter: blur(8px);
+}
+
+@keyframes waveMove {
+  0%   { transform: translateX(-60px) rotate(0deg); }
+  100% { transform: translateX(60px) rotate(3deg); }
+}
+
+/* ============ MAIN HEADING ============ */
+.hero-title {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.5rem;
+  flex-direction: row;
+  text-align: center;
+  font-size: 2.8rem;
+  font-weight: 700;
+  color: #1a1a1a;
+  max-width: 700px;
+  line-height: 1.2;
+  white-space: normal;
+  margin: 1rem auto;
+  margin-top: 80px; /* adjust as needed */
+}
+
+/* ============ TYPING TEXT ============ */
+.typed-subtext {
+  margin-top: 10px;
+  font-size: 1.2rem;
+  color: #333;
+  font-weight: 500;
+}
+
+/* Mobile Responsive */
+@media (max-width: 600px) {
+  .hero-title {
+    font-size: 1.4rem !important;
+    gap: 0.2rem !important;
+    line-height: 1.2;
+  }
+
+  .hero-animated {
+    padding-top: 120px;
+    padding-bottom: 80px;
+  }
+
+  .typed-subtext {
+    font-size: 1rem;
+  }
+}
+/* CSS */
+.hero {
+  position: relative;
+  width: 100%;
+  height: 100vh;                  /* full viewport height */
+  display: flex;
+  flex-direction: column;         /* stack h1, p, button vertically */
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: white;
+  background-image: url('assets/images/hero1.jpg'); /* your image path */
+  background-size: cover;       /* letterbox effect */
+  background-position: center;
+  background-repeat: no-repeat;
+  transition: background 1.5s ease-in-out, opacity 1s ease-in-out;
+}
+
+.hero::after {
+  content: '';
+  position: absolute;
+  top:0; left:0; width:100%; height:100%;
+  background: rgba(0,0,0,0.3);  /* overlay */
+  z-index:1;                     /* overlay layer */
+}
+
+.hero h1,
+.hero p,
+.hero .btn-hero {
+  position: relative;            /* makes z-index work */
+  z-index: 2;                    /* above overlay */
+}
+
+/* Hero button styling */
+.btn-hero {
+  padding: 12px 30px;
+  background-color: #04054e;
+ 
+  text-decoration: none;
+  border-radius: 6px;
+  font-weight: bold;
+  margin-top: 20px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.btn-hero:hover {
+  background-color: #04054e;
+}
+
+@media (max-width: 768px) {
+  .hero {
+    min-height: 60vh; /* slightly shorter on small screens */
+  }
+
+  .hero h1 {
+    font-size: 5vw; /* scale text on smaller devices */
+  }
+}
+.popular-subjects {
+  text-align: center;
+  
+}
+.popular-subjects h2{
+margin-bottom: 80px;
+font-size: 3rem;     /* Default for Desktop (Big) */
+font-weight: 800;    /* Bold thickness */
+color: white;
+}
+/* 📱 Mobile Adjustment (so it's not too huge on phones) */
+@media (max-width: 768px) {
+    .popular-subjects h2 {
+        font-size: 2rem; /* Smaller size for mobile */
+    }
+}
+.grade-section {
+  width: 100vw;
+  height: 100vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  box-sizing: border-box;
+  min-height: calc(100vh - 60px); /* adjust 60px to match your footer height */
+  background: transparent !important;
+}
+@media (min-width: 768px) {
+  .grade-section {
+    height: 100vh; /* full screen height on desktop */
+  }
+}
+
+.next-btn {
+  background: #0007d9;
+  margin-top: 15px;
+}
+.nav-buttons {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 15px;
+}
+
+.prev-btn {
+  background: #0007d9;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+.card {
+  background-color: #ffffff; /* Bright white for strong contrast */
+  color: #000000;            /* Solid black text */
+  border: 1px solid #ccc;    /* Light gray border for definition */
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
+  padding: 20px;
+  border-radius: 8px;
+}
+.card:hover {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+.option {
+  background-color: #ae1616; /* Light but visible background */
+  color: #111;               /* Dark text for contrast */
+  border: 1px solid #ccc;    /* Subtle border for definition */
+  padding: 12px 16px;
+  margin-bottom: 10px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.option:hover {
+  background-color: #e0e7ff; /* Highlight on hover */
+}
+
+/* ========== Flashcards ========== */
+.flashcards-section { padding: 20px; max-width: 800px; margin: 0 auto; }
+.flashcards-card { display:flex; flex-direction:column; align-items:center; gap:12px; }
+.flashcard { width: 90%; max-width:700px; height: 200px; perspective: 1200px; }
+.flashcard-face {
+  width:100%; height:100%;
+  border-radius:10px; padding:18px;
+  box-shadow:0 8px 24px rgba(0,0,0,0.12);
+  display:flex; align-items:center; justify-content:center;
+  font-size:1.15rem; text-align:center;
+  backface-visibility: hidden; transform-style: preserve-3d;
+}
+.flashcard-front { background: var(--card-bg, #fff); }
+.flashcard-back { background: var(--card-bg, #fff); transform: rotateY(180deg); position:absolute; top:0; left:0; }
+.flashcard.flipped .flashcard-front { transform: rotateY(180deg); transition: transform 0.7s cubic-bezier(.2,.8,.2,1);}
+.flashcard.flipped .flashcard-back { transform: rotateY(0deg); transition: transform 0.7s cubic-bezier(.2,.8,.2,1); }
+
+/* controls */
+.flashcontrols { display:flex; gap:10px; margin-top:8px; }
+.fc-meta { font-size:0.9rem; color:var(--text-muted,#666); }
+
+/* Weak topics */
+#weak-topics-section { margin-top: 18px; padding: 12px; border-radius:8px; background:var(--card-bg,#f7f7f7); }
+
+/* Try similar */
+#try-similar-btn { margin-left:8px; }
+
+
+
+/* Daily challenge */
+#daily-challenge-section .card { max-width:700px; margin: 10px auto; padding:16px; }
+
+/* Share links */
+#shareLinks a { text-decoration:none; margin-right:8px; }
+
+/* ------------------------------
+   🔥 Fullscreen Slideshow Background
+----------------------------------- */
+.slideshow-bg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  z-index: -1; /* Behind content */
+  animation: slideShow 30s infinite;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  transition: opacity 1s ease-in-out;
+  filter: brightness(0.85);
+  
+}
+
+/* 🔥 5 Image Fade Animation */
+@keyframes slideShow {
+  0%   { background-image: url('../assets/images/bg1.jpg'); }
+  20%  { background-image: url('../assets/images/bg2.jpg'); }
+  40%  { background-image: url('../assets/images/bg3.jpg'); }
+  60%  { background-image: url('../assets/images/bg4.jpg'); }
+  80%  { background-image: url('../assets/images/bg5.jpg'); }
+  100% { background-image: url('../assets/images/bg1.jpg'); }
+}
+
+/* 🔥 Slight overlay above background so text is readable */
+.content-overlay {
+  position: relative;
+  z-index: 5;
+  padding-top: 40px;
+  padding-bottom: 80px;
+  backdrop-filter: blur(2px);
+}
+
+/* Make text pop */
+.grades-section h2 {
+  color: white;
+  text-shadow: 0 3px 10px rgba(0,0,0,0.4);
+  text-align: center;
+}
+/* Base font size for desktop */
+body {
+  font-size: clamp(12px, 2vw, 16px);
+}
+
+/* Adjust font size for tablets and smaller devices */
+@media (max-width: 768px) {
+  body {
+    font-size: 14px;
+  }
+}
+
+/* Adjust font size for mobile phones */
+@media (max-width: 480px) {
+  body {
+    font-size: 12px;
+  }
+}
+/* Make hero text wrap and scale on mobile */
+.hero-animated .hero-title {
+  font-size: clamp(1.5rem, 5vw, 2rem); /* scales with screen width */
+  white-space: normal;                 /* allow wrapping */
+  word-break: break-word;              /* break long words */
+  text-align: center;                  /* optional: center on mobile */
+  max-width: 100%;                     /* never overflow container */
+  padding: 0 1rem;                     /* small side padding */
+}
+
+/* Ensure all text inside main content fits mobile */
+body, h1, h2, h3, h4, h5, h6, p, div {
+  max-width: 100%;
+  overflow-wrap: break-word;
+  word-break: break-word;
+  box-sizing: border-box;
+}
+.subjects-section {
+  position: relative;
+  overflow: hidden;
+  padding: 2rem 1rem;
+  text-align: center;
+  min-height: 100vh; /* Ensures full vertical coverage */
+}
+/*🔥 Fullscreen Slideshow Background
+----------------------------------- */
+.slideshow-bg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  z-index: -1; /* Behind content */
+  animation: slideShow 30s infinite;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  transition: opacity 1s ease-in-out;
+  filter: brightness(0.85);
+  
+}
+
+/* 🔥 5 Image Fade Animation */
+@keyframes slideShow {
+  0%   { background-image: url('../assets/images/bg1.jpg'); }
+  20%  { background-image: url('../assets/images/bg2.jpg'); }
+  40%  { background-image: url('../assets/images/bg3.jpg'); }
+  60%  { background-image: url('../assets/images/bg4.jpg'); }
+  80%  { background-image: url('../assets/images/bg5.jpg'); }
+  100% { background-image: url('../assets/images/bg1.jpg'); }
+}
+
+/* 🔥 Slight overlay above background so text is readable */
+.content-overlay {
+  position: relative;
+  z-index: 5;
+  padding-top: 40px;
+  padding-bottom: 80px;
+  backdrop-filter: blur(2px);
+}
+
+/* Make text pop */
+.subjects-section h2 {
+  color: white;
+  text-shadow: 0 3px 10px rgba(0,0,0,0.4);
+}
+/* Base font size for desktop */
+body {
+  font-size: clamp(12px, 2vw, 16px);
+}
+
+/* Adjust font size for tablets and smaller devices */
+@media (max-width: 768px) {
+  body {
+    font-size: 14px;
+  }
+}
+
+/* Adjust font size for mobile phones */
+@media (max-width: 480px) {
+  body {
+    font-size: 12px;
+  }
+}
+/* Make hero text wrap and scale on mobile */
+.hero-animated .hero-title {
+  font-size: clamp(1.5rem, 5vw, 2rem); /* scales with screen width */
+  white-space: normal;                 /* allow wrapping */
+  word-break: break-word;              /* break long words */
+  text-align: center;                  /* optional: center on mobile */
+  max-width: 100%;                     /* never overflow container */
+  padding: 0 1rem;                     /* small side padding */
+}
+
+/* Ensure all text inside main content fits mobile */
+body, h1, h2, h3, h4, h5, h6, p, div {
+  max-width: 100%;
+  overflow-wrap: break-word;
+  word-break: break-word;
+  box-sizing: border-box;
+}
+.subjects-section {
+  position: relative;
+  overflow: hidden;
+  padding: 2rem 1rem;
+  text-align: center;
+  min-height: 100vh; /* Ensures full vertical coverage */
+}
+/*footer design*/
+.site-footer {
+  background-color: #030135;
+  color: white;
+  padding: 2rem 1rem;
+  font-size: 0.9rem;
+}
+
+.footer-columns {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 2rem;
+  margin-bottom: 1rem;
+}
+
+.footer-column {
+  flex: 1 1 200px;
+}
+
+.footer-column h3,
+.footer-column h4 {
+  margin-bottom: 0.5rem;
+  font-size: 1.1rem;
+  text-decoration: underline;
+    text-decoration-color: #fa912e; /* Change color */
+    text-decoration-thickness: 2px; /* Thickness */
+    text-underline-offset: 4px; 
+}
+
+.footer-column ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-column ul li {
+  margin-bottom: 0.4rem;
+}
+
+.footer-column ul li a {
+  color: #bbdefb;
+  text-decoration: none;
+}
+
+.footer-column ul li a:hover {
+  text-decoration: underline;
+}
+/* =========================================
+   📱 MOBILE: FORCE HORIZONTAL LAYOUT (H4)
+   ========================================= */
+
+@media (max-width: 768px) {
+  
+  /* Target the container holding the columns (e.g., Footer) */
+  .footer-columns {
+    display: flex !important;
+    flex-direction: row !important; /* Forces horizontal row */
+    flex-wrap: nowrap !important;   /* Prevents stacking to next line */
+    overflow-x: auto;               /* Adds scrolling if content is too wide */
+    gap: 15px;                      /* Smaller gap for mobile */
+    justify-content: space-between;
+  }
+
+  /* Adjust individual columns to fit */
+  .footer-column {
+    min-width: auto; /* Allows them to shrink */
+    flex: 1;         /* Distribute space evenly */
+  }
+
+  /* Optional: Scale down text size so it fits */
+  .footer-column h4 {
+    font-size: 0.85rem; 
+    white-space: nowrap; /* Prevents text inside H4 from breaking lines */
+  }
+  .footer-column ul li {
+ font-size: 0.7rem; /*slightly smaller text for mobile size*/
+}
+
+}
+
+
+.footer-bottom {
+  text-align: center;
+  border-top: 1px solid #1976d2;
+  padding-top: 1rem;
+  font-size: 0.8rem;
+}
+.slideshow-bg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  animation: slideShow 25s infinite;
+  z-index: -1;       /* stays behind all content */
+  opacity: 0.4;      /* adjust visibility */
+  pointer-events: none; /* prevents blocking clicks */
+}
+.site-footer {
+  background-color: rgba(2, 2, 63, 0.85); /* semi-transparent blue */
+  position: relative;
+  z-index: 1;
+  color: white;
+}
+/* Reset default spacing */
+html, body {
+  margin: 0;
+  padding: 0;
+    box-sizing: border-box;
+}
+
+/* Optional: ensure header sticks to top */
+.header {
+  margin-top: 0;
+  padding-top: 0;
+}
+.hero-animated {
+  
+  padding: 0 20px 80px; /* remove top padding */
+  margin-top: -60px;    /* pull it up to overlap header */
+}
+
+.hero {
+  position: relative;
+  z-index: 1;
+}
+.hero h1,
+.hero p,
+.btn-hero {
+  position: relative;
+  z-index: 2; /* ensures text is above the overlay */
+  color: white; /* ensures contrast against dark overlay */
+}
+.hero::after {
+  background: none; /* lighter overlay */
+}
+.hero {
+  background: none; /* remove static image */
+}
+@keyframes ultraSmoothWave {
+  0%   { transform: translateY(0); }
+  10%  { transform: translateY(-8px); }
+  25%  { transform: translateY(-12px); }
+  35%  { transform: translateY(-6px); }
+  50%  { transform: translateY(0); }
+  65%  { transform: translateY(6px); }
+  75%  { transform: translateY(12px); }
+  90%  { transform: translateY(8px); }
+  100% { transform: translateY(0); }
+}
+.hero-animated {
+  position: relative;
+  width: 100%;
+  min-height: 300px;   /* ensures it shows up */
+  padding: 60px 20px;
+  text-align: center;
+  overflow: hidden;
+}
+.hero-title,
+.typed-subtext {
+  position: relative;
+  z-index: 2; /* ensures text is visible */
+}
+.gradient-wave {
+  z-index: 0; /* sits behind text */
+}
+.main {
+  background: none;
+}
+
+.orang {
+  color: #FF6A00; /* bright orange */
+}
+
+.dark-blue {
+  color: #0B3D91; /* deep strong blue */
+}
+
+/* optional: light glow for nicer look */
+.orange, .dark-blue {
+  text-shadow: 0 2px 8px rgba(0,0,0,0.12);
+}
+/* CENTER EVERYTHING */
+.daily-section {
+  text-align: center;
+  margin-top: 40px;
+}
+
+/* TITLE STYLE */
+.daily-title {
+  font-size: 2.2rem;
+  font-weight: 700;
+  color: #060552; /* dark premium blue */
+  margin-bottom: 28px;
+}
+
+/* CARD STYLING */
+.daily-card {
+  width: 80%;
+  max-width: 480px;
+  margin: 0 auto 25px auto;
+  padding: 25px;
+  border-radius: 18px;
+  font-size: 1.2rem;
+  background: #ffffff;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+  transition: 0.3s ease;
+}
+
+/* HOVER EFFECT ON CARD */
+.daily-card:hover {
+  background: #0B3D91;
+  color: #fff;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+  transform: translateY(-4px);
+}
+
+/* STREAK TEXT */
+.daily-streak {
+  font-size: 1.3rem;
+  font-weight: bold;
+  color: #FF6A00; /* bright orange pop */
+  margin-top: 10px;
+}
+
+/* GAP BELOW EVERYTHING */
+.daily-section {
+  padding-bottom: 50px;
+}
+/* Center the whole section properly */
+.subjects-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  text-align: center;
+  padding: 40px 20px;
+  position: relative;
+  z-index: 2;
+}
+
+/* Perfect full-screen blurred background */
+.slideshow-bg {
+  position: absolute;
+  inset: 0;
+  background-size: cover;
+  background-position: center;
+  filter: brightness(65%);
+  z-index: -1;
+}
+
+/* Title styling */
+#grade-title {
+  font-size: 32px;
+  font-weight: 700;
+  margin-bottom: 40px;
+  color: white;
+}
+
+/* Grid styling */
+.subjects-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 50px;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  max-width: 1200px;
+  
+}
+
+/* Subject cards */
+.subject-card {
+  width: 260px;
+  height: 200px;
+  background: rgba(255, 255, 255, 0.9);
+  
+  border-radius: 20px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+  font-size: 22px;
+  font-weight: 600;
+  transition: 0.25s ease;
+}
+
+/* Hover effect */
+.subject-card:hover {
+  background: #0c1a4b; /* deep dark blue */
+  color: white;
+  transform: translateY(-6px) scale(1.05);
+  box-shadow: 0 8px 30px rgba(0,0,0,0.25);
+  cursor: pointer;
+}
+/* --- VARIABLES & RESET --- */
+:root {
+  --primary-blue: #4b61ff;
+  --bg-light: #f4f6f8;
+  --success-green: #00c853;
+  --success-bg: #e8f5e9;
+  --error-red: #ff3d00;
+  --error-bg: #ffebee;
+  --text-dark: #333;
+  --border-color: #e0e0e0;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  background-color: var(--bg-light);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+}
+
+/* --- TOP BAR --- */
+.quiz-top-bar {
+  background-color: var(--primary-blue);
+  color: white;
+  padding: 0.8rem 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.top-left { display: flex; align-items: center; gap: 15px; }
+.timer { background: rgba(255,255,255,0.2); padding: 4px 10px; border-radius: 4px; font-weight: bold;}
+
+/* Progress Bar */
+.progress-wrapper { flex-grow: 1; margin: 0 2rem; display: flex; align-items: center; gap: 10px; }
+.progress-track {
+  background: rgba(0,0,0,0.2); height: 8px; width: 100%; border-radius: 10px; overflow: hidden;
+}
+.progress-fill { background: #fff; height: 100%; }
+
+.btn-warning {
+  background: #ffbf00; border: none; padding: 8px 15px; border-radius: 5px; cursor: pointer; font-weight: bold; color: #333;
+}
+
+/* --- MAIN LAYOUT (2 Columns) --- */
+.quiz-layout-wrapper {
+  display: flex;
+  max-width: 1400px;
+  margin: 0 auto;
+  height: calc(100vh - 60px); /* Full height minus header */
+}
+
+/* LEFT: Question Area */
+.quiz-main-content {
+  flex: 1;
+  background: white;
+  padding: 2rem;
+  overflow-y: auto; /* Scroll if content is long */
+  margin: 1rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+}
+
+.question-header { display: flex; justify-content: space-between; color: var(--primary-blue); margin-bottom: 1rem; font-weight: bold;}
+.question-text { font-size: 1.3rem; margin-bottom: 2rem; color: var(--text-dark); }
+
+/* OPTIONS STYLING (The Cards) */
+.options-list { display: flex; flex-direction: column; gap: 1rem; }
+
+.option-card {
+  display: flex;
+  align-items: center;
+  padding: 1rem;
+  border: 2px solid var(--border-color);
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.2s;
+  background: white;
+}
+
+/* Hide default radio button */
+.option-card input[type="radio"] { display: none; }
+
+/* Custom Radio Circle */
+.custom-radio {
+  width: 20px; height: 20px;
+  border: 2px solid #ccc; border-radius: 50%;
+  margin-right: 15px; position: relative;
+}
+
+.option-card:hover { border-color: var(--primary-blue); background: #f9faff; }
+
+/* SELECTED / CORRECT / WRONG STATES */
+
+/* Wrong State (Red) */
+.option-card.wrong {
+  border-color: var(--error-red);
+  background-color: var(--error-bg);
+}
+.option-card.wrong .custom-radio {
+  background: var(--error-red); border-color: var(--error-red);
+}
+
+/* Correct State (Green) */
+.option-card.correct {
+  border-color: var(--success-green);
+  background-color: var(--success-bg);
+}
+.option-card.correct .custom-radio {
+  background: var(--success-green); border-color: var(--success-green);
+}
+
+/* EXPLANATION BOX */
+.explanation-box {
+  margin-top: 2rem;
+  background: #f8f9fa;
+  padding: 1.5rem;
+  border-left: 5px solid var(--primary-blue);
+  border-radius: 4px;
+}
+
+/* NAVIGATION BUTTONS */
+.nav-buttons { margin-top: 2rem; display: flex; justify-content: space-between; }
+.nav-btn {
+  padding: 10px 20px; border: none; border-radius: 5px; cursor: pointer; font-size: 1rem;
+}
+.nav-btn.next { background: var(--primary-blue); color: white; }
+.nav-btn.prev { background: #e0e0e0; color: #333; }
+
+/* --- RIGHT: SIDEBAR --- */
+.quiz-sidebar {
+  width: 300px;
+  background: white;
+  padding: 1.5rem;
+  border-left: 1px solid var(--border-color);
+  overflow-y: auto;
+}
+
+.question-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+}
+
+.grid-btn {
+  padding: 10px;
+  border: 1px solid #ccc;
+  background: white;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.grid-btn.active {
+  background: var(--success-green);
+  color: white;
+  border-color: var(--success-green);
+}
+
+/* Toggle Switch (Visual only) */
+.switch { position: relative; display: inline-block; width: 34px; height: 20px; margin-left: 10px;}
+.switch input { opacity: 0; width: 0; height: 0; }
+.slider { position: absolute; cursor: pointer; top: 0; left: 0; right: 0; bottom: 0; background-color: #ccc; transition: .4s; border-radius: 34px; }
+.slider:before { position: absolute; content: ""; height: 14px; width: 14px; left: 3px; bottom: 3px; background-color: white; transition: .4s; border-radius: 50%; }
+input:checked + .slider { background-color: #2196F3; }
+input:checked + .slider:before { transform: translateX(14px); }
+
+/* Responsive */
+@media (max-width: 900px) {
+  .quiz-layout-wrapper { flex-direction: column; }
+  .quiz-sidebar { width: 100%; height: auto; border-left: none; border-top: 1px solid #ddd; }
+  .quiz-top-bar { flex-wrap: wrap; gap: 10px; }
+  .progress-wrapper { order: 3; width: 100%; margin: 5px 0; }
+}
+/* === ADD TO css/quiz.css === */
+
+/* 1. HIDING SIDEBAR LOGIC */
+.quiz-sidebar.hidden {
+    display: none;
+}
+/* Ensure main content expands when sidebar is gone */
+.quiz-layout-wrapper {
+    transition: all 0.3s ease;
+}
+
+/* =========================================
+   🌑 POWERFUL DARK MODE OVERRIDES
+   ========================================= */
+
+/* 1. Base Dark Mode Settings */
+body.dark-mode {
+    background-color: #121212 !important;
+    background-image: none !important; /* Remove background image for readability */
+    color: #e0e0e0 !important;
+}
+
+/* 2. Force All Cards & Containers to be Dark */
+body.dark-mode .quiz-main-content,
+body.dark-mode .quiz-sidebar,
+body.dark-mode .option-card,
+body.dark-mode .explanation-box,
+body.dark-mode .grid-btn {
+    background-color: #1e1e1e !important;
+    background: #1e1e1e !important;
+    border-color: #333 !important;
+    color: #e0e0e0 !important;
+    box-shadow: none !important;
+}
+
+/* 3. Fix Invisible Text */
+body.dark-mode h1,
+body.dark-mode h2,
+body.dark-mode h3,
+body.dark-mode p,
+body.dark-mode span,
+body.dark-mode .question-text,
+body.dark-mode .option-card,
+body.dark-mode .timer {
+    color: #ffffff !important;
+    text-shadow: none !important;
+}
+
+/* 4. Fix Top Bar */
+body.dark-mode .quiz-top-bar {
+    background-color: #000000 !important;
+    border-bottom: 1px solid #333;
+}
+
+/* 5. Fix Hover States on Options */
+body.dark-mode .option-card:hover {
+    background-color: #2d2d2d !important;
+    border-color: #4b61ff !important;
+}
+
+/* 6. Fix Navigation Buttons */
+body.dark-mode .nav-btn.prev {
+    background-color: #333 !important;
+    color: white !important;
+    border: 1px solid #555 !important;
+}
+
+body.dark-mode .nav-btn.next {
+    background-color: #4b61ff !important;
+    color: white !important;
+}
+
+/* 7. Fix Correct/Wrong Colors in Dark Mode */
+body.dark-mode .option-card.correct {
+    background-color: rgba(0, 200, 83, 0.2) !important;
+    border-color: #00c853 !important;
+}
+
+body.dark-mode .option-card.wrong {
+    background-color: rgba(255, 61, 0, 0.2) !important;
+    border-color: #ff3d00 !important;
+}
+
+/* 8. Fix Sidebar Grid Buttons */
+body.dark-mode .grid-btn {
+    background-color: #2c2c2c !important;
+    color: #ccc !important;
+}
+body.dark-mode .grid-btn.active {
+    background-color: #4b61ff !important;
+    color: white !important;
+    border-color: #4b61ff !important;
+}
+/* =========================================
+   RESPONSIVE SUBJECTS GRID
+   ========================================= */
+
+/* 1. Main Section Container */
+.subjects-section {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 60px 20px; /* Generous padding for desktop */
+}
+
+/* 2. The Grid Wrapper */
+.subjects-grid {
+    display: flex;
+    flex-wrap: wrap; /* Allows cards to wrap to next line */
+    justify-content: center; /* Centers orphans (like Geography) */
+    gap: 40px; /* Big gap for desktop */
+    width: 100%;
+    max-width: 1600px;
+    margin: 0 auto;
+}
+
+/* 3. The Card Style (Desktop Default) */
+.subject-card {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    width: 300px;
+    height: 200px;
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: 20px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+    
+    font-size: 1.4rem;
+    font-weight: 600;
+    color: #333;
+    text-decoration: none; /* Removes underline from links */
+    transition: all 0.3s ease;
+}
+
+/* Hover Effect */
+.subject-card:hover {
+    transform: translateY(-10px);
+    background: #0c1a4b;
+    color: white;
+    box-shadow: 0 12px 30px rgba(0,0,0,0.2);
+}
+
+/* =========================================
+   📱 MOBILE & TABLET ADJUSTMENTS
+   ========================================= */
+
+/* Tablet (Screens smaller than 1024px) */
+@media (max-width: 1024px) {
+    .subjects-grid {
+        gap: 25px; /* Reduce gap */
+    }
+    .subject-card {
+        width: 220px; /* Slightly smaller cards */
+        height: 160px;
+        font-size: 1.2rem;
+    }
+}
+
+/* Mobile Landscape / Large Phones (Screens smaller than 768px) */
+@media (max-width: 768px) {
+    .subjects-section {
+        padding: 40px 15px;
+    }
+    
+    .subjects-grid {
+        gap: 15px; /* Tight gap for mobile */
+    }
+
+    .subject-card {
+        /* Make cards fit 2 per row */
+        width: 46%; 
+        min-width: 140px; /* Prevents them from getting too skinny */
+        height: 130px; /* Shorter height */
+        font-size: 1rem; /* Smaller text */
+        border-radius: 15px;
+    }
+}
+
+/* Small Phones (Screens smaller than 480px) */
+@media (max-width: 480px) {
+    .subject-card {
+        /* Still keep 2 per row, but tighter */
+        width: 45%; 
+        height: 110px;
+        font-size: 0.95rem;
+    }
+}
+/* =========================================
+   FLASHCARDS STYLES
+   ========================================= */
+.flashcards-section {
+    padding: 60px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    perspective: 1000px;
+}
+
+.flashcard {
+    width: 100% !important;
+    max-width: 1500px !important;
+    height: 350px;
+    position: relative;
+    transform-style: preserve-3d;
+    transition: transform 0.6s cubic-bezier(0.4, 0.2, 0.2, 1);
+    cursor: pointer;
+    margin-bottom: 20px;
+}
+
+.flashcard.flipped {
+    transform: rotateY(180deg);
+}
+
+.flashcard-face {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 30px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+    border: 1px solid rgba(255,255,255,0.6);
+}
+
+.flashcard-front {
+    background: rgba(255, 255, 255, 0.95);
+    color: #0B3D91;
+}
+
+.flashcard-back {
+    background: #0B3D91;
+    color: white;
+    transform: rotateY(180deg);
+}
+.the-hundred{
+  color: #ffffff;
+}
+
+.card-content h3 {
+    font-size: 1.5rem; /* Adjusted for longer text */
+    line-height: 1.5;
+    font-weight: 600;
+}
+
+.emoji {
+    font-size: 3rem;
+    display: block;
+    margin-bottom: 15px;
+}
+
+.flashcontrols {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 10px;
+}
+
+.btn-control {
+    padding: 10px 25px;
+    border: none;
+    border-radius: 50px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    background: white;
+    color: #0B3D91;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    transition: 0.2s;
+}
+
+.btn-control:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 15px rgba(0,0,0,0.2);
+}
+
+.btn-control.shuffle {
+    background: #FFC727;
+    color: black;
+}
+
+.fc-meta {
+    color: white;
+    font-size: 0.9rem;
+    opacity: 0.8;
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+    .flashcard { height: 400px; } /* Taller on mobile for long text */
+    .card-content h3 { font-size: 1.2rem; }
+}
+/* =========================================
+   🚀 FINAL BACKGROUND FIX (The Nuclear Option)
+   ========================================= */
+
+/* 1. Remove the Gray Variable */
+:root {
+    --bg: transparent !important; 
+}
+
+/* 2. Force Layout Containers to be Transparent */
+html, 
+body, 
+main, 
+header, 
+section, 
+.main, 
+.hero, 
+.hero-animated, 
+.grade-section, 
+.subjects-section, 
+.flashcards-section,
+.daily-section,
+.container {
+    background: transparent !important;
+    background-color: transparent !important;
+    box-shadow: none !important; 
+}
+
+/* 3. Fix the Slideshow to stay stuck in the back */
+.slideshow-bg {
+    position: fixed; /* Makes it unmovable while scrolling */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    z-index: -999 !important; /* Pushes it behind everything */
+    opacity: 1 !important;    
+    pointer-events: none;
+}
+
+
+
+/* 5. Specific Fix for Flashcard Back */
+.flashcard-back {
+    background: rgba(11, 61, 145, 0.9) !important; /* Dark blue glass for answer */
+   
+}
+
+/* 6. Ensure Text is Readable */
+h1, h2, h3, p, li, a, span {
+    text-shadow: 0 1px 1px rgba(255, 255, 255, 0.5);
+    position: relative;
+    z-index: 2; /* Brings text above the background */
+}
+/* =========================================
+   👇 FORCE NAV LINKS LOWER
+   ========================================= */
+
+.header nav {
+    /* This allows us to move the element visually */
+    position: relative !important; 
+    
+    /* Change this number to move them lower or higher */
+    top: 15px !important; 
+}
+/* =========================================
+   STATS SECTION STYLES
+   ========================================= */
+
+.stats-section {
+    padding: 60px 20px;
+    width: 100%;
+    /* Ensures it sits above the background image if you have one */
+    position: relative; 
+    z-index: 2; 
+    /* 👇 THIS FIXES THE 0 MARGIN ISSUE */
+    margin-top: 80px !important;  /* Pushes it down from the section above */
+    margin-bottom: 50px !important; /* Adds space at the bottom before footer */
+}
+
+.stats-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.stat-card {
+    background: transparent; /* Solid White */
+    width: 260px;
+    padding: 40px 20px;
+    border-radius: 16px;
+    text-align: center;
+    /* Subtle border and shadow to match your image */
+    border: 1px solid #e5e7eb; 
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.02);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.stat-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(46, 125, 250, 0.15);
+    border-color: #2E7DFA;
+}
+
+.stat-number {
+    font-size: 3.5rem;
+    font-weight: 800;
+    color: #2E7DFA; /* Your Primary Blue */
+    line-height: 1;
+    margin-bottom: 15px;
+    font-family: 'Poppins', sans-serif;
+}
+
+.stat-label {
+    font-size: 1.1rem;
+    color: #ffffff; /* Muted Grey */
+    font-weight: 500;
+    font-family: 'Inter', sans-serif;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 600px) {
+    .stat-card {
+        width: 100%; /* Full width on phones */
+        max-width: 300px;
+        margin-bottom: 10px;
+    }
+    
+    .stat-number {
+        font-size: 2.8rem;
+    }
+}
+/* =========================================
+   📱 MOBILE FIX (Subjects Grid)
+   ========================================= */
+
+@media (max-width: 600px) {
+
+    /* 1. Fix the Section Spacing */
+    .subjects-section {
+        padding-top: 40px !important;   /* Give the title some room */
+        padding-bottom: 60px !important;
+    }
+
+    .subjects-section h2 {
+        font-size: 1.8rem !important;   /* Smaller Title */
+        margin-bottom: 30px !important; /* Space between title and cards */
+    }
+
+    /* 2. Fix the Grid Container */
+    .subjects-grid {
+        display: flex !important;
+        flex-wrap: wrap !important;
+        justify-content: center !important;
+        gap: 15px !important; /* Force space between cards vertically & horizontally */
+        width: 100% !important;
+        padding: 0 10px !important; /* Prevent touching screen edges */
+    }
+
+    /* 3. Fix the Individual Cards */
+    .subject-card {
+        /* Calculates exact width to fit 2 items per row minus the gap */
+        width: calc(50% - 20px) !important; 
+        min-width: 100px !important; /* Prevents getting too small */
+        
+        /* Make them shorter/smaller */
+        height: 110px !important; 
+        
+        /* Text styling */
+        font-size: 1rem !important;
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+        
+        /* Visuals */
+        border-radius: 12px !important;
+        margin: 10px !important; /* Remove any external margins causing the overlap */
+    }
+}
+/* 2. Force Grade Page Transparency */
+.grade-section, 
+.grades-grid-container {
+    background: transparent !important;
+    background-color: transparent !important;
+    box-shadow: none !important;
+}
+/* =========================================
+   GRADES PAGE SPECIFIC STYLES
+   ========================================= */
+
+/* 1. Force Global Transparency so Slideshow shows */
+html, body, .main, .grades-section {
+    background: transparent !important;
+    height: 100%;
+}
+
+/* 2. Center the Section Content */
+.grades-section {
+    min-height: 80vh; /* Takes up most of the screen */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 40px 20px;
+    text-align: center;
+    position: relative;
+    z-index: 2; /* Sits above the background */
+}
+
+/* 3. Title Styling */
+.grades-section h2 {
+    font-size: 3rem;
+    font-weight: 800;
+    color: white;
+    text-shadow: 0 4px 15px rgba(0,0,0,0.5); /* Strong shadow for readability */
+    margin-bottom: 50px;
+}
+
+/* 4. The Grid Container */
+.grades-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 40px; /* Space between cards */
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* 5. The Grade Cards (Glassmorphism) */
+/* Note: Ensure your JS generates elements with class 'grade-card' or 'card' */
+.grade-card, .card { 
+    width: 260px;
+    height: 200px;
+    
+    /* GLASS EFFECT */
+    background: rgba(255, 255, 255, 0.85); /* 85% opacity white */
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    border-radius: 20px;
+    
+    /* Layout Content */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    
+    /* Typography */
+    color: #0b0b0b;
+    font-size: 1.5rem;
+    font-weight: 700;
+    text-decoration: none;
+    
+    /* Shadow */
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+/* Hover Effect */
+.grade-card:hover, .card:hover {
+    transform: translateY(-10px) scale(1.02);
+    background: #ffffff; /* Solid white on hover */
+    box-shadow: 0 15px 40px 0 rgba(0, 0, 0, 0.25);
+    border-color: #2E7DFA; /* Blue border on hover */
+}
+
+/* 6. Icon Box (If your JS adds icons) */
+.icon-box {
+    width: 60px; height: 60px;
+    background: #2E7DFA;
+    color: white;
+    border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 1.2rem;
+    margin-bottom: 15px;
+    box-shadow: 0 4px 10px rgba(46, 125, 250, 0.4);
+}
+
+/* =========================================
+   📱 MOBILE RESPONSIVENESS
+   ========================================= */
+@media (max-width: 600px) {
+    .grades-section h2 {
+        font-size: 2rem; /* Smaller Title */
+        margin-bottom: 30px;
+    }
+
+    .grades-grid {
+        gap: 15px; /* Tighter gap */
+    }
+
+    .grade-card, .card {
+        width: 45%; /* Two cards per row */
+        height: 140px; /* Shorter cards */
+        font-size: 1.1rem;
+        padding: 10px;
+    }
+    
+    .icon-box {
+        width: 45px; height: 45px;
+        font-size: 1rem;
+        margin-bottom: 10px;
+    }
+}
+/* =========================================
+   🚀 FORCE STATS SPACING (The Override)
+   ========================================= */
+
+/* Use body to increase specificity */
+body .stats-section {
+    /* Huge top margin to force it down */
+    margin-top: 100px !important;
+    
+    /* Ensure padding exists */
+    padding-top: 60px !important;
+    padding-bottom: 60px !important;
+    
+    /* Ensure it behaves like a block element */
+    display: block !important;
+    position: relative !important;
+    clear: both !important;
+    
+    /* Reset any zeroing out */
+    background: transparent !important;
+}
+
+/* Ensure the Subjects section isn't pushing it weirdly */
+body .subjects-section {
+    margin-bottom: 50px !important;
+    padding-bottom: 50px !important;
+}
+/* =========================================
+   🚀 FIX: STOP OVERLAY (Allow Height to Grow)
+   ========================================= */
+
+.grade-section,
+.subjects-section,
+.popular-subjects,
+.main {
+    /* Stop forcing it to be screen-height */
+    height: auto !important;
+    min-height: auto !important;
+    width: 100% !important;
+    
+    /* Ensure it wraps around the cards */
+    display: block !important;
+    overflow: visible !important;
+    
+    /* Add space at the bottom so Stats doesn't touch it */
+    padding-bottom: 80px !important;
+    margin-bottom: 0 !important;
+}
+
+/* Ensure the Stats section clears any floating elements */
+.stats-section {
+    margin-top: 0 !important;
+    position: relative !important;
+    clear: both !important;
+    z-index: 10 !important;
+    display: block !important;
+}
+/* =========================================
+   DATA TABLE STYLES (For Aptitude Questions)
+   ========================================= */
+.table-wrapper {
+    width: 100%;
+    overflow-x: auto; /* Allows scrolling on mobile */
+    margin-bottom: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+
+.data-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.85rem;
+    background: white;
+    color: #333;
+    min-width: 500px; /* Forces scroll on small phones */
+}
+
+.data-table th {
+    background-color: #4b61ff; /* Your Brand Blue */
+    color: white;
+    padding: 10px;
+    text-align: center;
+    font-weight: 600;
+}
+
+.data-table td {
+    padding: 8px;
+    border: 1px solid #eee;
+    text-align: center;
+}
+
+.data-table tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+/* Dark Mode Support for Table */
+body.dark-mode .data-table {
+    background: #1e1e1e;
+    color: #e0e0e0;
+}
+body.dark-mode .data-table th {
+    background-color: #333;
+}
+body.dark-mode .data-table td {
+    border-color: #444;
+}
+body.dark-mode .data-table tr:nth-child(even) {
+    background-color: #262626;
+}
+/* =========================================
+   STATIC BACKGROUND & YEAR LABEL
+   ========================================= */
+
+/* 1. Fix the Background Image */
+/* =========================================
+   🚀 ULTIMATE STATIC BACKGROUND FIX
+   ========================================= */
+
+.slideshow-bg {
+    /* 1. Lock the container to the viewport */
+    position: fixed !important;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    
+    /* 2. Dimensions */
+    width: 100% !important;
+    height: 100vh !important;
+    
+    /* 3. Layering */
+    z-index: -9999 !important;
+    
+    /* 4. CRITICAL FIX FOR MOBILE: */
+    /* Do NOT use 'fixed' here. Use 'scroll' or 'initial'. */
+    /* Since the DIV is fixed, the image will stay put. */
+    background-attachment: scroll !important; 
+    
+    /* 5. Formatting */
+    background-size: cover !important;
+    background-position: center center !important;
+    background-repeat: no-repeat !important;
+    
+    /* 6. Keep your Animation */
+    animation: slideShow 30s infinite;
+    
+    /* 7. Ensure clicks pass through */
+    pointer-events: none;
+}
+
+/* 8. iOS Mobile Safari Fix (prevents jumpy background) */
+@supports (-webkit-touch-callout: none) {
+    .slideshow-bg {
+        height: -webkit-fill-available !important;
+    }
+}
+
+/* 9. Ensure nothing sits 'under' it */
+html, body {
+    min-height: 100%;
+    margin: 0;
+    padding: 0;
+    background: transparent !important; /* Ensures body doesn't paint over it */
+}
+
+/* 2. Styling the "2016" Divider */
+.year-section-title {
+    width: 100%;
+    text-align: center;
+    font-size: 3rem;
+    font-weight: 800;
+    color: #FFC727; /* Gold Color */
+    text-shadow: 0 4px 10px rgba(0,0,0,0.6);
+    
+    margin-top: 80px;    /* Space from top section */
+    margin-bottom: 40px; /* Space before bottom section */
+    
+    position: relative;
+    display: block;
+}
+
+/* Decorative Lines around "2016" */
+.year-section-title::before, 
+.year-section-title::after {
+    content: "";
+    display: inline-block;
+    width: 60px;
+    height: 4px;
+    background: white;
+    vertical-align: middle;
+    margin: 0 20px;
+    border-radius: 5px;
+    opacity: 0.8;
+}
+
+/* 3. Ensure Subjects Section allows scrolling */
+.subjects-section {
+    min-height: 100vh;
+    padding-bottom: 100px; /* Extra space at bottom */
+    overflow-y: auto; /* Allows scrolling */
+}
+/* =========================================
+   DYNAMIC 2016 LABEL STYLING
+   ========================================= */
+
+.year-section-title {
+    width: 100%;
+    text-align: center;
+    font-size: 3rem;
+    font-weight: 800;
+    color: #FFC727; /* Gold */
+    text-shadow: 0 4px 10px rgba(0,0,0,0.6);
+    
+    margin-top: 80px;    /* Space from top grid */
+    margin-bottom: 40px; /* Space before bottom grid */
+    
+    position: relative;
+    display: block;
+    clear: both;
+}
+
+/* Add Lines beside 2016 */
+.year-section-title::before, 
+.year-section-title::after {
+    content: "";
+    display: inline-block;
+    width: 60px;
+    height: 4px;
+    background: white;
+    vertical-align: middle;
+    margin: 0 20px;
+    border-radius: 5px;
+    opacity: 0.8;
+}
+
+/* Mobile adjustment for the label */
+@media (max-width: 768px) {
+    .year-section-title {
+        font-size: 2.2rem;
+        margin-top: 50px;
+        margin-bottom: 30px;
+    }
+}
+
+ 
+    .video-container {
+      position: relative;
+      padding-bottom: 56.25%; /* 16:9 aspect ratio */
+      height: 0;
+      overflow: hidden;
+      max-width: 100%;
+    }
+    .video-container iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 600px;
+      height: 400px;
+      border: 0;
+    }
+  /* style.css */
+.navbar {
+  list-style: none;
+  display: flex;
+  background-color: #2c3e50;
+  padding: 0;
+  margin: 0;
+}
+
+.navbar li {
+  position: relative;
+}
+
+.navbar a {
+  display: block;
+  padding: 14px 20px;
+  color: white;
+  text-decoration: none;
+}
+
+.navbar .dropdown:hover .dropdown-menu {
+  display: block;
+}
+
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  background-color: #34495e;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  top: 100%;
+  left: 0;
+  z-index: 1000;
+}
+
+.dropdown-menu li a {
+  padding: 10px 20px;
+  white-space: nowrap;
+}
+body {
+  font-family: Arial, sans-serif;
+  background: #f4f4f4;
+  text-align: center;
+}
+
+h1 {
+  margin-top: 40px;
+  font-size: 2em;
+  color: #3498db; /* Blue theme */
+}
+
+.subject-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 20px;
+  padding: 40px;
+  max-width: 900px;
+  margin: auto;
+}
+
+.subject {
+  background-color: #3498db;
+  color: white;
+  padding: 20px;
+  text-decoration: none;
+  border-radius: 8px;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.subject:hover {
+  background-color: #2980b9;
+}
+/* ============================================================
+   1. GLOBAL HEADER STYLES (Applies to both)
+   ============================================================ */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #ffffff; /* Clean White Background */
+    height: 80px; /* Fixed Height */
+    padding: 0 20px;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 4px 10px #030135;
+}
+
+/* Logo Section */
+.logo {
+    display: flex;
+    align-items: center;
+    flex-shrink: 0;
+}
+.brand-square {
+    background: #e67e22;
+    color: #030135;
+   
+    padding: 8px 12px;
+    border-radius: 6px;
+    font-weight: bold;
+    margin-right: 10px;
+}
+.site-title {
+    color: #030135;
+    font-weight: 800;
+    font-size: 1.2rem;
+}
+
+/* ============================================================
+   2. DESKTOP SPECIFIC (The "Round Shape" Look)
+   ============================================================ */
+@media (min-width: 769px) {
+    .main-nav {
+        background-color: #030135; /* Dark Blue Pill */
+        border-radius: 50px;       /* Makes it Round */
+        padding: 0 30px;           /* Padding inside the pill */
+        height: 50px;              /* Height of the pill */
+        display: flex;
+        align-items: center;
+    }
+
+    .navbar {
+        display: flex;
+        gap: 25px;
+        list-style: none;
+        margin: 0;
+        padding: 0;
+    }
+
+    .nav-link, .dropdown-toggle {
+        color: white;
+        text-decoration: none;
+        font-weight: 500;
+        font-size: 14px;
+        background: transparent;
+        border: none;
+        cursor: pointer;
+    }
+
+    /* "Practice" Button on Desktop */
+    a.nav-link.btn {
+        background-color: #e67e22;
+        padding: 8px 20px;
+        border-radius: 20px;
+        font-weight: bold;
+    }
+    
+    /* Dropdown Desktop */
+    .dropdown-menu {
+        display: none;
+        position: absolute;
+        top: 40px;
+        background: #030135;
+        border-radius: 8px;
+        box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+        padding: 10px;
+        min-width: 150px;
+    }
+    .dropdown:hover .dropdown-menu { display: block; }
+    .dropdown-link { display: block; padding: 8px; color: #030135; text-decoration: none; }
+    .dropdown-link:hover { background: #e67e22; }
+}
+
+/* ============================================================
+   3. MOBILE SPECIFIC (Fixing the Cut-Off Text)
+   ============================================================ */
+@media (max-width: 768px) {
+    
+    /* Hide Site Title to save space */
+    .site-title { display: none; }
+
+    /* Adjust Header Padding */
+    .header { padding: 0 10px; height: 70px; }
+
+    /* The Scrollable Blue Container */
+    .main-nav {
+        flex-grow: 1;
+        background-color: #030135;
+        height: 45px; /* Fixed Height */
+        border-radius: 8px;
+        margin-left: 10px;
+        
+        display: flex;
+        align-items: center; /* VERTICAL CENTER FIX */
+        
+        overflow-x: auto;
+        white-space: nowrap;
+        padding: 0 15px; /* Padding on sides of text */
+        
+        /* Hide Scrollbar */
+        -ms-overflow-style: none;
+        scrollbar-width: none;
+    }
+    .main-nav::-webkit-scrollbar { display: none; }
+
+    .navbar {
+        display: flex;
+        align-items: center; /* VERTICAL CENTER FIX */
+        gap: 15px;
+        margin: 0;
+        padding: 0;
+        height: 100%; /* Fill the blue bar */
+    }
+
+    /* The Text Links */
+    .nav-link, .dropdown-toggle {
+        color: #030135 !important;
+        font-size: 13px;
+        text-decoration: none;
+        border: none;
+        background: transparent;
+        
+        /* THIS FIXES THE CUT OFF */
+        line-height: normal; 
+        display: flex;
+        align-items: center;
+        height: 100%;
+        padding: 0;
+    }
+
+    /* The "Practice" Button Mobile */
+    a.nav-link.btn {
+        background-color: #e67e22;
+        color: white !important;
+        padding: 5px 10px;
+        border-radius: 4px;
+        height: 28px; /* Force small height */
+        display: flex;
+        align-items: center;
+    }
+    
+    /* Dropdown Fix Mobile */
+    .dropdown-menu {
+        position: fixed;
+        top: 60px;
+        right: 10px;
+        background: #030135;
+        z-index: 9999;
+        display: none;
+        border: 1px solid white;
+    }
+    .dropdown.active .dropdown-menu { display: block; } /* Requires JS toggle or :hover */
+    /* Use :focus-within for CSS only toggle on mobile */
+    .dropdown:hover .dropdown-menu { display: block; }
+}
+/* ============================================================
+   🚀 DESKTOP NAV FIX: Clean Rounded Pill
+   ============================================================ */
+
+@media (min-width: 769px) {
+    
+    /* 1. The Container (The Rounded Blue Shape) */
+    .main-nav {
+        background-color: #030135 !important; /* The Blue/Black Color */
+        border-radius: 50px !important;       /* Makes it round (Pill) */
+        padding: 0 40px !important;           /* Spacing on the sides */
+        height: 60px !important;              /* Height of the pill */
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+        box-shadow: 0 5px 15px rgba(0,0,0,0.1) !important;
+    }
+
+    /* 2. The Inner List (REMOVE THE GRAY RECTANGLE) */
+    .navbar {
+        background-color: transparent !important; /* 🛑 Removes the gray block */
+        background: transparent !important;
+        display: flex !important;
+        align-items: center !important;
+        gap: 30px !important; /* Spacing between links */
+        margin: 0 !important;
+        padding: 0 !important;
+        height: auto !important;
+        width: auto !important;
+    }
+
+    /* 3. The Links (Clean Text) */
+    .nav-link, .dropdown-toggle {
+        color: white !important;
+        font-weight: 500 !important;
+        font-size: 16px !important;
+        text-decoration: none !important;
+        background: transparent !important; /* Ensure no background on text */
+        border: none !important;
+    }
+
+    /* 4. The Orange "Practice" Button */
+    a.nav-link.btn {
+        background-color: #e67e22 !important;
+        color: white !important;
+        padding: 10px 25px !important;
+        border-radius: 30px !important; /* Round button to match pill */
+        font-weight: bold !important;
+        box-shadow: 0 4px 10px rgba(230, 126, 34, 0.3) !important;
+    }
+    
+    /* 5. Hover Effects */
+    .nav-link:hover, .dropdown-toggle:hover {
+        color: #e67e22 !important; /* Turn orange on hover */
+    }
+    a.nav-link.btn:hover {
+        transform: translateY(-2px);
+        color: white !important;
+    }
+}/* ============================================================
+   🚀 FINAL MOBILE FIX: White Header + Blue Scrollable Pill
+   ============================================================ */
+
+@media only screen and (max-width: 768px) {
+
+    /* 1. Main Header Strip (White Background) */
+    .header {
+        display: flex !important;
+        flex-direction: row !important;
+        align-items: center !important;
+        justify-content: space-between !important;
+        height: 70px !important; /* Fixed height prevents cutting off */
+        background: #ffffff !important;
+        padding: 5px 10px !important;
+        position: sticky !important;
+        top: 0;
+        z-index: 1000;
+        box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+
+    /* 2. Logo (Left Side) */
+    .logo {
+        flex-shrink: 0 !important;
+        margin-right: 8px !important;
+    }
+    .site-title { display: none !important; } /* Hide text to save space */
+    .brand-square { font-size: 14px !important; padding: 8px !important; }
+
+    /* 3. The Nav Container (The Blue Pill) */
+    .main-nav {
+        /* Make it take remaining width */
+        flex-grow: 1 !important;
+        width: auto !important;
+        
+        /* Visuals (Dark Blue Pill) */
+        background-color: #030135 !important; 
+        height: 45px !important; 
+        border-radius: 25px !important; /* Rounded Pill Shape */
+        padding: 0 15px !important;
+        
+        /* Flex Layout */
+        display: flex !important;
+        align-items: center !important; /* Centers text vertically */
+        
+        /* Scroll Logic */
+        overflow-x: auto !important;
+        overflow-y: hidden !important;
+        white-space: nowrap !important;
+        
+        /* Hide Scrollbar */
+        -ms-overflow-style: none;
+        scrollbar-width: none;
+    }
+    .main-nav::-webkit-scrollbar { display: none; }
+
+    /* 4. The List inside */
+    .navbar {
+        display: flex !important;
+        flex-direction: row !important;
+        align-items: center !important;
+        gap: 15px !important;
+        margin: 0 !important;
+        padding: 0 !important;
+        height: 100% !important;
+    }
+
+    /* 5. Text Links (MUST BE WHITE) */
+    .nav-link, .dropdown-toggle {
+        color: #ffffff !important; /* Fixed visibility issue */
+        font-size: 13px !important;
+        font-weight: 500 !important;
+        text-decoration: none !important;
+        background: transparent !important;
+        border: none !important;
+        padding: 0 !important;
+        display: flex !important;
+        align-items: center !important;
+    }
+
+    /* 6. "Practice" Button Styling */
+    a.nav-link.btn {
+        background-color: #e67e22 !important;
+        color: white !important;
+        padding: 5px 12px !important;
+        border-radius: 15px !important; /* Pill shape button */
+        font-size: 12px !important;
+        height: 30px !important;
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+        margin: 0 !important;
+    }
+
+    /* 7. Fix Dropdown Menu Position */
+    .dropdown-menu {
+        position: fixed !important;
+        top: 60px;
+        right: 10px;
+        left: auto;
+        width: 150px;
+        background: #030135 !important;
+        border: 1px solid white;
+        border-radius: 10px;
+    }
+}

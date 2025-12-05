@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Select Subject - EduFlow</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <!-- Re-using your existing styles for consistency -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/quiz.css">
+    
+    <style>
+        /* Custom Styles for Subject Page to match Quiz Theme */
+        body { background-color: #f4f6f8; margin: 0; font-family: 'Poppins', sans-serif; }
+        
+        .page-header {
+            background-color: #4b61ff; /* Your primary blue */
+            color: white;
+            padding: 2rem 1rem;
+            text-align: center;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            position: relative !important;
+            z-index: 1000 !important;
+            pointer-events: auto !important;
+        }
+
+        .back-link {
+            position: absolute;
+            z-index: 1001 !important;
+            cursor: pointer !important;
+            pointer-events: auto !important;
+            left: 20px;
+            top: 25px;
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+        
+        body ::before {
+            z-index: -1 !important;
+            pointer-events: none !important;
+        }
+        .subject-container {
+            max-width: 1000px;
+            margin: 3rem auto;
+            padding: 0 1rem;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+        }
+
+        .subject-card {
+            background: white;
+            padding: 2rem;
+            border-radius: 12px;
+            text-align: center;
+            cursor: pointer;
+            border: 2px solid transparent;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+            transition: all 0.3s ease;
+            text-decoration: none;
+            color: #333;
+        }
+
+        .subject-card:hover {
+            transform: translateY(-5px);
+            border-color: #4b61ff;
+            box-shadow: 0 8px 20px rgba(75, 97, 255, 0.2);
+        }
+
+        .subject-icon { font-size: 3rem; margin-bottom: 15px; display: block; }
+        .subject-title { font-size: 1.2rem; font-weight: 700; display: block; }
+        .subject-meta { font-size: 0.9rem; color: #888; margin-top: 5px; display: block; }
+
+    </style>
+</head>
+<body>
+
+    <!-- Header -->
+    <div class="page-header">
+        <a href="grades.html" class="back-link">&larr; Back to Home</a>
+        <h1>Select Subject</h1>
+        <p>Grade <span id="grade-badge">...</span></p>
+    </div>
+
+    <!-- Grid of Subjects -->
+    <div class="subject-container">
+        
+        <a href="#" class="subject-card" onclick="selectSubject('Mathematics')">
+            <span class="subject-icon">📐</span>
+            <span class="subject-title">Mathematics</span>
+            <span class="subject-meta">Algebra, Calculus, Geometry</span>
+        </a>
+
+        <a href="#" class="subject-card" onclick="selectSubject('Biology')">
+            <span class="subject-icon">🧬</span>
+            <span class="subject-title">Biology</span>
+            <span class="subject-meta">Cells, Genetics, Plants</span>
+        </a>
+
+        <a href="#" class="subject-card" onclick="selectSubject('Chemistry')">
+            <span class="subject-icon">🧪</span>
+            <span class="subject-title">Chemistry</span>
+            <span class="subject-meta">Reactions, Elements, pH</span>
+        </a>
+
+        <a href="#" class="subject-card" onclick="selectSubject('Physics')">
+            <span class="subject-icon">⚡</span>
+            <span class="subject-title">Physics</span>
+            <span class="subject-meta">Forces, Energy, Motion</span>
+        </a>
+
+        <a href="#" class="subject-card" onclick="selectSubject('English')">
+            <span class="subject-icon">📚</span>
+            <span class="subject-title">English</span>
+            <span class="subject-meta">Grammar, Vocabulary</span>
+        </a>
+
+        <a href="#" class="subject-card" onclick="selectSubject('Civics')">
+            <span class="subject-icon">⚖️</span>
+            <span class="subject-title">Civics</span>
+            <span class="subject-meta">Government, Rights, Laws</span>
+        </a>
+
+    </div>
+
+    <script>
+        // 1. Check if Grade is selected
+        const grade = localStorage.getItem('selectedGrade');
+        if (!grade) {
+            // Default to Grade 9 if none selected (prevents errors)
+            localStorage.setItem('selectedGrade', '9');
+            document.getElementById('grade-badge').innerText = "9";
+        } else {
+            document.getElementById('grade-badge').innerText = grade;
+        }
+
+        // 2. Handle Subject Selection
+        function selectSubject(sub) {
+            localStorage.setItem('selectedSubject', sub);
+            window.location.href = 'quiz.html';
+        }
+    </script>
+</body>
+</html>

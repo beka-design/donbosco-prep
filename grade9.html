@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Grade 9 Textbook</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/grade9.css">
+  <style>
+    .pdf-container {
+      width: 100%;
+      height: 100vh; /* full viewport height */
+      margin-top: 20px;
+      display: none; /* hidden until a PDF is loaded */
+      position: relative;
+    }
+    .pdf-container iframe {
+      width: 100%;
+      height: 100%;
+      border: none;
+    }
+    .back-btn {
+      position: sticky;   /* stays visible while scrolling */
+      top: 0;
+      z-index: 1000;
+      display: inline-block;
+      width: 100%;
+      padding: 10px 14px;
+      background-color: #e67e22;
+      color: #fff;
+      border: none;
+      font-weight: bold;
+      text-align: center;
+      cursor: pointer;
+    }
+    @media (max-width: 768px) {
+      .pdf-container {
+        height: 80vh; /* shorter on mobile */
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- Global background slideshow -->
+  <div class="slideshow-bg"></div>
+
+  <!-- HEADER -->
+  <header class="header">
+    <div class="logo">
+      <div class="brand-square">DB</div>
+      <div class="site-title">DonBoscoPrep</div>
+    </div>
+
+    <nav class="main-nav" aria-label="Primary">
+      <ul class="navbar">
+        <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
+        <li class="nav-item"><a href="grades.html" class="nav-link btn">Practice</a></li>
+        <li class="nav-item dropdown">
+          <button class="dropdown-toggle" aria-expanded="false" aria-haspopup="true">Text-book ⌵</button>
+          <ul class="dropdown-menu" role="menu">
+            <li><a href="grade9.html" class="dropdown-link">Grade 9</a></li>
+            <li><a href="grade10.html" class="dropdown-link">Grade 10</a></li>
+            <li><a href="grade11.html" class="dropdown-link">Grade 11</a></li>
+            <li><a href="grade12.html" class="dropdown-link">Grade 12</a></li>
+          </ul>
+        </li>
+        <li class="nav-item"><a href="videos.html" class="nav-link">Video Lessons</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <h1>Grade 9 Textbook</h1>
+  <div class="subject-grid" id="subjectGrid">
+  <a href="#" class="subject" onclick="event.preventDefault(); loadPDF('pdfs/grade9-math.pdf')">Mathematics</a>
+  <a href="#" class="subject" onclick="event.preventDefault(); loadPDF('pdfs/grade9-biology.pdf')">Biology</a>
+  <a href="#" class="subject" onclick="event.preventDefault(); loadPDF('pdfs/grade9-chemistry.pdf')">Chemistry</a>
+  <a href="#" class="subject" onclick="event.preventDefault(); loadPDF('pdfs/grade9-physics.pdf')">Physics</a>
+  <a href="#" class="subject" onclick="event.preventDefault(); loadPDF('pdfs/grade9-english.pdf')">English</a>
+  <a href="#" class="subject" onclick="event.preventDefault(); loadPDF('pdfs/grade9-civics.pdf')">Civics</a>
+  <a href="#" class="subject" onclick="event.preventDefault(); loadPDF('pdfs/grade9-geography.pdf')">Geography</a>
+  <a href="#" class="subject" onclick="event.preventDefault(); loadPDF('pdfs/grade9-history.pdf')">History</a>
+</div>
+
+
+  <!-- PDF Viewer -->
+  <div class="pdf-container" id="pdfContainer"></div>
+
+  <script>
+    function loadPDF(pdfUrl) {
+      const subjectGrid = document.getElementById("subjectGrid");
+      const container = document.getElementById("pdfContainer");
+
+      // Hide subjects, show PDF
+      subjectGrid.style.display = "none";
+      container.style.display = "block";
+
+      container.innerHTML = `
+        
+        <iframe src="${pdfUrl}" frameborder="0"></iframe>
+      `;
+    }
+
+    function goBack() {
+      const subjectGrid = document.getElementById("subjectGrid");
+      const container = document.getElementById("pdfContainer");
+
+      // Hide PDF, show subjects
+      container.style.display = "none";
+      subjectGrid.style.display = "grid";
+      container.innerHTML = ""; // clear iframe
+    }
+
+    // ✅ Preload Mathematics PDF when page opens
+    window.onload = function() {
+      loadPDF('pdfs/grade9-math.pdf');
+    };
+  </script>
+</body>
+</html>

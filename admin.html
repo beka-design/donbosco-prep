@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DonBoscoPrep — Admin Panel</title>
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    .admin-container { max-width:900px; margin:24px auto; padding:16px; }
+    h2 { margin-bottom:16px; }
+    .form-group { margin-bottom:12px; }
+    label { display:block; margin-bottom:4px; font-weight:600; }
+    input, select, textarea { width:100%; padding:8px; border-radius:8px; border:1px solid #ccc; margin-bottom:8px; }
+    button { padding:8px 16px; background:var(--primary); color:#fff; border:none; border-radius:8px; cursor:pointer; }
+    .section { background:#fff; padding:16px; border-radius:12px; box-shadow:0 6px 20px rgba(0,0,0,0.08); margin-bottom:24px; }
+    .uploaded-list { margin-top:12px; }
+    .uploaded-list li { margin-bottom:4px; }
+  </style>
+</head>
+<body>
+  <header class="header">
+    <div class="logo">
+      <div class="brand-square">DB</div>
+      <div class="site-title">DonBoscoPrep Admin</div>
+    </div>
+    <nav>
+      <a href="index.html" class="nav-link">Home</a>
+    </nav>
+  </header>
+
+  <main class="main admin-container">
+    <!-- Upload PDF past paper -->
+    <section class="section">
+      <h2>Upload PDF Past Paper</h2>
+      <div class="form-group">
+        <label for="grade-select">Grade</label>
+        <select id="grade-select">
+          <option value="9">Grade 9</option>
+          <option value="10">Grade 10</option>
+          <option value="11">Grade 11</option>
+          <option value="12">Grade 12</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label for="subject-select">Subject</label>
+        <select id="subject-select">
+          <option value="Mathematics">Mathematics</option>
+          <option value="Biology">Biology</option>
+          <option value="Chemistry">Chemistry</option>
+          <option value="Physics">Physics</option>
+          <option value="English">English</option>
+          <option value="Civics">Civics</option>
+          <option value="Economics">Economics</option>
+          <option value="History">History</option>
+          <option value="Geography">Geography</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label for="year-input">Year</label>
+        <input type="number" id="year-input" placeholder="e.g., 2024">
+      </div>
+      <div class="form-group">
+        <label for="pdf-upload">Select PDF</label>
+        <input type="file" id="pdf-upload" accept="application/pdf">
+      </div>
+      <button id="upload-btn">Upload Paper</button>
+      <ul class="uploaded-list" id="uploaded-papers"></ul>
+    </section>
+
+    <!-- Add multiple-choice question -->
+    <section class="section">
+      <h2>Add Multiple-Choice Question</h2>
+      <div class="form-group">
+        <label for="mc-grade">Grade</label>
+        <select id="mc-grade">
+          <option value="9">Grade 9</option>
+          <option value="10">Grade 10</option>
+          <option value="11">Grade 11</option>
+          <option value="12">Grade 12</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label for="mc-subject">Subject</label>
+        <select id="mc-subject">
+          <option value="Mathematics">Mathematics</option>
+          <option value="Biology">Biology</option>
+          <option value="Chemistry">Chemistry</option>
+          <option value="Physics">Physics</option>
+          <option value="English">English</option>
+          <option value="Civics">Civics</option>
+          <option value="Economics">Economics</option>
+          <option value="History">History</option>
+          <option value="Geography">Geography</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label for="mc-question">Question Text</label>
+        <textarea id="mc-question" rows="3"></textarea>
+      </div>
+      <div class="form-group">
+        <label for="mc-options">Options (comma separated)</label>
+        <input type="text" id="mc-options" placeholder="Option A, Option B, Option C, Option D">
+      </div>
+      <div class="form-group">
+        <label for="mc-answer">Correct Answer (0,1,2,3)</label>
+        <input type="number" id="mc-answer" min="0" max="3">
+      </div>
+      <div class="form-group">
+        <label for="mc-explanation">AI Explanation</label>
+        <textarea id="mc-explanation" rows="2"></textarea>
+      </div>
+      <button id="add-question-btn">Add Question</button>
+      <ul class="uploaded-list" id="uploaded-questions"></ul>
+    </section>
+  </main>
+
+  <script src="js/admin.js"></script>
+</body>
+</html>
