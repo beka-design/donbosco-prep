@@ -5,49 +5,142 @@
   <title>Grade 11 Textbook</title>
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="css/grade11.css">
+  <style>
+    .pdf-container {
+      width: 100%;
+      height: 90vh;
+      margin-top: 20px;
+      display: none;
+    }
+    .pdf-container iframe {
+      width: 100%;
+      height: 100%;
+      border: none;
+    }
+    .back-btn {
+      display: block;
+      margin: 10px auto;
+      padding: 10px 14px;
+      background-color: #2ecc71;
+      color: #fff;
+      border: none;
+      font-weight: bold;
+      cursor: pointer;
+    }
+  </style>
+
+  <!-- ✅ AdSense script -->
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+  <script>
+    (adsbygoogle = window.adsbygoogle || []).push({});
+  </script>
 </head>
 <body>
   <!-- Global background slideshow -->
   <div class="slideshow-bg"></div>
 
   <!-- HEADER -->
-<header class="header">
-  <div class="logo">
-    <div class="brand-square">DB</div>
-    <div class="site-title">DonBoscoPrep</div>
-  </div>
+  <header class="header">
+    <div class="logo">
+      <div class="brand-square">DB</div>
+      <div class="site-title">DonBoscoPrep</div>
+    </div>
 
-  <nav class="main-nav" aria-label="Primary">
-    <ul class="navbar">
-      <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
-      <li class="nav-item"><a href="grades.html" class="nav-link btn">Practice</a></li>
-
-      <li class="nav-item dropdown">
-        <button class="dropdown-toggle" aria-expanded="false" aria-haspopup="true">Text-book ⌵</button>
-        <ul class="dropdown-menu" role="menu">
-          <li><a href="grade9.html" class="dropdown-link">Grade 9</a></li>
-          <li><a href="grade10.html" class="dropdown-link">Grade 10</a></li>
-          <li><a href="grade11.html" class="dropdown-link">Grade 11</a></li>
-          <li><a href="grade12.html" class="dropdown-link">Grade 12</a></li>
-        </ul>
-      </li>
-
-      <li class="nav-item"><a href="videos.html" class="nav-link">Video Lessons</a></li>
-      
-    </ul>
-  </nav>
-</header>
+    <nav class="main-nav" aria-label="Primary">
+      <ul class="navbar">
+        <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
+        <li class="nav-item"><a href="grades.html" class="nav-link btn">Practice</a></li>
+        <li class="nav-item dropdown">
+          <button class="dropdown-toggle" aria-expanded="false" aria-haspopup="true">Text-book ⌵</button>
+          <ul class="dropdown-menu" role="menu">
+            <li><a href="grade9.html" class="dropdown-link">Grade 9</a></li>
+            <li><a href="grade10.html" class="dropdown-link">Grade 10</a></li>
+            <li><a href="grade11.html" class="dropdown-link">Grade 11</a></li>
+            <li><a href="grade12.html" class="dropdown-link">Grade 12</a></li>
+          </ul>
+        </li>
+        <li class="nav-item"><a href="videos.html" class="nav-link">Video Lessons</a></li>
+      </ul>
+    </nav>
+  </header>
 
   <h1>Grade 11 Textbook</h1>
-  <div class="subject-grid">
-    <a href="grade11-math.html" class="subject">Mathematics</a>
-    <a href="grade11-biology.html" class="subject">Biology</a>
-    <a href="grade11-chemistry.html" class="subject">Chemistry</a>
-    <a href="grade11-physics.html" class="subject">Physics</a>
-    <a href="grade11-english.html" class="subject">English</a>
-    <a href="grade11-civics.html" class="subject">Civics</a>
-    <a href="grade11-geography.html" class="subject">Geography</a>
-    <a href="grade11-history.html" class="subject">History</a>
+
+  <!-- ✅ Ad above subjects -->
+  <ins class="adsbygoogle"
+       style="display:block; text-align:center; margin:20px 0;"
+       data-ad-client="ca-pub-XXXXXX"
+       data-ad-slot="1111111"
+       data-ad-format="auto"
+       data-full-width-responsive="true"></ins>
+  <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+
+  <!-- SUBJECT GRID -->
+  <div class="subject-grid" id="subjectGrid">
+    <a href="#" class="subject" onclick="event.preventDefault(); loadPDF('pdfs/grade11-math.pdf')">Mathematics</a>
+    <a href="#" class="subject" onclick="event.preventDefault(); loadPDF('pdfs/grade11-biology.pdf')">Biology</a>
+    <a href="#" class="subject" onclick="event.preventDefault(); loadPDF('pdfs/grade11-chemistry.pdf')">Chemistry</a>
+    <a href="#" class="subject" onclick="event.preventDefault(); loadPDF('pdfs/grade11-physics.pdf')">Physics</a>
+    <a href="#" class="subject" onclick="event.preventDefault(); loadPDF('pdfs/grade11-english.pdf')">English</a>
+    <a href="#" class="subject" onclick="event.preventDefault(); loadPDF('pdfs/grade11-civics.pdf')">Civics</a>
+    <a href="#" class="subject" onclick="event.preventDefault(); loadPDF('pdfs/grade11-geography.pdf')">Geography</a>
+    <a href="#" class="subject" onclick="event.preventDefault(); loadPDF('pdfs/grade11-history.pdf')">History</a>
   </div>
+
+  <!-- ✅ Ad between subjects and PDF -->
+  <ins class="adsbygoogle"
+       style="display:block; text-align:center; margin:20px 0;"
+       data-ad-client="ca-pub-XXXXXX"
+       data-ad-slot="2222222"
+       data-ad-format="auto"
+       data-full-width-responsive="true"></ins>
+  <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+
+  <!-- PDF Viewer -->
+  <div class="pdf-container" id="pdfContainer"></div>
+
+  <!-- ✅ Ad below PDF -->
+  <ins class="adsbygoogle"
+       style="display:block; text-align:center; margin:20px 0;"
+       data-ad-client="ca-pub-XXXXXX"
+       data-ad-slot="3333333"
+       data-ad-format="auto"
+       data-full-width-responsive="true"></ins>
+  <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+
+  <!-- ✅ Sticky footer ad -->
+  <div style="position:fixed; bottom:0; width:100%; background:#fff; z-index:999;">
+    <ins class="adsbygoogle"
+         style="display:block; text-align:center;"
+         data-ad-client="ca-pub-XXXXXX"
+         data-ad-slot="4444444"
+         data-ad-format="auto"
+         data-full-width-responsive="true"></ins>
+    <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+  </div>
+
+  <script>
+    function loadPDF(pdfUrl) {
+      const subjectGrid = document.getElementById("subjectGrid");
+      const container = document.getElementById("pdfContainer");
+
+      subjectGrid.style.display = "none";
+      container.style.display = "block";
+
+      container.innerHTML = `
+        <button class="back-btn" onclick="goBack()">← Back to Subjects</button>
+        <iframe src="${pdfUrl}" style="width:100%; height:90vh;" frameborder="0"></iframe>
+      `;
+    }
+
+    function goBack() {
+      const subjectGrid = document.getElementById("subjectGrid");
+      const container = document.getElementById("pdfContainer");
+
+      container.style.display = "none";
+      subjectGrid.style.display = "grid";
+      container.innerHTML = ""; // clear iframe
+    }
+  </script>
 </body>
 </html>
