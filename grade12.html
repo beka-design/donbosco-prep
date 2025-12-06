@@ -3,9 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <title>Grade 12 Textbook</title>
-  <!-- Global navbar styles -->
   <link rel="stylesheet" href="css/style.css">
-  <!-- Grade-specific styles -->
   <link rel="stylesheet" href="css/grade12.css">
   <style>
     .pdf-container {
@@ -29,47 +27,100 @@
       font-weight: bold;
       cursor: pointer;
     }
+    .footer-ad {
+      margin: 0;
+      padding: 0;
+      text-align: center;
+      background: rgba(255, 255, 255, 0.8);
+      border-top: 1px solid #e6e6e6;
+    }
+    .footer-ad ins.adsbygoogle {
+      display: block;
+      margin: 0;
+    }
+    .site-footer {
+      background-color: #030135;
+      color: white;
+      padding: 2rem 1rem;
+      font-size: 0.9rem;
+      margin: 0;
+    }
+    .footer-columns {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: 2rem;
+      margin-bottom: 1rem;
+    }
+    .footer-column {
+      flex: 1 1 200px;
+    }
+    .footer-column h4 {
+      margin: 0 0 0.5rem 0;
+      font-size: 1.1rem;
+      text-decoration: underline;
+      text-decoration-color: #fa912e;
+      text-decoration-thickness: 2px;
+      text-underline-offset: 4px;
+    }
+    .footer-column ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+    .footer-column ul li {
+      margin-bottom: 0.4rem;
+    }
+    .footer-column ul li a {
+      color: #bbdefb;
+      text-decoration: none;
+    }
+    .footer-column ul li a:hover {
+      text-decoration: underline;
+    }
+    .footer-bottom {
+      text-align: center;
+      border-top: 1px solid #1976d2;
+      padding-top: 1rem;
+      font-size: 0.8rem;
+    }
   </style>
 
-  <!-- ✅ AdSense script -->
+  <!-- AdSense script -->
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
   <script>
     (adsbygoogle = window.adsbygoogle || []).push({});
   </script>
 </head>
 <body>
-  <!-- Global background slideshow -->
   <div class="slideshow-bg"></div>
 
-  <!-- HEADER -->
   <header class="header">
     <div class="logo">
       <div class="brand-square">DB</div>
       <div class="site-title">DonBoscoPrep</div>
     </div>
-
     <nav class="main-nav" aria-label="Primary">
       <ul class="navbar">
         <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
         <li class="nav-item"><a href="grades.html" class="nav-link btn">Practice</a></li>
         <li class="nav-item dropdown">
-          <button class="dropdown-toggle" aria-expanded="false" aria-haspopup="true">Text-book ⌵</button>
-          <ul class="dropdown-menu" role="menu">
-            <li><a href="grade9.html" class="dropdown-link">Grade 9</a></li>
-            <li><a href="grade10.html" class="dropdown-link">Grade 10</a></li>
-            <li><a href="grade11.html" class="dropdown-link">Grade 11</a></li>
-            <li><a href="grade12.html" class="dropdown-link">Grade 12</a></li>
+          <button class="dropdown-toggle">Text-book ⌵</button>
+          <ul class="dropdown-menu">
+            <li><a href="grade9.html">Grade 9</a></li>
+            <li><a href="grade10.html">Grade 10</a></li>
+            <li><a href="grade11.html">Grade 11</a></li>
+            <li><a href="grade12.html">Grade 12</a></li>
           </ul>
         </li>
-        <li class="nav-item"><a href="videos.html" class="nav-link">Video Lessons</a></li>
+        <li class="nav-item"><a href="videos.html">Video Lessons</a></li>
       </ul>
     </nav>
   </header>
 
-  <!-- Page heading -->
   <h1>Grade 12 Textbook</h1>
 
-  <!-- ✅ Ad above subjects -->
+  <!-- Ad above subjects -->
   <ins class="adsbygoogle"
        style="display:block; text-align:center; margin:20px 0;"
        data-ad-client="ca-pub-XXXXXX"
@@ -90,7 +141,7 @@
     <a href="#" class="subject" onclick="event.preventDefault(); loadPDF('pdfs/grade12-history.pdf')">History</a>
   </div>
 
-  <!-- ✅ Ad between subjects and PDF -->
+  <!-- Ad between subjects and PDF -->
   <ins class="adsbygoogle"
        style="display:block; text-align:center; margin:20px 0;"
        data-ad-client="ca-pub-XXXXXX"
@@ -99,10 +150,9 @@
        data-full-width-responsive="true"></ins>
   <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
 
-  <!-- PDF Viewer -->
   <div class="pdf-container" id="pdfContainer"></div>
 
-  <!-- ✅ Ad below PDF -->
+  <!-- Ad below PDF -->
   <ins class="adsbygoogle"
        style="display:block; text-align:center; margin:20px 0;"
        data-ad-client="ca-pub-XXXXXX"
@@ -111,10 +161,10 @@
        data-full-width-responsive="true"></ins>
   <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
 
-  <!-- ✅ Sticky footer ad -->
-  <div style="position:fixed; bottom:0; width:100%; background: rgba(255, 255, 255, 0.8); z-index:999;">
+  <!-- Ad merged directly above footer -->
+  <div class="footer-ad">
     <ins class="adsbygoogle"
-         style="display:block; text-align:center;"
+         style="display:block; text-align:center; margin:0;"
          data-ad-client="ca-pub-XXXXXX"
          data-ad-slot="1515151"
          data-ad-format="auto"
@@ -122,33 +172,8 @@
     <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
   </div>
 
-  <script>
-    function loadPDF(pdfUrl) {
-      const subjectGrid = document.getElementById("subjectGrid");
-      const container = document.getElementById("pdfContainer");
-
-      subjectGrid.style.display = "none";
-      container.style.display = "block";
-
-      container.innerHTML = `
-        <button class="back-btn" onclick="goBack()">← Back to Subjects</button>
-        <iframe src="${pdfUrl}" style="width:100%; height:90vh;" frameborder="0"></iframe>
-      `;
-    }
-
-    function goBack() {
-      const subjectGrid = document.getElementById("subjectGrid");
-      const container = document.getElementById("pdfContainer");
-
-      container.style.display = "none";
-      subjectGrid.style.display = "grid";
-      container.innerHTML = ""; // clear iframe
-    }
-  </script>
-   <!-- FOOTER -->
   <footer class="site-footer">
     <div class="footer-columns">
-      
       <div class="footer-column">
         <h4>Resources</h4>
         <ul>
@@ -181,5 +206,28 @@
     </div>
   </footer>
 
+  <script>
+    function loadPDF(pdfUrl) {
+      const subjectGrid = document.getElementById("subjectGrid");
+      const container = document.getElementById("pdfContainer");
+
+      subjectGrid.style.display = "none";
+      container.style.display = "block";
+
+      container.innerHTML = `
+        <button class="back-btn" onclick="goBack()">← Back to Subjects</button>
+        <iframe src="${pdfUrl}" style="width:100%; height:90vh;" frameborder="0"></iframe>
+      `;
+    }
+
+    function goBack() {
+      const subjectGrid = document.getElementById("subjectGrid");
+      const container = document.getElementById("pdfContainer");
+
+      container.style.display = "none";
+      subjectGrid.style.display = "grid";
+      container.innerHTML = "";
+    }
+  </script>
 </body>
 </html>

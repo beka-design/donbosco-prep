@@ -8,9 +8,9 @@
   <style>
     .pdf-container {
       width: 100%;
-      height: 100vh; /* full viewport height */
+      height: 100vh;
       margin-top: 20px;
-      display: none; /* hidden until a PDF is loaded */
+      display: none;
       position: relative;
     }
     .pdf-container iframe {
@@ -19,7 +19,7 @@
       border: none;
     }
     .back-btn {
-      position: sticky;   /* stays visible while scrolling */
+      position: sticky;
       top: 0;
       z-index: 1000;
       display: inline-block;
@@ -34,53 +34,107 @@
     }
     @media (max-width: 768px) {
       .pdf-container {
-        height: 80vh; /* shorter on mobile */
+        height: 80vh;
       }
+    }
+    .footer-ad {
+      margin: 0;
+      padding: 0;
+      text-align: center;
+      background: rgba(255, 255, 255, 0.8);
+      border-top: 1px solid #e6e6e6;
+    }
+    .footer-ad ins.adsbygoogle {
+      display: block;
+      margin: 0;
+    }
+    .site-footer {
+      background-color: #030135;
+      color: white;
+      padding: 2rem 1rem;
+      font-size: 0.9rem;
+      margin: 0;
+    }
+    .footer-columns {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: 2rem;
+      margin-bottom: 1rem;
+    }
+    .footer-column {
+      flex: 1 1 200px;
+    }
+    .footer-column h4 {
+      margin: 0 0 0.5rem 0;
+      font-size: 1.1rem;
+      text-decoration: underline;
+      text-decoration-color: #fa912e;
+      text-decoration-thickness: 2px;
+      text-underline-offset: 4px;
+    }
+    .footer-column ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+    .footer-column ul li {
+      margin-bottom: 0.4rem;
+    }
+    .footer-column ul li a {
+      color: #bbdefb;
+      text-decoration: none;
+    }
+    .footer-column ul li a:hover {
+      text-decoration: underline;
+    }
+    .footer-bottom {
+      text-align: center;
+      border-top: 1px solid #1976d2;
+      padding-top: 1rem;
+      font-size: 0.8rem;
     }
   </style>
 
-  <!-- ✅ AdSense script -->
+  <!-- AdSense script -->
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
   <script>
     (adsbygoogle = window.adsbygoogle || []).push({});
   </script>
 </head>
 <body>
-  <!-- Global background slideshow -->
   <div class="slideshow-bg"></div>
 
-  <!-- HEADER -->
   <header class="header">
     <div class="logo">
       <div class="brand-square">DB</div>
       <div class="site-title">DonBoscoPrep</div>
     </div>
-
     <nav class="main-nav" aria-label="Primary">
       <ul class="navbar">
         <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
         <li class="nav-item"><a href="grades.html" class="nav-link btn">Practice</a></li>
         <li class="nav-item dropdown">
-          <button class="dropdown-toggle" aria-expanded="false" aria-haspopup="true">Text-book ⌵</button>
-          <ul class="dropdown-menu" role="menu">
-            <li><a href="grade9.html" class="dropdown-link">Grade 9</a></li>
-            <li><a href="grade10.html" class="dropdown-link">Grade 10</a></li>
-            <li><a href="grade11.html" class="dropdown-link">Grade 11</a></li>
-            <li><a href="grade12.html" class="dropdown-link">Grade 12</a></li>
+          <button class="dropdown-toggle">Text-book ⌵</button>
+          <ul class="dropdown-menu">
+            <li><a href="grade9.html">Grade 9</a></li>
+            <li><a href="grade10.html">Grade 10</a></li>
+            <li><a href="grade11.html">Grade 11</a></li>
+            <li><a href="grade12.html">Grade 12</a></li>
           </ul>
         </li>
-        <li class="nav-item"><a href="videos.html" class="nav-link">Video Lessons</a></li>
+        <li class="nav-item"><a href="videos.html">Video Lessons</a></li>
       </ul>
     </nav>
   </header>
 
   <h1>Grade 9 Textbook</h1>
 
-  <!-- ✅ Ad above subjects -->
+  <!-- Ad above subjects -->
   <ins class="adsbygoogle"
        style="display:block; text-align:center; margin:20px 0;"
        data-ad-client="ca-pub-XXXXXX"
-       data-ad-slot="1111111"
+       data-ad-slot="9111111"
        data-ad-format="auto"
        data-full-width-responsive="true"></ins>
   <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
@@ -96,47 +150,30 @@
     <a href="#" class="subject" onclick="event.preventDefault(); loadPDF('pdfs/grade9-history.pdf')">History</a>
   </div>
 
-  <!-- PDF Viewer -->
   <div class="pdf-container" id="pdfContainer"></div>
 
-  <!-- ✅ Ad below PDF -->
+  <!-- Ad below PDF -->
   <ins class="adsbygoogle"
        style="display:block; text-align:center; margin:20px 0;"
        data-ad-client="ca-pub-XXXXXX"
-       data-ad-slot="2222222"
+       data-ad-slot="9222222"
        data-ad-format="auto"
        data-full-width-responsive="true"></ins>
   <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
 
-  <script>
-    function loadPDF(pdfUrl) {
-      const subjectGrid = document.getElementById("subjectGrid");
-      const container = document.getElementById("pdfContainer");
+  <!-- Ad merged directly above footer -->
+  <div class="footer-ad">
+    <ins class="adsbygoogle"
+         style="display:block; text-align:center; margin:0;"
+         data-ad-client="ca-pub-XXXXXX"
+         data-ad-slot="9333333"
+         data-ad-format="auto"
+         data-full-width-responsive="true"></ins>
+    <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+  </div>
 
-      // Hide subjects, show PDF
-      subjectGrid.style.display = "none";
-      container.style.display = "block";
-
-      container.innerHTML = `
-        <button class="back-btn" onclick="goBack()">← Back to Subjects</button>
-        <iframe src="${pdfUrl}" style="width:100%; height:90vh;" frameborder="0"></iframe>
-      `;
-    }
-
-    function goBack() {
-      const subjectGrid = document.getElementById("subjectGrid");
-      const container = document.getElementById("pdfContainer");
-
-      // Hide PDF, show subjects
-      container.style.display = "none";
-      subjectGrid.style.display = "grid";
-      container.innerHTML = ""; // clear iframe
-    }
-  </script>
-   <!-- FOOTER -->
   <footer class="site-footer">
     <div class="footer-columns">
-      
       <div class="footer-column">
         <h4>Resources</h4>
         <ul>
@@ -169,5 +206,28 @@
     </div>
   </footer>
 
+  <script>
+    function loadPDF(pdfUrl) {
+      const subjectGrid = document.getElementById("subjectGrid");
+      const container = document.getElementById("pdfContainer");
+
+      subjectGrid.style.display = "none";
+      container.style.display = "block";
+
+      container.innerHTML = `
+        <button class="back-btn" onclick="goBack()">← Back to Subjects</button>
+        <iframe src="${pdfUrl}" style="width:100%; height:90vh;" frameborder="0"></iframe>
+      `;
+    }
+
+    function goBack() {
+      const subjectGrid = document.getElementById("subjectGrid");
+      const container = document.getElementById("pdfContainer");
+
+      container.style.display = "none";
+      subjectGrid.style.display = "grid";
+      container.innerHTML = "";
+    }
+  </script>
 </body>
 </html>
