@@ -33,26 +33,41 @@
       text-align: center;
     }
 
-    /* ✅ Mobile adjustments to match Grade 10 look */
     @media (max-width: 768px) {
-      .pdf-container {
-        height: 80vh; /* shorter on mobile */
-      }
-      .back-btn {
-        width: 100%;   /* full width button on mobile */
-      }
-      .subject-grid {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        gap: 10px;
-        margin: 0 10px;
-      }
-      .subject-grid .subject {
-        text-align: center;
-        padding: 12px;
-        font-size: 1rem;
-      }
-    }
+  .pdf-container {
+    height: 80vh;
+  }
+
+  .back-btn {
+    width: 100%;
+    font-size: 1rem;
+    margin: 10px 0;
+  }
+
+  .subject-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+    padding: 0 12px;
+  }
+
+  .subject-grid .subject {
+    display: block;
+    text-align: center;
+    padding: 14px;
+    background-color: #3498db;
+    color: #fff;
+    border-radius: 6px;
+    font-weight: bold;
+    font-size: 1rem;
+    text-decoration: none;
+  }
+
+  .subject-grid .subject:hover {
+    background-color: #2980b9;
+  }
+}
+
 
     .footer-ad {
       margin: 0;
