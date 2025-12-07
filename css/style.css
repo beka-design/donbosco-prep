@@ -151,23 +151,29 @@ footer {
   margin-top: 100px;
 }
 
-/* === MOBILE FIXES === */
-@media (max-width: 768px) {
-  .hero {
-    min-height: 60vh;
-    text-align: center;
+@media (max-width: 600px) {
+  .subjects-grid {
+    display: flex !important;
+    flex-wrap: wrap !important;
+    justify-content: center !important;
+    gap: 24px !important; /* More horizontal space between columns */
+    width: 100% !important;
+    padding: 0 10px !important;
   }
 
   .subject-card {
-    width: 90%;
-    height: 90px;
-    font-size: 1rem;
-  }
-
-  .subjects-grid {
-    gap: 20px;
+    width: calc(48% - 24px) !important; /* Slightly narrower to allow more gap */
+    min-width: 100px !important;
+    height: 110px !important;
+    font-size: 0.8rem !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    border-radius: 12px !important;
+    margin: 14px !important;
   }
 }
+
 /* ============ HERO ANIMATION CONTAINER ============ */
 .hero-animated {
   position: relative;
@@ -1486,54 +1492,50 @@ h1, h2, h3, p, li, a, span {
    ========================================= */
 
 @media (max-width: 600px) {
+  /* Section spacing */
+  h1 {
+    font-size: 1.8rem;
+    margin-bottom: 30px;
+    color: #27ae60; /* match Grade 10 green */
+  }
 
-    /* 1. Fix the Section Spacing */
-    .subjects-section {
-        padding-top: 40px !important;   /* Give the title some room */
-        padding-bottom: 60px !important;
-    }
+  /* Grid container */
+  .subject-grid {
+    display: flex;
+    flex-direction: column; /* stack in one column */
+    gap: 20px;              /* space between cards */
+    width: 100%;
+    padding: 0 16px;        /* keep away from screen edges */
+    max-width: 500px;
+    margin: 0 auto;
+  }
 
-    .subjects-section h2 {
-        font-size: 1.8rem !important;   /* Smaller Title */
-        margin-bottom: 30px !important; /* Space between title and cards */
-    }
+  /* Individual cards */
+  .subject {
+    display: block;
+    width: 100%;
+    text-align: center;
+    padding: 16px;
+    background-color: #3498db;
+    color: #fff;
+    border-radius: 12px;
+    font-weight: bold;
+    font-size: 1rem;
+    text-decoration: none;
+  }
 
-    /* 2. Fix the Grid Container */
-    .subjects-grid {
-        display: flex !important;
-        flex-wrap: wrap !important;
-        justify-content: center !important;
-        gap: 15px !important; /* Force space between cards vertically & horizontally */
-        width: 100% !important;
-        padding: 0 10px !important; /* Prevent touching screen edges */
-    }
-
-    /* 3. Fix the Individual Cards */
-    .subject-card {
-        /* Calculates exact width to fit 2 items per row minus the gap */
-        width: calc(50% - 20px) !important; 
-        min-width: 100px !important; /* Prevents getting too small */
-        
-        /* Make them shorter/smaller */
-        height: 110px !important; 
-        
-        /* Text styling */
-        font-size: 1rem !important;
-        display: flex !important;
-        align-items: center !important;
-        justify-content: center !important;
-        
-        /* Visuals */
-        border-radius: 12px !important;
-        margin: 10px !important; /* Remove any external margins causing the overlap */
-    }
+  .subject:hover {
+    background-color: #2980b9;
+  }
 }
+
 /* 2. Force Grade Page Transparency */
 .grade-section, 
 .grades-grid-container {
     background: transparent !important;
     background-color: transparent !important;
     box-shadow: none !important;
+    
 }
 /* =========================================
    GRADES PAGE SPECIFIC STYLES
@@ -1643,10 +1645,11 @@ html, body, .main, .grades-section {
     }
 
     .grade-card, .card {
-        width: 45%; /* Two cards per row */
-        height: 140px; /* Shorter cards */
+        width: 100%; /* Two cards per row */
+        height: 120px; /* Shorter cards */
         font-size: 1.1rem;
         padding: 10px;
+        margin: 10px;
     }
     
     .icon-box {
