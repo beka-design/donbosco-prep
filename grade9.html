@@ -160,6 +160,52 @@ h1 {
 .subject:hover {
   background-color: #1e8449;
 }
+/* Match Grade 10 mobile layout */
+@media (max-width: 768px) {
+  h1 {
+    margin-top: 40px;
+    font-size: 2em;
+    color: #27ae60; /* Grade 10 green */
+    text-align: center;
+  }
+
+  .subject-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    padding: 0 16px;
+    max-width: 500px;
+    margin: 0 auto;
+  }
+
+  .subject-grid .subject {
+    display: block;
+    width: 100%;
+    text-align: center;
+    padding: 14px;
+    background-color: #3498db;
+    color: #fff;
+    border-radius: 6px;
+    font-weight: bold;
+    font-size: 1rem;
+    text-decoration: none;
+  }
+
+  .subject-grid .subject:hover {
+    background-color: #2980b9;
+  }
+
+  .back-btn {
+    width: 100%;
+    margin: 10px 0;
+    font-size: 1rem;
+    text-align: center;
+  }
+
+  .pdf-container {
+    height: 80vh;
+  }
+}
 
   </style>
 
