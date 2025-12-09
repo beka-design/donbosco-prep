@@ -251,5 +251,34 @@
       container.innerHTML = "";
     }
   </script>
+  <script>
+  function loadPDF(pdfUrl) {
+    const subjectGrid = document.getElementById("subjectGrid");
+    const container = document.getElementById("pdfContainer");
+
+    subjectGrid.style.display = "none";
+    container.style.display = "block";
+
+    container.innerHTML = `
+      <button class="back-btn" onclick="goBack()">← Back to Subjects</button>
+      <iframe src="${pdfUrl}" style="width:100%; height:90vh;" frameborder="0"></iframe>
+    `;
+
+    // ✅ Scroll smoothly to the PDF container so users see it immediately
+    container.scrollIntoView({ behavior: "smooth", block: "start" });
+  }
+
+  function goBack() {
+    const subjectGrid = document.getElementById("subjectGrid");
+    const container = document.getElementById("pdfContainer");
+
+    container.style.display = "none";
+    subjectGrid.style.display = "grid";
+    container.innerHTML = ""; // clear iframe
+
+    // ✅ Scroll smoothly back to the subject grid
+    subjectGrid.scrollIntoView({ behavior: "smooth", block: "start" });
+  }
+</script>
 </body>
 </html>
