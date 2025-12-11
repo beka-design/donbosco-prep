@@ -5,14 +5,2321 @@
 ============================= */
 
 // 1. THE QUESTION BANK
+fetch("api/questions.json")
+  .then(res => res.json())
+  .then(data => {
+    localStorage.setItem("quizQuestions", JSON.stringify(data));
+  });
+
 const allQuestions = [
     // Grade 9
-    { id: 1, grade:"9", subject:"Mathematics", question:"What is 7 + 5?", options:["A.10","B.11","C.12","D.13"], correct:2, aiExplanation:"7 + 5 equals 12.", topicName:"Addition" },
-    { id: 2, grade:"9", subject:"Mathematics", question:"Solve 9 × 3.", options:["A.27","B.21","C.30","D.24"], correct:0, aiExplanation:"9 multiplied by 3 is 27.", topicName:"Multiplication" },
-    { id: 3, grade:"9", subject:"Mathematics", question:"What is 16 ÷ 4?", options:["A.2","B.4","C.6","D.8"], correct:1, aiExplanation:"16 divided by 4 is 4.", topicName:"Division" },
-    { id: 4, grade:"9", subject:"Biology", question:"Which is a vertebrate?", options:["A.Frog","B.Earthworm","C.Snail","D.Jellyfish"], correct:0, aiExplanation:"Frogs are vertebrates with a backbone.", topicName:"Animals" },
-    { id: 5, grade:"9", subject:"Biology", question:"What is the function of roots?", options:["A.Photosynthesis","B.Anchoring & Absorption","C.Respiration","D.Circulation"], correct:1, aiExplanation:"Roots anchor plants and absorb water & minerals.", topicName:"Plant Structure" },
-    { id: 6, grade:"9", subject:"Biology", question:"Which part of the cell contains DNA?", options:["A.Cytoplasm","B.Nucleus","C.Ribosome","D.Mitochondria"], correct:1, aiExplanation:"The nucleus contains DNA.", topicName:"Cell Structure" },
+    /* =========================================
+   DonBoscoPrep Quiz System
+   Grade 9 Mathematics - Final Exam Compilation
+========================================= */
+
+
+    // --- FROM SOURCE: GEOMETRY & POLYGONS ---
+    { 
+        id: 1, 
+        grade: "9", 
+        subject: "Mathematics", 
+        question: "In a regular polygon, the degree measure of each central angle is 30°. What is the sum of all interior angles of such a polygon?", 
+        options: ["1800°", "2160°", "1440°", "1980°"], 
+        correct: 0, 
+        aiExplanation: "Central angle = 360/n. 30 = 360/n => n = 12 sides. Sum of interior angles = (n-2) × 180 = (12-2) × 180 = 10 × 180 = 1800°.", 
+        topicName: "Polygons" 
+    },
+    { 
+        id: 2, 
+        grade: "9", 
+        subject: "Mathematics", 
+        question: "What is the area of a regular hexagon inscribed in a circle of radius 12cm?", 
+        options: ["216√3 cm²", "216 cm²", "72 cm²", "72√3 cm²"], 
+        correct: 0, 
+        aiExplanation: "For a regular hexagon, side length equals radius (12cm). Area = (3√3 / 2) × s². Area = (3√3 / 2) × 144 = 216√3 cm².", 
+        topicName: "Geometry" 
+    },
+    { 
+        id: 3, 
+        grade: "9", 
+        subject: "Mathematics", 
+        question: "The degree measure of each interior angle of a 15-sided regular polygon is:", 
+        options: ["243°", "156°", "172°", "24°"], 
+        correct: 1, 
+        aiExplanation: "Each interior angle = [(n-2) × 180] / n. For n=15: (13 × 180) / 15 = 2340 / 15 = 156°.", 
+        topicName: "Polygons" 
+    },
+    { 
+        id: 4, 
+        grade: "9", 
+        subject: "Mathematics", 
+        question: "The sum of the measures of the three interior angles of a scalene triangle is:", 
+        options: ["360°", "0°", "180°", "90°"], 
+        correct: 2, 
+        aiExplanation: "The sum of interior angles of ANY triangle (scalene, isosceles, or equilateral) is always 180°.", 
+        topicName: "Geometry" 
+    },
+    { 
+        id: 5, 
+        grade: "9", 
+        subject: "Mathematics", 
+        question: "The apothem of an inscribed regular hexagon is 6cm. What is the area of the Hexagon?", 
+        options: ["144√3 cm²", "72√3 cm²", "36√3 cm²", "12√3 cm²"], 
+        correct: 1, 
+        aiExplanation: "In a hexagon, apothem a = s√3/2. If a=6, then 6 = s√3/2 => s = 12/√3 = 4√3. Area = 1/2 * Perimeter * apothem = 1/2 * (6 * 4√3) * 6 = 72√3.", 
+        topicName: "Geometry" 
+    },
+    { 
+        id: 6, 
+        grade: "9", 
+        subject: "Mathematics", 
+        question: "Maximum possible exterior angle in a regular polygon occurs in a:", 
+        options: ["Triangle", "Square", "Hexagon", "Octagon"], 
+        correct: 0, 
+        aiExplanation: "Exterior angle = 360/n. To maximize this, 'n' must be the smallest possible integer for a polygon, which is 3 (Triangle). 360/3 = 120°.", 
+        topicName: "Polygons" 
+    },
+    { 
+        id: 7, 
+        grade: "9", 
+        subject: "Mathematics", 
+        question: "Which of the following formulas is used to find the Total Surface Area (TSA) of a cylinder open at one end?", 
+        options: ["2πrh + 2πr²", "2πrh", "2πrh + πr²", "πrl + πr²"], 
+        correct: 2, 
+        aiExplanation: "A standard cylinder is 2πrh + 2πr². If open at one end, we remove one circular base, resulting in 2πrh (lateral) + πr² (one base).", 
+        topicName: "Solid Geometry" 
+    },
+    { 
+        id: 8, 
+        grade: "9", 
+        subject: "Mathematics", 
+        question: "The radian measure of 45° is:", 
+        options: ["π/3", "π/4", "π/6", "π/2"], 
+        correct: 1, 
+        aiExplanation: "To convert degrees to radians: Angle × (π/180). 45 × π/180 = π/4.", 
+        topicName: "Trigonometry" 
+    },
+    { 
+        id: 9, 
+        grade: "9", 
+        subject: "Mathematics", 
+        question: "A sector of a circle is the region bounded by:", 
+        options: ["A chord and an arc", "Two radii and an arc", "A diameter and a chord", "Two chords"], 
+        correct: 1, 
+        aiExplanation: "By definition, a sector is the 'slice of pizza' shape bounded by two radii and the intercepted arc.", 
+        topicName: "Circles" 
+    },
+    { 
+        id: 10, 
+        grade: "9", 
+        subject: "Mathematics", 
+        question: "Which of the following is true about a regular polygon with 'n' sides?", 
+        options: ["It has n-1 lines of symmetry", "It has n lines of symmetry", "It has n/2 lines of symmetry", "It has no lines of symmetry"], 
+        correct: 1, 
+        aiExplanation: "A regular polygon with n sides always has exactly n lines of symmetry.", 
+        topicName: "Polygons" 
+    },
+
+    // --- FROM SOURCE: RELATIONS & FUNCTIONS ---
+    { 
+        id: 11, 
+        grade: "9", 
+        subject: "Mathematics", 
+        question: "Let A={1,2,3,4} and B={-1,0,1,2}. If Relation R = {(x, y): y = x - 1, x ∈ A, y ∈ B}, then R is:", 
+        options: ["{(1,0), (2,1), (3,2)}", "{(1,0), (2,1), (3,2), (4,3)}", "{(0,-1), (1,0)}", "{(2,1), (3,2)}"], 
+        correct: 0, 
+        aiExplanation: "We test x values from A: If x=1, y=0 (in B). If x=2, y=1 (in B). If x=3, y=2 (in B). If x=4, y=3 (NOT in B). So R = {(1,0), (2,1), (3,2)}.", 
+        topicName: "Relations" 
+    },
+    { 
+        id: 12, 
+        grade: "9", 
+        subject: "Mathematics", 
+        question: "Let A = {x : 1 ≤ x < 8, x ∈ Z}. If R = {(x,y) : 3x - 2y > 3} is a relation, what is the domain?", 
+        options: ["{2, 4, 6}", "{1, 2, 3, 4, 5, 6, 7}", "{3, 4, 5}", "Depends on B"], 
+        correct: 1, 
+        aiExplanation: "The domain of a relation defined on set A is a subset of A. Without set B defined explicitly, the domain implies possible x values from A={1,2,3,4,5,6,7}.", 
+        topicName: "Relations" 
+    },
+    { 
+        id: 13, 
+        grade: "9", 
+        subject: "Mathematics", 
+        question: "Which of the following sets of ordered pairs represents a function?", 
+        options: ["{(1,1), (2,1), (5,1), (6,2)}", "{(1,5), (4,6), (1,9), (0,0)}", "{(x,y) : x = y²}", "{(x,y) : x = 3}"], 
+        correct: 0, 
+        aiExplanation: "A function requires that every x maps to exactly one y. In option A, x values (1, 2, 5, 6) are unique. In B, x=1 maps to 5 and 9. C and D are vertical lines/parabolas opening sideways.", 
+        topicName: "Functions" 
+    },
+    { 
+        id: 14, 
+        grade: "9", 
+        subject: "Mathematics", 
+        question: "If g = {(2,1), (5,3), (1,2), (0,-1)} and f = {(5,1), (6,-2), (1,5), (3,0)}, then f - g is:", 
+        options: ["{(-2,5), (3,1)}", "{(5,-2), (1,3)}", "{(0,-2), (0,3)}", "{(5,2), (1,-3)}"], 
+        correct: 1, 
+        aiExplanation: "We calculate (f-g)(x) = f(x) - g(x) for common domains. Common x are 1 and 5. At x=1: f(1)-g(1) = 5-2=3 -> (1,3). At x=5: f(5)-g(5) = 1-3=-2 -> (5,-2).", 
+        topicName: "Functions" 
+    },
+    { 
+        id: 15, 
+        grade: "9", 
+        subject: "Mathematics", 
+        question: "Let f(x) = -3x - 12 and g(x) = x - 2. What is the value of (3f + 5g)(0)?", 
+        options: ["-6", "-46", "-20", "-30"], 
+        correct: 1, 
+        aiExplanation: "First find f(0) = -12 and g(0) = -2. Then 3(-12) + 5(-2) = -36 - 10 = -46.", 
+        topicName: "Functions" 
+    },
+    { 
+        id: 16, 
+        grade: "9", 
+        subject: "Mathematics", 
+        question: "Let R = {(x,y) : y ≥ x and y + x < 2}. Which point does NOT belong to R?", 
+        options: ["(-1, 0)", "(1, 1)", "(0, 1)", "(-2, 0)"], 
+        correct: 1, 
+        aiExplanation: "Test (1,1): y ≥ x (1 ≥ 1 True). y + x < 2 (1 + 1 < 2 => 2 < 2 False). So (1,1) is not in R.", 
+        topicName: "Relations" 
+    },
+    { 
+        id: 17, 
+        grade: "9", 
+        subject: "Mathematics", 
+        question: "Which of the following is NOT true about the graph of f(x) = -3x² + 9?", 
+        options: ["Its x-intercepts are -√3 and √3", "Its vertex is (0, 9)", "Its line of symmetry is x = 0", "Its range is [0, ∞)"], 
+        correct: 3, 
+        aiExplanation: "Since 'a' is negative (-3), the parabola opens downward. The max value is at the vertex (9). The range is (-∞, 9], not [0, ∞).", 
+        topicName: "Quadratics" 
+    },
+    { 
+        id: 18, 
+        grade: "9", 
+        subject: "Mathematics", 
+        question: "Let f(x) = -x² + 4x. The vertex of the parabola is at:", 
+        options: ["(1, 4)", "(2, 4)", "(0, 4)", "(-2, -12)"], 
+        correct: 1, 
+        aiExplanation: "h = -b/2a = -4/(2*-1) = 2. k = f(2) = -(2)² + 4(2) = -4 + 8 = 4. Vertex is (2, 4).", 
+        topicName: "Quadratics" 
+    },
+    { 
+        id: 19, 
+        grade: "9", 
+        subject: "Mathematics", 
+        question: "The range of the relation R = {(x, y) : y = x² + 1} for real numbers is:", 
+        options: ["All Real Numbers", "y ≥ 1", "y > 0", "y ≤ 1"], 
+        correct: 1, 
+        aiExplanation: "Since x² ≥ 0, adding 1 means x² + 1 ≥ 1. Thus, y ≥ 1.", 
+        topicName: "Relations" 
+    },
+    { 
+        id: 20, 
+        grade: "9", 
+        subject: "Mathematics", 
+        question: "Which of the following relations is a function?", 
+        options: ["x = y²", "y = x²", "x² + y² = 1", "x = |y|"], 
+        correct: 1, 
+        aiExplanation: "y = x² is a function (parabola opening up). The others fail the vertical line test (one x maps to two y values).", 
+        topicName: "Functions" 
+    },
+
+    // --- FROM SOURCE: PROBABILITY & STATISTICS ---
+    { 
+        id: 21, 
+        grade: "9", 
+        subject: "Mathematics", 
+        question: "Two dice are tossed simultaneously. What is the probability that the sum of the two numbers is less than 4?", 
+        options: ["2/36", "3/36", "4/36", "1/12"], 
+        correct: 3, 
+        aiExplanation: "Possible sums less than 4: (1,1), (1,2), (2,1). Total outcomes = 3. Total space = 36. Prob = 3/36 = 1/12.", 
+        topicName: "Probability" 
+    },
+    { 
+        id: 22, 
+        grade: "9", 
+        subject: "Mathematics", 
+        question: "If three fair coins are tossed, what is the probability of getting at least two heads?", 
+        options: ["1/2", "3/8", "1/4", "1/8"], 
+        correct: 0, 
+        aiExplanation: "Sample space = 8 (HHH, HHT, HTH, THH, HTT, THT, TTH, TTT). At least 2 heads: HHH, HHT, HTH, THH (4 outcomes). Prob = 4/8 = 1/2.", 
+        topicName: "Probability" 
+    },
+    { 
+        id: 23, 
+        grade: "9", 
+        subject: "Mathematics", 
+        question: "Variance of a set of data can never be:", 
+        options: ["Zero", "Positive", "Negative", "Large"], 
+        correct: 2, 
+        aiExplanation: "Variance is the average of squared differences from the mean. Since squares cannot be negative, variance cannot be negative.", 
+        topicName: "Statistics" 
+    },
+    { 
+        id: 24, 
+        grade: "9", 
+        subject: "Mathematics", 
+        question: "If A is an impossible event, then P(A) is:", 
+        options: ["0", "1", "0.5", "Undefined"], 
+        correct: 0, 
+        aiExplanation: "The probability of an impossible event is always 0.", 
+        topicName: "Probability" 
+    },
+    { 
+        id: 25, 
+        grade: "9", 
+        subject: "Mathematics", 
+        question: "For any event E, which inequality is always true?", 
+        options: ["0 ≤ P(E) ≤ 1", "0 < P(E) < 1", "P(E) > 1", "P(E) = 0"], 
+        correct: 0, 
+        aiExplanation: "Probability ranges from 0 (impossible) to 1 (certain).", 
+        topicName: "Probability" 
+    },
+    { 
+        id: 26, 
+        grade: "9", 
+        subject: "Mathematics", 
+        question: "The mean of the data set: 2, 4, 6, 8, 10 is:", 
+        options: ["5", "6", "7", "8"], 
+        correct: 1, 
+        aiExplanation: "Mean = Sum/Count. (2+4+6+8+10)/5 = 30/5 = 6.", 
+        topicName: "Statistics" 
+    },
+    { 
+        id: 27, 
+        grade: "9", 
+        subject: "Mathematics", 
+        question: "Which measure of central tendency represents the most frequently occurring value?", 
+        options: ["Mean", "Median", "Mode", "Range"], 
+        correct: 2, 
+        aiExplanation: "Mode is defined as the value that appears most often in a data set.", 
+        topicName: "Statistics" 
+    },
+    { 
+        id: 28, 
+        grade: "9", 
+        subject: "Mathematics", 
+        question: "If a card is drawn from a standard deck of 52 cards, what is the probability of drawing a King?", 
+        options: ["1/52", "4/52", "13/52", "12/52"], 
+        correct: 1, 
+        aiExplanation: "There are 4 Kings in a deck (one for each suit). Probability = 4/52 = 1/13.", 
+        topicName: "Probability" 
+    },
+    { 
+        id: 29, 
+        grade: "9", 
+        subject: "Mathematics", 
+        question: "The median of the data: 3, 5, 1, 6, 9 is:", 
+        options: ["1", "5", "6", "3"], 
+        correct: 1, 
+        aiExplanation: "First order the data: 1, 3, 5, 6, 9. The middle number is 5.", 
+        topicName: "Statistics" 
+    },
+    { 
+        id: 30, 
+        grade: "9", 
+        subject: "Mathematics", 
+        question: "A bag contains 3 red balls and 5 blue balls. Probability of drawing a red ball?", 
+        options: ["3/5", "3/8", "5/8", "1/3"], 
+        correct: 1, 
+        aiExplanation: "Total balls = 8. Red balls = 3. Probability = 3/8.", 
+        topicName: "Probability" 
+    },
+
+    // --- EXPANDED CURRICULUM QUESTIONS ---
+    { 
+        id: 31, 
+        grade: "9", 
+        subject: "Mathematics", 
+        question: "Find the value of x if 2(x - 3) = 14.", 
+        options: ["7", "10", "11", "17"], 
+        correct: 1, 
+        aiExplanation: "2x - 6 = 14. 2x = 20. x = 10.", 
+        topicName: "Algebra" 
+    },
+    { 
+        id: 32, 
+        grade: "9", 
+        subject: "Mathematics", 
+        question: "The set {x : x is a natural number and x < 1} is:", 
+        options: ["{0}", "{1}", "Empty Set (∅)", "{0, 1}"], 
+        correct: 2, 
+        aiExplanation: "Natural numbers start from 1 (usually). There is no natural number less than 1, so it is the empty set.", 
+        topicName: "Sets" 
+    },
+    { 
+        id: 33, 
+        grade: "9", 
+        subject: "Mathematics", 
+        question: "Which of the following is an irrational number?", 
+        options: ["√4", "3.14", "22/7", "√2"], 
+        correct: 3, 
+        aiExplanation: "√4 is 2. 3.14 is a terminating decimal. 22/7 is a fraction. √2 cannot be written as a simple fraction, so it is irrational.", 
+        topicName: "Number System" 
+    },
+    { 
+        id: 34, 
+        grade: "9", 
+        subject: "Mathematics", 
+        question: "The intersection of sets A={1,2,3} and B={3,4,5} is:", 
+        options: ["{1,2,3,4,5}", "{3}", "{1,2}", "∅"], 
+        correct: 1, 
+        aiExplanation: "Intersection is the element common to both sets. Only 3 is in both.", 
+        topicName: "Sets" 
+    },
+    { 
+        id: 35, 
+        grade: "9", 
+        subject: "Mathematics", 
+        question: "Simplify: (a³ × a²) / a⁴", 
+        options: ["a", "a²", "a⁹", "1"], 
+        correct: 0, 
+        aiExplanation: "a^(3+2) / a^4 = a^5 / a^4 = a^(5-4) = a^1 = a.", 
+        topicName: "Exponents" 
+    },
+    { 
+        id: 36, 
+        grade: "9", 
+        subject: "Mathematics", 
+        question: "Two triangles are similar if:", 
+        options: ["Their corresponding sides are equal", "Their corresponding angles are equal", "They have the same area", "They have the same perimeter"], 
+        correct: 1, 
+        aiExplanation: "Similarity requires corresponding angles to be equal (AAA) and sides to be proportional.", 
+        topicName: "Geometry" 
+    },
+    { 
+        id: 37, 
+        grade: "9", 
+        subject: "Mathematics", 
+        question: "The volume of a right circular cylinder with radius r and height h is given by:", 
+        options: ["πr²h", "2πrh", "πrh²", "1/3 πr²h"], 
+        correct: 0, 
+        aiExplanation: "Volume of cylinder = Area of base × height = (πr²) × h.", 
+        topicName: "Solid Geometry" 
+    },
+    { 
+        id: 38, 
+        grade: "9", 
+        subject: "Mathematics", 
+        question: "If the radius of a circle is doubled, its area increases by a factor of:", 
+        options: ["2", "4", "8", "16"], 
+        correct: 1, 
+        aiExplanation: "Area = πr². New Area = π(2r)² = π(4r²) = 4(πr²). It increases by 4.", 
+        topicName: "Geometry" 
+    },
+    { 
+        id: 39, 
+        grade: "9", 
+        subject: "Mathematics", 
+        question: "The linear equation y = 3x - 1 passes through which point?", 
+        options: ["(0, 1)", "(1, 1)", "(1, 2)", "(2, 4)"], 
+        correct: 2, 
+        aiExplanation: "Test x=1: y = 3(1) - 1 = 2. So (1, 2) is on the line.", 
+        topicName: "Functions" 
+    },
+    { 
+        id: 40, 
+        grade: "9", 
+        subject: "Mathematics", 
+        question: "The slope of the line passing through (2, 3) and (4, 7) is:", 
+        options: ["1", "2", "3", "4"], 
+        correct: 1, 
+        aiExplanation: "Slope m = (y2 - y1) / (x2 - x1) = (7 - 3) / (4 - 2) = 4 / 2 = 2.", 
+        topicName: "Coordinate Geometry" 
+    },
+    { 
+        id: 41, 
+        grade: "9", 
+        subject: "Mathematics", 
+        question: "What is the complement of 60°?", 
+        options: ["30°", "120°", "90°", "40°"], 
+        correct: 0, 
+        aiExplanation: "Complementary angles add up to 90°. 90 - 60 = 30°.", 
+        topicName: "Geometry" 
+    },
+    { 
+        id: 42, 
+        grade: "9", 
+        subject: "Mathematics", 
+        question: "A subset of the population selected for a statistical study is called a:", 
+        options: ["Parameter", "Sample", "Census", "Variable"], 
+        correct: 1, 
+        aiExplanation: "A sample is a smaller group selected from the full population for analysis.", 
+        topicName: "Statistics" 
+    },
+    { 
+        id: 43, 
+        grade: "9", 
+        subject: "Mathematics", 
+        question: "Which logical connective represents 'If... then'?", 
+        options: ["Conjunction", "Disjunction", "Implication", "Negation"], 
+        correct: 2, 
+        aiExplanation: "Implication (->) represents conditional statements like 'If p then q'.", 
+        topicName: "Logic" 
+    },
+    { 
+        id: 44, 
+        grade: "9", 
+        subject: "Mathematics", 
+        question: "In a right-angled triangle, if sides are 3 and 4, the hypotenuse is:", 
+        options: ["5", "6", "7", "8"], 
+        correct: 0, 
+        aiExplanation: "Pythagorean theorem: 3² + 4² = c². 9 + 16 = 25. √25 = 5.", 
+        topicName: "Geometry" 
+    },
+    { 
+        id: 45, 
+        grade: "9", 
+        subject: "Mathematics", 
+        question: "Convert 3.5 m to cm.", 
+        options: ["35 cm", "350 cm", "3500 cm", "0.35 cm"], 
+        correct: 1, 
+        aiExplanation: "1 m = 100 cm. 3.5 × 100 = 350 cm.", 
+        topicName: "Measurement" 
+    },
+    { 
+        id: 46, 
+        grade: "9", 
+        subject: "Mathematics", 
+        question: "Which of the following is a polynomial?", 
+        options: ["1/x", "√x", "x² + 3x + 1", "x^-2"], 
+        correct: 2, 
+        aiExplanation: "A polynomial must have non-negative integer exponents. A, B, and D involve negative or fractional powers.", 
+        topicName: "Algebra" 
+    },
+    { 
+        id: 47, 
+        grade: "9", 
+        subject: "Mathematics", 
+        question: "The solution set of |x| = 5 is:", 
+        options: ["{5}", "{-5}", "{5, -5}", "∅"], 
+        correct: 2, 
+        aiExplanation: "Absolute value represents distance from zero. Both 5 and -5 are distance 5 from zero.", 
+        topicName: "Algebra" 
+    },
+    { 
+        id: 48, 
+        grade: "9", 
+        subject: "Mathematics", 
+        question: "If A ⊂ B, then A ∪ B is equal to:", 
+        options: ["A", "B", "∅", "A ∩ B"], 
+        correct: 1, 
+        aiExplanation: "If A is inside B, combining them (Union) just results in the larger set B.", 
+        topicName: "Sets" 
+    },
+    { 
+        id: 49, 
+        grade: "9", 
+        subject: "Mathematics", 
+        question: "The circumference of a circle is 20π. What is its radius?", 
+        options: ["10", "20", "5", "40"], 
+        correct: 0, 
+        aiExplanation: "C = 2πr. 20π = 2πr. Divide both sides by 2π => r = 10.", 
+        topicName: "Geometry" 
+    },
+    { 
+        id: 50, 
+        grade: "9", 
+        subject: "Mathematics", 
+        question: "Which quadrant contains the point (-3, -5)?", 
+        options: ["I", "II", "III", "IV"], 
+        correct: 2, 
+        aiExplanation: "Both x and y are negative in the 3rd Quadrant (III).", 
+        topicName: "Coordinate Geometry" 
+    },
+    { 
+        id: 51, 
+        grade: "9", 
+        subject: "Mathematics", 
+        question: "What is the HCF (GCD) of 12 and 18?", 
+        options: ["2", "3", "6", "36"], 
+        correct: 2, 
+        aiExplanation: "Factors of 12: 1,2,3,4,6,12. Factors of 18: 1,2,3,6,9,18. Highest common is 6.", 
+        topicName: "Number System" 
+    },
+    { 
+        id: 52, 
+        grade: "9", 
+        subject: "Mathematics", 
+        question: "A trapezium has parallel sides 8cm and 12cm, and height 5cm. Area?", 
+        options: ["100 cm²", "50 cm²", "60 cm²", "40 cm²"], 
+        correct: 1, 
+        aiExplanation: "Area = 1/2 (b1 + b2) h = 1/2 (8+12) * 5 = 1/2 (20) * 5 = 10 * 5 = 50.", 
+        topicName: "Geometry" 
+    },
+    { 
+        id: 53, 
+        grade: "9", 
+        subject: "Mathematics", 
+        question: "Which of the following is a quadratic equation?", 
+        options: ["2x + 1 = 0", "x³ - 1 = 0", "x² - 5x + 6 = 0", "y = mx + b"], 
+        correct: 2, 
+        aiExplanation: "Quadratic equations have the highest degree of 2.", 
+        topicName: "Algebra" 
+    },
+    { 
+        id: 54, 
+        grade: "9", 
+        subject: "Mathematics", 
+        question: "The probability of an event happening is 0.4. What is the probability of it NOT happening?", 
+        options: ["0.4", "0.6", "0", "1"], 
+        correct: 1, 
+        aiExplanation: "P(not E) = 1 - P(E) = 1 - 0.4 = 0.6.", 
+        topicName: "Probability" 
+    },
+    { 
+        id: 55, 
+        grade: "9", 
+        subject: "Mathematics", 
+        question: "If f(x) = 2x and g(x) = x + 3, find f(g(1)).", 
+        options: ["5", "8", "4", "6"], 
+        correct: 1, 
+        aiExplanation: "First find g(1) = 1+3 = 4. Then find f(4) = 2(4) = 8.", 
+        topicName: "Functions" 
+    },
+    { 
+        id: 56, 
+        grade: "9", 
+        subject: "Mathematics", 
+        question: "The angle sum of a pentagon is:", 
+        options: ["360°", "540°", "720°", "180°"], 
+        correct: 1, 
+        aiExplanation: "(n-2) × 180. (5-2) × 180 = 3 × 180 = 540°.", 
+        topicName: "Polygons" 
+    },
+    { 
+        id: 57, 
+        grade: "9", 
+        subject: "Mathematics", 
+        question: "Which logic gate corresponds to the boolean operation AND?", 
+        options: ["Disjunction", "Conjunction", "Negation", "Implication"], 
+        correct: 1, 
+        aiExplanation: "Conjunction (∧) is equivalent to the logical AND operation.", 
+        topicName: "Logic" 
+    },
+    { 
+        id: 58, 
+        grade: "9", 
+        subject: "Mathematics", 
+        question: "Simplify: √18 + √50", 
+        options: ["√68", "8√2", "5√2", "2√2"], 
+        correct: 1, 
+        aiExplanation: "√18 = 3√2. √50 = 5√2. Sum = 3√2 + 5√2 = 8√2.", 
+        topicName: "Number System" 
+    },
+    { 
+        id: 59, 
+        grade: "9", 
+        subject: "Mathematics", 
+        question: "Scientific notation of 0.00045 is:", 
+        options: ["4.5 × 10⁴", "4.5 × 10⁻³", "4.5 × 10⁻⁴", "45 × 10⁻⁵"], 
+        correct: 2, 
+        aiExplanation: "Move decimal 4 places right to get 4.5, so exponent is -4.", 
+        topicName: "Number System" 
+    },
+    { 
+        id: 60, 
+        grade: "9", 
+        subject: "Mathematics", 
+        question: "The ratio of boys to girls is 2:3. If there are 20 boys, how many girls are there?", 
+        options: ["20", "25", "30", "40"], 
+        correct: 2, 
+        aiExplanation: "2/3 = 20/x. 2x = 60. x = 30.", 
+        topicName: "Ratios" 
+    },
+
+    /* =========================================
+   DonBoscoPrep Quiz System
+   Grade 9 Biology - Comprehensive Exam Question Bank
+========================================= */
+
+
+    // --- UNIT 1: INTRODUCTION TO BIOLOGY ---
+
+    // 1.1 Definition of Biology
+    { 
+        id: 1, 
+        grade: "9", 
+        subject: "Biology", 
+        question: "Which of the following characteristics of living things is most critical for the long-term survival of a species in a changing environment?", 
+        options: ["Homeostasis", "Evolutionary adaptation", "Response to stimuli", "Ordered complexity"], 
+        correct: 1, 
+        aiExplanation: "While all are characteristics of life, evolutionary adaptation allows a species to change over generations to fit new environmental conditions, ensuring long-term survival.", 
+        topicName: "Characteristics of Life" 
+    },
+    { 
+        id: 2, 
+        grade: "9", 
+        subject: "Biology", 
+        question: "Homeostasis is best defined as:", 
+        options: ["The ability to move from place to place", "The maintenance of a relatively constant internal environment", "The production of offspring", "The conversion of solar energy into chemical energy"], 
+        correct: 1, 
+        aiExplanation: "Homeostasis refers to the regulatory mechanisms that maintain a stable internal physiological state despite external changes.", 
+        topicName: "Characteristics of Life" 
+    },
+    
+    // 1.2 Why do we study Biology?
+    { 
+        id: 3, 
+        grade: "9", 
+        subject: "Biology", 
+        question: "The production of antibiotics like penicillin utilizes which group of organisms?", 
+        options: ["Viruses", "Protozoa", "Fungi", "Algae"], 
+        correct: 2, 
+        aiExplanation: "Penicillin is produced by the mold Penicillium, which is a fungus.", 
+        topicName: "Applications of Biology" 
+    },
+    { 
+        id: 4, 
+        grade: "9", 
+        subject: "Biology", 
+        question: "Which biological process is harnessed in the production of alcoholic beverages like Tej and Tella?", 
+        options: ["Photosynthesis", "Fermentation", "Transpiration", "Nitrogen fixation"], 
+        correct: 1, 
+        aiExplanation: "Fermentation by yeast converts sugars into alcohol and carbon dioxide.", 
+        topicName: "Applications of Biology" 
+    },
+
+    // 1.3 The Scientific Method
+    { 
+        id: 5, 
+        grade: "9", 
+        subject: "Biology", 
+        question: "A hypothesis must be:", 
+        options: ["Proven correct immediately", "A random guess", "Testable and falsifiable", "Accepted by all scientists"], 
+        correct: 2, 
+        aiExplanation: "For a hypothesis to be scientifically valid, one must be able to design an experiment that could prove it wrong (falsifiable) or support it.", 
+        topicName: "Scientific Method" 
+    },
+    { 
+        id: 6, 
+        grade: "9", 
+        subject: "Biology", 
+        question: "In the scientific method, if experimental data does not support the hypothesis, the next step is to:", 
+        options: ["Alter the data to fit the hypothesis", "Reject the hypothesis and formulate a new one", "Publish the results immediately", "Stop the investigation"], 
+        correct: 1, 
+        aiExplanation: "Science is iterative. If evidence contradicts a hypothesis, it must be rejected or modified.", 
+        topicName: "Scientific Method" 
+    },
+
+    // 1.4 Tools of a Biologist
+    { 
+        id: 7, 
+        grade: "9", 
+        subject: "Biology", 
+        question: "Which piece of laboratory equipment is best suited for sterilizing culture media and killing bacterial spores?", 
+        options: ["Incubator", "Autoclave", "Centrifuge", "Hotplate"], 
+        correct: 1, 
+        aiExplanation: "An autoclave uses high pressure and steam to achieve temperatures high enough to kill all microorganisms, including resistant spores.", 
+        topicName: "Lab Tools" 
+    },
+    { 
+        id: 8, 
+        grade: "9", 
+        subject: "Biology", 
+        question: "To cultivate bacteria at their optimal growth temperature, a biologist would use a(n):", 
+        options: ["Autoclave", "Refrigerator", "Incubator", "Fume hood"], 
+        correct: 2, 
+        aiExplanation: "An incubator maintains a constant, controlled temperature necessary for the growth of microbial cultures.", 
+        topicName: "Lab Tools" 
+    },
+
+    // 1.5 Handling and using a light Microscope
+    { 
+        id: 9, 
+        grade: "9", 
+        subject: "Biology", 
+        question: "If the ocular lens magnification is 10X and the objective lens magnification is 40X, the total magnification is:", 
+        options: ["50X", "400X", "4000X", "4X"], 
+        correct: 1, 
+        aiExplanation: "Total magnification = Ocular magnification × Objective magnification (10 × 40 = 400).", 
+        topicName: "Microscopy" 
+    },
+    { 
+        id: 10, 
+        grade: "9", 
+        subject: "Biology", 
+        question: "Which part of the microscope controls the amount of light reaching the specimen?", 
+        options: ["Condenser", "Diaphragm (Iris)", "Fine adjustment knob", "Objective lens"], 
+        correct: 1, 
+        aiExplanation: "The diaphragm (or iris) adjusts the diameter of the opening through which light passes, regulating light intensity and contrast.", 
+        topicName: "Microscopy" 
+    },
+    { 
+        id: 11, 
+        grade: "9", 
+        subject: "Biology", 
+        question: "Resolution in microscopy refers to:", 
+        options: ["The size of the image", "The ability to distinguish two separate points as distinct", "The amount of light used", "The magnifying power of the ocular lens"], 
+        correct: 1, 
+        aiExplanation: "Resolution is the clarity of the image—the minimum distance between two points that can still be seen as two points.", 
+        topicName: "Microscopy" 
+    },
+
+    // --- UNIT 2: CHARACTERISTICS AND CLASSIFICATION ---
+
+    // 2.1 Characteristics of living things
+    { 
+        id: 12, 
+        grade: "9", 
+        subject: "Biology", 
+        question: "Metabolism refers to:", 
+        options: ["The intake of food", "The sum of all chemical reactions in an organism", "The movement of an organism", "The reproduction rate"], 
+        correct: 1, 
+        aiExplanation: "Metabolism encompasses all catabolic (breaking down) and anabolic (building up) chemical reactions occurring within a living organism.", 
+        topicName: "Characteristics of Life" 
+    },
+
+    // 2.2 Taxonomy
+    { 
+        id: 13, 
+        grade: "9", 
+        subject: "Biology", 
+        question: "Who is known as the 'Father of Taxonomy'?", 
+        options: ["Aristotle", "Charles Darwin", "Carolus Linnaeus", "Robert Hooke"], 
+        correct: 2, 
+        aiExplanation: "Carolus Linnaeus developed the system of binomial nomenclature and the hierarchical classification system still used today.", 
+        topicName: "Taxonomy" 
+    },
+    { 
+        id: 14, 
+        grade: "9", 
+        subject: "Biology", 
+        question: "Which of the following sequences represents the correct hierarchy of classification from broadest to most specific?", 
+        options: ["Kingdom, Phylum, Class, Order, Family, Genus, Species", "Phylum, Kingdom, Order, Class, Family, Genus, Species", "Kingdom, Class, Phylum, Family, Order, Genus, Species", "Species, Genus, Family, Order, Class, Phylum, Kingdom"], 
+        correct: 0, 
+        aiExplanation: "The standard hierarchy is Domain -> Kingdom -> Phylum -> Class -> Order -> Family -> Genus -> Species.", 
+        topicName: "Taxonomy" 
+    },
+    { 
+        id: 15, 
+        grade: "9", 
+        subject: "Biology", 
+        question: "In the scientific name *Homo sapiens*, 'Homo' represents the:", 
+        options: ["Species", "Genus", "Family", "Order"], 
+        correct: 1, 
+        aiExplanation: "In binomial nomenclature, the first name is the Genus (capitalized) and the second is the specific epithet (lowercase).", 
+        topicName: "Taxonomy" 
+    },
+
+    // 2.6 The five-kingdom system
+    { 
+        id: 16, 
+        grade: "9", 
+        subject: "Biology", 
+        question: "Which kingdom consists of unicellular prokaryotes?", 
+        options: ["Protista", "Fungi", "Monera", "Plantae"], 
+        correct: 2, 
+        aiExplanation: "Kingdom Monera contains bacteria and archaea, which are prokaryotic (lacking a nucleus).", 
+        topicName: "Five Kingdoms" 
+    },
+    { 
+        id: 17, 
+        grade: "9", 
+        subject: "Biology", 
+        question: "Fungi are distinct from plants because fungi are:", 
+        options: ["Autotrophic", "Prokaryotic", "Heterotrophic absorbers", "Motile"], 
+        correct: 2, 
+        aiExplanation: "Fungi cannot photosynthesize; they secrete enzymes to digest food externally and absorb the nutrients (saprophytic heterotrophs).", 
+        topicName: "Fungi" 
+    },
+    { 
+        id: 18, 
+        grade: "9", 
+        subject: "Biology", 
+        question: "Which group of plants produces 'naked seeds' not enclosed in a fruit?", 
+        options: ["Angiosperms", "Gymnosperms", "Bryophytes", "Pteridophytes"], 
+        correct: 1, 
+        aiExplanation: "Gymnosperms (like conifers) produce seeds on the surface of cones, unlike angiosperms which enclose seeds in ovaries (fruit).", 
+        topicName: "Plants" 
+    },
+    { 
+        id: 19, 
+        grade: "9", 
+        subject: "Biology", 
+        question: "Which of the following is an abiotic factor in an ecosystem?", 
+        options: ["Predators", "Bacteria", "Temperature", "Plants"], 
+        correct: 2, 
+        aiExplanation: "Abiotic factors are non-living chemical and physical parts of the environment like temperature, water, and light.", 
+        topicName: "Ecology Basics" 
+    },
+    { 
+        id: 20, 
+        grade: "9", 
+        subject: "Biology", 
+        question: "Viruses are often considered 'on the borderline' of life because:", 
+        options: ["They have a cell wall", "They can reproduce independently", "They metabolize energy", "They require a host cell to replicate"], 
+        correct: 3, 
+        aiExplanation: "Viruses lack cellular machinery for metabolism and reproduction; they are obligate parasites dependent on a host.", 
+        topicName: "Viruses" 
+    },
+
+    // --- UNIT 3: CELLS ---
+
+    // 3.2 Cell Theory
+    { 
+        id: 21, 
+        grade: "9", 
+        subject: "Biology", 
+        question: "Which statement is NOT part of the Cell Theory?", 
+        options: ["All living things are composed of cells", "Cells are the basic unit of life", "All cells arise from pre-existing cells", "All cells contain a nucleus"], 
+        correct: 3, 
+        aiExplanation: "Prokaryotic cells (bacteria) do not contain a nucleus. The first three options form the standard Cell Theory.", 
+        topicName: "Cell Theory" 
+    },
+    { 
+        id: 22, 
+        grade: "9", 
+        subject: "Biology", 
+        question: "Who was the first person to observe and name 'cells' using cork?", 
+        options: ["Anton van Leeuwenhoek", "Robert Hooke", "Matthias Schleiden", "Theodor Schwann"], 
+        correct: 1, 
+        aiExplanation: "Robert Hooke observed cork in 1665 and coined the term 'cell' because they looked like monk's cells.", 
+        topicName: "History of Cell Biology" 
+    },
+
+    // 3.3 Cell Structure
+    { 
+        id: 23, 
+        grade: "9", 
+        subject: "Biology", 
+        question: "Which organelle is responsible for cellular respiration and ATP production?", 
+        options: ["Ribosome", "Chloroplast", "Mitochondria", "Golgi Apparatus"], 
+        correct: 2, 
+        aiExplanation: "Mitochondria are the 'powerhouses' of the cell where aerobic respiration occurs to generate ATP.", 
+        topicName: "Cell Organelles" 
+    },
+    { 
+        id: 24, 
+        grade: "9", 
+        subject: "Biology", 
+        question: "The function of the Ribosome is:", 
+        options: ["Lipid synthesis", "Protein synthesis", "DNA replication", "Photosynthesis"], 
+        correct: 1, 
+        aiExplanation: "Ribosomes translate mRNA into polypeptide chains (proteins).", 
+        topicName: "Cell Organelles" 
+    },
+    { 
+        id: 25, 
+        grade: "9", 
+        subject: "Biology", 
+        question: "Which organelle contains digestive enzymes to break down waste?", 
+        options: ["Lysosome", "Vacuole", "Peroxisome", "Endoplasmic Reticulum"], 
+        correct: 0, 
+        aiExplanation: "Lysosomes contain hydrolytic enzymes for intracellular digestion.", 
+        topicName: "Cell Organelles" 
+    },
+    { 
+        id: 26, 
+        grade: "9", 
+        subject: "Biology", 
+        question: "Rough Endoplasmic Reticulum is 'rough' because of the presence of attached:", 
+        options: ["Lysosomes", "Ribosomes", "Vesicles", "Mitochondria"], 
+        correct: 1, 
+        aiExplanation: "Ribosomes attached to the cytosolic side of the ER membrane give it a granular or 'rough' appearance.", 
+        topicName: "Cell Organelles" 
+    },
+
+    // 3.4/3.5 Types of Cells
+    { 
+        id: 27, 
+        grade: "9", 
+        subject: "Biology", 
+        question: "Which structure is found in plant cells but NOT in animal cells?", 
+        options: ["Cell membrane", "Mitochondria", "Cell wall", "Nucleus"], 
+        correct: 2, 
+        aiExplanation: "Plant cells have a rigid cellulose cell wall. Animal cells only have a cell membrane.", 
+        topicName: "Cell Types" 
+    },
+    { 
+        id: 28, 
+        grade: "9", 
+        subject: "Biology", 
+        question: "The genetic material of a prokaryotic cell is found in the:", 
+        options: ["Nucleus", "Nucleoid region", "Mitochondria", "Chloroplast"], 
+        correct: 1, 
+        aiExplanation: "Prokaryotes lack a membrane-bound nucleus; their DNA is located in a cytoplasmic region called the nucleoid.", 
+        topicName: "Cell Types" 
+    },
+
+    // 3.7 Transport
+    { 
+        id: 29, 
+        grade: "9", 
+        subject: "Biology", 
+        question: "Movement of water from high water potential to low water potential through a semi-permeable membrane is:", 
+        options: ["Diffusion", "Active Transport", "Osmosis", "Phagocytosis"], 
+        correct: 2, 
+        aiExplanation: "Osmosis is the specific term for the diffusion of water across a selectively permeable membrane.", 
+        topicName: "Cell Transport" 
+    },
+    { 
+        id: 30, 
+        grade: "9", 
+        subject: "Biology", 
+        question: "Active transport differs from passive transport because it:", 
+        options: ["Moves substances down the gradient", "Does not require energy", "Requires energy (ATP)", "Only moves water"], 
+        correct: 2, 
+        aiExplanation: "Active transport moves substances against their concentration gradient, which requires cellular energy (ATP).", 
+        topicName: "Cell Transport" 
+    },
+    { 
+        id: 31, 
+        grade: "9", 
+        subject: "Biology", 
+        question: "If a red blood cell is placed in a hypertonic solution, it will:", 
+        options: ["Swell and burst", "Shrink (crenate)", "Stay the same", "Divide"], 
+        correct: 1, 
+        aiExplanation: "In a hypertonic solution, water leaves the cell via osmosis to balance the concentration, causing the cell to shrivel.", 
+        topicName: "Cell Transport" 
+    },
+    { 
+        id: 32, 
+        grade: "9", 
+        subject: "Biology", 
+        question: "Turgor pressure in plant cells is essential for:", 
+        options: ["Photosynthesis", "Maintaining shape and support", "Protein synthesis", "Reproduction"], 
+        correct: 1, 
+        aiExplanation: "Water pressure inside the vacuole pushes against the cell wall, providing structural support (turgidity) to non-woody plants.", 
+        topicName: "Cell Physiology" 
+    },
+
+    // --- UNIT 4: REPRODUCTION ---
+
+    // 4.2 Asexual Reproduction
+    { 
+        id: 33, 
+        grade: "9", 
+        subject: "Biology", 
+        question: "Binary fission is a form of asexual reproduction commonly seen in:", 
+        options: ["Humans", "Bacteria", "Flowering plants", "Birds"], 
+        correct: 1, 
+        aiExplanation: "Bacteria reproduce primarily by binary fission, where one cell divides into two genetically identical cells.", 
+        topicName: "Asexual Reproduction" 
+    },
+    { 
+        id: 34, 
+        grade: "9", 
+        subject: "Biology", 
+        question: "Yeast reproduces primarily by:", 
+        options: ["Binary Fission", "Budding", "Fragmentation", "Parthenogenesis"], 
+        correct: 1, 
+        aiExplanation: "Yeast cells produce a small outgrowth (bud) that eventually detaches to form a new individual.", 
+        topicName: "Asexual Reproduction" 
+    },
+    { 
+        id: 35, 
+        grade: "9", 
+        subject: "Biology", 
+        question: "Vegetative propagation using 'runners' or stolons occurs in:", 
+        options: ["Potato", "Onion", "Strawberry", "Ginger"], 
+        correct: 2, 
+        aiExplanation: "Strawberries send out horizontal stems called runners (stolons) that root at nodes to form new plants.", 
+        topicName: "Vegetative Propagation" 
+    },
+    { 
+        id: 36, 
+        grade: "9", 
+        subject: "Biology", 
+        question: "Which of the following is a disadvantage of asexual reproduction?", 
+        options: ["It is slow", "It requires two parents", "Lack of genetic variation", "It produces few offspring"], 
+        correct: 2, 
+        aiExplanation: "Since offspring are clones, there is no genetic diversity, making the population vulnerable to changing environments or diseases.", 
+        topicName: "Reproduction Strategies" 
+    },
+
+    // 4.4 Sexual Reproduction
+    { 
+        id: 37, 
+        grade: "9", 
+        subject: "Biology", 
+        question: "The fusion of male and female gametes is called:", 
+        options: ["Meiosis", "Mitosis", "Fertilization", "Ovulation"], 
+        correct: 2, 
+        aiExplanation: "Fertilization is the biological process where a sperm and egg fuse to form a zygote.", 
+        topicName: "Sexual Reproduction" 
+    },
+    { 
+        id: 38, 
+        grade: "9", 
+        subject: "Biology", 
+        question: "In humans, gametes are produced by a type of cell division called:", 
+        options: ["Mitosis", "Meiosis", "Binary Fission", "Budding"], 
+        correct: 1, 
+        aiExplanation: "Meiosis reduces the chromosome number by half, producing haploid gametes (sperm and egg).", 
+        topicName: "Cell Division" 
+    },
+
+    // 4.6/4.7 Reproductive Systems
+    { 
+        id: 39, 
+        grade: "9", 
+        subject: "Biology", 
+        question: "Sperm maturation and storage occur in the:", 
+        options: ["Testes", "Epididymis", "Vas Deferens", "Prostate"], 
+        correct: 1, 
+        aiExplanation: "Sperm produced in the testes move to the epididymis where they mature and are stored until ejaculation.", 
+        topicName: "Human Reproduction" 
+    },
+    { 
+        id: 40, 
+        grade: "9", 
+        subject: "Biology", 
+        question: "Where does fertilization typically occur in the female reproductive tract?", 
+        options: ["Ovary", "Uterus", "Oviduct (Fallopian tube)", "Vagina"], 
+        correct: 2, 
+        aiExplanation: "The egg is fertilized by sperm in the oviduct (Fallopian tube) before moving to the uterus for implantation.", 
+        topicName: "Human Reproduction" 
+    },
+    { 
+        id: 41, 
+        grade: "9", 
+        subject: "Biology", 
+        question: "The hormone responsible for the development of male secondary sexual characteristics is:", 
+        options: ["Estrogen", "Progesterone", "Testosterone", "FSH"], 
+        correct: 2, 
+        aiExplanation: "Testosterone drives male traits like deep voice, muscle growth, and facial hair during puberty.", 
+        topicName: "Hormones" 
+    },
+    { 
+        id: 42, 
+        grade: "9", 
+        subject: "Biology", 
+        question: "Ovulation is triggered by a surge in which hormone?", 
+        options: ["FSH", "LH (Luteinizing Hormone)", "Estrogen", "Progesterone"], 
+        correct: 1, 
+        aiExplanation: "A sharp spike in LH levels causes the mature follicle to rupture and release the egg (ovulation).", 
+        topicName: "Menstrual Cycle" 
+    },
+
+    // 4.10 Birth Control
+    { 
+        id: 43, 
+        grade: "9", 
+        subject: "Biology", 
+        question: "Which of the following is a permanent method of contraception?", 
+        options: ["Condom", "Oral Pills", "Vasectomy", "IUD"], 
+        correct: 2, 
+        aiExplanation: "Vasectomy (cutting the vas deferens) is a surgical sterilization procedure intended to be permanent.", 
+        topicName: "Contraception" 
+    },
+
+    // --- UNIT 5: HUMAN HEALTH & NUTRITION ---
+
+    // 5.3 Nutrients
+    { 
+        id: 44, 
+        grade: "9", 
+        subject: "Biology", 
+        question: "Which nutrient provides the most energy per gram?", 
+        options: ["Carbohydrates", "Proteins", "Fats (Lipids)", "Vitamins"], 
+        correct: 2, 
+        aiExplanation: "Fats provide ~9 kcal/g, while carbohydrates and proteins provide ~4 kcal/g.", 
+        topicName: "Nutrition" 
+    },
+    { 
+        id: 45, 
+        grade: "9", 
+        subject: "Biology", 
+        question: "Proteins are polymers made of monomers called:", 
+        options: ["Fatty acids", "Amino acids", "Monosaccharides", "Nucleotides"], 
+        correct: 1, 
+        aiExplanation: "Amino acids are the building blocks that link together to form protein chains.", 
+        topicName: "Nutrition" 
+    },
+    { 
+        id: 46, 
+        grade: "9", 
+        subject: "Biology", 
+        question: "Which vitamin is synthesized in the skin upon exposure to sunlight?", 
+        options: ["Vitamin A", "Vitamin C", "Vitamin D", "Vitamin K"], 
+        correct: 2, 
+        aiExplanation: "UV rays convert a cholesterol derivative in the skin into Vitamin D.", 
+        topicName: "Vitamins" 
+    },
+
+    // 5.5 Deficiency Diseases
+    { 
+        id: 47, 
+        grade: "9", 
+        subject: "Biology", 
+        question: "Kwashiorkor is caused by a deficiency of:", 
+        options: ["Iron", "Protein", "Vitamin C", "Carbohydrates"], 
+        correct: 1, 
+        aiExplanation: "Kwashiorkor is severe protein malnutrition characterized by edema (swelling) and muscle wasting.", 
+        topicName: "Deficiency Diseases" 
+    },
+    { 
+        id: 48, 
+        grade: "9", 
+        subject: "Biology", 
+        question: "A lack of Iron in the diet leads to:", 
+        options: ["Scurvy", "Rickets", "Anemia", "Goiter"], 
+        correct: 2, 
+        aiExplanation: "Iron is needed for hemoglobin. Deficiency reduces oxygen-carrying capacity, causing Anemia.", 
+        topicName: "Deficiency Diseases" 
+    },
+    { 
+        id: 49, 
+        grade: "9", 
+        subject: "Biology", 
+        question: "Scurvy is prevented by consuming:", 
+        options: ["Meat", "Citrus fruits (Vitamin C)", "Milk", "Rice"], 
+        correct: 1, 
+        aiExplanation: "Scurvy is a Vitamin C deficiency. Citrus fruits like oranges and lemons are rich sources.", 
+        topicName: "Deficiency Diseases" 
+    },
+
+    // 5.8 Diseases
+    { 
+        id: 50, 
+        grade: "9", 
+        subject: "Biology", 
+        question: "Which of the following is a vector for Malaria?", 
+        options: ["House fly", "Tsetse fly", "Female Anopheles mosquito", "Aedes mosquito"], 
+        correct: 2, 
+        aiExplanation: "The female Anopheles mosquito transmits the Plasmodium parasite which causes malaria.", 
+        topicName: "Diseases" 
+    },
+    { 
+        id: 51, 
+        grade: "9", 
+        subject: "Biology", 
+        question: "HIV specifically attacks which cells in the human body?", 
+        options: ["Red blood cells", "T-helper lymphocytes (CD4 cells)", "Liver cells", "Nerve cells"], 
+        correct: 1, 
+        aiExplanation: "HIV infects and destroys CD4 T-cells, which are crucial for the immune system.", 
+        topicName: "Diseases" 
+    },
+    { 
+        id: 52, 
+        grade: "9", 
+        subject: "Biology", 
+        question: "Which of the following is a non-infectious disease?", 
+        options: ["Tuberculosis", "Diabetes", "Cholera", "Influenza"], 
+        correct: 1, 
+        aiExplanation: "Diabetes is a metabolic disorder (lifestyle/genetic), not caused by a pathogen, unlike TB, Cholera, or Flu.", 
+        topicName: "Diseases" 
+    },
+
+    // --- UNIT 6: ECOLOGY ---
+
+    // 6.1 Ecology Basics
+    { 
+        id: 53, 
+        grade: "9", 
+        subject: "Biology", 
+        question: "A group of organisms of the same species living in the same area is a:", 
+        options: ["Community", "Population", "Ecosystem", "Biome"], 
+        correct: 1, 
+        aiExplanation: "Population refers to individuals of one species. Community is multiple species together.", 
+        topicName: "Ecological Levels" 
+    },
+    { 
+        id: 54, 
+        grade: "9", 
+        subject: "Biology", 
+        question: "In a food chain, plants are classified as:", 
+        options: ["Primary consumers", "Secondary consumers", "Producers", "Decomposers"], 
+        correct: 2, 
+        aiExplanation: "Plants produce energy from sunlight (photosynthesis), making them Producers (Autotrophs).", 
+        topicName: "Ecology" 
+    },
+    
+    // 6.2 Ecological Relationships
+    { 
+        id: 55, 
+        grade: "9", 
+        subject: "Biology", 
+        question: "A relationship where both species benefit is called:", 
+        options: ["Parasitism", "Commensalism", "Mutualism", "Competition"], 
+        correct: 2, 
+        aiExplanation: "Mutualism is a +/+ interaction (e.g., bees and flowers).", 
+        topicName: "Interactions" 
+    },
+    { 
+        id: 56, 
+        grade: "9", 
+        subject: "Biology", 
+        question: "An organism that feeds on dead organic matter is a:", 
+        options: ["Carnivore", "Herbivore", "Decomposer", "Parasite"], 
+        correct: 2, 
+        aiExplanation: "Decomposers (like bacteria and fungi) break down dead material and recycle nutrients.", 
+        topicName: "Ecology" 
+    },
+    { 
+        id: 57, 
+        grade: "9", 
+        subject: "Biology", 
+        question: "The maximum population size that an environment can sustain is called:", 
+        options: ["Biotic potential", "Carrying capacity", "Limiting factor", "Growth rate"], 
+        correct: 1, 
+        aiExplanation: "Carrying capacity (K) is the limit imposed by available resources (food, space, water).", 
+        topicName: "Population Ecology" 
+    },
+
+    // --- GENERAL / MISC CHALLENGING QUESTIONS ---
+    
+    { 
+        id: 58, 
+        grade: "9", 
+        subject: "Biology", 
+        question: "Which of the following is NOT a greenhouse gas?", 
+        options: ["Carbon dioxide", "Methane", "Nitrogen", "Water vapor"], 
+        correct: 2, 
+        aiExplanation: "Nitrogen (N2) makes up 78% of air but does not trap heat. CO2, CH4, and H2O vapor do.", 
+        topicName: "Environmental Biology" 
+    },
+    { 
+        id: 59, 
+        grade: "9", 
+        subject: "Biology", 
+        question: "The process of succession that begins on bare rock (no soil) is:", 
+        options: ["Secondary succession", "Primary succession", "Climax succession", "Pioneer succession"], 
+        correct: 1, 
+        aiExplanation: "Primary succession starts from scratch (e.g., after a volcano). Secondary succession starts where soil exists.", 
+        topicName: "Succession" 
+    },
+    { 
+        id: 60, 
+        grade: "9", 
+        subject: "Biology", 
+        question: "Which biome has the highest biodiversity?", 
+        options: ["Tundra", "Desert", "Tropical Rainforest", "Savanna"], 
+        correct: 2, 
+        aiExplanation: "Tropical Rainforests have stable warm temps and rain, supporting the widest variety of species.", 
+        topicName: "Biomes" 
+    },
+    { 
+        id: 61, 
+        grade: "9", 
+        subject: "Biology", 
+        question: "Enzymes are biological catalysts made of:", 
+        options: ["Lipids", "Carbohydrates", "Proteins", "Nucleic Acids"], 
+        correct: 2, 
+        aiExplanation: "Almost all enzymes are globular proteins.", 
+        topicName: "Biochemistry" 
+    },
+    { 
+        id: 62, 
+        grade: "9", 
+        subject: "Biology", 
+        question: "The movement of particles from low to high concentration using a carrier protein and energy is:", 
+        options: ["Diffusion", "Facilitated Diffusion", "Active Transport", "Osmosis"], 
+        correct: 2, 
+        aiExplanation: "Going 'uphill' against the gradient requires Active Transport (energy).", 
+        topicName: "Cell Transport" 
+    },
+    { 
+        id: 63, 
+        grade: "9", 
+        subject: "Biology", 
+        question: "Which blood cells are involved in blood clotting?", 
+        options: ["Erythrocytes (Red)", "Leukocytes (White)", "Platelets", "Plasma"], 
+        correct: 2, 
+        aiExplanation: "Platelets (thrombocytes) clump together to plug vessel breaks and initiate clotting.", 
+        topicName: "Circulatory System" 
+    },
+    { 
+        id: 64, 
+        grade: "9", 
+        subject: "Biology", 
+        question: "The part of the flower that produces pollen is the:", 
+        options: ["Stigma", "Ovary", "Anther", "Sepal"], 
+        correct: 2, 
+        aiExplanation: "The anther is the male part (atop the filament) that produces pollen grains.", 
+        topicName: "Plant Reproduction" 
+    },
+    { 
+        id: 65, 
+        grade: "9", 
+        subject: "Biology", 
+        question: "Which organism causes Sleeping Sickness?", 
+        options: ["Plasmodium", "Trypanosoma", "Amoeba", "Paramecium"], 
+        correct: 1, 
+        aiExplanation: "Trypanosoma is the protozoan parasite transmitted by the Tsetse fly.", 
+        topicName: "Diseases" 
+    },
+    { 
+        id: 66, 
+        grade: "9", 
+        subject: "Biology", 
+        question: "What is the primary function of the large intestine?", 
+        options: ["Digestion of fats", "Absorption of nutrients", "Absorption of water", "Production of bile"], 
+        correct: 2, 
+        aiExplanation: "The main job of the colon (large intestine) is to reabsorb water from indigestible food matter.", 
+        topicName: "Digestive System" 
+    },
+    { 
+        id: 67, 
+        grade: "9", 
+        subject: "Biology", 
+        question: "The taxonomic category 'Family' is grouped into:", 
+        options: ["Order", "Genus", "Class", "Phylum"], 
+        correct: 0, 
+        aiExplanation: "Hierarchy: Species -> Genus -> Family -> ORDER -> Class...", 
+        topicName: "Taxonomy" 
+    },
+    { 
+        id: 68, 
+        grade: "9", 
+        subject: "Biology", 
+        question: "Which of these is NOT a function of the skeleton?", 
+        options: ["Protection", "Support", "Blood cell production", "Nerve impulse transmission"], 
+        correct: 3, 
+        aiExplanation: "Nerves transmit impulses. The skeleton supports, protects, moves, and makes blood cells (marrow).", 
+        topicName: "Skeletal System" 
+    },
+    { 
+        id: 69, 
+        grade: "9", 
+        subject: "Biology", 
+        question: "The gas exchange organ in humans is:", 
+        options: ["Heart", "Kidney", "Lung (Alveoli)", "Liver"], 
+        correct: 2, 
+        aiExplanation: "Gas exchange occurs in the alveoli of the lungs.", 
+        topicName: "Respiratory System" 
+    },
+    { 
+        id: 70, 
+        grade: "9", 
+        subject: "Biology", 
+        question: "Which substance creates the cell wall of fungi?", 
+        options: ["Cellulose", "Chitin", "Peptidoglycan", "Lipid"], 
+        correct: 1, 
+        aiExplanation: "Fungal cell walls are made of Chitin. Plant walls are Cellulose. Bacterial walls are Peptidoglycan.", 
+        topicName: "Fungi" 
+    },
+    { 
+        id: 71, 
+        grade: "9", 
+        subject: "Biology", 
+        question: "In DNA, Adenine always pairs with:", 
+        options: ["Guanine", "Cytosine", "Thymine", "Uracil"], 
+        correct: 2, 
+        aiExplanation: "A pairs with T (Adenine-Thymine) and G pairs with C (Guanine-Cytosine).", 
+        topicName: "Genetics" 
+    },
+    { 
+        id: 72, 
+        grade: "9", 
+        subject: "Biology", 
+        question: "Which microscope uses electrons to create a 3D image of the surface?", 
+        options: ["Light Microscope", "Transmission Electron Microscope (TEM)", "Scanning Electron Microscope (SEM)", "Dissecting Microscope"], 
+        correct: 2, 
+        aiExplanation: "SEM scans the surface with electrons to create detailed 3D topography.", 
+        topicName: "Microscopy" 
+    },
+    { 
+        id: 73, 
+        grade: "9", 
+        subject: "Biology", 
+        question: "The 'Lock and Key' model explains the action of:", 
+        options: ["Hormones", "Enzymes", "Antibodies", "All of the above"], 
+        correct: 3, 
+        aiExplanation: "The specificity mechanism (shape fit) applies to enzymes/substrates, antigens/antibodies, and hormones/receptors.", 
+        topicName: "Biochemistry" 
+    },
+    { 
+        id: 74, 
+        grade: "9", 
+        subject: "Biology", 
+        question: "Which process produces alcohol in yeast?", 
+        options: ["Aerobic respiration", "Anaerobic respiration (Fermentation)", "Photosynthesis", "Transpiration"], 
+        correct: 1, 
+        aiExplanation: "Yeast fermentation (anaerobic) converts sugar to Ethanol + CO2.", 
+        topicName: "Respiration" 
+    },
+    { 
+        id: 75, 
+        grade: "9", 
+        subject: "Biology", 
+        question: "The first vaccine was developed by:", 
+        options: ["Louis Pasteur", "Alexander Fleming", "Edward Jenner", "Robert Koch"], 
+        correct: 2, 
+        aiExplanation: "Edward Jenner developed the smallpox vaccine using cowpox material.", 
+        topicName: "History of Science" 
+    },
+    { 
+        id: 76, 
+        grade: "9", 
+        subject: "Biology", 
+        question: "Binomial Nomenclature uses which two names?", 
+        options: ["Family and Genus", "Genus and Species", "Order and Family", "Kingdom and Phylum"], 
+        correct: 1, 
+        aiExplanation: "Scientific names consist of Genus + Species (e.g., Homo sapiens).", 
+        topicName: "Taxonomy" 
+    },
+    { 
+        id: 77, 
+        grade: "9", 
+        subject: "Biology", 
+        question: "Which of the following is NOT a characteristic of Monocots?", 
+        options: ["One cotyledon", "Parallel leaf veins", "Taproot system", "Flower parts in 3s"], 
+        correct: 2, 
+        aiExplanation: "Monocots have fibrous roots. Dicots have taproots.", 
+        topicName: "Plants" 
+    },
+    { 
+        id: 78, 
+        grade: "9", 
+        subject: "Biology", 
+        question: "The causative agent of Typhoid is:", 
+        options: ["Virus", "Bacteria (Salmonella)", "Protozoa", "Fungi"], 
+        correct: 1, 
+        aiExplanation: "Typhoid fever is caused by the bacterium Salmonella typhi.", 
+        topicName: "Diseases" 
+    },
+    { 
+        id: 79, 
+        grade: "9", 
+        subject: "Biology", 
+        question: "What is the function of the Xylem?", 
+        options: ["Transport food", "Transport water and minerals", "Photosynthesis", "Support only"], 
+        correct: 1, 
+        aiExplanation: "Xylem transports water up from roots. Phloem transports food (sugar) down.", 
+        topicName: "Plant Physiology" 
+    },
+    { 
+        id: 80, 
+        grade: "9", 
+        subject: "Biology", 
+        question: "Which is the 'Universal Donor' blood group?", 
+        options: ["Type A", "Type B", "Type AB", "Type O-"], 
+        correct: 3, 
+        aiExplanation: "O- blood has no antigens, so it can be given to anyone without immune reaction.", 
+        topicName: "Human Physiology" 
+    },
+    { 
+        id: 81, 
+        grade: "9", 
+        subject: "Biology", 
+        question: "The gap between two neurons is called:", 
+        options: ["Axon", "Dendrite", "Synapse", "Myelin"], 
+        correct: 2, 
+        aiExplanation: "The synapse is the junction where neurotransmitters pass the signal to the next neuron.", 
+        topicName: "Nervous System" 
+    },
+    { 
+        id: 82, 
+        grade: "9", 
+        subject: "Biology", 
+        question: "Which ecological pyramid is always upright?", 
+        options: ["Pyramid of Numbers", "Pyramid of Biomass", "Pyramid of Energy", "None"], 
+        correct: 2, 
+        aiExplanation: "Energy is lost at each trophic level (10% rule), so energy pyramids can never be inverted.", 
+        topicName: "Ecology" 
+    },
+    { 
+        id: 83, 
+        grade: "9", 
+        subject: "Biology", 
+        question: "Penicillin kills bacteria by:", 
+        options: ["Destroying the nucleus", "Stopping cell wall synthesis", "Stopping protein synthesis", "Destroying the membrane"], 
+        correct: 1, 
+        aiExplanation: "Penicillin inhibits the formation of peptidoglycan links in the bacterial cell wall, causing it to burst.", 
+        topicName: "Medicine" 
+    },
+    { 
+        id: 84, 
+        grade: "9", 
+        subject: "Biology", 
+        question: "Which organ produces Insulin?", 
+        options: ["Liver", "Kidney", "Pancreas", "Stomach"], 
+        correct: 2, 
+        aiExplanation: "The Pancreas (Islets of Langerhans) produces Insulin to regulate blood sugar.", 
+        topicName: "Endocrine System" 
+    },
+    { 
+        id: 85, 
+        grade: "9", 
+        subject: "Biology", 
+        question: "A plant bending towards light is an example of:", 
+        options: ["Geotropism", "Phototropism", "Thigmotropism", "Hydrotropism"], 
+        correct: 1, 
+        aiExplanation: "Photo- means light. Tropism means turning. It is positive phototropism.", 
+        topicName: "Plant Behavior" 
+    },
+    { 
+        id: 86, 
+        grade: "9", 
+        subject: "Biology", 
+        question: "Which is a Vertebrate?", 
+        options: ["Spider", "Earthworm", "Snake", "Crab"], 
+        correct: 2, 
+        aiExplanation: "Snakes are reptiles and have a backbone (vertebrae). The others are invertebrates.", 
+        topicName: "Classification" 
+    },
+    { 
+        id: 87, 
+        grade: "9", 
+        subject: "Biology", 
+        question: "The basic structural unit of DNA is the:", 
+        options: ["Amino acid", "Nucleotide", "Fatty acid", "Glucose"], 
+        correct: 1, 
+        aiExplanation: "A nucleotide consists of a sugar, phosphate, and nitrogenous base.", 
+        topicName: "Genetics" 
+    },
+    { 
+        id: 88, 
+        grade: "9", 
+        subject: "Biology", 
+        question: "Eutrophication in lakes is caused by excess:", 
+        options: ["Oxygen", "Nitrates and Phosphates", "Carbon dioxide", "Fish"], 
+        correct: 1, 
+        aiExplanation: "Fertilizer runoff (Nitrates/Phosphates) causes algae blooms, which deplete oxygen and kill fish.", 
+        topicName: "Environmental Biology" 
+    },
+    { 
+        id: 89, 
+        grade: "9", 
+        subject: "Biology", 
+        question: "Which is an example of a gymnosperm found in Ethiopia?", 
+        options: ["Teff", "Coffee", "Zigba (Podocarpus)", "Rose"], 
+        correct: 2, 
+        aiExplanation: "Podocarpus (Zigba) and Juniperus (Tid) are common Ethiopian gymnosperms.", 
+        topicName: "Ethiopian Flora" 
+    },
+    { 
+        id: 90, 
+        grade: "9", 
+        subject: "Biology", 
+        question: "The part of the brain responsible for balance and coordination is:", 
+        options: ["Cerebrum", "Cerebellum", "Medulla", "Hypothalamus"], 
+        correct: 1, 
+        aiExplanation: "The Cerebellum controls motor movement coordination, balance, equilibrium, and muscle tone.", 
+        topicName: "Nervous System" 
+    },
+    { 
+        id: 91, 
+        grade: "9", 
+        subject: "Biology", 
+        question: "Which of the following is an example of a micronutrient?", 
+        options: ["Iron", "Protein", "Starch", "Fat"], 
+        correct: 0, 
+        aiExplanation: "Iron is a mineral needed in small amounts (micro). Protein, Starch, and Fat are macronutrients.", 
+        topicName: "Nutrition" 
+    },
+    { 
+        id: 92, 
+        grade: "9", 
+        subject: "Biology", 
+        question: "The sticky part of the flower that catches pollen is:", 
+        options: ["Style", "Stigma", "Ovary", "Petal"], 
+        correct: 1, 
+        aiExplanation: "The Stigma is at the top of the pistil and is sticky to trap pollen grains.", 
+        topicName: "Plant Reproduction" 
+    },
+    { 
+        id: 93, 
+        grade: "9", 
+        subject: "Biology", 
+        question: "Which disease is caused by a deficiency of Iodine?", 
+        options: ["Scurvy", "Goiter", "Rickets", "Night blindness"], 
+        correct: 1, 
+        aiExplanation: "Lack of Iodine causes the thyroid gland to enlarge, known as Goiter.", 
+        topicName: "Deficiency Diseases" 
+    },
+    { 
+        id: 94, 
+        grade: "9", 
+        subject: "Biology", 
+        question: "During inhalation, the diaphragm:", 
+        options: ["Relaxes and moves up", "Contracts and moves down", "Stays stationary", "Expands"], 
+        correct: 1, 
+        aiExplanation: "Contraction flattens the diaphragm downwards, increasing chest volume and drawing air in.", 
+        topicName: "Respiratory System" 
+    },
+    { 
+        id: 95, 
+        grade: "9", 
+        subject: "Biology", 
+        question: "Which blood vessel carries oxygenated blood from the lungs to the heart?", 
+        options: ["Pulmonary Artery", "Pulmonary Vein", "Aorta", "Vena Cava"], 
+        correct: 1, 
+        aiExplanation: "The Pulmonary Vein is the ONLY vein that carries oxygenated blood (back to the left atrium).", 
+        topicName: "Circulatory System" 
+    },
+    { 
+        id: 96, 
+        grade: "9", 
+        subject: "Biology", 
+        question: "Who discovered the antibiotic Penicillin?", 
+        options: ["Louis Pasteur", "Alexander Fleming", "Robert Hooke", "Darwin"], 
+        correct: 1, 
+        aiExplanation: "Alexander Fleming discovered Penicillin by accident in 1928.", 
+        topicName: "History of Science" 
+    },
+    { 
+        id: 97, 
+        grade: "9", 
+        subject: "Biology", 
+        question: "Which of the following animals is cold-blooded (Poikilothermic)?", 
+        options: ["Human", "Bird", "Frog", "Whale"], 
+        correct: 2, 
+        aiExplanation: "Frogs (Amphibians) cannot regulate their own body temperature; they are ectotherms.", 
+        topicName: "Classification" 
+    },
+    { 
+        id: 98, 
+        grade: "9", 
+        subject: "Biology", 
+        question: "The main excretory product in humans is:", 
+        options: ["Ammonia", "Urea", "Uric Acid", "Amino Acid"], 
+        correct: 1, 
+        aiExplanation: "The liver converts toxic ammonia into Urea, which is excreted by the kidneys.", 
+        topicName: "Excretory System" 
+    },
+    { 
+        id: 99, 
+        grade: "9", 
+        subject: "Biology", 
+        question: "Which of the following is a physical method of contraception?", 
+        options: ["Pill", "Condom", "Vasectomy", "Calendar method"], 
+        correct: 1, 
+        aiExplanation: "A condom is a physical barrier method. The pill is chemical, vasectomy is surgical.", 
+        topicName: "Reproduction Health" 
+    },
+    { 
+        id: 100, 
+        grade: "9", 
+        subject: "Biology", 
+        question: "Global warming is primarily caused by an increase in:", 
+        options: ["Oxygen", "Ozone", "Carbon Dioxide", "Nitrogen"], 
+        correct: 2, 
+        aiExplanation: "CO2 traps heat in the atmosphere (Greenhouse Effect), leading to global warming.", 
+        topicName: "Ecology" 
+    },
+    /* =========================================
+   DonBoscoPrep Quiz System
+   Grade 9 Physics - Comprehensive Exam Question Bank
+========================================= */
+
+
+    // --- UNIT 1: PHYSICS AND HUMAN SOCIETY ---
+
+    { 
+        id: 1, 
+        grade: "9", 
+        subject: "Physics", 
+        question: "Which branch of physics would best describe the trajectory and stability of the Grand Ethiopian Renaissance Dam (GERD)?", 
+        options: ["Thermodynamics", "Mechanics", "Nuclear Physics", "Acoustics"], 
+        correct: 1, 
+        aiExplanation: "Mechanics deals with forces, matter, and motion. The structural stability and forces acting on a dam fall squarely under static and fluid mechanics.", 
+        topicName: "Branches of Physics" 
+    },
+    { 
+        id: 2, 
+        grade: "9", 
+        subject: "Physics", 
+        question: "The study of the behavior of electrons in a semiconductor chip primarily involves which branch of physics?", 
+        options: ["Classical Mechanics", "Quantum Mechanics", "Astrophysics", "Geophysics"], 
+        correct: 1, 
+        aiExplanation: "Quantum mechanics deals with the behavior of subatomic particles like electrons, which is essential for understanding semiconductors.", 
+        topicName: "Branches of Physics" 
+    },
+    { 
+        id: 3, 
+        grade: "9", 
+        subject: "Physics", 
+        question: "Galileo Galilei is credited as the 'father of observational astronomy' because he:", 
+        options: ["Invented the telescope", "Was the first to use a telescope for celestial study", "Discovered the law of gravity", "Developed the laws of motion"], 
+        correct: 1, 
+        aiExplanation: "While he didn't invent the telescope, Galileo was the first to systematically turn it towards the sky to study celestial bodies.", 
+        topicName: "History of Physics" 
+    },
+    { 
+        id: 4, 
+        grade: "9", 
+        subject: "Physics", 
+        question: "Which field of study combines biology and physics to explain phenomena like blood flow or nerve impulses?", 
+        options: ["Geophysics", "Biophysics", "Medical Physics", "Astrophysics"], 
+        correct: 1, 
+        aiExplanation: "Biophysics applies the theories and methods of physics to understand how biological systems work.", 
+        topicName: "Related Fields" 
+    },
+
+    // --- UNIT 2: PHYSICAL QUANTITIES ---
+
+    { 
+        id: 5, 
+        grade: "9", 
+        subject: "Physics", 
+        question: "Which of the following is a ratio scale?", 
+        options: ["Celsius Temperature", "Fahrenheit Temperature", "Kelvin Temperature", "Calendar Dates"], 
+        correct: 2, 
+        aiExplanation: "The Kelvin scale has a 'true zero' point (absolute zero), which allows for meaningful ratios (e.g., 200K is twice as hot as 100K). Celsius and Fahrenheit do not have a true zero.", 
+        topicName: "Measurement Scales" 
+    },
+    { 
+        id: 6, 
+        grade: "9", 
+        subject: "Physics", 
+        question: "Express the speed of light (3 × 10^8 m/s) in Gigameters per second (Gm/s).", 
+        options: ["300 Gm/s", "30 Gm/s", "3 Gm/s", "0.3 Gm/s"], 
+        correct: 3, 
+        aiExplanation: "Giga (G) is 10^9. 3 × 10^8 m/s = 0.3 × 10^9 m/s = 0.3 Gm/s.", 
+        topicName: "Unit Conversion" 
+    },
+    { 
+        id: 7, 
+        grade: "9", 
+        subject: "Physics", 
+        question: "Which pair consists ONLY of fundamental physical quantities?", 
+        options: ["Mass and Force", "Time and Current", "Velocity and Length", "Energy and Temperature"], 
+        correct: 1, 
+        aiExplanation: "Time and Current (Ampere) are fundamental. Force, Velocity, and Energy are derived quantities.", 
+        topicName: "Physical Quantities" 
+    },
+    { 
+        id: 8, 
+        grade: "9", 
+        subject: "Physics", 
+        question: "If a cube has a side length of 2 cm, what is its volume in SI units (m³)?", 
+        options: ["8 m³", "0.08 m³", "8 × 10⁻⁴ m³", "8 × 10⁻⁶ m³"], 
+        correct: 3, 
+        aiExplanation: "2 cm = 0.02 m. Volume = (0.02)³ = 0.000008 = 8 × 10⁻⁶ m³.", 
+        topicName: "Unit Conversion" 
+    },
+    { 
+        id: 9, 
+        grade: "9", 
+        subject: "Physics", 
+        question: "Which of the following measurements has 3 significant figures?", 
+        options: ["0.052", "0.0520", "5200", "5.2"], 
+        correct: 1, 
+        aiExplanation: "In 0.0520, the leading zeros are not significant, but the trailing zero after the decimal is. 5, 2, and 0 are significant.", 
+        topicName: "Significant Figures" 
+    },
+    { 
+        id: 10, 
+        grade: "9", 
+        subject: "Physics", 
+        question: "The derived unit Pascal (Pa) is equivalent to:", 
+        options: ["kg/m·s²", "kg·m/s²", "kg/m²·s²", "kg·m²/s²"], 
+        correct: 0, 
+        aiExplanation: "Pascal is Force/Area. Force (N) = kg·m/s². Area = m². N/m² = (kg·m/s²) / m² = kg/(m·s²).", 
+        topicName: "Derived Units" 
+    },
+
+    // --- UNIT 3: MOTION IN A STRAIGHT LINE ---
+
+    { 
+        id: 11, 
+        grade: "9", 
+        subject: "Physics", 
+        question: "A runner completes one lap of a 400m circular track in 50 seconds. What is her average velocity?", 
+        options: ["8 m/s", "0 m/s", "4 m/s", "80 m/s"], 
+        correct: 1, 
+        aiExplanation: "Average velocity = Displacement / Time. Since she returns to the start, displacement is 0, so average velocity is 0.", 
+        topicName: "Velocity" 
+    },
+    { 
+        id: 12, 
+        grade: "9", 
+        subject: "Physics", 
+        question: "An object is thrown vertically upward. At the highest point of its trajectory:", 
+        options: ["Its velocity and acceleration are zero", "Its velocity is zero, but acceleration is non-zero", "Its velocity is non-zero, but acceleration is zero", "Both are non-zero"], 
+        correct: 1, 
+        aiExplanation: "At the top, the object momentarily stops (v=0), but gravity is still acting on it (g = 9.8 m/s² downward).", 
+        topicName: "Kinematics" 
+    },
+    { 
+        id: 13, 
+        grade: "9", 
+        subject: "Physics", 
+        question: "The slope of a velocity-time graph represents:", 
+        options: ["Displacement", "Speed", "Acceleration", "Distance"], 
+        correct: 2, 
+        aiExplanation: "The rate of change of velocity (rise/run on a v-t graph) is defined as acceleration.", 
+        topicName: "Graphs of Motion" 
+    },
+    { 
+        id: 14, 
+        grade: "9", 
+        subject: "Physics", 
+        question: "A car accelerates from rest at 2 m/s² for 10 seconds. How far does it travel?", 
+        options: ["20 m", "100 m", "200 m", "50 m"], 
+        correct: 1, 
+        aiExplanation: "Use s = ut + ½at². u=0, a=2, t=10. s = 0 + 0.5(2)(100) = 100 m.", 
+        topicName: "Kinematics Equations" 
+    },
+    { 
+        id: 15, 
+        grade: "9", 
+        subject: "Physics", 
+        question: "If a body travels with uniform velocity, its acceleration is:", 
+        options: ["Constant and non-zero", "Increasing", "Zero", "Decreasing"], 
+        correct: 2, 
+        aiExplanation: "Uniform velocity means speed and direction are constant. Since there is no change in velocity, acceleration is zero.", 
+        topicName: "Uniform Motion" 
+    },
+    { 
+        id: 16, 
+        grade: "9", 
+        subject: "Physics", 
+        question: "A stone is dropped from a cliff. It hits the ground after 4 seconds. How high is the cliff? (g = 10 m/s²)", 
+        options: ["40 m", "80 m", "120 m", "160 m"], 
+        correct: 1, 
+        aiExplanation: "h = ½gt². h = 0.5 * 10 * 4² = 5 * 16 = 80 m.", 
+        topicName: "Free Fall" 
+    },
+    { 
+        id: 17, 
+        grade: "9", 
+        subject: "Physics", 
+        question: "Which graph represents an object at rest?", 
+        options: ["Position-time graph: horizontal line", "Velocity-time graph: horizontal line (non-zero)", "Position-time graph: straight diagonal line", "Velocity-time graph: diagonal line"], 
+        correct: 0, 
+        aiExplanation: "If position does not change over time (horizontal line on s-t graph), the object is stationary.", 
+        topicName: "Graphs of Motion" 
+    },
+
+    // --- UNIT 4: FORCE, WORK, ENERGY AND POWER ---
+
+    { 
+        id: 18, 
+        grade: "9", 
+        subject: "Physics", 
+        question: "If the net force acting on a moving object is suddenly reduced to zero, the object will:", 
+        options: ["Stop immediately", "Decelerate gradually", "Continue moving at constant velocity", "Move in a circle"], 
+        correct: 2, 
+        aiExplanation: "According to Newton's 1st Law, without a net force, an object keeps its current state of motion (constant velocity).", 
+        topicName: "Newton's Laws" 
+    },
+    { 
+        id: 19, 
+        grade: "9", 
+        subject: "Physics", 
+        question: "A 10 kg box is pushed with a force of 50 N. If the frictional force is 10 N, what is the acceleration?", 
+        options: ["4 m/s²", "5 m/s²", "6 m/s²", "40 m/s²"], 
+        correct: 0, 
+        aiExplanation: "Net Force = Applied - Friction = 50 - 10 = 40 N. a = F/m = 40/10 = 4 m/s².", 
+        topicName: "Dynamics" 
+    },
+    { 
+        id: 20, 
+        grade: "9", 
+        subject: "Physics", 
+        question: "Which of the following is a non-contact force?", 
+        options: ["Friction", "Tension", "Normal Force", "Gravitational Force"], 
+        correct: 3, 
+        aiExplanation: "Gravity acts over a distance without physical contact. The others are contact forces.", 
+        topicName: "Forces" 
+    },
+    { 
+        id: 21, 
+        grade: "9", 
+        subject: "Physics", 
+        question: "Work is done only when:", 
+        options: ["A force acts on a body", "The body moves", "The force has a component in the direction of displacement", "Energy is consumed"], 
+        correct: 2, 
+        aiExplanation: "Work = F d cos(theta). There must be displacement, and the force must not be perpendicular to it.", 
+        topicName: "Work" 
+    },
+    { 
+        id: 22, 
+        grade: "9", 
+        subject: "Physics", 
+        question: "If the speed of a car is doubled, its kinetic energy increases by a factor of:", 
+        options: ["2", "4", "8", "√2"], 
+        correct: 1, 
+        aiExplanation: "KE = ½mv². If v becomes 2v, KE becomes ½m(2v)² = 4(½mv²). It quadruples.", 
+        topicName: "Energy" 
+    },
+    { 
+        id: 23, 
+        grade: "9", 
+        subject: "Physics", 
+        question: "Power is defined as:", 
+        options: ["Force x Distance", "Work done per unit time", "Energy x Time", "Force x Velocity squared"], 
+        correct: 1, 
+        aiExplanation: "Power is the rate of doing work: P = W/t.", 
+        topicName: "Power" 
+    },
+    { 
+        id: 24, 
+        grade: "9", 
+        subject: "Physics", 
+        question: "A 2kg book is lifted 2m high. How much work is done against gravity? (g=10 m/s²)", 
+        options: ["20 J", "4 J", "40 J", "10 J"], 
+        correct: 2, 
+        aiExplanation: "Work = mgh = 2 * 10 * 2 = 40 J.", 
+        topicName: "Work" 
+    },
+    { 
+        id: 25, 
+        grade: "9", 
+        subject: "Physics", 
+        question: "Action and reaction forces do not cancel each other because:", 
+        options: ["They are unequal in magnitude", "They act in the same direction", "They act on different objects", "They act at different times"], 
+        correct: 2, 
+        aiExplanation: "Newton's 3rd Law pairs act on different bodies (e.g., A on B, and B on A), so they cannot cancel out on a single free-body diagram.", 
+        topicName: "Newton's Laws" 
+    },
+
+    // --- UNIT 5: SIMPLE MACHINES ---
+
+    { 
+        id: 26, 
+        grade: "9", 
+        subject: "Physics", 
+        question: "Which class of lever always has a Mechanical Advantage greater than 1?", 
+        options: ["First Class", "Second Class", "Third Class", "None"], 
+        correct: 1, 
+        aiExplanation: "In a 2nd class lever (e.g., wheelbarrow), the load is between the fulcrum and effort. The effort arm is always longer than the load arm, so MA > 1.", 
+        topicName: "Levers" 
+    },
+    { 
+        id: 27, 
+        grade: "9", 
+        subject: "Physics", 
+        question: "The efficiency of a machine is always less than 100% because:", 
+        options: ["Machines are heavy", "Output work is always less than input work due to friction", "Input force is too small", "Machines multiply distance"], 
+        correct: 1, 
+        aiExplanation: "Some input energy is always lost as heat due to friction, making Output Work < Input Work.", 
+        topicName: "Efficiency" 
+    },
+    { 
+        id: 28, 
+        grade: "9", 
+        subject: "Physics", 
+        question: "A block and tackle system has 4 pulleys. Ideally, its Mechanical Advantage is:", 
+        options: ["2", "4", "8", "16"], 
+        correct: 1, 
+        aiExplanation: "For a pulley system, the Ideal Mechanical Advantage (IMA) is equal to the number of rope segments supporting the load. 4 pulleys typically mean 4 segments.", 
+        topicName: "Pulleys" 
+    },
+    { 
+        id: 29, 
+        grade: "9", 
+        subject: "Physics", 
+        question: "An inclined plane has a length of 10m and a height of 2m. What is its Velocity Ratio (VR)?", 
+        options: ["0.2", "5", "20", "8"], 
+        correct: 1, 
+        aiExplanation: "VR for an inclined plane = Length / Height = 10 / 2 = 5.", 
+        topicName: "Inclined Plane" 
+    },
+    { 
+        id: 30, 
+        grade: "9", 
+        subject: "Physics", 
+        question: "Which simple machine is essentially an inclined plane wrapped around a cylinder?", 
+        options: ["Wedge", "Lever", "Screw", "Wheel and Axle"], 
+        correct: 2, 
+        aiExplanation: "A screw transforms rotational motion into linear motion and is geometrically an inclined plane wrapped helically.", 
+        topicName: "Screw" 
+    },
+    { 
+        id: 31, 
+        grade: "9", 
+        subject: "Physics", 
+        question: "If a machine has a Velocity Ratio of 5 and an Efficiency of 80%, what is its Mechanical Advantage?", 
+        options: ["4", "6.25", "5", "0.16"], 
+        correct: 0, 
+        aiExplanation: "Efficiency = MA / VR. So, MA = Efficiency * VR = 0.80 * 5 = 4.", 
+        topicName: "Efficiency" 
+    },
+    { 
+        id: 32, 
+        grade: "9", 
+        subject: "Physics", 
+        question: "A wedge is mainly used to:", 
+        options: ["Lift heavy loads", "Split objects apart", "Change direction of force", "Increase speed"], 
+        correct: 1, 
+        aiExplanation: "Wedges (like axes or knives) convert a downward force into a sideways force to split materials.", 
+        topicName: "Wedge" 
+    },
+
+    // --- UNIT 6: MECHANICAL OSCILLATION AND SOUND ---
+
+    { 
+        id: 33, 
+        grade: "9", 
+        subject: "Physics", 
+        question: "The time required for one complete oscillation is called:", 
+        options: ["Frequency", "Amplitude", "Period", "Wavelength"], 
+        correct: 2, 
+        aiExplanation: "Period (T) is the time taken for one full cycle. Frequency is cycles per second.", 
+        topicName: "Oscillation Basics" 
+    },
+    { 
+        id: 34, 
+        grade: "9", 
+        subject: "Physics", 
+        question: "If the length of a simple pendulum is quadrupled (x4), its period will:", 
+        options: ["Double", "Quadruple", "Halve", "Stay the same"], 
+        correct: 0, 
+        aiExplanation: "T = 2π√(L/g). If L becomes 4L, T becomes √(4) = 2 times the original.", 
+        topicName: "Pendulum" 
+    },
+    { 
+        id: 35, 
+        grade: "9", 
+        subject: "Physics", 
+        question: "Sound waves cannot travel through:", 
+        options: ["Water", "Steel", "Air", "Vacuum"], 
+        correct: 3, 
+        aiExplanation: "Sound is a mechanical wave requiring a medium (particles) to transmit energy. A vacuum has no particles.", 
+        topicName: "Sound Propagation" 
+    },
+    { 
+        id: 36, 
+        grade: "9", 
+        subject: "Physics", 
+        question: "Which characteristic of a sound wave determines its pitch?", 
+        options: ["Amplitude", "Frequency", "Speed", "Wavelength"], 
+        correct: 1, 
+        aiExplanation: "Pitch is directly proportional to frequency. High frequency = High pitch.", 
+        topicName: "Characteristics of Sound" 
+    },
+    { 
+        id: 37, 
+        grade: "9", 
+        subject: "Physics", 
+        question: "An echo is heard 2 seconds after shouting towards a cliff. If the speed of sound is 340 m/s, how far is the cliff?", 
+        options: ["170 m", "340 m", "680 m", "85 m"], 
+        correct: 1, 
+        aiExplanation: "Time to reach cliff = 1 sec (half of total). Distance = Speed * Time = 340 * 1 = 340 m.", 
+        topicName: "Echo" 
+    },
+    { 
+        id: 38, 
+        grade: "9", 
+        subject: "Physics", 
+        question: "In a longitudinal wave, the particles of the medium vibrate:", 
+        options: ["Perpendicular to the wave direction", "Parallel to the wave direction", "In circles", "They do not vibrate"], 
+        correct: 1, 
+        aiExplanation: "Longitudinal waves (like sound) have compressions and rarefactions parallel to the energy transfer.", 
+        topicName: "Wave Types" 
+    },
+    { 
+        id: 39, 
+        grade: "9", 
+        subject: "Physics", 
+        question: "Hooke's Law states that the restoring force in a spring is proportional to:", 
+        options: ["Mass attached", "Velocity", "Displacement from equilibrium", "Acceleration"], 
+        correct: 2, 
+        aiExplanation: "F = -kx. Force is directly proportional to displacement (x) but in the opposite direction.", 
+        topicName: "Hooke's Law" 
+    },
+    { 
+        id: 40, 
+        grade: "9", 
+        subject: "Physics", 
+        question: "A sound wave has a frequency of 50 Hz and a wavelength of 6 m. What is its speed?", 
+        options: ["300 m/s", "8.3 m/s", "0.12 m/s", "56 m/s"], 
+        correct: 0, 
+        aiExplanation: "v = f * λ = 50 * 6 = 300 m/s.", 
+        topicName: "Wave Equation" 
+    },
+
+    // --- UNIT 7: TEMPERATURE AND THERMOMETRY ---
+
+    { 
+        id: 41, 
+        grade: "9", 
+        subject: "Physics", 
+        question: "Temperature is a measure of:", 
+        options: ["Total heat energy", "Average kinetic energy of particles", "Potential energy", "Thermal expansion"], 
+        correct: 1, 
+        aiExplanation: "Temperature reflects the average random kinetic energy of the molecules in a substance.", 
+        topicName: "Temperature" 
+    },
+    { 
+        id: 42, 
+        grade: "9", 
+        subject: "Physics", 
+        question: "Convert 27°C to Kelvin.", 
+        options: ["300 K", "273 K", "246 K", "327 K"], 
+        correct: 0, 
+        aiExplanation: "K = °C + 273.15. So, 27 + 273 = 300 K.", 
+        topicName: "Temperature Scales" 
+    },
+    { 
+        id: 43, 
+        grade: "9", 
+        subject: "Physics", 
+        question: "Absolute Zero is:", 
+        options: ["0°C", "-273°F", "0 K", "-100°C"], 
+        correct: 2, 
+        aiExplanation: "Absolute zero (0 K) is the theoretical temperature where all molecular motion ceases.", 
+        topicName: "Temperature Scales" 
+    },
+    { 
+        id: 44, 
+        grade: "9", 
+        subject: "Physics", 
+        question: "Which thermometer is best suited for measuring very high temperatures (e.g., in a furnace)?", 
+        options: ["Alcohol thermometer", "Mercury thermometer", "Thermocouple", "Clinical thermometer"], 
+        correct: 2, 
+        aiExplanation: "Thermocouples have a wide range and can withstand extreme heat where liquid thermometers would boil or break.", 
+        topicName: "Thermometers" 
+    },
+    { 
+        id: 45, 
+        grade: "9", 
+        subject: "Physics", 
+        question: "When a metal rod is heated, it expands. This is an example of:", 
+        options: ["Linear expansion", "Volume expansion", "Area expansion", "Chemical change"], 
+        correct: 0, 
+        aiExplanation: "Expansion along the length of a solid object is called Linear Expansion.", 
+        topicName: "Thermal Expansion" 
+    },
+    { 
+        id: 46, 
+        grade: "9", 
+        subject: "Physics", 
+        question: "The bimetallic strip works based on the principle that:", 
+        options: ["Metals melt at different temperatures", "Different metals expand at different rates", "Metals conduct electricity", "Heat flows from hot to cold"], 
+        correct: 1, 
+        aiExplanation: "Because the two metals have different coefficients of linear expansion, the strip bends when heated.", 
+        topicName: "Thermal Expansion" 
+    },
+    { 
+        id: 47, 
+        grade: "9", 
+        subject: "Physics", 
+        question: "If a hole is drilled in a metal plate and the plate is heated, the size of the hole will:", 
+        options: ["Decrease", "Increase", "Remain same", "First decrease then increase"], 
+        correct: 1, 
+        aiExplanation: "Thermal expansion acts as if the material was photographic. Everything enlarges, including the hole.", 
+        topicName: "Thermal Expansion" 
+    },
+
+    // --- MIXED CHALLENGE QUESTIONS (UNITS 1-7) ---
+
+    { 
+        id: 48, 
+        grade: "9", 
+        subject: "Physics", 
+        question: "A force of 10N acts on a 2kg mass for 5 seconds. What is the change in velocity?", 
+        options: ["25 m/s", "10 m/s", "50 m/s", "2 m/s"], 
+        correct: 0, 
+        aiExplanation: "a = F/m = 10/2 = 5 m/s². v = u + at. Assuming u=0, v = 5 * 5 = 25 m/s.", 
+        topicName: "Dynamics" 
+    },
+    { 
+        id: 49, 
+        grade: "9", 
+        subject: "Physics", 
+        question: "Which of the following has the same unit as Energy?", 
+        options: ["Power", "Force", "Work", "Momentum"], 
+        correct: 2, 
+        aiExplanation: "Work and Energy are both measured in Joules (J). Work is the transfer of energy.", 
+        topicName: "Units" 
+    },
+    { 
+        id: 50, 
+        grade: "9", 
+        subject: "Physics", 
+        question: "The period of a simple pendulum depends on:", 
+        options: ["Mass of the bob", "Amplitude of oscillation", "Length of the string", "All of the above"], 
+        correct: 2, 
+        aiExplanation: "For small angles, period depends only on length (L) and gravity (g), not mass or amplitude.", 
+        topicName: "Pendulum" 
+    },
+    { 
+        id: 51, 
+        grade: "9", 
+        subject: "Physics", 
+        question: "A 500g ball moving at 4 m/s has a kinetic energy of:", 
+        options: ["4 J", "2 J", "8 J", "1000 J"], 
+        correct: 0, 
+        aiExplanation: "m = 0.5 kg. KE = 0.5 * 0.5 * 4² = 0.25 * 16 = 4 J.", 
+        topicName: "Energy Calculation" 
+    },
+    { 
+        id: 52, 
+        grade: "9", 
+        subject: "Physics", 
+        question: "Which law states 'For every action, there is an equal and opposite reaction'?", 
+        options: ["Newton's 1st Law", "Newton's 2nd Law", "Newton's 3rd Law", "Law of Gravitation"], 
+        correct: 2, 
+        aiExplanation: "This is the classic definition of Newton's Third Law of Motion.", 
+        topicName: "Newton's Laws" 
+    },
+    { 
+        id: 53, 
+        grade: "9", 
+        subject: "Physics", 
+        question: "The area under a force-displacement graph represents:", 
+        options: ["Power", "Work done", "Acceleration", "Momentum"], 
+        correct: 1, 
+        aiExplanation: "Work = Force x Displacement. Graphically, this is the area under the curve.", 
+        topicName: "Work" 
+    },
+    { 
+        id: 54, 
+        grade: "9", 
+        subject: "Physics", 
+        question: "Water freezes at 32° on which scale?", 
+        options: ["Celsius", "Kelvin", "Fahrenheit", "Rankine"], 
+        correct: 2, 
+        aiExplanation: "On the Fahrenheit scale, the freezing point of water is 32°F.", 
+        topicName: "Temperature" 
+    },
+    { 
+        id: 55, 
+        grade: "9", 
+        subject: "Physics", 
+        question: "Which of the following is NOT a scalar quantity?", 
+        options: ["Speed", "Distance", "Displacement", "Mass"], 
+        correct: 2, 
+        aiExplanation: "Displacement has both magnitude and direction, making it a vector. The others are scalars.", 
+        topicName: "Scalars and Vectors" 
+    },
+    { 
+        id: 56, 
+        grade: "9", 
+        subject: "Physics", 
+        question: "A screw is an example of which simple machine?", 
+        options: ["Lever", "Inclined Plane", "Pulley", "Wheel and Axle"], 
+        correct: 1, 
+        aiExplanation: "A screw is essentially an inclined plane wrapped around a central cylinder.", 
+        topicName: "Simple Machines" 
+    },
+    { 
+        id: 57, 
+        grade: "9", 
+        subject: "Physics", 
+        question: "Sound travels fastest in:", 
+        options: ["Air", "Water", "Steel", "Vacuum"], 
+        correct: 2, 
+        aiExplanation: "Sound travels faster in denser media where particles are closer together. Solids > Liquids > Gases.", 
+        topicName: "Sound" 
+    },
+    { 
+        id: 58, 
+        grade: "9", 
+        subject: "Physics", 
+        question: "1 horsepower (hp) is approximately equal to:", 
+        options: ["1000 W", "746 W", "500 W", "100 W"], 
+        correct: 1, 
+        aiExplanation: "1 mechanical horsepower is defined as approximately 746 Watts.", 
+        topicName: "Power" 
+    },
+    { 
+        id: 59, 
+        grade: "9", 
+        subject: "Physics", 
+        question: "If a spring stretches 0.2m when a 10N force is applied, its spring constant k is:", 
+        options: ["2 N/m", "50 N/m", "0.02 N/m", "20 N/m"], 
+        correct: 1, 
+        aiExplanation: "F = kx => k = F/x = 10 / 0.2 = 50 N/m.", 
+        topicName: "Hooke's Law" 
+    },
+    { 
+        id: 60, 
+        grade: "9", 
+        subject: "Physics", 
+        question: "Which scientist discovered the relationship between current, voltage, and resistance?", 
+        options: ["Newton", "Ohm", "Ampere", "Volta"], 
+        correct: 1, 
+        aiExplanation: "Georg Ohm formulated Ohm's Law (V = IR).", 
+        topicName: "History of Physics" 
+    },
+
+
     { id: 7, grade:"9", subject:"Chemistry", question:"Water's chemical formula is?", options:["A.H2O","B.CO2","C.O2","D.NaCl"], correct:0, aiExplanation:"Water is H2O.", topicName:"Chemical Formulas" },
     { id: 8, grade:"9", subject:"Chemistry", question:"pH of pure water is?", options:["A.7","B.0","C.14","D.1"], correct:0, aiExplanation:"Pure water has neutral pH 7.", topicName:"Acids & Bases" },
     { id: 9, grade:"9", subject:"Chemistry", question:"Na + Cl → ?", options:["A.NaCl","B.H2O","C.CO2","D.O2"], correct:0, aiExplanation:"Sodium reacts with chlorine to form NaCl.", topicName:"Reactions" },
@@ -25,6 +2332,1707 @@ const allQuestions = [
     { id:16, grade:"9", subject:"Civics", question:"Who makes laws in a country?", options:["A.President","B.Legislature","C.Judiciary","D.Governor"], correct:1, aiExplanation:"Legislature is responsible for making laws.", topicName:"Government" },
     { id:17, grade:"9", subject:"Civics", question:"Right to vote is?", options:["A.Duty","B.Right","C.Responsibility","D.Privilege"], correct:1, aiExplanation:"Voting is a right of citizens.", topicName:"Rights" },
     { id:18, grade:"9", subject:"Civics", question:"Supreme law of a country?", options:["A.Constitution","B.Bill","C.Act","D.Policy"], correct:0, aiExplanation:"The constitution is the highest law.", topicName:"Law" },
+     
+{ id: 1, grade: "9", subject: "Geography", question: "Evaluate how the convergence of the Indian and Eurasian plates continues to influence seismic risk in the Himalayan region.", options: ["Minimal impact due to plate stabilization", "High risk from ongoing compression", "No effect since uplift has ceased", "Risk only from volcanic activity"], correct: 1, aiExplanation: "The Himalayas remain tectonically active; compression generates frequent earthquakes and landslides.", topicName: "Plate Tectonics" },
+
+{ id: 2, grade: "9", subject: "Geography", question: "Analyze why equatorial rainforests maintain high biodiversity despite nutrient‑poor soils.", options: ["Constant volcanic ash renewal", "Rapid nutrient cycling in biomass", "High mineral content in bedrock", "Artificial fertilization"], correct: 1, aiExplanation: "Nutrients are locked in dense vegetation; rapid cycling sustains biodiversity despite poor soils.", topicName: "Biomes" },
+
+{ id: 3, grade: "9", subject: "Geography", question: "Assess the role of the Gulf Stream in shaping economic activities in Northwestern Europe.", options: ["Promotes agriculture through mild winters", "Supports fishing by warming waters", "Encourages tourism with temperate climate", "All of the above"], correct: 3, aiExplanation: "The Gulf Stream moderates climate, enabling agriculture, fishing, and tourism industries.", topicName: "Ocean Currents" },
+
+{ id: 4, grade: "9", subject: "Geography", question: "Explain how the distribution of deserts aligns with global atmospheric circulation cells.", options: ["Located at equator due to rising air", "Found at subtropical highs with descending air", "Formed at poles due to cold air", "Randomly distributed"], correct: 1, aiExplanation: "Deserts cluster at 30° latitude under Hadley cell descending air, limiting rainfall.", topicName: "Climate Systems" },
+
+{ id: 5, grade: "9", subject: "Geography", question: "Critically compare the demographic challenges of Japan and Nigeria in terms of population structure.", options: ["Japan faces youth unemployment, Nigeria faces aging population", "Japan faces aging, Nigeria faces youth bulge", "Both face declining fertility", "Both face overpopulation"], correct: 1, aiExplanation: "Japan’s aging population strains healthcare, while Nigeria’s youth bulge pressures education and jobs.", topicName: "Population Geography" },
+
+{ id: 6, grade: "9", subject: "Geography", question: "Discuss how river deltas become vulnerable to climate change and human activity.", options: ["Sea‑level rise and subsidence", "Urbanization and pollution", "Loss of wetlands", "All of the above"], correct: 3, aiExplanation: "Deltas face combined threats: rising seas, subsidence, and human exploitation.", topicName: "Landforms" },
+
+{ id: 7, grade: "9", subject: "Geography", question: "Evaluate the environmental consequences of large‑scale deforestation in equatorial regions.", options: ["Reduced rainfall and biodiversity loss", "Expansion of fertile soils", "Increased glacier formation", "Improved carbon storage"], correct: 0, aiExplanation: "Deforestation disrupts evapotranspiration, reduces rainfall, and destroys biodiversity.", topicName: "Environmental Issues" },
+
+{ id: 8, grade: "9", subject: "Geography", question: "Explain why the Mercator projection is unsuitable for global population density analysis.", options: ["It distorts direction", "It exaggerates land area near poles", "It compresses equatorial regions", "It removes latitude lines"], correct: 1, aiExplanation: "Mercator exaggerates polar regions, misrepresenting population distribution.", topicName: "Cartography" },
+
+{ id: 9, grade: "9", subject: "Geography", question: "Assess how monsoon variability impacts agricultural productivity in South Asia.", options: ["Excess rainfall ensures bumper harvests", "Failure of monsoon causes drought and famine", "Monsoon has no effect on agriculture", "Monsoon only affects coastal regions"], correct: 1, aiExplanation: "Agriculture in South Asia depends heavily on monsoon rains; variability leads to famine or surplus.", topicName: "Climate" },
+
+{ id: 10, grade: "9", subject: "Geography", question: "Evaluate the geopolitical significance of the Strait of Malacca in global trade.", options: ["Minor route with limited traffic", "Critical chokepoint for oil and goods", "Irrelevant due to air transport", "Only important for fishing"], correct: 1, aiExplanation: "The Strait of Malacca is a vital chokepoint for Asian trade and energy flows.", topicName: "World Geography" },
+
+{ id: 11, grade: "9", subject: "Geography", question: "Assess the importance of barometric pressure readings in predicting cyclones.", options: ["They indicate rising humidity", "They reveal sudden drops linked to storms", "They measure wind velocity", "They track ocean currents"], correct: 1, aiExplanation: "Rapid drops in barometric pressure signal cyclone formation and intensity.", topicName: "Weather Systems" },
+
+{ id: 12, grade: "9", subject: "Geography", question: "Explain why the Sahara Desert expanded southward into the Sahel during the late 20th century.", options: ["Overgrazing and deforestation", "Increased rainfall", "Glacial retreat", "Urbanization"], correct: 0, aiExplanation: "Human activity combined with climate change accelerated desertification in the Sahel.", topicName: "Climate Change" },
+
+{ id: 13, grade: "9", subject: "Geography", question: "Evaluate the competing claims about whether the Nile or Amazon is the longest river.", options: ["Amazon is longer by discharge", "Nile is longer by length", "Both are equal", "Neither is significant"], correct: 1, aiExplanation: "The Nile is traditionally longest by length, but the Amazon surpasses in discharge volume.", topicName: "Rivers" },
+
+{ id: 14, grade: "9", subject: "Geography", question: "Discuss how mountain barriers influence rainfall distribution in South Asia.", options: ["They block monsoon winds", "They intensify rainfall on windward slopes", "They create rain shadows", "All of the above"], correct: 3, aiExplanation: "Mountains both enhance rainfall on windward sides and reduce it in leeward rain shadows.", topicName: "Climate Geography" },
+
+{ id: 15, grade: "9", subject: "Geography", question: "Analyze why nitrogen dominates Earth’s atmosphere compared to oxygen.", options: ["Nitrogen is chemically stable", "Nitrogen is produced by volcanoes", "Oxygen is consumed by plants", "Nitrogen dissolves in oceans"], correct: 0, aiExplanation: "Nitrogen’s chemical stability prevents rapid removal, making it the dominant atmospheric gas.", topicName: "Atmosphere" },
+
+{ id: 16, grade: "9", subject: "Geography", question: "Evaluate Russia’s geographic advantages and disadvantages as the largest country by land area.", options: ["Resource abundance vs. harsh climate", "Population density vs. fertile soils", "Trade routes vs. isolation", "All of the above"], correct: 3, aiExplanation: "Russia’s vast land provides resources but faces harsh climates and logistical challenges.", topicName: "World Geography" },
+
+{ id: 17, grade: "9", subject: "Geography", question: "Explain why loamy soil is considered ideal for agriculture.", options: ["It drains quickly", "It retains nutrients and moisture", "It is purely sandy", "It is purely clay"], correct: 1, aiExplanation: "Loamy soil balances sand, silt, and clay, supporting crops with nutrients and water retention.", topicName: "Soils" },
+
+{ id: 18, grade: "9", subject: "Geography", question: "Compare the Andes and Himalayas in terms of tectonic origin.", options: ["Both formed by divergent boundaries", "Andes by subduction, Himalayas by collision", "Both by volcanic activity", "Both by transform faults"], correct: 1, aiExplanation: "The Andes formed by oceanic‑continental subduction, while the Himalayas formed by continental collision.", topicName: "Mountains" },
+
+{ id: 19, grade: "9", subject: "Geography", question: "Assess why earthquake magnitude scales are critical for disaster management.", options: ["They measure rainfall", "They predict volcanic eruptions", "They quantify seismic energy", "They track wind speed"], correct: 2, aiExplanation: "Magnitude scales quantify seismic energy, guiding emergency response and building codes.", topicName: "Natural Hazards" },
+
+{ id: 20, grade: "9", subject: "Geography", question: "Explain how tundra ecosystems adapt to permafrost conditions.", options: ["Plants grow deep roots", "Vegetation remains shallow with short life cycles", "Animals migrate permanently", "Soils remain fertile year‑round"], correct: 1, aiExplanation: "Tundra plants adapt with shallow roots and rapid seasonal growth above frozen ground.", topicName: "Biomes" },
+
+{ id: 21, grade: "9", subject: "Geography", question: "Evaluate the role of the Prime Meridian in global navigation and timekeeping.", options: ["It divides hemispheres", "It sets 0° longitude", "It anchors time zones", "All of the above"], correct: 3, aiExplanation: "The Prime Meridian establishes longitude reference and anchors global time zones.", topicName: "Cartography" },
+
+{ id: 22, grade: "9", subject: "Geography", question: "Discuss the significance of the Nile River for Egypt’s agriculture and settlement.", options: ["Provides irrigation", "Deposits fertile silt", "Supports dense population", "All of the above"], correct: 3, aiExplanation: "The Nile sustains Egypt through irrigation, fertile soils, and concentrated settlement.", topicName: "Rivers" },
+
+{ id: 23, grade: "9", subject: "Geography", question: "Analyze why the Amazon Basin climate supports continuous rainforest growth.", options: ["Seasonal droughts", "Year‑round rainfall and humidity", "Cold winters", "High altitude"], correct: 1, aiExplanation: "The Amazon Basin’s constant rainfall and humidity sustain rainforest ecosystems.", topicName: "Climate Zones" },
+
+{ id: 24, grade: "9", subject: "Geography", question: "Evaluate Turkey’s geopolitical position as a transcontinental country.", options: ["Controls Bosporus trade", "Bridges Europe and Asia", "Hosts cultural exchange", "All of the above"], correct: 3, aiExplanation: "Turkey’s location bridges continents, controlling trade and cultural flows.", topicName: "World Geography" },
+
+{ id: 25, grade: "9", subject: "Geography", question: "Explain how sediment deposition creates deltas at river mouths.", options: ["Sediments accumulate faster than removal", "Erosion dominates", "Volcanic activity forms deltas", "Tectonic uplift builds deltas"], correct: 0, aiExplanation: "Deltas form when rivers deposit sediments faster than they are removed.", topicName: "Landforms" },
+
+{ id: 26, grade: "9", subject: "Geography", question: "Assess why the Namib Desert is considered the oldest desert.", options: ["Persistent aridity for millions of years", "Recent volcanic activity", "Glacial retreat", "Urban expansion"], correct: 0, aiExplanation: "The Namib has remained arid for millions of years, making it the oldest desert.", topicName: "Deserts" },
+
+{ id: 27, grade: "9", subject: "Geography", question: "Explain how Earth’s rotation produces day and night cycles.", options: ["Rotation exposes regions to sunlight", "Revolution around the sun", "Moon’s orbit", "Sun’s movement"], correct: 0, aiExplanation: "Earth’s rotation exposes different regions to sunlight, creating day and night.", topicName: "Astronomical phenomina"},
+
+{ id: 28, grade: "9", subject: "Geography", question: "Evaluate the cultural and religious significance of the Ganges River in South Asia.", options: ["It is a sacred river in Hinduism", "It supports agriculture only", "It is used for industrial transport", "It has no cultural role"], correct: 0, aiExplanation: "The Ganges is revered in Hinduism and central to rituals, settlement, and agriculture.", topicName: "Rivers" },
+
+{ id: 29, grade: "9", subject: "Geography", question: "Assess why Finland is called the 'Land of a Thousand Lakes' and its impact on economy.", options: ["Tourism and fishing industries thrive", "It supports hydroelectric power", "It provides irrigation", "All of the above"], correct: 3, aiExplanation: "Finland’s lakes sustain tourism, fishing, and energy, shaping its economy.", topicName: "World Geography" },
+
+{ id: 30, grade: "9", subject: "Geography", question: "Explain why bauxite deposits are strategically important for global industry.", options: ["They produce aluminum", "They provide iron", "They generate coal", "They yield copper"], correct: 0, aiExplanation: "Bauxite is the primary ore for aluminum, vital in transport and construction.", topicName: "Minerals" },
+
+{ id: 31, grade: "9", subject: "Geography", question: "Analyze the geopolitical importance of the Arctic Ocean as the smallest ocean.", options: ["It is irrelevant due to size", "It offers new shipping routes", "It supports tropical biodiversity", "It is isolated"], correct: 1, aiExplanation: "Melting ice opens Arctic shipping lanes, raising geopolitical competition.", topicName: "Oceans" },
+
+{ id: 32, grade: "9", subject: "Geography", question: "Evaluate Lake Victoria’s role in regional development in East Africa.", options: ["Supports fishing", "Provides transport", "Supplies water for agriculture", "All of the above"], correct: 3, aiExplanation: "Lake Victoria sustains fishing, transport, and agriculture, supporting millions of people.", topicName: "Lakes" },
+
+{ id: 33, grade: "9", subject: "Geography", question: "Discuss how monsoon winds shape agricultural cycles in India.", options: ["They bring seasonal rainfall", "They cause droughts only", "They have no impact", "They affect only coastal areas"], correct: 0, aiExplanation: "Monsoon rains determine planting and harvest cycles in India.", topicName: "Climate" },
+
+{ id: 34, grade: "9", subject: "Geography", question: "Explain why the Seine River is historically significant for Paris.", options: ["It provides irrigation", "It enabled trade and settlement", "It supports fishing only", "It is a boundary marker"], correct: 1, aiExplanation: "The Seine facilitated trade and settlement, shaping Paris’s growth.", topicName: "Rivers" },
+
+{ id: 35, grade: "9", subject: "Geography", question: "Assess Australia’s unique position as a continent entirely in the Southern Hemisphere.", options: ["It influences climate zones", "It isolates biodiversity", "It shapes trade routes", "All of the above"], correct: 3, aiExplanation: "Australia’s location defines climate, biodiversity, and trade.", topicName: "World Geography" },
+
+{ id: 36, grade: "9", subject: "Geography", question: "Explain how stalactites form in limestone caves.", options: ["Mineral deposition from dripping water", "Volcanic eruptions", "Glacial melting", "Wind erosion"], correct: 0, aiExplanation: "Stalactites form when mineral‑rich water drips and deposits calcite.", topicName: "Landforms" },
+
+{ id: 37, grade: "9", subject: "Geography", question: "Evaluate Uganda’s challenges as a landlocked country.", options: ["Limited sea access", "Dependence on neighbors for trade", "Higher transport costs", "All of the above"], correct: 3, aiExplanation: "Uganda faces trade and transport challenges due to lack of direct sea access.", topicName: "World Geography" },
+
+{ id: 38, grade: "9", subject: "Geography", question: "Discuss carbon dioxide’s role in intensifying the greenhouse effect.", options: ["It traps heat", "It cools the atmosphere", "It dissolves in oceans only", "It reduces rainfall"], correct: 0, aiExplanation: "CO₂ traps infrared radiation, warming Earth’s atmosphere.", topicName: "Climate Change" },
+
+{ id: 39, grade: "9", subject: "Geography", question: "Explain why Victoria Falls is considered a major African landmark.", options: ["It is the widest waterfall", "It is formed by the Zambezi River", "It supports tourism", "All of the above"], correct: 3, aiExplanation: "Victoria Falls is a massive waterfall on the Zambezi, attracting global tourism.", topicName: "Rivers" },
+
+{ id: 40, grade: "9", subject: "Geography", question: "Evaluate the Gobi Desert’s unique climate as a cold desert.", options: ["It has harsh winters", "It has tropical rainfall", "It is humid year‑round", "It supports dense forests"], correct: 0, aiExplanation: "The Gobi experiences extreme cold, unlike hot deserts.", topicName: "Deserts" },
+
+{ id: 41, grade: "9", subject: "Geography", question: "Assess Mount Kilimanjaro’s significance for Africa’s Geography and tourism.", options: ["It is Africa’s highest peak", "It attracts climbers worldwide", "It influences local climate", "All of the above"], correct: 3, aiExplanation: "Kilimanjaro is Africa’s highest peak and a major tourism site.", topicName: "Mountains" },
+
+{ id: 42, grade: "9", subject: "Geography", question: "Explain why the Mediterranean Sea is strategically important.", options: ["It connects to the Atlantic", "It supports trade routes", "It hosts diverse cultures", "All of the above"], correct: 3, aiExplanation: "The Mediterranean links continents and supports trade and culture.", topicName: "Seas" },
+
+{ id: 43, grade: "9", subject: "Geography", question: "Evaluate the Congo River’s role as the deepest river globally.", options: ["It supports navigation", "It sustains biodiversity", "It generates hydroelectric power", "All of the above"], correct: 3, aiExplanation: "The Congo’s depth supports transport, ecosystems, and energy.", topicName: "Rivers" },
+
+{ id: 44, grade: "9", subject: "Geography", question: "Discuss China’s demographic challenges as the most populous country.", options: ["Aging population", "Urbanization pressures", "Resource demand", "All of the above"], correct: 3, aiExplanation: "China faces aging, urbanization, and resource strain.", topicName: "Population Geography" },
+
+{ id: 45, grade: "9", subject: "Geography", question: "Explain why the Kalahari Desert is significant for Botswana.", options: ["It covers most of the country", "It supports unique ecosystems", "It influences settlement patterns", "All of the above"], correct: 3, aiExplanation: "The Kalahari shapes Botswana’s Geography and ecosystems.", topicName: "Deserts" },
+
+{ id: 46, grade: "9", subject: "Geography", question: "Evaluate the Danube River’s importance for European integration.", options: ["It flows through multiple capitals", "It supports trade", "It connects cultures", "All of the above"], correct: 3, aiExplanation: "The Danube links countries, capitals, and economies in Europe.", topicName: "Rivers" },
+
+{ id: 47, grade: "9", subject: "Geography", question: "Explain why Lake Tanganyika is notable in Africa.", options: ["It is the deepest lake", "It supports biodiversity", "It provides transport", "All of the above"], correct: 3, aiExplanation: "Tanganyika is Africa’s deepest lake, vital for biodiversity and transport.", topicName: "Lakes" },
+
+{ id: 48, grade: "9", subject: "Geography", question: "Assess the Himalayas’ role in shaping South Asia’s climate.", options: ["They block cold winds", "They trap monsoon rains", "They create rain shadows", "All of the above"], correct: 3, aiExplanation: "The Himalayas influence rainfall, temperature, and wind patterns.", topicName: "Mountains" },
+
+{ id: 49, grade: "9", subject: "Geography", question: "Discuss the Niger River’s importance for West Africa.", options: ["It supports agriculture", "It provides transport", "It sustains fishing", "All of the above"], correct: 3, aiExplanation: "The Niger sustains agriculture, transport, and fishing in West Africa.", topicName: "Rivers" },
+
+{ id: 50, grade: "9", subject: "Geography", question: "Evaluate Japan’s geographic identity as the 'Land of the Rising Sun' and its implications for culture and economy.", options: ["It reflects Japan’s eastern location", "It symbolizes cultural heritage", "It influences tourism branding", "All of the above"], correct: 3, aiExplanation: "Japan’s eastern position inspired the name; it shapes cultural identity and global perception.", topicName: "World Geography" },
+
+{ id: 51, grade: "9", subject: "Geography", question: "Evaluate how the Sahara Desert’s expansion impacts food security in the Sahel.", options: ["It reduces arable land", "It increases rainfall", "It improves soil fertility", "It supports biodiversity"], correct: 0, aiExplanation: "Desertification reduces farmland, threatening food supplies in the Sahel.", topicName: "Climate Change" },
+
+{ id: 52, grade: "9", subject: "Geography", question: "Discuss the strategic importance of the Strait of Gibraltar for global trade.", options: ["It connects the Mediterranean to the Atlantic", "It supports fishing only", "It is irrelevant for shipping", "It is used for tourism only"], correct: 0, aiExplanation: "The Strait of Gibraltar is a vital chokepoint linking Mediterranean trade to the Atlantic.", topicName: "World Geography" },
+
+{ id: 53, grade: "9", subject: "Geography", question: "Analyze how population pyramids reveal economic challenges in developing countries.", options: ["Youth bulges strain education", "Aging populations dominate", "Balanced structures exist", "No impact on economy"], correct: 0, aiExplanation: "Youth bulges in developing countries create pressure on education and jobs.", topicName: "Population Geography" },
+
+{ id: 54, grade: "9", subject: "Geography", question: "Explain why the Amazon rainforest is called the 'lungs of the Earth'.", options: ["It produces oxygen", "It absorbs carbon dioxide", "It regulates climate", "All of the above"], correct: 3, aiExplanation: "The Amazon sustains oxygen production, carbon absorption, and climate regulation.", topicName: "Biomes" },
+
+{ id: 55, grade: "9", subject: "Geography", question: "Evaluate the environmental risks of oil extraction in the Niger Delta.", options: ["Water pollution", "Loss of biodiversity", "Community displacement", "All of the above"], correct: 3, aiExplanation: "Oil extraction causes pollution, biodiversity loss, and social disruption.", topicName: "Environmental Issues" },
+
+{ id: 56, grade: "9", subject: "Geography", question: "Discuss how the Himalayas influence monsoon rainfall in India.", options: ["They block cold winds", "They trap moist air", "They create rain shadows", "All of the above"], correct: 3, aiExplanation: "The Himalayas block winds, trap moisture, and create rain shadows.", topicName: "Climate Geography" },
+
+{ id: 57, grade: "9", subject: "Geography", question: "Explain why the Great Rift Valley is geologically significant.", options: ["It marks a divergent plate boundary", "It is formed by volcanic activity", "It is a transform fault", "It is a passive margin"], correct: 0, aiExplanation: "The Rift Valley formed by divergent tectonic plates pulling apart.", topicName: "Plate Tectonics" },
+
+{ id: 58, grade: "9", subject: "Geography", question: "Evaluate the role of the Mekong River in Southeast Asia’s economy.", options: ["Supports agriculture", "Provides transport", "Generates hydroelectric power", "All of the above"], correct: 3, aiExplanation: "The Mekong sustains farming, transport, and energy in Southeast Asia.", topicName: "Rivers" },
+
+{ id: 59, grade: "9", subject: "Geography", question: "Discuss the challenges of managing water resources in arid regions.", options: ["Scarcity of rainfall", "Overuse of aquifers", "Competition among sectors", "All of the above"], correct: 3, aiExplanation: "Arid regions face scarcity, overuse, and competition for water.", topicName: "Natural Resources" },
+
+{ id: 60, grade: "9", subject: "Geography", question: "Explain how the Ring of Fire affects human settlement in Asia.", options: ["Frequent earthquakes", "Volcanic eruptions", "Rich soils for farming", "All of the above"], correct: 3, aiExplanation: "The Ring of Fire brings hazards but also fertile soils, influencing settlement.", topicName: "Natural Hazards" },
+
+{ id: 61, grade: "9", subject: "Geography", question: "Evaluate the geopolitical importance of the Suez Canal.", options: ["It shortens trade routes", "It connects Europe and Asia", "It bypasses Africa", "All of the above"], correct: 3, aiExplanation: "The Suez Canal is a critical trade link between Europe and Asia.", topicName: "World Geography" },
+
+{ id: 62, grade: "9", subject: "Geography", question: "Discuss how climate change threatens small island nations.", options: ["Sea‑level rise", "Loss of freshwater", "Damage to tourism", "All of the above"], correct: 3, aiExplanation: "Island nations face flooding, freshwater loss, and economic disruption.", topicName: "Climate Change" },
+
+{ id: 63, grade: "9", subject: "Geography", question: "Explain why the Andes are rich in mineral resources.", options: ["Volcanic activity", "Tectonic uplift", "Glacial erosion", "Wind deposition"], correct: 0, aiExplanation: "Volcanic activity in the Andes created rich mineral deposits.", topicName: "Mountains" },
+
+{ id: 64, grade: "9", subject: "Geography", question: "Evaluate the role of the Rhine River in European trade.", options: ["It connects industrial regions", "It supports shipping", "It links ports to inland areas", "All of the above"], correct: 3, aiExplanation: "The Rhine is a major artery for European trade and industry.", topicName: "Rivers" },
+
+{ id: 65, grade: "9", subject: "Geography", question: "Discuss the environmental consequences of melting glaciers.", options: ["Sea‑level rise", "Loss of freshwater", "Disruption of ecosystems", "All of the above"], correct: 3, aiExplanation: "Melting glaciers cause rising seas, water loss, and ecosystem disruption.", topicName: "Climate Change" },
+
+{ id: 66, grade: "9", subject: "Geography", question: "Explain why the Dead Sea is unique.", options: ["It is the lowest point on Earth’s surface", "It has high salinity", "It supports tourism", "All of the above"], correct: 3, aiExplanation: "The Dead Sea is the lowest point, extremely saline, and a tourist site.", topicName: "Lakes" },
+
+{ id: 67, grade: "9", subject: "Geography", question: "Evaluate the impact of desertification on African economies.", options: ["Loss of farmland", "Migration pressures", "Reduced food security", "All of the above"], correct: 3, aiExplanation: "Desertification undermines agriculture, food security, and stability.", topicName: "Climate Change" },
+
+{ id: 68, grade: "9", subject: "Geography", question: "Discuss the importance of the Yangtze River for China’s development.", options: ["Hydroelectric power", "Transport", "Agriculture", "All of the above"], correct: 3, aiExplanation: "The Yangtze sustains power, transport, and farming in China.", topicName: "Rivers" },
+
+{ id: 69, grade: "9", subject: "Geography", question: "Explain how coral reefs are threatened globally.", options: ["Ocean acidification", "Overfishing", "Pollution", "All of the above"], correct: 3, aiExplanation: "Coral reefs face acidification, overfishing, and pollution.", topicName: "Biomes" },
+
+{ id: 70, grade: "9", subject: "Geography", question: "Evaluate the Amazon River’s role in South America’s economy.", options: ["Supports transport", "Provides fishing", "Generates hydroelectric power", "All of the above"], correct: 3, aiExplanation: "The Amazon sustains transport, fishing, and energy.", topicName: "Rivers" },
+
+{ id: 71, grade: "9", subject: "Geography", question: "Discuss the challenges of urbanization in megacities.", options: ["Traffic congestion", "Pollution", "Housing shortages", "All of the above"], correct: 3, aiExplanation: "Megacities face congestion, pollution, and housing crises.", topicName: "Urban Geography" },
+
+{ id: 72, grade: "9", subject: "Geography", question: "Explain why Antarctica is considered a desert.", options: ["It has low precipitation", "It is covered in ice", "It has no vegetation", "It is uninhabited"], correct: 0, aiExplanation: "Antarctica receives very little precipitation, classifying it as a desert.", topicName: "Deserts" },
+
+{ id: 73, grade: "9", subject: "Geography", question: "Evaluate the importance of the Mississippi River for the United States.", options: ["It supports agriculture", "It provides transport", "It sustains trade", "All of the above"], correct: 3, aiExplanation: "The Mississippi is vital for farming, shipping, and national commerce.", topicName: "Rivers" },
+
+{ id: 74, grade: "9", subject: "Geography", question: "Discuss the challenges of managing the Amazon Basin sustainably.", options: ["Deforestation", "Illegal mining", "Biodiversity loss", "All of the above"], correct: 3, aiExplanation: "The Amazon faces deforestation, mining, and biodiversity threats.", topicName: "Environmental Issues" },
+
+{ id: 75, grade: "9", subject: "Geography", question: "Explain how the International Date Line affects global timekeeping.", options: ["It shifts calendar days", "It divides hemispheres", "It sets 0° longitude", "It controls daylight hours"], correct: 0, aiExplanation: "Crossing the Date Line changes the calendar day forward or backward.", topicName: "Cartography" },
+
+{ id: 76, grade: "9", subject: "Geography", question: "Evaluate the impact of rising sea levels on Bangladesh.", options: ["Loss of farmland", "Displacement of people", "Increased flooding", "All of the above"], correct: 3, aiExplanation: "Bangladesh faces flooding, displacement, and farmland loss due to sea‑level rise.", topicName: "Climate Change" },
+
+{ id: 77, grade: "9", subject: "Geography", question: "Discuss the importance of the Volga River for Russia.", options: ["It supports transport", "It sustains agriculture", "It provides hydroelectric power", "All of the above"], correct: 3, aiExplanation: "The Volga is Russia’s lifeline for transport, farming, and energy.", topicName: "Rivers" },
+
+{ id: 78, grade: "9", subject: "Geography", question: "Explain why the Sahara Desert is considered a climatic barrier.", options: ["It blocks rainfall", "It separates ecosystems", "It influences trade routes", "All of the above"], correct: 3, aiExplanation: "The Sahara limits rainfall, divides ecosystems, and shapes trade.", topicName: "Deserts" },
+
+{ id: 79, grade: "9", subject: "Geography", question: "Evaluate the geopolitical importance of the Panama Canal.", options: ["It shortens trade routes", "It connects oceans", "It boosts global commerce", "All of the above"], correct: 3, aiExplanation: "The Panama Canal links oceans, transforming global trade.", topicName: "World Geography" },
+
+{ id: 80, grade: "9", subject: "Geography", question: "Discuss the environmental risks of mining in the Andes.", options: ["Deforestation", "Water pollution", "Soil erosion", "All of the above"], correct: 3, aiExplanation: "Mining in the Andes causes deforestation, pollution, and erosion.", topicName: "Environmental Issues" },
+
+{ id: 81, grade: "9", subject: "Geography", question: "Explain how the Great Lakes influence North American climate and economy.", options: ["They moderate climate", "They support trade", "They sustain fishing", "All of the above"], correct: 3, aiExplanation: "The Great Lakes regulate climate and sustain trade and fishing.", topicName: "Lakes" },
+
+{ id: 82, grade: "9", subject: "Geography", question: "Evaluate the impact of desertification on the Middle East.", options: ["Loss of farmland", "Water scarcity", "Migration pressures", "All of the above"], correct: 3, aiExplanation: "Desertification reduces farmland, water, and stability in the Middle East.", topicName: "Climate Change" },
+
+{ id: 83, grade: "9", subject: "Geography", question: "Discuss the importance of the Mekong Delta for Vietnam.", options: ["It supports rice farming", "It sustains fishing", "It provides transport", "All of the above"], correct: 3, aiExplanation: "The Mekong Delta sustains Vietnam’s agriculture, fishing, and transport.", topicName: "Rivers" },
+
+{ id: 84, grade: "9", subject: "Geography", question: "Explain why the Alps are significant for Europe’s economy.", options: ["They support tourism", "They provide hydroelectric power", "They influence climate", "All of the above"], correct: 3, aiExplanation: "The Alps sustain tourism, energy, and climate regulation.", topicName: "Mountains" },
+
+{ id: 85, grade: "9", subject: "Geography", question: "Evaluate the impact of urban sprawl on ecosystems.", options: ["Loss of biodiversity", "Deforestation", "Pollution", "All of the above"], correct: 3, aiExplanation: "Urban sprawl destroys habitats, increases pollution, and reduces biodiversity.", topicName: "Urban Geography" },
+
+{ id: 86, grade: "9", subject: "Geography", question: "Discuss the importance of the Nile Delta for Egypt.", options: ["It provides fertile soil", "It supports agriculture", "It sustains population", "All of the above"], correct: 3, aiExplanation: "The Nile Delta sustains Egypt’s agriculture and population.", topicName: "Landforms" },
+
+{ id: 87, grade: "9", subject: "Geography", question: "Explain how the Himalayas act as a climatic barrier for South Asia.", options: ["They block cold winds", "They trap monsoon rains", "They create rain shadows", "All of the above"], correct: 3, aiExplanation: "The Himalayas block winds, trap rains, and create rain shadows.", topicName: "Climate Geography" },
+
+{ id: 88, grade: "9", subject: "Geography", question: "Evaluate the importance of the Yangtze River for China’s economy.", options: ["It supports agriculture", "It provides transport", "It generates hydroelectric power", "All of the above"], correct: 3, aiExplanation: "The Yangtze sustains farming, transport, and energy in China.", topicName: "Rivers" },
+
+{ id: 89, grade: "9", subject: "Geography", question: "Discuss the environmental consequences of deforestation in Indonesia.", options: ["Loss of biodiversity", "Carbon emissions", "Soil erosion", "All of the above"], correct: 3, aiExplanation: "Deforestation in Indonesia causes biodiversity loss, emissions, and erosion.", topicName: "Environmental Issues" },
+
+{ id: 90, grade: "9", subject: "Geography", question: "Explain why the Arctic is geopolitically significant.", options: ["It offers new shipping routes", "It contains oil and gas reserves", "It influences climate", "All of the above"], correct: 3, aiExplanation: "The Arctic’s resources and routes make it geopolitically vital.", topicName: "World Geography" },
+
+{ id: 91, grade: "9", subject: "Geography", question: "Evaluate the impact of climate change on Himalayan glaciers.", options: ["They retreat rapidly", "They reduce water supply", "They increase flooding risk", "All of the above"], correct: 3, aiExplanation: "Glacier retreat reduces water and increases flood risk.", topicName: "Climate Change" },
+
+{ id: 92, grade: "9", subject: "Geography", question: "Discuss the importance of the Amazon Basin for global climate regulation.", options: ["It absorbs carbon dioxide", "It produces oxygen", "It influences rainfall", "All of the above"], correct: 3, aiExplanation: "The Amazon regulates carbon, oxygen, and rainfall globally.", topicName: "Biomes" },
+
+{ id: 93, grade: "9", subject: "Geography", question: "Explain why the Himalayas are prone to landslides.", options: ["Steep slopes", "Heavy rainfall", "Seismic activity", "All of the above"], correct: 3, aiExplanation: "Steep slopes, rainfall, and seismic activity cause landslides.", topicName: "Natural Hazards" },
+
+{ id: 94, grade: "9", subject: "Geography", question: "Evaluate the importance of the Ganges River for India’s culture and economy.", options: ["It is sacred", "It supports agriculture", "It sustains population", "All of the above"], correct: 3, aiExplanation: "The Ganges is sacred in Hinduism and sustains agriculture and dense settlement.", topicName: "Rivers" },
+
+{ id: 95, grade: "9", subject: "Geography", question: "Discuss how the Himalayas contribute to geopolitical tensions in South Asia.", options: ["They form natural borders", "They host disputed territories", "They influence water resources", "All of the above"], correct: 3, aiExplanation: "The Himalayas create borders, disputed zones, and water conflicts between nations.", topicName: "World Geography" },
+
+{ id: 96, grade: "9", subject: "Geography", question: "Explain why the Sahara Desert is expanding and its global implications.", options: ["Climate change", "Overgrazing", "Deforestation", "All of the above"], correct: 3, aiExplanation: "Human activity and climate change drive Sahara expansion, threatening food security.", topicName: "Climate Change" },
+
+{ id: 97, grade: "9", subject: "Geography", question: "Evaluate the importance of the Amazon Basin in regulating rainfall patterns beyond South America.", options: ["It influences North America", "It affects Africa", "It impacts global climate", "All of the above"], correct: 3, aiExplanation: "The Amazon’s evapotranspiration influences rainfall globally, not just regionally.", topicName: "Biomes" },
+
+{ id: 98, grade: "9", subject: "Geography", question: "Discuss the environmental consequences of melting permafrost in Siberia.", options: ["Release of methane", "Infrastructure collapse", "Ecosystem disruption", "All of the above"], correct: 3, aiExplanation: "Melting permafrost releases methane, damages infrastructure, and disrupts ecosystems.", topicName: "Climate Change" },
+
+{ id: 99, grade: "9", subject: "Geography", question: "Explain how the Himalayas act as a water tower for Asia.", options: ["They store glaciers", "They feed major rivers", "They sustain agriculture downstream", "All of the above"], correct: 3, aiExplanation: "Himalayan glaciers feed rivers that sustain agriculture and populations across Asia.", topicName: "Mountains" },
+
+{ id: 100, grade: "9", subject: "Geography", question: "Evaluate the geopolitical significance of the Arctic’s untapped resources.", options: ["Oil and gas reserves", "New shipping routes", "Strategic military interest", "All of the above"], correct: 3, aiExplanation: "The Arctic’s resources and routes make it a focal point for global competition.", topicName: "World Geography" },
+
+{
+ id: 1,
+ grade: "9",
+ subject: "History",
+ question: "Why do historians consider the invention of writing the dividing line between prehistory and history?",
+ options: [
+   "Because writing allowed the development of agriculture",
+   "Because written records allow verifiable reconstruction of past events",
+   "Because writing replaced oral traditions entirely",
+   "Because writing spread human populations across continents"
+ ],
+ correct: 1,
+ aiExplanation: "History begins where verifiable written records appear; before that is prehistory.",
+ topicName: "Prehistory and History"
+},
+{
+ id: 2,
+ grade: "9",
+ subject: "History",
+ question: "Which of the following BEST explains why distinguishing facts from opinions is critical in historical analysis?",
+ options: [
+   "Opinions are illegal to include in history",
+   "Facts are based on evidence while opinions may introduce bias",
+   "Opinions are always incorrect",
+   "Facts are always written while opinions are oral"
+ ],
+ correct: 1,
+ aiExplanation: "Historians must separate evidence-based facts from subjective viewpoints to avoid bias.",
+ topicName: "Historical Methodology"
+},
+{
+ id: 3,
+ grade: "9",
+ subject: "History",
+ question: "Which statement reflects the main weakness of secondary sources compared to primary sources?",
+ options: [
+   "They often provide too much information",
+   "They may contain interpretations influenced by the author's perspective",
+   "They cannot be used for academic work",
+   "They are always older than primary sources"
+ ],
+ correct: 1,
+ aiExplanation: "Secondary sources interpret primary data and may reflect author bias.",
+ topicName: "Sources of History"
+},
+{
+ id: 4,
+ grade: "9",
+ subject: "History",
+ question: "Why is chronology essential in historical study?",
+ options: [
+   "It prevents historians from using oral traditions",
+   "It organizes events into a logical sequence for interpretation",
+   "It eliminates the need for historical evidence",
+   "It allows historians to predict the future with certainty"
+ ],
+ correct: 1,
+ aiExplanation: "Chronology arranges events in time order, making historical analysis possible.",
+ topicName: "Chronology"
+},
+{
+ id: 5,
+ grade: "9",
+ subject: "History",
+ question: "Which characteristic distinguishes Homo erectus from earlier hominids?",
+ options: [
+   "Use of complex written symbols",
+   "Mastery of fire and long-distance migration",
+   "Ability to domesticate animals",
+   "Development of agriculture"
+ ],
+ correct: 1,
+ aiExplanation: "Homo erectus used fire and migrated beyond Africa.",
+ topicName: "Human Evolution"
+},
+{
+ id: 6,
+ grade: "9",
+ subject: "History",
+ question: "Which archaeological discovery provides the strongest evidence for Ethiopia as a major center of human evolution?",
+ options: [
+   "The remains of the Great Zimbabwe",
+   "The fossils of Australopithecus afarensis",
+   "The ruins of Aksum’s obelisks",
+   "The manuscripts of the Zagwe dynasty"
+ ],
+ correct: 1,
+ aiExplanation: "Australopithecus afarensis (Lucy) was discovered in Ethiopia, supporting its role in human evolution.",
+ topicName: "Human Evolution in Ethiopia"
+},
+{
+ id: 7,
+ grade: "9",
+ subject: "History",
+ question: "Which development most clearly marks the beginning of the Neolithic Revolution?",
+ options: [
+   "The creation of stone hand-axes",
+   "The shift from hunting-gathering to food production",
+   "The discovery of bronze",
+   "The appearance of writing"
+ ],
+ correct: 1,
+ aiExplanation: "Systematic agriculture is the defining feature of the Neolithic Age.",
+ topicName: "Stone Age"
+},
+{
+ id: 8,
+ grade: "9",
+ subject: "History",
+ question: "Which factor MOST contributed to the emergence of early states according to the economic theory?",
+ options: [
+   "Migration of nomads",
+   "Agricultural surplus enabling social stratification",
+   "Discovery of iron tools",
+   "Introduction of writing systems"
+ ],
+ correct: 1,
+ aiExplanation: "Surplus production created elites and centralized authority, enabling state formation.",
+ topicName: "Emergence of States"
+},
+{
+ id: 9,
+ grade: "9",
+ subject: "History",
+ question: "Why is the Ethiopian calendar approximately seven to eight years behind the Gregorian calendar?",
+ options: [
+   "It measures months differently",
+   "It follows the birth of Jesus using a different calculation",
+   "It was intentionally delayed for political reasons",
+   "It adds extra days each month"
+ ],
+ correct: 1,
+ aiExplanation: "The Ethiopian Church calculated the birth of Jesus differently, creating a 7–8 year difference.",
+ topicName: "Calendars and Dating"
+},
+{
+ id: 10,
+ grade: "9",
+ subject: "History",
+ question: "Which factor BEST explains why oral traditions must be cross-checked with written sources?",
+ options: [
+   "Oral traditions are always inaccurate",
+   "They may change over time due to memory distortion",
+   "They cannot describe events older than 100 years",
+   "They are less common than written sources"
+ ],
+ correct: 1,
+ aiExplanation: "Oral information may change through generations and must be verified.",
+ topicName: "Historical Sources"
+},
+{
+ id: 11,
+ grade: "9",
+ subject: "History",
+ question: "Which hominid species is directly associated with the earliest evidence of tool-making?",
+ options: [
+   "Homo sapiens",
+   "Homo habilis",
+   "Homo erectus",
+   "Australopithecus africanus"
+ ],
+ correct: 1,
+ aiExplanation: "Homo habilis is known as the 'handy man' and produced early stone tools.",
+ topicName: "Human Evolution"
+},
+{
+ id: 12,
+ grade: "9",
+ subject: "History",
+ question: "The creationist theory differs from the evolutionist theory primarily because it:",
+ options: [
+   "Rejects the idea of fossils",
+   "Attributes human origins to divine creation",
+   "Denies the existence of early humans",
+   "Opposes archaeological research"
+ ],
+ correct: 1,
+ aiExplanation: "Creationism explains human origins through divine creation, unlike evolution.",
+ topicName: "Theories of Human Origin"
+},
+{
+ id: 13,
+ grade: "9",
+ subject: "History",
+ question: "Why was fire essential for Homo erectus in their migration beyond Africa?",
+ options: [
+   "It improved agricultural efficiency",
+   "It enabled survival in colder climates",
+   "It allowed written communication",
+   "It helped domesticate animals"
+ ],
+ correct: 1,
+ aiExplanation: "Fire provided warmth in cold regions, enabling long-distance migration.",
+ topicName: "Human Evolution"
+},
+{
+ id: 14,
+ grade: "9",
+ subject: "History",
+ question: "Which advancement during the Paleolithic period BEST demonstrates early human cognitive development?",
+ options: [
+   "Domestication of plants",
+   "Use of spoken language",
+   "Invention of bronze tools",
+   "Development of trade networks"
+ ],
+ correct: 1,
+ aiExplanation: "Language reflects complex thought processes and social cooperation.",
+ topicName: "Stone Age"
+},
+{
+ id: 15,
+ grade: "9",
+ subject: "History",
+ question: "Which characteristic is essential for defining a political state?",
+ options: [
+   "Presence of writing",
+   "Defined territory and sovereign authority",
+   "Agricultural economy",
+   "Use of iron tools"
+ ],
+ correct: 1,
+ aiExplanation: "A state must have population, territory, government, sovereignty, and recognition.",
+ topicName: "Emergence of States"
+},
+{
+ id: 16,
+ grade: "9",
+ subject: "History",
+ question: "Which factor contributed MOST to the economic strength of ancient Egypt?",
+ options: [
+   "Iron tools and horses",
+   "Annual flooding of the Nile that enriched the soil",
+   "Frequent invasions that spread new technologies",
+   "Trade dominance over Mesopotamia"
+ ],
+ correct: 1,
+ aiExplanation: "The Nile’s annual flood deposited fertile silt, enabling surplus agriculture.",
+ topicName: "Ancient Egypt"
+},
+{
+ id: 17,
+ grade: "9",
+ subject: "History",
+ question: "The pharaoh was considered both a king and a god primarily because:",
+ options: [
+   "He founded all Egyptian cities",
+   "Egyptians believed he mediated between gods and people",
+   "He discovered the art of writing",
+   "He created the Egyptian calendar"
+ ],
+ correct: 1,
+ aiExplanation: "Pharaohs were divine rulers believed to sustain order and link to the gods.",
+ topicName: "Ancient Egypt"
+},
+{
+ id: 18,
+ grade: "9",
+ subject: "History",
+ question: "What feature most clearly distinguished the Sumerian city-states from Egypt?",
+ options: [
+   "Use of bronze",
+   "Polytheistic beliefs",
+   "Independent political units ruled separately",
+   "Agriculture near major rivers"
+ ],
+ correct: 2,
+ aiExplanation: "Sumer consisted of independent city-states, unlike unified Egypt.",
+ topicName: "Mesopotamia"
+},
+{
+ id: 19,
+ grade: "9",
+ subject: "History",
+ question: "Which innovation is the Sumerians credited with that fundamentally shaped human communication?",
+ options: [
+   "Hieroglyphics",
+   "Papyrus sheets",
+   "Cuneiform writing",
+   "Alphabetic letters"
+ ],
+ correct: 2,
+ aiExplanation: "Cuneiform was the earliest known writing system developed in Mesopotamia.",
+ topicName: "Mesopotamia"
+},
+{
+ id: 20,
+ grade: "9",
+ subject: "History",
+ question: "Which geographic feature MOST contributed to the rise of the Indus Valley civilization?",
+ options: [
+   "The Tigris River",
+   "The Zagros Mountains",
+   "The Indus River system enabling irrigation",
+   "The Nile Delta"
+ ],
+ correct: 2,
+ aiExplanation: "The Indus River allowed systematic agriculture and urban planning.",
+ topicName: "Indus Valley Civilization"
+},
+{
+ id: 21,
+ grade: "9",
+ subject: "History",
+ question: "Which belief system emerged as a reform movement from early Indo-Aryan religion?",
+ options: [
+   "Islam",
+   "Buddhism",
+   "Judaism",
+   "Confucianism"
+ ],
+ correct: 1,
+ aiExplanation: "Buddhism developed as a reform movement within Hindu traditions.",
+ topicName: "Ancient India"
+},
+{
+ id: 22,
+ grade: "9",
+ subject: "History",
+ question: "Why did the Persians develop an efficient postal system?",
+ options: [
+   "To support long-distance military campaigns",
+   "To spread religion across their empire",
+   "To control trade guilds",
+   "To replace written communication"
+ ],
+ correct: 0,
+ aiExplanation: "The vast Persian Empire required fast and organized communication for administration.",
+ topicName: "Persian Empire"
+},
+{
+ id: 23,
+ grade: "9",
+ subject: "History",
+ question: "Which achievement of the Shang dynasty MOST influenced later Chinese civilizations?",
+ options: [
+   "Invention of the alphabet",
+   "Development of bronze casting and early writing",
+   "Construction of the Great Wall",
+   "Introduction of Buddhism"
+ ],
+ correct: 1,
+ aiExplanation: "Shang innovations in writing and bronze shaped China’s cultural foundation.",
+ topicName: "Ancient China"
+},
+{
+ id: 24,
+ grade: "9",
+ subject: "History",
+ question: "Confucianism emphasizes social harmony based primarily on:",
+ options: [
+   "Equal distribution of wealth",
+   "Hierarchical respect and moral duty",
+   "Rejection of government authority",
+   "Economic specialization"
+ ],
+ correct: 1,
+ aiExplanation: "Confucius taught proper relationships and moral responsibility maintain social order.",
+ topicName: "Ancient China"
+},
+{
+ id: 25,
+ grade: "9",
+ subject: "History",
+ question: "Which civilization is MOST known for constructing large limestone pyramids with temple tops?",
+ options: [
+   "Aztec",
+   "Maya",
+   "Inca",
+   "Persian"
+ ],
+ correct: 1,
+ aiExplanation: "The Maya built limestone pyramids for religious ceremonies.",
+ topicName: "Maya Civilization"
+},
+{
+ id: 26,
+ grade: "9",
+ subject: "History",
+ question: "Why were the Inca roads historically significant?",
+ options: [
+   "They were the world’s first paved roads",
+   "They unified a vast empire across challenging terrain",
+   "They spread Christianity into South America",
+   "They connected the Inca to Roman trade"
+ ],
+ correct: 1,
+ aiExplanation: "Inca roads strengthened political control across mountains and deserts.",
+ topicName: "Inca Civilization"
+},
+{
+ id: 27,
+ grade: "9",
+ subject: "History",
+ question: "Which factor contributed MOST to the Aztec Empire’s economic strength?",
+ options: [
+   "Chinampa agriculture supporting large populations",
+   "Use of horses for farming",
+   "Early industrial machinery",
+   "Mining of iron and steel"
+ ],
+ correct: 0,
+ aiExplanation: "Chinampas (floating gardens) allowed intensive agriculture in lake regions.",
+ topicName: "Aztec Civilization"
+},
+{
+ id: 28,
+ grade: "9",
+ subject: "History",
+ question: "Which Greek contribution MOST influenced modern democratic governments?",
+ options: [
+   "Mythology",
+   "Direct participation of citizens in law-making",
+   "Geometric art style",
+   "Marble quarrying"
+ ],
+ correct: 1,
+ aiExplanation: "Athens introduced direct democracy, influencing modern political systems.",
+ topicName: "Ancient Greece"
+},
+{
+ id: 29,
+ grade: "9",
+ subject: "History",
+ question: "Why is Thucydides considered a foundational historian?",
+ options: [
+   "He wrote myths about gods",
+   "He emphasized accurate, unbiased reporting",
+   "He invented cuneiform",
+   "He wrote the first law code"
+ ],
+ correct: 1,
+ aiExplanation: "Thucydides insisted on factual, non-mythical historical writing.",
+ topicName: "Ancient Greece"
+},
+{
+ id: 30,
+ grade: "9",
+ subject: "History",
+ question: "Which architectural structure best reflects Roman engineering achievements?",
+ options: [
+   "Ziggurat of Ur",
+   "The Great Wall",
+   "Roman aqueducts",
+   "Mayan pyramids"
+ ],
+ correct: 2,
+ aiExplanation: "Aqueducts demonstrate Roman mastery of arches and water transport.",
+ topicName: "Ancient Rome"
+},
+{
+ id: 31,
+ grade: "9",
+ subject: "History",
+ question: "What feature distinguished the Roman Republic from the Roman Empire?",
+ options: [
+   "Republic used elected leaders; empire concentrated power in one emperor",
+   "Republic allowed slavery; empire did not",
+   "Empire lacked written law codes",
+   "Empire elected kings annually"
+ ],
+ correct: 0,
+ aiExplanation: "The Republic had elected consuls; the Empire was auto­cratically ruled.",
+ topicName: "Ancient Rome"
+},
+{
+ id: 32,
+ grade: "9",
+ subject: "History",
+ question: "Which event MOST accelerated the spread of Christianity in the Roman Empire?",
+ options: [
+   "The fall of the Roman Republic",
+   "Constantine’s Edict of Milan",
+   "The Punic Wars",
+   "The construction of the Colosseum"
+ ],
+ correct: 1,
+ aiExplanation: "The Edict of Milan legalized Christianity, allowing rapid expansion.",
+ topicName: "Spread of Christianity"
+},
+{
+ id: 33,
+ grade: "9",
+ subject: "History",
+ question: "The split between Roman Catholic and Eastern Orthodox churches in 1054 was primarily due to:",
+ options: [
+   "Conflict over trade routes",
+   "Differences in church authority and rituals",
+   "Language barriers only",
+   "Disagreement about the Crusades"
+ ],
+ correct: 1,
+ aiExplanation: "Doctrinal and authority conflicts caused the Great Schism of 1054.",
+ topicName: "Spread of Christianity"
+},
+{
+ id: 34,
+ grade: "9",
+ subject: "History",
+ question: "Which region conquered both the Maya and Aztecs, leading to the collapse of their civilizations?",
+ options: [
+   "Portugal",
+   "Spain",
+   "England",
+   "France"
+ ],
+ correct: 1,
+ aiExplanation: "Spanish conquistadors destroyed Mayan and Aztec societies in the 16th century.",
+ topicName: "American Civilizations"
+},
+{
+ id: 35,
+ grade: "9",
+ subject: "History",
+ question: "Which factor BEST explains the rapid expansion of the Persian Empire?",
+ options: [
+   "Advanced sailing technology",
+   "Highly organized administration and satrap system",
+   "Use of iron chariots",
+   "Adoption of Greek democracy"
+ ],
+ correct: 1,
+ aiExplanation: "Persian satrapies and administrative organization enabled stable expansion.",
+ topicName: "Persian Empire"
+},
+{
+ id: 36,
+ grade: "9",
+ subject: "History",
+ question: "Which factor most strongly contributed to the development of early Ethiopian communities into complex societies?",
+ options: [
+   "Introduction of horses from Europe",
+   "Agricultural settlement in highland environments",
+   "Direct rule by Egyptian pharaohs",
+   "Widespread use of bronze weaponry"
+ ],
+ correct: 1,
+ aiExplanation: "Stable highland agriculture supported permanent settlements and social complexity.",
+ topicName: "Early Ethiopian Societies"
+},
+{
+ id: 37,
+ grade: "9",
+ subject: "History",
+ question: "Which linguistic branch does the majority of Ethiopia’s population belong to?",
+ options: [
+   "Khoisan",
+   "Afro-Asiatic",
+   "Niger-Congo",
+   "Indo-European"
+ ],
+ correct: 1,
+ aiExplanation: "Most Ethiopian languages—including Semitic, Cushitic, and Omotic—belong to the Afro-Asiatic family.",
+ topicName: "Ethiopian Languages"
+},
+{
+ id: 38,
+ grade: "9",
+ subject: "History",
+ question: "Which evidence most strongly supports the existence of a Pre-Aksumite civilization?",
+ options: [
+   "Gada councils from Oromia",
+   "Stone inscriptions and temple remains in Yeha",
+   "Portuguese travel accounts",
+   "Zagwe-era rock churches"
+ ],
+ correct: 1,
+ aiExplanation: "Yeha temples and inscriptions reveal an advanced pre-Aksumite society.",
+ topicName: "Pre-Aksumite Civilization"
+},
+{
+ id: 39,
+ grade: "9",
+ subject: "History",
+ question: "Which factor most contributed to the rise of the Kingdom of Aksum as a major regional power?",
+ options: [
+   "Isolation from foreign trade",
+   "Control of Red Sea and inland trade routes",
+   "Exclusive focus on agriculture",
+   "Military alliances with China"
+ ],
+ correct: 1,
+ aiExplanation: "Aksum’s strategic Red Sea access enabled profitable international trade.",
+ topicName: "Aksumite Civilization"
+},
+{
+ id: 40,
+ grade: "9",
+ subject: "History",
+ question: "Which evidence best demonstrates the technological advancement of Aksum?",
+ options: [
+   "Clay tablets",
+   "Bronze-age tools",
+   "Monolithic obelisks carved from single stones",
+   "Stone circles used for rituals"
+ ],
+ correct: 2,
+ aiExplanation: "Aksum’s obelisks show engineering precision unmatched in most ancient African civilizations.",
+ topicName: "Aksumite Civilization"
+},
+{
+ id: 41,
+ grade: "9",
+ subject: "History",
+ question: "What was the most significant reason for Aksum’s adoption of Christianity in the 4th century?",
+ options: [
+   "Military conquest by Rome",
+   "Influence of Syrian Christian missionaries",
+   "Trade rivalry with Egypt",
+   "Pressure from Jewish communities"
+ ],
+ correct: 1,
+ aiExplanation: "Frumentius and Aedesius brought Christianity, which King Ezana later adopted.",
+ topicName: "Christianization of Aksum"
+},
+{
+ id: 42,
+ grade: "9",
+ subject: "History",
+ question: "Which factor MOST contributed to the decline of Aksum?",
+ options: [
+   "Loss of access to Red Sea trade due to Islamic expansion",
+   "Overuse of iron tools",
+   "Civil war with the Zagwe dynasty",
+   "Introduction of new agricultural techniques"
+ ],
+ correct: 0,
+ aiExplanation: "Islamic control of the Red Sea cut Aksum off from key trade routes.",
+ topicName: "Decline of Aksum"
+},
+{
+ id: 43,
+ grade: "9",
+ subject: "History",
+ question: "Which characteristic distinguishes the Zagwe dynasty from the Aksumite kingdom?",
+ options: [
+   "Practice of Islam",
+   "Construction of rock-hewn churches",
+   "Use of Greek as an official language",
+   "Dependence on Red Sea trade"
+ ],
+ correct: 1,
+ aiExplanation: "The Zagwe kings are known for carving monolithic rock churches, especially in Lalibela.",
+ topicName: "Zagwe Dynasty"
+},
+{
+ id: 44,
+ grade: "9",
+ subject: "History",
+ question: "Which factor best explains why the Zagwe dynasty lost legitimacy over time?",
+ options: [
+   "Failure to pay tribute to Egypt",
+   "Claims that they did not descend from the Solomonic line",
+   "Promotion of Islam over Christianity",
+   "Weak military organization"
+ ],
+ correct: 1,
+ aiExplanation: "The Solomonic narrative made Zagwe kings appear like usurpers.",
+ topicName: "Zagwe Dynasty"
+},
+{
+ id: 45,
+ grade: "9",
+ subject: "History",
+ question: "Which achievement is MOST associated with the Solomonic dynasty after 1270?",
+ options: [
+   "Introduction of Buddhism",
+   "Expansive territorial restoration campaigns",
+   "Construction of the Yeha temples",
+   "Rise of the Gada system"
+ ],
+ correct: 1,
+ aiExplanation: "Solomonic rulers reconsolidated Ethiopian territory and expanded Christian rule.",
+ topicName: "Solomonic Dynasty"
+},
+{
+ id: 46,
+ grade: "9",
+ subject: "History",
+ question: "What major challenge prevented centralized rule during much of the Solomonic period?",
+ options: [
+   "Scarcity of metals",
+   "Powerful regional nobles resisting central authority",
+   "Foreign invasions from Asia",
+   "Environmental droughts"
+ ],
+ correct: 1,
+ aiExplanation: "Regional lords (rist and gult holders) limited the king’s practical authority.",
+ topicName: "Solomonic Dynasty"
+},
+{
+ id: 47,
+ grade: "9",
+ subject: "History",
+ question: "Which factor MOST contributed to the rise of Islamic sultanates in eastern Ethiopia?",
+ options: [
+   "Decline of Aksum",
+   "Introduction of Christianity",
+   "Civil war among the Zagwe rulers",
+   "Arrival of European traders"
+ ],
+ correct: 0,
+ aiExplanation: "As Aksum declined, trade shifted eastward, where Islamic merchants established strong states.",
+ topicName: "Islamic Sultanates of Ethiopia"
+},
+{
+ id: 48,
+ grade: "9",
+ subject: "History",
+ question: "Why did the Sultanate of Ifat become especially significant in medieval Ethiopian history?",
+ options: [
+   "It controlled key trade routes linking the coast and hinterland",
+   "It discovered iron technology",
+   "It conquered India",
+   "It invented the Ge'ez script"
+ ],
+ correct: 0,
+ aiExplanation: "Ifat’s position allowed it to dominate regional trade and political influence.",
+ topicName: "Ifat Sultanate"
+},
+{
+ id: 49,
+ grade: "9",
+ subject: "History",
+ question: "Which leader initiated the major Christian–Muslim wars of the 16th century?",
+ options: [
+   "King Ezana",
+   "Imam Ahmad ibn Ibrahim al-Ghazi",
+   "King Lalibela",
+   "Menelik II"
+ ],
+ correct: 1,
+ aiExplanation: "Imam Ahmad (Gragn) launched a large campaign that devastated Christian highlands.",
+ topicName: "Adal War"
+},
+{
+ id: 50,
+ grade: "9",
+ subject: "History",
+ question: "What was the main consequence of the 16th-century Adal–Christian wars?",
+ options: [
+   "Complete destruction of the highlands",
+   "Long-term weakening of both Christian and Muslim states",
+   "Introduction of Islam as the state religion",
+   "Unification of Ethiopia under a single ruler"
+ ],
+ correct: 1,
+ aiExplanation: "Both sides suffered huge losses, paving the way for Oromo expansions.",
+ topicName: "Adal War"
+},
+{
+ id: 51,
+ grade: "9",
+ subject: "History",
+ question: "Which statement best explains the historical significance of the Oromo migrations?",
+ options: [
+   "They introduced Christianity to the Horn of Africa",
+   "They reshaped Ethiopia’s demographic and political landscape",
+   "They weakened Islamic states only",
+   "They resulted in a unified Oromo kingdom"
+ ],
+ correct: 1,
+ aiExplanation: "Oromo migrations altered ethnic distribution and regional power structures.",
+ topicName: "Oromo Migrations"
+},
+{
+ id: 52,
+ grade: "9",
+ subject: "History",
+ question: "Which principle is central to the Oromo Gada system?",
+ options: [
+   "Hereditary kingship",
+   "Age-based leadership rotation",
+   "Monastic government",
+   "Absolute monarchy"
+ ],
+ correct: 1,
+ aiExplanation: "The Gada system rotates leadership by age-sets every eight years.",
+ topicName: "Oromo Gada System"
+},
+{
+ id: 53,
+ grade: "9",
+ subject: "History",
+ question: "Why is the Gada system considered a democratic institution?",
+ options: [
+   "All decisions were made by priests",
+   "Political power changed regularly through election-like processes",
+   "Women exclusively held political authority",
+   "Leaders served for life"
+ ],
+ correct: 1,
+ aiExplanation: "Leadership rotated and was reviewed by councils, reflecting democratic principles.",
+ topicName: "Oromo Gada System"
+},
+{
+ id: 54,
+ grade: "9",
+ subject: "History",
+ question: "The major reason for the expansion of the Oromo during the 16th century was:",
+ options: [
+   "Use of iron weapons",
+   "Skill in horseback riding and flexible military organization",
+   "Help from Portuguese soldiers",
+   "Weakness of Somali city-states"
+ ],
+ correct: 1,
+ aiExplanation: "Oromo mobility and military adaptability enabled rapid territorial expansion.",
+ topicName: "Oromo Migrations"
+},
+{
+ id: 55,
+ grade: "9",
+ subject: "History",
+ question: "Which region became the political center of the Solomonic dynasty during the Middle Ages?",
+ options: [
+   "Harar Plateau",
+   "Shewa and Amhara highlands",
+   "Gondar only",
+   "Somali coast"
+ ],
+ correct: 1,
+ aiExplanation: "Solomonic rulers built their base in the Shewan and Amhara highlands.",
+ topicName: "Solomonic Dynasty"
+},
+{
+ id: 56,
+ grade: "9",
+ subject: "History",
+ question: "Which factor most contributed to the spread of Christianity during the Zagwe era?",
+ options: [
+   "Military conquest of Arabia",
+   "Royal patronage and massive church construction projects",
+   "Arrival of Jesuit missionaries",
+   "Trade with India"
+ ],
+ correct: 1,
+ aiExplanation: "Zagwe rulers promoted Christianity through church building and royal support.",
+ topicName: "Zagwe Dynasty"
+},
+{
+ id: 57,
+ grade: "9",
+ subject: "History",
+ question: "Which foreign group provided firearms that influenced the outcome of the Adal–Christian wars?",
+ options: [
+   "Chinese merchants",
+   "Portuguese soldiers",
+   "Turkish sailors",
+   "Roman soldiers"
+ ],
+ correct: 1,
+ aiExplanation: "Portuguese musketeers aided Christian forces against Imam Ahmad.",
+ topicName: "Adal War"
+},
+{
+ id: 58,
+ grade: "9",
+ subject: "History",
+ question: "Why did the Portuguese become interested in Ethiopia during the 16th century?",
+ options: [
+   "To spread Buddhism",
+   "To weaken Muslim trade networks in the Indian Ocean",
+   "To import Ethiopian gold",
+   "To conquer East Africa entirely"
+ ],
+ correct: 1,
+ aiExplanation: "Portugal saw Ethiopia as a Christian ally against Islamic trade competitors.",
+ topicName: "Portuguese Arrival"
+},
+{
+ id: 59,
+ grade: "9",
+ subject: "History",
+ question: "Which factor eventually caused Portuguese influence in Ethiopia to decline?",
+ options: [
+   "Lack of military technology",
+   "Religious conflict caused by attempts to impose Catholic doctrine",
+   "Collapse of Portuguese trade",
+   "Alliance with the Oromo"
+ ],
+ correct: 1,
+ aiExplanation: "Jesuit attempts to convert Ethiopians to Catholicism led to rebellion and expulsion.",
+ topicName: "Portuguese Influence"
+},
+{
+ id: 60,
+ grade: "9",
+ subject: "History",
+ question: "Which Ethiopian king is best known for resisting Portuguese religious pressure and restoring traditional Orthodoxy?",
+ options: [
+   "Lalibela",
+   "Ezana",
+   "Fasilides",
+   "Haile Selassie I"
+ ],
+ correct: 2,
+ aiExplanation: "Fasilides expelled the Jesuits and restored Ethiopian Orthodoxy.",
+ topicName: "Solomonic Dynasty"
+},
+{
+ id: 61,
+ grade: "9",
+ subject: "History",
+ question: "Which factor most enabled the rise of Gondar as a stable political center in the 17th century?",
+ options: [
+   "Decline of the Gada system",
+   "Establishment of a permanent royal capital",
+   "Replacement of Christianity with Islam",
+   "Introduction of firearms by Egypt"
+ ],
+ correct: 1,
+ aiExplanation: "The founding of a permanent capital at Gondar ended centuries of royal mobility.",
+ topicName: "Gondarine Period"
+},
+{
+ id: 62,
+ grade: "9",
+ subject: "History",
+ question: "Which architectural feature MOST characterizes the Gondarine period?",
+ options: [
+   "Obelisks",
+   "Rock-hewn churches",
+   "Castle-like stone structures",
+   "Stone stelae"
+ ],
+ correct: 2,
+ aiExplanation: "Gondar is famous for its stone castles influenced by multiple architectural traditions.",
+ topicName: "Gondarine Architecture"
+},
+{
+ id: 63,
+ grade: "9",
+ subject: "History",
+ question: "Which development contributed most to the political fragmentation known as the Zemene Mesafint?",
+ options: [
+   "Weak central monarchy dominated by regional nobles",
+   "Foreign invasions from Europe",
+   "Rapid spread of Islam",
+   "Decline of agriculture in the highlands"
+ ],
+ correct: 0,
+ aiExplanation: "Powerful regional lords overshadowed the emperor, causing fragmentation.",
+ topicName: "Zemene Mesafint"
+},
+{
+ id: 64,
+ grade: "9",
+ subject: "History",
+ question: "Which leader is credited with beginning the reunification of Ethiopia after the Zemene Mesafint?",
+ options: [
+   "Menelik II",
+   "Tewodros II",
+   "Yohannes IV",
+   "Haile Selassie I"
+ ],
+ correct: 1,
+ aiExplanation: "Tewodros II set out to centralize authority and end the era of princes.",
+ topicName: "Modern Ethiopian History"
+},
+{
+ id: 65,
+ grade: "9",
+ subject: "History",
+ question: "What was a major economic reason for Ethiopia’s relative isolation during the Zemene Mesafint?",
+ options: [
+   "Egyptian control of the Nile",
+   "Constant internal warfare disrupting trade routes",
+   "Lack of demand for Ethiopian goods",
+   "Prohibition of foreign merchants"
+ ],
+ correct: 1,
+ aiExplanation: "Warfare among regional lords weakened long-distance trade.",
+ topicName: "Zemene Mesafint"
+},
+{
+ id: 66,
+ grade: "9",
+ subject: "History",
+ question: "Which factor MOST contributed to the strength of the West African kingdom of Mali?",
+ options: [
+   "Rich gold mines and control of trans-Saharan trade",
+   "Large naval fleets",
+   "Alliance with Rome",
+   "Highland agriculture"
+ ],
+ correct: 0,
+ aiExplanation: "Mali’s wealth came from gold and control of trans-Saharan trade routes.",
+ topicName: "African States Before 1500"
+},
+{
+ id: 67,
+ grade: "9",
+ subject: "History",
+ question: "Which city became a major intellectual center of the Mali Empire?",
+ options: [
+   "Timbuktu",
+   "Gondar",
+   "Harar",
+   "Axum"
+ ],
+ correct: 0,
+ aiExplanation: "Timbuktu became renowned for scholarship and Islamic learning.",
+ topicName: "African States Before 1500"
+},
+{
+ id: 68,
+ grade: "9",
+ subject: "History",
+ question: "Which factor MOST contributed to the prosperity of Great Zimbabwe?",
+ options: [
+   "The gold–ivory trade with East African coastal cities",
+   "Use of written scripts",
+   "Alliance with Ethiopia",
+   "Military conquest of Egypt"
+ ],
+ correct: 0,
+ aiExplanation: "Great Zimbabwe’s success rested on controlling gold and ivory trade routes.",
+ topicName: "African Civilizations"
+},
+{
+ id: 69,
+ grade: "9",
+ subject: "History",
+ question: "Which major technological difference allowed Europeans to dominate long-distance oceanic trade after the 15th century?",
+ options: [
+   "Reinforced concrete",
+   "Steam engines",
+   "Advanced navigational tools and ship designs",
+   "Bronze-age swords"
+ ],
+ correct: 2,
+ aiExplanation: "Navigational tools like the compass and improved ships enabled global exploration.",
+ topicName: "Age of Exploration"
+},
+{
+ id: 70,
+ grade: "9",
+ subject: "History",
+ question: "Which economic system emerged in Europe as a result of increased global trade in the 16th–18th centuries?",
+ options: [
+   "Feudalism",
+   "Mercantilism",
+   "Communism",
+   "Subsistence economy"
+ ],
+ correct: 1,
+ aiExplanation: "Mercantilism encouraged accumulation of gold through exports and colonial expansion.",
+ topicName: "Early Global Economy"
+},
+{
+ id: 71,
+ grade: "9",
+ subject: "History",
+ question: "Which factor MOST accelerated the trans-Atlantic slave trade?",
+ options: [
+   "Demand for labor on American plantations",
+   "Need to repopulate Europe",
+   "Abolition of slavery in Africa",
+   "Discovery of oil in the Americas"
+ ],
+ correct: 0,
+ aiExplanation: "American plantations required large labor forces, driving slave exports.",
+ topicName: "Trans-Atlantic Slave Trade"
+},
+{
+ id: 72,
+ grade: "9",
+ subject: "History",
+ question: "Why did the Indian Ocean slave trade differ significantly from the Atlantic system?",
+ options: [
+   "It involved only children",
+   "It emphasized household and military slaves over plantation labor",
+   "It lasted only ten years",
+   "It resulted in complete depopulation of East Africa"
+ ],
+ correct: 1,
+ aiExplanation: "Indian Ocean slavery was more domestic/military in nature, not plantation-based.",
+ topicName: "Indian Ocean Trade"
+},
+{
+ id: 73,
+ grade: "9",
+ subject: "History",
+ question: "Which European power controlled most of Central Africa during the colonial scramble?",
+ options: [
+   "Britain",
+   "Belgium",
+   "France",
+   "Portugal"
+ ],
+ correct: 1,
+ aiExplanation: "Belgium, under King Leopold II, dominated Central Africa (Congo Free State).",
+ topicName: "Scramble for Africa"
+},
+{
+ id: 74,
+ grade: "9",
+ subject: "History",
+ question: "Which factor MOST contributed to European colonization of Africa in the late 19th century?",
+ options: [
+   "Desire to spread feudalism",
+   "Industrial demand for raw materials",
+   "Lack of African military power",
+   "Decline of European populations"
+ ],
+ correct: 1,
+ aiExplanation: "Industries needed raw materials, encouraging European expansion into Africa.",
+ topicName: "Colonialism"
+},
+{
+ id: 75,
+ grade: "9",
+ subject: "History",
+ question: "Which event prevented Ethiopia from being colonized during the Scramble for Africa?",
+ options: [
+   "Support from Great Zimbabwe",
+   "Victory at the Battle of Adwa",
+   "Assistance from the Ottoman Empire",
+   "Invention of firearms by Ethiopia"
+ ],
+ correct: 1,
+ aiExplanation: "Ethiopia defeated Italy at Adwa in 1896, securing independence.",
+ topicName: "Adwa Victory"
+},
+{
+ id: 76,
+ grade: "9",
+ subject: "History",
+ question: "What major advantage helped Ethiopia defeat Italy at Adwa?",
+ options: [
+   "Superior artillery supplied by multiple countries",
+   "More advanced naval technology",
+   "Italian withdrawal from Africa",
+   "Ethiopia’s control of the Nile River"
+ ],
+ correct: 0,
+ aiExplanation: "Ethiopia received weapons from France, Russia, and other countries, improving firepower.",
+ topicName: "Adwa Victory"
+},
+{
+ id: 77,
+ grade: "9",
+ subject: "History",
+ question: "Why is the Adwa victory considered a global symbol of anti-colonial resistance?",
+ options: [
+   "It inspired the invention of democracy",
+   "It showed a European empire could be defeated by an African state",
+   "It led to the collapse of all colonial empires",
+   "It caused WWI"
+ ],
+ correct: 1,
+ aiExplanation: "Adwa proved that colonial armies were not invincible.",
+ topicName: "Adwa Victory"
+},
+{
+ id: 78,
+ grade: "9",
+ subject: "History",
+ question: "Which factor MOST contributed to the Industrial Revolution beginning in Britain?",
+ options: [
+   "Abundant slave labor",
+   "Large coal and iron reserves",
+   "Military conquest of Europe",
+   "Lack of rivers for power"
+ ],
+ correct: 1,
+ aiExplanation: "Coal and iron fueled industrial machinery and railroads.",
+ topicName: "Industrial Revolution"
+},
+{
+ id: 79,
+ grade: "9",
+ subject: "History",
+ question: "Which invention had the greatest impact on the mechanization of textile production?",
+ options: [
+   "Steam turbine",
+   "Spinning jenny",
+   "Electric telegraph",
+   "Internal combustion engine"
+ ],
+ correct: 1,
+ aiExplanation: "The spinning jenny transformed textile efficiency, accelerating industrialization.",
+ topicName: "Industrial Revolution"
+},
+{
+ id: 80,
+ grade: "9",
+ subject: "History",
+ question: "Which global consequence resulted directly from industrialization in the 19th century?",
+ options: [
+   "Decrease in European population",
+   "Intensified imperial expansion for raw materials",
+   "Abolition of private property",
+   "Decline of international trade"
+ ],
+ correct: 1,
+ aiExplanation: "Industrialized nations sought new sources of raw materials, accelerating imperialism.",
+ topicName: "Industrialization & Imperialism"
+},
+{
+ id: 81,
+ grade: "9",
+ subject: "History",
+ question: "Which long-term cause MOST contributed to the outbreak of World War I?",
+ options: [
+   "The invention of tanks",
+   "Intense nationalism and rival alliances",
+   "Discovery of oil in the Middle East",
+   "Failure of the United Nations"
+ ],
+ correct: 1,
+ aiExplanation: "Nationalism, militarism, and alliance systems set conditions for global conflict.",
+ topicName: "World War I"
+},
+{
+ id: 82,
+ grade: "9",
+ subject: "History",
+ question: "Which event triggered World War I in 1914?",
+ options: [
+   "Bombing of Pearl Harbor",
+   "Assassination of Archduke Franz Ferdinand",
+   "Fall of the Berlin Wall",
+   "Treaty of Versailles"
+ ],
+ correct: 1,
+ aiExplanation: "The assassination in Sarajevo triggered the war among major European powers.",
+ topicName: "World War I"
+},
+{
+ id: 83,
+ grade: "9",
+ subject: "History",
+ question: "Which consequence of World War I contributed directly to the rise of fascism?",
+ options: [
+   "Worldwide population growth",
+   "Economic depression and political instability",
+   "Expansion of colonies",
+   "Creation of NATO"
+ ],
+ correct: 1,
+ aiExplanation: "Economic crisis after WWI destabilized societies and enabled fascist movements.",
+ topicName: "Interwar Period"
+},
+{
+ id: 84,
+ grade: "9",
+ subject: "History",
+ question: "Which aggressive policy MOST characterized fascist governments before World War II?",
+ options: [
+   "Isolationism",
+   "Expansionism through military conquest",
+   "Complete disarmament",
+   "Promotion of global democracy"
+ ],
+ correct: 1,
+ aiExplanation: "Fascist regimes pursued territorial expansion using military force.",
+ topicName: "Fascism"
+},
+{
+ id: 85,
+ grade: "9",
+ subject: "History",
+ question: "Which immediate event marked the beginning of World War II?",
+ options: [
+   "Germany’s invasion of Poland",
+   "Attack on Pearl Harbor",
+   "Surrender of Italy",
+   "Formation of NATO"
+ ],
+ correct: 0,
+ aiExplanation: "Germany attacked Poland in 1939, prompting British and French declarations of war.",
+ topicName: "World War II"
+},
+{
+ id: 86,
+ grade: "9",
+ subject: "History",
+ question: "Which factor MOST contributed to the Allied victory in WWII?",
+ options: [
+   "Germany’s superior navy",
+   "The industrial capacity of the United States",
+   "Japan’s control of world oil",
+   "Isolation of Britain"
+ ],
+ correct: 1,
+ aiExplanation: "U.S. industrial output supplied huge military resources to Allies.",
+ topicName: "World War II"
+},
+{
+ id: 87,
+ grade: "9",
+ subject: "History",
+ question: "Which global organization was created after WWII to maintain international peace and security?",
+ options: [
+   "League of Nations",
+   "European Union",
+   "United Nations",
+   "NATO"
+ ],
+ correct: 2,
+ aiExplanation: "The UN was formed in 1945 to prevent major conflicts and support cooperation.",
+ topicName: "United Nations"
+},
+{
+ id: 88,
+ grade: "9",
+ subject: "History",
+ question: "Which principle is a core objective of the United Nations?",
+ options: [
+   "Supporting colonial expansion",
+   "Promoting international peace and human rights",
+   "Encouraging militarism",
+   "Expanding nuclear weapons"
+ ],
+ correct: 1,
+ aiExplanation: "The UN’s foundational goals include peace, rights, and cooperation.",
+ topicName: "United Nations"
+},
+{
+ id: 89,
+ grade: "9",
+ subject: "History",
+ question: "What was the immediate cause of the Italian invasion of Ethiopia in 1935?",
+ options: [
+   "Conflict over the Red Sea",
+   "Italy’s desire to avenge its defeat at Adwa and expand its empire",
+   "Alliance between Ethiopia and Germany",
+   "Discovery of oil in Ethiopia"
+ ],
+ correct: 1,
+ aiExplanation: "Mussolini sought revenge for Adwa and aimed to build an Italian empire.",
+ topicName: "Italian Invasion of Ethiopia"
+},
+{
+ id: 90,
+ grade: "9",
+ subject: "History",
+ question: "Which factor MOST helped Ethiopia regain independence in 1941?",
+ options: [
+   "Support from Allied forces during WWII",
+   "Italy’s economic strength",
+   "Oromo military support for Italy",
+   "Japanese intervention"
+ ],
+ correct: 0,
+ aiExplanation: "British and other Allied forces helped expel Italy and restore Ethiopian sovereignty.",
+ topicName: "Ethiopia in WWII"
+},
+{
+ id: 91,
+ grade: "9",
+ subject: "History",
+ question: "What was a major reform of Emperor Haile Selassie's early reign?",
+ options: [
+   "Abolition of Christianity",
+   "Centralization of administration and modernization",
+   "Return to feudal fragmentation",
+   "Creation of the Gada system"
+ ],
+ correct: 1,
+ aiExplanation: "Haile Selassie introduced modern administrative, legal, and educational reforms.",
+ topicName: "Haile Selassie Era"
+},
+{
+ id: 92,
+ grade: "9",
+ subject: "History",
+ question: "Which factor contributed most to the 1974 Ethiopian Revolution?",
+ options: [
+   "Excessive rainfall",
+   "Widespread inequality, famine, and dissatisfaction with imperial rule",
+   "Discovery of diamonds",
+   "Victory at Adwa"
+ ],
+ correct: 1,
+ aiExplanation: "Economic hardship, famine, and demand for reform led to the revolution.",
+ topicName: "1974 Revolution"
+},
+{
+ id: 93,
+ grade: "9",
+ subject: "History",
+ question: "Which ideology guided the Derg government after 1974?",
+ options: [
+   "Capitalism",
+   "Marxist-Leninist socialism",
+   "Feudal monarchism",
+   "Liberal democracy"
+ ],
+ correct: 1,
+ aiExplanation: "The Derg embraced Marxist-Leninist ideology and nationalized land and industries.",
+ topicName: "Derg Regime"
+},
+{
+ id: 94,
+ grade: "9",
+ subject: "History",
+ question: "Which major event ended the Derg regime in Ethiopia?",
+ options: [
+   "Italian invasion",
+   "Formation of the UN",
+   "Military defeat by the EPRDF",
+   "Death of Franz Ferdinand"
+ ],
+ correct: 2,
+ aiExplanation: "The EPRDF overthrew the Derg in 1991 after years of civil war.",
+ topicName: "End of Derg"
+},
+{
+ id: 95,
+ grade: "9",
+ subject: "History",
+ question: "Which of the following is a major achievement of the FDRE constitution of 1995?",
+ options: [
+   "Abolition of elections",
+   "Recognition of ethnic federalism and self-rule",
+   "Return to absolute monarchy",
+   "Legalization of colonialism"
+ ],
+ correct: 1,
+ aiExplanation: "The constitution introduced ethnic federalism with rights to self-governance.",
+ topicName: "Modern Ethiopia"
+},
+{
+ id: 96,
+ grade: "9",
+ subject: "History",
+ question: "What major global tension defined the Cold War?",
+ options: [
+   "Competition between monarchies",
+   "Ideological and political rivalry between the US and USSR",
+   "Conflict between Africa and Europe",
+   "Religious wars in Asia"
+ ],
+ correct: 1,
+ aiExplanation: "The Cold War was a US–USSR rivalry over political and economic systems.",
+ topicName: "Cold War"
+},
+{
+ id: 97,
+ grade: "9",
+ subject: "History",
+ question: "Which conflict symbolized Cold War tension becoming direct military confrontation?",
+ options: [
+   "Battle of Adwa",
+   "Korean War",
+   "WWI",
+   "French Revolution"
+ ],
+ correct: 1,
+ aiExplanation: "The Korean War involved US-led UN forces against communist North Korea/China.",
+ topicName: "Cold War Conflicts"
+},
+{
+ id: 98,
+ grade: "9",
+ subject: "History",
+ question: "Which development MOST accelerated globalization in the late 20th century?",
+ options: [
+   "The rise of medieval guilds",
+   "Advances in communication and transportation technology",
+   "Decline of electricity",
+   "Isolation of major world economies"
+ ],
+ correct: 1,
+ aiExplanation: "Internet, air travel, and communication technology interconnected global economies.",
+ topicName: "Globalization"
+},
+{
+ id: 99,
+ grade: "9",
+ subject: "History",
+ question: "Which consequence of globalization has MOST affected developing countries?",
+ options: [
+   "Complete end of trade",
+   "Increased economic interdependence and cultural exchange",
+   "Elimination of all poverty",
+   "Total isolation from global markets"
+ ],
+ correct: 1,
+ aiExplanation: "Globalization increases interconnection in trade, culture, and technology.",
+ topicName: "Globalization"
+},
+{
+ id: 100,
+ grade: "9",
+ subject: "History",
+ question: "Which global institution was created in 1945 to promote peace, human rights, and international cooperation?",
+ options: [
+   "World Cup Federation",
+   "United Nations",
+   "African Union",
+   "NATO"
+ ],
+ correct: 1,
+ aiExplanation: "The UN was established after WWII to maintain global peace and cooperation.",
+ topicName: "United Nations"
+},
 
     // Grade 10
     { id:19, grade:"10", subject:"Mathematics", question:"Solve: 2x + 5 = 13", options:["x=4","x=5","x=6","x=3"], correct:0, aiExplanation:"2x + 5 =13 ⇒ 2x=8 ⇒ x=4.", topicName:"Algebra" },
@@ -21915,7 +25923,7 @@ const dom = {
 // Start Quiz
 document.addEventListener('DOMContentLoaded', () => {
     if (!questions.length) {
-        dom.mainContent.innerHTML = `<div class="explanation-box"><h3>No questions found for Grade ${grade} ${subject}.</h3><a href="subjects.html">Go Back</a></div>`;
+        dom.mainContent.innerHTML = `<div class="explanation-box"><h3>No questions found for Grade ${grade} ${subject}.</h3><a href="subject.html">Go Back</a></div>`;
         return;
     }
     
@@ -22159,7 +26167,7 @@ if (backArrow) {
     backArrow.style.cursor = 'pointer';
     backArrow.addEventListener('click', () => {
         if(confirm("Exit quiz? Your progress will be lost.")) {
-            window.location.href = 'subjects.html';
+            window.location.href = 'subject.html';
         }
     });
 }
