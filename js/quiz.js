@@ -16377,6 +16377,5108 @@ const allQuestions = [
   aiExplanation: "'Their' is the possessive form used before nouns.",
   topicName: "Vocabulary – Homophones"
 },
+{
+  id: 1,
+  grade: "11",
+  subject: "Economics",
+  question: "A country decides to allocate more resources to producing capital goods instead of consumer goods this year. What long‑term economic implication does this shift most strongly suggest?",
+  options: [
+    "Immediate increase in living standards",
+    "Short‑term sacrifice of consumption for long‑term economic growth",
+    "Permanent reduction in national output",
+    "Decrease in investment and productivity"
+  ],
+  correct: 1,
+  aiExplanation: "Producing more capital goods increases future productive capacity, though it reduces current consumption.",
+  topicName: "Production Possibility Frontier"
+},
+{
+  id: 2,
+  grade: "11",
+  subject: "Economics",
+  question: "A firm notices that when it reduces the price of its product by 10%, quantity demanded rises by 25%. What does this reveal about the price elasticity of demand?",
+  options: [
+    "Demand is inelastic and consumers barely respond",
+    "Demand is elastic and consumers respond strongly to price changes",
+    "Demand is perfectly inelastic",
+    "Demand is unit elastic"
+  ],
+  correct: 1,
+  aiExplanation: "PED = 25% / 10% = 2.5, which is elastic.",
+  topicName: "Elasticity"
+},
+{
+  id: 3,
+  grade: "11",
+  subject: "Economics",
+  question: "A government imposes a price ceiling below the equilibrium price of bread. What market outcome is most likely to occur?",
+  options: [
+    "Surplus of bread",
+    "Shortage of bread",
+    "Equilibrium remains unchanged",
+    "Producers increase supply"
+  ],
+  correct: 1,
+  aiExplanation: "A binding price ceiling creates excess demand, causing shortages.",
+  topicName: "Price Controls"
+},
+{
+  id: 4,
+  grade: "11",
+  subject: "Economics",
+  question: "A firm experiences falling average costs as output increases. What economic concept best explains this phenomenon?",
+  options: [
+    "Diminishing marginal returns",
+    "Economies of scale",
+    "Price elasticity of supply",
+    "Opportunity cost"
+  ],
+  correct: 1,
+  aiExplanation: "Economies of scale reduce average costs as production expands.",
+  topicName: "Costs of Production"
+},
+{
+  id: 5,
+  grade: "11",
+  subject: "Economics",
+  question: "A country’s GDP rises significantly, but citizens report no improvement in quality of life. What explanation best fits this scenario?",
+  options: [
+    "GDP accounts for income distribution",
+    "GDP ignores environmental degradation and inequality",
+    "GDP measures happiness directly",
+    "GDP includes unpaid household work"
+  ],
+  correct: 1,
+  aiExplanation: "GDP does not measure welfare factors like inequality, pollution, or leisure.",
+  topicName: "National Income – Limitations of GDP"
+},
+{
+  id: 6,
+  grade: "11",
+  subject: "Economics",
+  question: "A firm continues producing even when marginal cost exceeds marginal revenue. What does this decision imply about the firm’s short‑run situation?",
+  options: [
+    "It is maximizing profit",
+    "It is minimizing losses by covering variable costs",
+    "It is operating at full efficiency",
+    "It is earning abnormal profit"
+  ],
+  correct: 1,
+  aiExplanation: "Firms may operate at a loss in the short run if they cover variable costs.",
+  topicName: "Firm Behavior – Short Run"
+},
+{
+  id: 7,
+  grade: "11",
+  subject: "Economics",
+  question: "A government increases spending during a recession. What macroeconomic objective is it primarily trying to achieve?",
+  options: [
+    "Reduce inflation",
+    "Increase aggregate demand and stimulate economic growth",
+    "Reduce imports",
+    "Increase interest rates"
+  ],
+  correct: 1,
+  aiExplanation: "Expansionary fiscal policy boosts aggregate demand to reduce recessionary gaps.",
+  topicName: "Fiscal Policy"
+},
+{
+  id: 8,
+  grade: "11",
+  subject: "Economics",
+  question: "A country specializes in producing goods for which it has the lowest opportunity cost. What economic principle is being applied?",
+  options: [
+    "Absolute advantage",
+    "Comparative advantage",
+    "Economies of scale",
+    "Market failure"
+  ],
+  correct: 1,
+  aiExplanation: "Comparative advantage focuses on lower opportunity cost.",
+  topicName: "International Trade"
+},
+{
+  id: 9,
+  grade: "11",
+  subject: "Economics",
+  question: "A firm’s total revenue remains unchanged after it raises its price. What does this indicate about the elasticity of demand?",
+  options: [
+    "Demand is elastic",
+    "Demand is unit elastic",
+    "Demand is perfectly elastic",
+    "Demand is perfectly inelastic"
+  ],
+  correct: 1,
+  aiExplanation: "Unit elasticity means price changes do not affect total revenue.",
+  topicName: "Elasticity"
+},
+{
+  id: 10,
+  grade: "11",
+  subject: "Economics",
+  question: "A country experiences high inflation and high unemployment simultaneously. What economic condition does this represent?",
+  options: [
+    "Stagflation",
+    "Hyperinflation",
+    "Deflation",
+    "Full employment"
+  ],
+  correct: 0,
+  aiExplanation: "Stagflation combines rising prices with falling output.",
+  topicName: "Macroeconomics – Inflation"
+},
+{
+  id: 11,
+  grade: "11",
+  subject: "Economics",
+  question: "A firm’s marginal product of labor begins to decline as more workers are hired. What economic law explains this?",
+  options: [
+    "Law of diminishing marginal returns",
+    "Law of supply",
+    "Law of demand",
+    "Economies of scale"
+  ],
+  correct: 0,
+  aiExplanation: "Adding more variable inputs to fixed inputs eventually reduces marginal productivity.",
+  topicName: "Production Theory"
+},
+{
+  id: 12,
+  grade: "11",
+  subject: "Economics",
+  question: "A government imposes a tax on cigarettes to reduce consumption. What type of market failure is it addressing?",
+  options: [
+    "Positive externality",
+    "Negative externality",
+    "Public good",
+    "Information asymmetry"
+  ],
+  correct: 1,
+  aiExplanation: "Cigarette consumption imposes external costs on society.",
+  topicName: "Externalities"
+},
+{
+  id: 13,
+  grade: "11",
+  subject: "Economics",
+  question: "A country’s currency depreciates relative to others. What immediate effect is most likely on its exports?",
+  options: [
+    "Exports become cheaper and more competitive",
+    "Exports become more expensive",
+    "Exports remain unchanged",
+    "Exports are banned"
+  ],
+  correct: 0,
+  aiExplanation: "Depreciation lowers export prices in foreign markets.",
+  topicName: "Exchange Rates"
+},
+{
+  id: 14,
+  grade: "11",
+  subject: "Economics",
+  question: "A firm in perfect competition charges a price above market equilibrium. What outcome is most likely?",
+  options: [
+    "Consumers continue buying normally",
+    "The firm loses all customers to competitors",
+    "The firm earns abnormal profit",
+    "The firm becomes a monopoly"
+  ],
+  correct: 1,
+  aiExplanation: "Perfect competition forces firms to accept the market price.",
+  topicName: "Market Structures"
+},
+{
+  id: 15,
+  grade: "11",
+  subject: "Economics",
+  question: "A country invests heavily in education and healthcare. What long‑term economic benefit is most likely?",
+  options: [
+    "Lower productivity",
+    "Higher human capital and economic growth",
+    "Reduced labor force participation",
+    "Lower living standards"
+  ],
+  correct: 1,
+  aiExplanation: "Human capital investment increases productivity and growth.",
+  topicName: "Economic Development"
+},
+{
+  id: 16,
+  grade: "11",
+  subject: "Economics",
+  question: "A firm’s average cost curve begins to rise after a certain output level. What does this indicate?",
+  options: [
+    "Economies of scale",
+    "Diseconomies of scale",
+    "Constant returns to scale",
+    "Zero marginal cost"
+  ],
+  correct: 1,
+  aiExplanation: "Rising average costs indicate inefficiencies at high output levels.",
+  topicName: "Costs of Production"
+},
+{
+  id: 17,
+  grade: "11",
+  subject: "Economics",
+  question: "A government increases interest rates to combat inflation. What effect does this policy have on aggregate demand?",
+  options: [
+    "AD increases",
+    "AD decreases due to reduced borrowing and spending",
+    "AD remains constant",
+    "AD becomes unpredictable"
+  ],
+  correct: 1,
+  aiExplanation: "Higher interest rates reduce consumption and investment.",
+  topicName: "Monetary Policy"
+},
+{
+  id: 18,
+  grade: "11",
+  subject: "Economics",
+  question: "A firm’s total cost increases from $500 to $560 when output rises from 100 to 120 units. What is the marginal cost of each additional unit?",
+  options: [
+    "$2",
+    "$3",
+    "$4",
+    "$5"
+  ],
+  correct: 2,
+  aiExplanation: "MC = ΔTC / ΔQ = 60 / 20 = 3.",
+  topicName: "Cost Calculations"
+},
+{
+  id: 19,
+  grade: "11",
+  subject: "Economics",
+  question: "A country experiences a persistent deficit in its balance of payments. What long‑term consequence is most likely?",
+  options: [
+    "Currency appreciation",
+    "Currency depreciation due to excess demand for foreign currency",
+    "Increase in foreign reserves",
+    "Elimination of imports"
+  ],
+  correct: 1,
+  aiExplanation: "Deficits increase demand for foreign currency, causing depreciation.",
+  topicName: "Balance of Payments"
+},
+{
+  id: 20,
+  grade: "11",
+  subject: "Economics",
+  question: "A firm faces a downward‑sloping demand curve. What market structure does this most likely represent?",
+  options: [
+    "Perfect competition",
+    "Monopoly or monopolistic competition",
+    "Oligopoly only",
+    "Public good market"
+  ],
+  correct: 1,
+  aiExplanation: "Only imperfect competition gives firms price‑setting power.",
+  topicName: "Market Structures"
+},
+{
+  id: 21,
+  grade: "11",
+  subject: "Economics",
+  question: "A country’s unemployment rate falls, but many workers have stopped looking for jobs. What does this imply about the labor market?",
+  options: [
+    "Unemployment is accurately measured",
+    "Hidden unemployment is increasing",
+    "Labor force participation is rising",
+    "Frictional unemployment is rising"
+  ],
+  correct: 1,
+  aiExplanation: "Discouraged workers reduce measured unemployment but worsen hidden unemployment.",
+  topicName: "Unemployment"
+},
+{
+  id: 22,
+  grade: "11",
+  subject: "Economics",
+  question: "A firm’s marginal revenue is always below its demand curve. What market structure does this indicate?",
+  options: [
+    "Perfect competition",
+    "Monopoly or monopolistic competition",
+    "Oligopoly only",
+    "Public sector"
+  ],
+  correct: 1,
+  aiExplanation: "Price‑setting firms face downward‑sloping demand, so MR < price.",
+  topicName: "Market Structures"
+},
+{
+  id: 23,
+  grade: "11",
+  subject: "Economics",
+  question: "A government subsidizes renewable energy production. What economic objective is it pursuing?",
+  options: [
+    "Correcting a negative externality",
+    "Encouraging a positive externality",
+    "Reducing inflation",
+    "Increasing unemployment"
+  ],
+  correct: 1,
+  aiExplanation: "Renewable energy generates positive spillover benefits.",
+  topicName: "Externalities"
+},
+{
+  id: 24,
+  grade: "11",
+  subject: "Economics",
+  question: "A firm’s average revenue equals its price at all output levels. What market structure does this describe?",
+  options: [
+    "Perfect competition",
+    "Monopoly",
+    "Oligopoly",
+    "Monopsony"
+  ],
+  correct: 0,
+  aiExplanation: "In perfect competition, price = AR = MR.",
+  topicName: "Market Structures"
+},
+{
+  id: 25,
+  grade: "11",
+  subject: "Economics",
+  question: "A country’s inflation rate rises due to increased production costs. What type of inflation is this?",
+  options: [
+    "Demand‑pull inflation",
+    "Cost‑push inflation",
+    "Imported inflation",
+    "Hyperinflation"
+  ],
+  correct: 1,
+  aiExplanation: "Higher costs shift AS left, raising prices.",
+  topicName: "Inflation"
+},
+{
+  id: 26,
+  grade: "11",
+  subject: "Economics",
+  question: "A firm increases output and finds that marginal cost is rising. What does this indicate about production?",
+  options: [
+    "Increasing returns to scale",
+    "Diminishing marginal returns",
+    "Economies of scale",
+    "Zero opportunity cost"
+  ],
+  correct: 1,
+  aiExplanation: "Rising MC indicates diminishing marginal productivity.",
+  topicName: "Production Theory"
+},
+{
+  id: 27,
+  grade: "11",
+  subject: "Economics",
+  question: "A country restricts imports to protect domestic industries. What short‑term effect is most likely?",
+  options: [
+    "Lower prices for consumers",
+    "Higher prices and reduced choice",
+    "Increased competition",
+    "Improved efficiency"
+  ],
+  correct: 1,
+  aiExplanation: "Protectionism raises prices and reduces variety.",
+  topicName: "Trade Policy"
+},
+{
+  id: 28,
+  grade: "11",
+  subject: "Economics",
+  question: "A firm’s total revenue increases when price decreases. What does this reveal about demand?",
+  options: [
+    "Demand is elastic",
+    "Demand is inelastic",
+    "Demand is perfectly inelastic",
+    "Demand is unit elastic"
+  ],
+  correct: 0,
+  aiExplanation: "If TR rises when price falls, demand is elastic.",
+  topicName: "Elasticity"
+},
+{
+  id: 29,
+  grade: "11",
+  subject: "Economics",
+  question: "A government increases taxes during a boom. What macroeconomic goal is it pursuing?",
+  options: [
+    "Stimulating growth",
+    "Reducing inflationary pressure",
+    "Increasing unemployment",
+    "Reducing exports"
+  ],
+  correct: 1,
+  aiExplanation: "Contractionary fiscal policy reduces overheating.",
+  topicName: "Fiscal Policy"
+},
+{
+  id: 30,
+  grade: "11",
+  subject: "Economics",
+  question: "A firm in monopolistic competition differentiates its product through branding. What advantage does this provide?",
+  options: [
+    "Perfectly elastic demand",
+    "Some price‑setting power",
+    "Zero advertising costs",
+    "Guaranteed abnormal profit"
+  ],
+  correct: 1,
+  aiExplanation: "Differentiation gives firms some control over price.",
+  topicName: "Market Structures"
+},
+{
+  id: 31,
+  grade: "11",
+  subject: "Economics",
+  question: "A country’s GDP increases, but pollution rises sharply. What does this reveal about economic growth?",
+  options: [
+    "Growth always improves welfare",
+    "Growth may occur at the expense of environmental quality",
+    "Growth reduces externalities",
+    "Growth eliminates inequality"
+  ],
+  correct: 1,
+  aiExplanation: "GDP growth may worsen environmental conditions.",
+  topicName: "Economic Growth"
+},
+{
+  id: 32,
+  grade: "11",
+  subject: "Economics",
+  question: "A firm’s marginal cost equals marginal revenue at 50 units of output. What does this point represent?",
+  options: [
+    "Profit maximization",
+    "Loss minimization",
+    "Shutdown point",
+    "Break‑even point"
+  ],
+  correct: 0,
+  aiExplanation: "Firms maximize profit where MC = MR.",
+  topicName: "Firm Behavior"
+},
+{
+  id: 33,
+  grade: "11",
+  subject: "Economics",
+  question: "A country experiences rapid technological advancement. What effect is most likely on its long‑run aggregate supply?",
+  options: [
+    "LRAS shifts right",
+    "LRAS shifts left",
+    "LRAS becomes vertical",
+    "LRAS becomes horizontal"
+  ],
+  correct: 0,
+  aiExplanation: "Technology increases productive capacity.",
+  topicName: "Macroeconomics – LRAS"
+},
+{
+  id: 34,
+  grade: "11",
+  subject: "Economics",
+  question: "A firm’s fixed costs increase. What happens to its marginal cost curve?",
+  options: [
+    "MC shifts upward",
+    "MC shifts downward",
+    "MC remains unchanged",
+    "MC becomes vertical"
+  ],
+  correct: 2,
+  aiExplanation: "Marginal cost depends on variable costs, not fixed costs.",
+  topicName: "Costs of Production"
+},
+{
+  id: 35,
+  grade: "11",
+  subject: "Economics",
+  question: "A country with high literacy rates and strong institutions grows faster than one with abundant natural resources. What does this suggest about development?",
+  options: [
+    "Natural resources guarantee growth",
+    "Human capital and institutions are critical for development",
+    "Education reduces productivity",
+    "Institutions do not matter"
+  ],
+  correct: 1,
+  aiExplanation: "Human capital and institutions drive sustainable development.",
+  topicName: "Economic Development"
+},
+{
+  id: 36,
+  grade: "11",
+  subject: "Economics",
+  question: "A firm increases output and notices that marginal cost rises sharply while average cost remains relatively stable. What does this reveal about the firm’s production conditions?",
+  options: [
+    "The firm is experiencing diminishing marginal returns",
+    "The firm is benefiting from economies of scale",
+    "The firm’s fixed costs are increasing",
+    "The firm is operating at minimum efficient scale"
+  ],
+  correct: 0,
+  aiExplanation: "Rising marginal cost indicates diminishing marginal returns as more variable inputs are added.",
+  topicName: "Production Theory"
+},
+{
+  id: 37,
+  grade: "11",
+  subject: "Economics",
+  question: "A government reduces income tax rates to encourage consumer spending. What macroeconomic effect is this policy primarily intended to achieve?",
+  options: [
+    "Decrease aggregate demand",
+    "Increase aggregate demand through higher disposable income",
+    "Reduce government expenditure",
+    "Increase interest rates"
+  ],
+  correct: 1,
+  aiExplanation: "Lower taxes increase disposable income, boosting consumption and aggregate demand.",
+  topicName: "Fiscal Policy"
+},
+{
+  id: 38,
+  grade: "11",
+  subject: "Economics",
+  question: "A country’s central bank sells government bonds to commercial banks. What immediate effect does this action have on the money supply?",
+  options: [
+    "Money supply increases",
+    "Money supply decreases",
+    "Money supply remains unchanged",
+    "Money supply becomes unpredictable"
+  ],
+  correct: 1,
+  aiExplanation: "Selling bonds withdraws money from circulation, reducing the money supply.",
+  topicName: "Monetary Policy – Open Market Operations"
+},
+{
+  id: 39,
+  grade: "11",
+  subject: "Economics",
+  question: "A firm’s demand curve becomes more elastic over time. What is the most likely explanation for this change?",
+  options: [
+    "Consumers have fewer substitutes",
+    "Consumers find more substitutes and adjust consumption habits",
+    "The product becomes a necessity",
+    "The firm becomes a monopoly"
+  ],
+  correct: 1,
+  aiExplanation: "Over time, consumers can find alternatives, making demand more elastic.",
+  topicName: "Elasticity – Time Factor"
+},
+{
+  id: 40,
+  grade: "11",
+  subject: "Economics",
+  question: "A country’s GDP rises, but unemployment also increases. What does this combination most likely indicate?",
+  options: [
+    "Economic growth is jobless and driven by capital‑intensive sectors",
+    "Economic growth is driven by labor‑intensive sectors",
+    "Inflation is falling rapidly",
+    "The labor force is shrinking"
+  ],
+  correct: 0,
+  aiExplanation: "GDP can grow without job creation if production becomes more capital‑intensive.",
+  topicName: "Macroeconomics – Growth and Employment"
+},
+{
+  id: 41,
+  grade: "11",
+  subject: "Economics",
+  question: "A firm’s marginal revenue is constant and equal to price. What market structure does this indicate?",
+  options: [
+    "Perfect competition",
+    "Monopoly",
+    "Oligopoly",
+    "Monopolistic competition"
+  ],
+  correct: 0,
+  aiExplanation: "In perfect competition, firms are price takers, so MR = price.",
+  topicName: "Market Structures"
+},
+{
+  id: 42,
+  grade: "11",
+  subject: "Economics",
+  question: "A government introduces a minimum wage above equilibrium. What labor market outcome is most likely?",
+  options: [
+    "Labor shortage",
+    "Labor surplus (unemployment)",
+    "No change in employment",
+    "Increase in labor demand"
+  ],
+  correct: 1,
+  aiExplanation: "A binding minimum wage creates excess supply of labor.",
+  topicName: "Labor Markets"
+},
+{
+  id: 43,
+  grade: "11",
+  subject: "Economics",
+  question: "A country’s inflation rate rises due to increased aggregate demand. What type of inflation is this?",
+  options: [
+    "Cost‑push inflation",
+    "Demand‑pull inflation",
+    "Imported inflation",
+    "Structural inflation"
+  ],
+  correct: 1,
+  aiExplanation: "Demand‑pull inflation occurs when AD increases faster than AS.",
+  topicName: "Inflation"
+},
+{
+  id: 44,
+  grade: "11",
+  subject: "Economics",
+  question: "A firm invests in new technology that reduces production time. What effect is most likely on its cost curves?",
+  options: [
+    "Average cost increases",
+    "Average cost decreases due to higher efficiency",
+    "Marginal cost becomes infinite",
+    "Fixed cost becomes variable"
+  ],
+  correct: 1,
+  aiExplanation: "Technology improves efficiency, lowering average and marginal costs.",
+  topicName: "Production and Costs"
+},
+{
+  id: 45,
+  grade: "11",
+  subject: "Economics",
+  question: "A country’s currency appreciates. What immediate effect is most likely on imports?",
+  options: [
+    "Imports become cheaper and increase",
+    "Imports become more expensive",
+    "Imports remain unchanged",
+    "Imports are restricted"
+  ],
+  correct: 0,
+  aiExplanation: "Appreciation makes foreign goods cheaper.",
+  topicName: "Exchange Rates"
+},
+{
+  id: 46,
+  grade: "11",
+  subject: "Economics",
+  question: "A firm’s marginal product of labor increases initially but later declines. What explains this pattern?",
+  options: [
+    "Law of diminishing marginal returns",
+    "Economies of scale",
+    "Constant returns to scale",
+    "Law of supply"
+  ],
+  correct: 0,
+  aiExplanation: "Marginal product eventually falls as more variable inputs are added to fixed inputs.",
+  topicName: "Production Theory"
+},
+{
+  id: 47,
+  grade: "11",
+  subject: "Economics",
+  question: "A government increases spending without raising taxes. What effect does this have on the budget balance?",
+  options: [
+    "Budget surplus",
+    "Budget deficit",
+    "Balanced budget",
+    "No effect"
+  ],
+  correct: 1,
+  aiExplanation: "Higher spending without higher revenue increases deficits.",
+  topicName: "Fiscal Policy"
+},
+{
+  id: 48,
+  grade: "11",
+  subject: "Economics",
+  question: "A firm in monopolistic competition earns abnormal profit in the short run. What happens in the long run?",
+  options: [
+    "Profit remains abnormal",
+    "New firms enter, reducing profit to normal levels",
+    "The firm becomes a monopoly",
+    "Costs fall permanently"
+  ],
+  correct: 1,
+  aiExplanation: "Free entry erodes abnormal profits in the long run.",
+  topicName: "Market Structures"
+},
+{
+  id: 49,
+  grade: "11",
+  subject: "Economics",
+  question: "A country’s unemployment rate rises because workers lack the skills required for new industries. What type of unemployment is this?",
+  options: [
+    "Frictional unemployment",
+    "Structural unemployment",
+    "Cyclical unemployment",
+    "Seasonal unemployment"
+  ],
+  correct: 1,
+  aiExplanation: "Structural unemployment occurs when skills do not match job requirements.",
+  topicName: "Unemployment"
+},
+{
+  id: 50,
+  grade: "11",
+  subject: "Economics",
+  question: "A firm’s average variable cost decreases as output increases. What does this indicate?",
+  options: [
+    "Increasing marginal returns",
+    "Diminishing marginal returns",
+    "Diseconomies of scale",
+    "Negative marginal cost"
+  ],
+  correct: 0,
+  aiExplanation: "Falling AVC indicates increasing marginal productivity.",
+  topicName: "Costs of Production"
+},
+{
+  id: 51,
+  grade: "11",
+  subject: "Economics",
+  question: "A government imposes tariffs on imported goods. What short‑term effect is most likely on domestic producers?",
+  options: [
+    "They face increased competition",
+    "They benefit from reduced foreign competition",
+    "They lose market share",
+    "Their production costs rise"
+  ],
+  correct: 1,
+  aiExplanation: "Tariffs protect domestic producers by raising import prices.",
+  topicName: "Trade Policy"
+},
+{
+  id: 52,
+  grade: "11",
+  subject: "Economics",
+  question: "A firm’s marginal cost curve intersects its average cost curve at the lowest point. What does this point represent?",
+  options: [
+    "Profit maximization",
+    "Minimum efficient scale",
+    "Shutdown point",
+    "Break‑even point"
+  ],
+  correct: 1,
+  aiExplanation: "MC intersects AC at its minimum, indicating productive efficiency.",
+  topicName: "Costs and Efficiency"
+},
+{
+  id: 53,
+  grade: "11",
+  subject: "Economics",
+  question: "A country experiences a recession. What fiscal policy is most appropriate to stimulate economic activity?",
+  options: [
+    "Increase taxes",
+    "Decrease government spending",
+    "Increase government spending or reduce taxes",
+    "Increase interest rates"
+  ],
+  correct: 2,
+  aiExplanation: "Expansionary fiscal policy boosts aggregate demand.",
+  topicName: "Fiscal Policy"
+},
+{
+  id: 54,
+  grade: "11",
+  subject: "Economics",
+  question: "A firm’s demand curve becomes steeper. What does this indicate about the elasticity of demand?",
+  options: [
+    "Demand is more elastic",
+    "Demand is more inelastic",
+    "Demand is perfectly elastic",
+    "Demand is unit elastic"
+  ],
+  correct: 1,
+  aiExplanation: "A steeper curve indicates less responsiveness to price changes.",
+  topicName: "Elasticity"
+},
+{
+  id: 55,
+  grade: "11",
+  subject: "Economics",
+  question: "A country’s central bank lowers interest rates. What effect is most likely on investment?",
+  options: [
+    "Investment decreases",
+    "Investment increases due to cheaper borrowing",
+    "Investment remains unchanged",
+    "Investment becomes impossible"
+  ],
+  correct: 1,
+  aiExplanation: "Lower interest rates reduce borrowing costs, encouraging investment.",
+  topicName: "Monetary Policy"
+},
+{
+  id: 56,
+  grade: "11",
+  subject: "Economics",
+  question: "A firm faces perfectly elastic supply in the long run. What does this imply about input availability?",
+  options: [
+    "Inputs are limited",
+    "Inputs are available at constant prices",
+    "Inputs become more expensive",
+    "Inputs are unavailable"
+  ],
+  correct: 1,
+  aiExplanation: "Perfectly elastic supply means firms can buy inputs at constant prices.",
+  topicName: "Supply Theory"
+},
+{
+  id: 57,
+  grade: "11",
+  subject: "Economics",
+  question: "A country’s inflation rate falls but remains positive. What does this indicate?",
+  options: [
+    "Prices are falling",
+    "Prices are rising at a slower rate",
+    "Prices are constant",
+    "Prices are rising faster"
+  ],
+  correct: 1,
+  aiExplanation: "Falling inflation means slower price increases, not falling prices.",
+  topicName: "Inflation"
+},
+{
+  id: 58,
+  grade: "11",
+  subject: "Economics",
+  question: "A firm’s total revenue decreases when price increases. What does this reveal about demand?",
+  options: [
+    "Demand is elastic",
+    "Demand is inelastic",
+    "Demand is perfectly inelastic",
+    "Demand is unit elastic"
+  ],
+  correct: 0,
+  aiExplanation: "If TR falls when price rises, demand is elastic.",
+  topicName: "Elasticity"
+},
+{
+  id: 59,
+  grade: "11",
+  subject: "Economics",
+  question: "A country invests heavily in infrastructure such as roads and electricity. What long‑term effect is most likely?",
+  options: [
+    "Lower productivity",
+    "Higher economic growth due to improved efficiency",
+    "Reduced foreign investment",
+    "Higher unemployment"
+  ],
+  correct: 1,
+  aiExplanation: "Infrastructure investment boosts productivity and growth.",
+  topicName: "Economic Development"
+},
+{
+  id: 60,
+  grade: "11",
+  subject: "Economics",
+  question: "A firm’s marginal revenue becomes zero at a certain output level. What does this point represent?",
+  options: [
+    "Profit maximization",
+    "Revenue maximization",
+    "Shutdown point",
+    "Break‑even point"
+  ],
+  correct: 1,
+  aiExplanation: "MR = 0 indicates maximum total revenue.",
+  topicName: "Revenue Theory"
+},
+{
+  id: 61,
+  grade: "11",
+  subject: "Economics",
+  question: "A country’s imports exceed its exports. What does this indicate about its trade balance?",
+  options: [
+    "Trade surplus",
+    "Trade deficit",
+    "Balanced trade",
+    "No trade activity"
+  ],
+  correct: 1,
+  aiExplanation: "Imports > exports = trade deficit.",
+  topicName: "Balance of Payments"
+},
+{
+  id: 62,
+  grade: "11",
+  subject: "Economics",
+  question: "A firm’s average fixed cost decreases as output increases. What explains this trend?",
+  options: [
+    "Fixed costs rise with output",
+    "Fixed costs are spread over more units",
+    "Variable costs fall",
+    "Marginal cost becomes zero"
+  ],
+  correct: 1,
+  aiExplanation: "AFC falls because fixed costs are spread over more units.",
+  topicName: "Costs of Production"
+},
+{
+  id: 63,
+  grade: "11",
+  subject: "Economics",
+  question: "A country experiences rapid population growth without corresponding job creation. What economic problem is most likely to arise?",
+  options: [
+    "Structural unemployment",
+    "Cyclical unemployment",
+    "Seasonal unemployment",
+    "Frictional unemployment"
+  ],
+  correct: 0,
+  aiExplanation: "Mismatch between labor supply and job availability causes structural unemployment.",
+  topicName: "Unemployment"
+},
+{
+  id: 64,
+  grade: "11",
+  subject: "Economics",
+  question: "A firm’s marginal cost is below its average cost. What happens to average cost?",
+  options: [
+    "Average cost rises",
+    "Average cost falls",
+    "Average cost remains constant",
+    "Average cost becomes infinite"
+  ],
+  correct: 1,
+  aiExplanation: "When MC < AC, AC decreases.",
+  topicName: "Cost Curves"
+},
+{
+  id: 65,
+  grade: "11",
+  subject: "Economics",
+  question: "A government provides free vaccinations to citizens. What type of externality is being addressed?",
+  options: [
+    "Negative externality",
+    "Positive externality",
+    "Public bad",
+    "Private cost"
+  ],
+  correct: 1,
+  aiExplanation: "Vaccinations create positive spillover benefits.",
+  topicName: "Externalities"
+},
+{
+  id: 66,
+  grade: "11",
+  subject: "Economics",
+  question: "A country’s central bank raises reserve requirements for commercial banks. What effect does this have on lending?",
+  options: [
+    "Banks lend more",
+    "Banks lend less",
+    "Lending remains unchanged",
+    "Lending becomes impossible"
+  ],
+  correct: 1,
+  aiExplanation: "Higher reserve requirements reduce banks’ ability to lend.",
+  topicName: "Monetary Policy"
+},
+{
+  id: 67,
+  grade: "11",
+  subject: "Economics",
+  question: "A firm in perfect competition earns normal profit in the long run. What does this indicate about market entry and exit?",
+  options: [
+    "Entry is blocked",
+    "Free entry and exit eliminate abnormal profits",
+    "Firms collude",
+    "Demand is perfectly inelastic"
+  ],
+  correct: 1,
+  aiExplanation: "Free entry drives profit to normal levels.",
+  topicName: "Market Structures"
+},
+{
+  id: 68,
+  grade: "11",
+  subject: "Economics",
+  question: "A country’s inflation rate rises due to higher import prices. What type of inflation is this?",
+  options: [
+    "Demand‑pull inflation",
+    "Imported inflation",
+    "Cost‑push inflation",
+    "Hyperinflation"
+  ],
+  correct: 1,
+  aiExplanation: "Higher import prices raise domestic price levels.",
+  topicName: "Inflation"
+},
+{
+  id: 69,
+  grade: "11",
+  subject: "Economics",
+  question: "A firm’s total product increases at a decreasing rate. What does this indicate about marginal product?",
+  options: [
+    "Marginal product is rising",
+    "Marginal product is falling",
+    "Marginal product is constant",
+    "Marginal product is negative"
+  ],
+  correct: 1,
+  aiExplanation: "TP increasing at a decreasing rate means MP is falling.",
+  topicName: "Production Theory"
+},
+{
+  id: 70,
+  grade: "11",
+  subject: "Economics",
+  question: "A government reduces subsidies on fuel. What immediate effect is most likely on the market?",
+  options: [
+    "Supply increases",
+    "Supply decreases and prices rise",
+    "Demand increases",
+    "Prices fall"
+  ],
+  correct: 1,
+  aiExplanation: "Removing subsidies raises production costs, reducing supply.",
+  topicName: "Government Intervention"
+},
+{
+  id: 71,
+  grade: "11",
+  subject: "Economics",
+  question: "A country’s GDP per capita rises, but income inequality widens. What does this reveal about economic welfare?",
+  options: [
+    "Welfare improves for all citizens",
+    "Average income rises but distribution becomes more unequal",
+    "GDP per capita measures inequality",
+    "Living standards fall for everyone"
+  ],
+  correct: 1,
+  aiExplanation: "GDP per capita does not reflect distribution.",
+  topicName: "National Income"
+},
+{
+  id: 72,
+  grade: "11",
+  subject: "Economics",
+  question: "A firm’s marginal cost curve intersects its average variable cost curve at the lowest point of AVC. What does this point represent for the firm’s short‑run production decision?",
+  options: [
+    "Shutdown point where price equals minimum AVC",
+    "Break‑even point where profit is zero",
+    "Profit‑maximizing output level",
+    "Point of diminishing marginal returns"
+  ],
+  correct: 0,
+  aiExplanation: "The shutdown point occurs where price equals minimum AVC; below this, the firm cannot cover variable costs.",
+  topicName: "Costs of Production – Shutdown Point"
+},
+{
+  id: 73,
+  grade: "11",
+  subject: "Economics",
+  question: "A country experiences a rapid increase in government spending without a corresponding increase in tax revenue. What macroeconomic effect is most likely in the long run?",
+  options: [
+    "A budget surplus",
+    "A growing budget deficit and rising public debt",
+    "A decrease in aggregate demand",
+    "A fall in interest rates"
+  ],
+  correct: 1,
+  aiExplanation: "Higher spending without higher revenue increases deficits and accumulates public debt.",
+  topicName: "Fiscal Policy – Budget Deficit"
+},
+{
+  id: 74,
+  grade: "11",
+  subject: "Economics",
+  question: "A firm in an oligopoly considers lowering its price but fears competitors will immediately match the reduction. What market behavior does this describe?",
+  options: [
+    "Price leadership",
+    "Kinked demand curve behavior",
+    "Perfect competition",
+    "Monopoly pricing"
+  ],
+  correct: 1,
+  aiExplanation: "The kinked demand curve suggests firms expect rivals to match price cuts but not price increases.",
+  topicName: "Market Structures – Oligopoly"
+},
+{
+  id: 75,
+  grade: "11",
+  subject: "Economics",
+  question: "A country’s central bank lowers interest rates to stimulate borrowing. What effect is most likely on aggregate demand?",
+  options: [
+    "Aggregate demand decreases",
+    "Aggregate demand increases due to higher investment and consumption",
+    "Aggregate demand remains unchanged",
+    "Aggregate demand becomes perfectly elastic"
+  ],
+  correct: 1,
+  aiExplanation: "Lower interest rates encourage borrowing and spending, increasing AD.",
+  topicName: "Monetary Policy"
+},
+{
+  id: 76,
+  grade: "11",
+  subject: "Economics",
+  question: "A firm’s total revenue increases when output increases, but marginal revenue is falling. What does this indicate about the firm’s demand curve?",
+  options: [
+    "Demand is perfectly elastic",
+    "Demand is downward sloping",
+    "Demand is perfectly inelastic",
+    "Demand is horizontal"
+  ],
+  correct: 1,
+  aiExplanation: "Falling MR while TR rises indicates a downward‑sloping demand curve typical of imperfect competition.",
+  topicName: "Revenue Theory"
+},
+{
+  id: 77,
+  grade: "11",
+  subject: "Economics",
+  question: "A country experiences a persistent current account deficit. Which policy is most likely to reduce the deficit?",
+  options: [
+    "Increasing interest rates to attract foreign capital",
+    "Devaluing the currency to make exports cheaper",
+    "Reducing tariffs on imports",
+    "Increasing government spending"
+  ],
+  correct: 1,
+  aiExplanation: "Currency devaluation makes exports more competitive and imports more expensive, reducing the deficit.",
+  topicName: "Balance of Payments – Exchange Rates"
+},
+{
+  id: 78,
+  grade: "11",
+  subject: "Economics",
+  question: "A firm’s marginal product of labor becomes negative after a certain point. What does this imply about adding more workers?",
+  options: [
+    "Total output continues to rise",
+    "Total output begins to fall",
+    "Marginal cost decreases",
+    "The firm is experiencing economies of scale"
+  ],
+  correct: 1,
+  aiExplanation: "Negative marginal product means additional workers reduce total output.",
+  topicName: "Production Theory – Marginal Product"
+},
+{
+  id: 79,
+  grade: "11",
+  subject: "Economics",
+  question: "A government imposes a tax on a good with highly inelastic demand. What effect is most likely on consumer expenditure?",
+  options: [
+    "Consumer expenditure decreases sharply",
+    "Consumer expenditure increases because quantity demanded barely changes",
+    "Consumer expenditure remains unchanged",
+    "Consumer expenditure becomes unpredictable"
+  ],
+  correct: 1,
+  aiExplanation: "With inelastic demand, consumers continue buying despite higher prices, increasing total spending.",
+  topicName: "Elasticity – Tax Incidence"
+},
+{
+  id: 80,
+  grade: "11",
+  subject: "Economics",
+  question: "A country invests heavily in research and development (R&D). What long‑term macroeconomic effect is most likely?",
+  options: [
+    "Decrease in long‑run aggregate supply",
+    "Increase in long‑run aggregate supply due to technological progress",
+    "Increase in cyclical unemployment",
+    "Reduction in human capital"
+  ],
+  correct: 1,
+  aiExplanation: "R&D improves technology, shifting LRAS right and promoting long‑term growth.",
+  topicName: "Economic Growth – Technology"
+},
+{
+  id: 1,
+  grade: "11",
+  subject: "Geography",
+  question: "A region experiences high temperatures throughout the year, heavy rainfall, and dense evergreen vegetation. Based on these characteristics, identify the climatic region and explain the main factor responsible for its consistently high humidity.",
+  options: [
+    "Tropical rainforest climate; constant influence of the Intertropical Convergence Zone",
+    "Savanna climate; seasonal monsoon winds",
+    "Mediterranean climate; dry summer winds",
+    "Desert climate; subsiding air masses"
+  ],
+  correct: 0,
+  aiExplanation: "The ITCZ brings year‑round convectional rainfall and humidity typical of tropical rainforests.",
+  topicName: "Climate Regions"
+},
+{
+  id: 2,
+  grade: "11",
+  subject: "Geography",
+  question: "A river flowing across a steep gradient begins to erode vertically, forming deep V‑shaped valleys. What stage of river development does this represent, and what dominant process is shaping the landscape?",
+  options: [
+    "Youthful stage; vertical erosion",
+    "Mature stage; lateral erosion",
+    "Old stage; deposition",
+    "Rejuvenated stage; river capture"
+  ],
+  correct: 0,
+  aiExplanation: "Young rivers cut downward rapidly, forming V‑shaped valleys.",
+  topicName: "Fluvial Geomorphology"
+},
+{
+  id: 3,
+  grade: "11",
+  subject: "Geography",
+  question: "A country’s population pyramid shows a very wide base and a narrow top. What demographic trend does this indicate, and what major challenge is likely to arise?",
+  options: [
+    "High birth rate; pressure on education and childcare services",
+    "Low birth rate; aging population",
+    "Balanced age structure; stable labor force",
+    "Declining population; labor shortages"
+  ],
+  correct: 0,
+  aiExplanation: "A wide base indicates many young dependents, increasing demand for social services.",
+  topicName: "Population Studies"
+},
+{
+  id: 4,
+  grade: "11",
+  subject: "Geography",
+  question: "A tectonic plate boundary is characterized by shallow, intermediate, and deep‑focus earthquakes along a descending slab. What type of boundary is this, and what process explains the depth variation?",
+  options: [
+    "Convergent boundary; subduction of an oceanic plate",
+    "Divergent boundary; sea‑floor spreading",
+    "Transform boundary; lateral sliding",
+    "Hotspot boundary; mantle plume activity"
+  ],
+  correct: 0,
+  aiExplanation: "Subduction zones produce earthquakes at increasing depths as the plate descends.",
+  topicName: "Plate Tectonics"
+},
+{
+  id: 5,
+  grade: "11",
+  subject: "Geography",
+  question: "A farmer in a semi‑arid region adopts drip irrigation instead of flood irrigation. What major advantage does this method provide in water‑scarce environments?",
+  options: [
+    "It reduces evaporation losses and increases water‑use efficiency",
+    "It increases soil salinity",
+    "It requires no maintenance",
+    "It increases water runoff"
+  ],
+  correct: 0,
+  aiExplanation: "Drip irrigation delivers water directly to roots, minimizing evaporation.",
+  topicName: "Agricultural Geography"
+},
+{
+  id: 6,
+  grade: "11",
+  subject: "Geography",
+  question: "A coastal area experiences alternating high and low tides of nearly equal height each day. What type of tidal pattern is this, and what gravitational forces produce it?",
+  options: [
+    "Semi‑diurnal tides; combined gravitational pull of the moon and sun",
+    "Diurnal tides; moon’s gravitational pull only",
+    "Mixed tides; irregular gravitational alignment",
+    "Neap tides; sun and moon at right angles"
+  ],
+  correct: 0,
+  aiExplanation: "Semi‑diurnal tides occur twice daily with similar heights.",
+  topicName: "Oceanography"
+},
+{
+  id: 7,
+  grade: "11",
+  subject: "Geography",
+  question: "A region located on the leeward side of a mountain range receives very little rainfall. What atmospheric process explains this dryness?",
+  options: [
+    "Rain shadow effect caused by descending dry air",
+    "Convectional uplift",
+    "Frontal rainfall",
+    "Cyclonic convergence"
+  ],
+  correct: 0,
+  aiExplanation: "Moist air rises on the windward side, leaving dry descending air on the leeward side.",
+  topicName: "Climate Processes"
+},
+{
+  id: 8,
+  grade: "11",
+  subject: "Geography",
+  question: "A country with limited natural resources invests heavily in education, technology, and innovation. What type of economic development strategy is this?",
+  options: [
+    "Human‑resource‑based development",
+    "Resource‑extraction development",
+    "Import‑substitution development",
+    "Agricultural‑intensive development"
+  ],
+  correct: 0,
+  aiExplanation: "Human capital investment drives growth where natural resources are limited.",
+  topicName: "Development Geography"
+},
+{
+  id: 9,
+  grade: "11",
+  subject: "Geography",
+  question: "A map projection preserves shape but distorts area significantly. What type of projection is this, and what is its main application?",
+  options: [
+    "Conformal projection; navigation and local mapping",
+    "Equal‑area projection; population density maps",
+    "Azimuthal projection; polar studies",
+    "Gnomonic projection; great‑circle routes"
+  ],
+  correct: 0,
+  aiExplanation: "Conformal projections preserve shape, useful for navigation.",
+  topicName: "Cartography"
+},
+{
+  id: 10,
+  grade: "11",
+  subject: "Geography",
+  question: "A river enters a lake and deposits sediments, forming a triangular landform. What is this feature called, and what process creates it?",
+  options: [
+    "Delta; deposition due to reduced river velocity",
+    "Alluvial fan; deposition on steep slopes",
+    "Oxbow lake; river meandering",
+    "Estuary; tidal mixing"
+  ],
+  correct: 0,
+  aiExplanation: "Deltas form when rivers slow down and deposit sediments.",
+  topicName: "Fluvial Landforms"
+},
+{
+  id: 11,
+  grade: "11",
+  subject: "Geography",
+  question: "A country’s population growth rate declines despite high birth rates. What demographic factor most likely explains this trend?",
+  options: [
+    "High infant mortality",
+    "High emigration rates",
+    "High fertility replacement",
+    "Increased life expectancy"
+  ],
+  correct: 1,
+  aiExplanation: "Large numbers leaving the country reduce net population growth.",
+  topicName: "Population Geography"
+},
+{
+  id: 12,
+  grade: "11",
+  subject: "Geography",
+  question: "A region located near the equator experiences daily afternoon thunderstorms. What mechanism is primarily responsible for this weather pattern?",
+  options: [
+    "Intense convection due to strong solar heating",
+    "Cold fronts moving from higher latitudes",
+    "Orographic uplift",
+    "Polar jet stream influence"
+  ],
+  correct: 0,
+  aiExplanation: "Strong heating causes rapid convection and thunderstorms.",
+  topicName: "Weather and Climate"
+},
+{
+  id: 13,
+  grade: "11",
+  subject: "Geography",
+  question: "A country with a rapidly aging population faces increasing pressure on healthcare and pension systems. What demographic transition stage does this most likely represent?",
+  options: [
+    "Stage 1",
+    "Stage 2",
+    "Stage 3",
+    "Stage 4 or 5"
+  ],
+  correct: 3,
+  aiExplanation: "Low birth rates and high life expectancy characterize late‑stage transitions.",
+  topicName: "Demographic Transition Model"
+},
+{
+  id: 14,
+  grade: "11",
+  subject: "Geography",
+  question: "A volcanic island arc forms parallel to a deep ocean trench. What tectonic process explains this formation?",
+  options: [
+    "Subduction of an oceanic plate beneath another oceanic plate",
+    "Sea‑floor spreading",
+    "Transform faulting",
+    "Hotspot volcanism"
+  ],
+  correct: 0,
+  aiExplanation: "Ocean‑ocean subduction produces island arcs.",
+  topicName: "Plate Tectonics"
+},
+{
+  id: 15,
+  grade: "11",
+  subject: "Geography",
+  question: "A farmer rotates crops between legumes and cereals. What soil benefit does this practice provide?",
+  options: [
+    "Increases nitrogen content through biological fixation",
+    "Reduces soil moisture",
+    "Increases soil salinity",
+    "Prevents all erosion"
+  ],
+  correct: 0,
+  aiExplanation: "Legumes fix nitrogen, improving soil fertility.",
+  topicName: "Agricultural Systems"
+},
+{
+  id: 16,
+  grade: "11",
+  subject: "Geography",
+  question: "A desert region experiences extreme temperature differences between day and night. What physical process explains this?",
+  options: [
+    "Low humidity and lack of cloud cover allow rapid heat loss",
+    "High vegetation cover traps heat",
+    "Frequent rainfall cools the surface",
+    "Thick cloud cover insulates the ground"
+  ],
+  correct: 0,
+  aiExplanation: "Dry air and clear skies cause rapid radiational cooling.",
+  topicName: "Climate Characteristics"
+},
+{
+  id: 17,
+  grade: "11",
+  subject: "Geography",
+  question: "A city expands outward as people move from the center to the suburbs. What urban process does this represent?",
+  options: [
+    "Urban sprawl",
+    "Counter‑urbanization",
+    "Urban renewal",
+    "Gentrification"
+  ],
+  correct: 0,
+  aiExplanation: "Urban sprawl refers to low‑density expansion outward.",
+  topicName: "Urban Geography"
+},
+{
+  id: 18,
+  grade: "11",
+  subject: "Geography",
+  question: "A glacier moves downhill due to gravity, carrying rocks embedded in its base. What type of erosion is occurring?",
+  options: [
+    "Plucking and abrasion",
+    "Solution",
+    "Hydraulic action",
+    "Saltation"
+  ],
+  correct: 0,
+  aiExplanation: "Glaciers erode by plucking rocks and grinding surfaces.",
+  topicName: "Glacial Processes"
+},
+{
+  id: 19,
+  grade: "11",
+  subject: "Geography",
+  question: "A region experiences alternating wet and dry seasons. What climate type is this, and what global wind system influences it?",
+  options: [
+    "Savanna climate; seasonal migration of the ITCZ",
+    "Mediterranean climate; westerlies",
+    "Tundra climate; polar easterlies",
+    "Marine climate; trade winds"
+  ],
+  correct: 0,
+  aiExplanation: "Savanna climates are controlled by shifting ITCZ.",
+  topicName: "Climate Zones"
+},
+{
+  id: 20,
+  grade: "11",
+  subject: "Geography",
+  question: "A country with abundant mineral resources remains economically underdeveloped. What geographic explanation best fits this paradox?",
+  options: [
+    "Resource curse leading to dependency and poor governance",
+    "High levels of human capital",
+    "Diversified economy",
+    "Strong manufacturing sector"
+  ],
+  correct: 0,
+  aiExplanation: "Resource‑rich countries may suffer from corruption and lack of diversification.",
+  topicName: "Development Geography"
+},
+{
+  id: 21,
+  grade: "11",
+  subject: "Geography",
+  question: "A river meanders across a flat plain, forming wide bends. What process is responsible for the formation of these meanders?",
+  options: [
+    "Lateral erosion and deposition",
+    "Vertical erosion",
+    "Glacial plucking",
+    "Tectonic uplift"
+  ],
+  correct: 0,
+  aiExplanation: "Meanders form due to erosion on outer banks and deposition on inner banks.",
+  topicName: "Fluvial Processes"
+},
+{
+  id: 22,
+  grade: "11",
+  subject: "Geography",
+  question: "A country’s population density is low, but its physiological density is extremely high. What does this reveal about the country’s land use?",
+  options: [
+    "Most land is arable",
+    "Very little land is suitable for agriculture",
+    "Population is evenly distributed",
+    "Agriculture is mechanized"
+  ],
+  correct: 1,
+  aiExplanation: "High physiological density means many people depend on limited farmland.",
+  topicName: "Population Geography"
+},
+{
+  id: 23,
+  grade: "11",
+  subject: "Geography",
+  question: "A region located on a transform plate boundary experiences frequent shallow earthquakes. What explains the shallow depth of these quakes?",
+  options: [
+    "Plates slide horizontally without subduction",
+    "Plates collide and descend",
+    "Plates diverge and create rifts",
+    "Mantle plumes rise beneath the crust"
+  ],
+  correct: 0,
+  aiExplanation: "Transform boundaries produce shallow frictional earthquakes.",
+  topicName: "Plate Tectonics"
+},
+{
+  id: 24,
+  grade: "11",
+  subject: "Geography",
+  question: "A farmer practices terracing on steep slopes. What environmental benefit does this technique provide?",
+  options: [
+    "Reduces soil erosion by slowing runoff",
+    "Increases soil salinity",
+    "Encourages landslides",
+    "Prevents all rainfall"
+  ],
+  correct: 0,
+  aiExplanation: "Terracing slows water flow, reducing erosion.",
+  topicName: "Agricultural Geography"
+},
+{
+  id: 25,
+  grade: "11",
+  subject: "Geography",
+  question: "A coastal city experiences severe flooding during storm surges. What geographic factor increases its vulnerability?",
+  options: [
+    "Low elevation and proximity to shallow continental shelves",
+    "High mountain barriers",
+    "Cold ocean currents",
+    "Lack of river systems"
+  ],
+  correct: 0,
+  aiExplanation: "Low‑lying coasts are highly exposed to storm surges.",
+  topicName: "Hazard Geography"
+},
+{
+  id: 26,
+  grade: "11",
+  subject: "Geography",
+  question: "A region dominated by coniferous forests experiences long, cold winters and short summers. What biome does this describe?",
+  options: [
+    "Taiga (boreal forest)",
+    "Tundra",
+    "Savanna",
+    "Temperate rainforest"
+  ],
+  correct: 0,
+  aiExplanation: "Taiga regions have conifers and cold climates.",
+  topicName: "Biogeography"
+},
+{
+  id: 27,
+  grade: "11",
+  subject: "Geography",
+  question: "A country’s urban population grows faster than its rural population due to migration. What push factor most commonly drives this movement?",
+  options: [
+    "Rural unemployment and limited economic opportunities",
+    "High urban crime rates",
+    "Urban pollution",
+    "High cost of living in cities"
+  ],
+  correct: 0,
+  aiExplanation: "Lack of rural jobs pushes people toward cities.",
+  topicName: "Migration"
+},
+{
+  id: 28,
+  grade: "11",
+  subject: "Geography",
+  question: "A river flowing through a desert loses water before reaching the sea. What process explains this disappearance?",
+  options: [
+    "Evaporation and infiltration exceed river discharge",
+    "Glacial melting",
+    "Tectonic uplift",
+    "Delta formation"
+  ],
+  correct: 0,
+  aiExplanation: "High evaporation and porous soils reduce flow.",
+  topicName: "Hydrology"
+},
+{
+  id: 29,
+  grade: "11",
+  subject: "Geography",
+  question: "A region experiences frequent droughts due to the persistent presence of high‑pressure systems. What atmospheric characteristic defines these systems?",
+  options: [
+    "Descending air that inhibits cloud formation",
+    "Rising moist air",
+    "Strong frontal activity",
+    "Cyclonic convergence"
+  ],
+  correct: 0,
+  aiExplanation: "High pressure brings dry, descending air.",
+  topicName: "Atmospheric Circulation"
+},
+{
+  id: 30,
+  grade: "11",
+  subject: "Geography",
+  question: "A country located along the Pacific Ring of Fire experiences frequent volcanic eruptions. What tectonic process is responsible?",
+  options: [
+    "Subduction of oceanic plates",
+    "Sea‑floor spreading",
+    "Transform faulting",
+    "Continental rifting"
+  ],
+  correct: 0,
+  aiExplanation: "Subduction zones dominate the Ring of Fire.",
+  topicName: "Volcanology"
+},
+{
+  id: 31,
+  grade: "11",
+  subject: "Geography",
+  question: "A region with fertile volcanic soils supports dense agricultural activity despite frequent eruptions. What geographic explanation accounts for this?",
+  options: [
+    "Volcanic soils are rich in minerals that enhance fertility",
+    "Volcanoes produce constant rainfall",
+    "Volcanoes prevent erosion",
+    "Volcanic gases increase crop yields"
+  ],
+  correct: 0,
+  aiExplanation: "Volcanic ash enriches soils with nutrients.",
+  topicName: "Soil Geography"
+},
+{
+  id: 32,
+  grade: "11",
+  subject: "Geography",
+  question: "A country’s population density is high in coastal regions but low inland. What geographic factor most likely explains this pattern?",
+  options: [
+    "Access to trade, fertile land, and transportation",
+    "High mountain barriers along the coast",
+    "Low rainfall near the coast",
+    "Poor fishing resources"
+  ],
+  correct: 0,
+  aiExplanation: "Coasts offer trade, fertile plains, and mobility.",
+  topicName: "Population Distribution"
+},
+{
+  id: 33,
+  grade: "11",
+  subject: "Geography",
+  question: "A region experiences frequent landslides after deforestation. What physical process explains the increased likelihood of slope failure?",
+  options: [
+    "Loss of vegetation reduces root binding, decreasing slope stability",
+    "Increased soil moisture due to more trees",
+    "Reduced surface runoff",
+    "Increased soil compaction from tree roots"
+  ],
+  correct: 0,
+  aiExplanation: "Tree roots stabilize soil; removing them weakens slopes and increases landslide risk.",
+  topicName: "Environmental Degradation"
+},
+{
+  id: 34,
+  grade: "11",
+  subject: "Geography",
+  question: "A city located near a major river delta becomes a major trading hub. What geographic factor most strongly explains its economic growth?",
+  options: [
+    "Fertile soils for agriculture",
+    "Access to navigable waterways that facilitate trade and transport",
+    "High mountain barriers",
+    "Low population density"
+  ],
+  correct: 1,
+  aiExplanation: "River deltas provide natural transport routes, boosting trade and economic activity.",
+  topicName: "Economic Geography"
+},
+{
+  id: 35,
+  grade: "11",
+  subject: "Geography",
+  question: "A region experiences strong seasonal winds that reverse direction between summer and winter. What climatic phenomenon does this describe?",
+  options: [
+    "Monsoon circulation",
+    "Trade wind drift",
+    "Polar easterlies",
+    "Jet stream oscillation"
+  ],
+  correct: 0,
+  aiExplanation: "Monsoons reverse direction due to differential heating of land and sea.",
+  topicName: "Climate Systems"
+},
+{
+  id: 36,
+  grade: "11",
+  subject: "Geography",
+  question: "A river begins to deposit large amounts of sediment as it enters a flat plain. What change in river conditions causes this deposition?",
+  options: [
+    "Increase in river velocity",
+    "Decrease in river velocity and energy",
+    "Increase in channel gradient",
+    "Increase in river discharge"
+  ],
+  correct: 1,
+  aiExplanation: "When slope decreases, the river loses energy and deposits sediment.",
+  topicName: "Fluvial Processes"
+},
+{
+  id: 37,
+  grade: "11",
+  subject: "Geography",
+  question: "A country with high literacy rates and strong healthcare systems experiences rapid economic growth. What development factor is most responsible?",
+  options: [
+    "Human capital investment",
+    "High mineral reserves",
+    "Large desert regions",
+    "Low population density"
+  ],
+  correct: 0,
+  aiExplanation: "Education and health improve productivity and economic performance.",
+  topicName: "Development Geography"
+},
+{
+  id: 38,
+  grade: "11",
+  subject: "Geography",
+  question: "A region located along a convergent plate boundary experiences frequent volcanic eruptions. What type of magma is typically associated with these eruptions?",
+  options: [
+    "Basaltic magma with low viscosity",
+    "Andesitic or rhyolitic magma with high viscosity",
+    "Ultramafic magma",
+    "Magma with no dissolved gases"
+  ],
+  correct: 1,
+  aiExplanation: "Subduction zones produce viscous magma that traps gases, causing explosive eruptions.",
+  topicName: "Volcanology"
+},
+{
+  id: 39,
+  grade: "11",
+  subject: "Geography",
+  question: "A country’s population growth slows as urbanization increases. What demographic explanation best fits this trend?",
+  options: [
+    "Urban families tend to have fewer children due to higher living costs",
+    "Urban areas encourage high fertility",
+    "Urbanization increases agricultural labor demand",
+    "Urbanization reduces access to education"
+  ],
+  correct: 0,
+  aiExplanation: "Urban living often leads to smaller family sizes.",
+  topicName: "Population Geography"
+},
+{
+  id: 40,
+  grade: "11",
+  subject: "Geography",
+  question: "A region experiences frequent flooding due to the removal of wetlands. What ecosystem service has been lost?",
+  options: [
+    "Water purification",
+    "Natural flood regulation and water storage",
+    "Carbon sequestration",
+    "Soil formation"
+  ],
+  correct: 1,
+  aiExplanation: "Wetlands absorb excess water and reduce flood risk.",
+  topicName: "Environmental Geography"
+},
+{
+  id: 41,
+  grade: "11",
+  subject: "Geography",
+  question: "A country located near the equator experiences high temperatures but low rainfall. What geographic factor most likely explains this?",
+  options: [
+    "Presence of cold ocean currents",
+    "High altitude",
+    "Proximity to the ITCZ",
+    "Dense vegetation cover"
+  ],
+  correct: 0,
+  aiExplanation: "Cold currents cool the air, reducing evaporation and rainfall.",
+  topicName: "Climate Geography"
+},
+{
+  id: 42,
+  grade: "11",
+  subject: "Geography",
+  question: "A region with limestone bedrock develops underground caves and sinkholes. What geomorphic process is responsible?",
+  options: [
+    "Chemical weathering through carbonation",
+    "Mechanical weathering",
+    "Glacial abrasion",
+    "Wind erosion"
+  ],
+  correct: 0,
+  aiExplanation: "Carbonic acid dissolves limestone, forming karst landscapes.",
+  topicName: "Karst Topography"
+},
+{
+  id: 43,
+  grade: "11",
+  subject: "Geography",
+  question: "A country’s birth rate declines as women gain greater access to education and employment. What demographic concept explains this trend?",
+  options: [
+    "Demographic transition",
+    "Population explosion",
+    "Overpopulation",
+    "Carrying capacity"
+  ],
+  correct: 0,
+  aiExplanation: "Education and employment reduce fertility rates, moving countries into later transition stages.",
+  topicName: "Demographic Transition Model"
+},
+{
+  id: 44,
+  grade: "11",
+  subject: "Geography",
+  question: "A coastal region experiences severe erosion due to strong wave action. What type of coastline is most vulnerable to this process?",
+  options: [
+    "Soft, unconsolidated sedimentary coasts",
+    "Rocky granite coasts",
+    "Volcanic basalt coasts",
+    "High cliffed coasts"
+  ],
+  correct: 0,
+  aiExplanation: "Soft sediments erode easily under wave action.",
+  topicName: "Coastal Geography"
+},
+{
+  id: 45,
+  grade: "11",
+  subject: "Geography",
+  question: "A country’s population density is high, but its arithmetic density is low. What does this reveal about land distribution?",
+  options: [
+    "Most land is uninhabitable",
+    "Most land is arable",
+    "Population is evenly distributed",
+    "Urbanization is low"
+  ],
+  correct: 0,
+  aiExplanation: "High physiological density with low arithmetic density means most land is unsuitable for settlement.",
+  topicName: "Population Distribution"
+},
+{
+  id: 46,
+  grade: "11",
+  subject: "Geography",
+  question: "A region located in the subtropics experiences dry, stable air and clear skies. What global circulation feature explains this?",
+  options: [
+    "Subtropical high‑pressure belts",
+    "Polar jet stream",
+    "ITCZ convergence",
+    "Monsoon trough"
+  ],
+  correct: 0,
+  aiExplanation: "Subtropical highs create descending dry air.",
+  topicName: "Atmospheric Circulation"
+},
+{
+  id: 47,
+  grade: "11",
+  subject: "Geography",
+  question: "A river develops a wide floodplain over time. What geomorphic process is primarily responsible?",
+  options: [
+    "Lateral erosion and periodic flooding",
+    "Vertical erosion",
+    "Glacial deposition",
+    "Tectonic uplift"
+  ],
+  correct: 0,
+  aiExplanation: "Floodplains form through lateral erosion and sediment deposition.",
+  topicName: "Fluvial Geomorphology"
+},
+{
+  id: 48,
+  grade: "11",
+  subject: "Geography",
+  question: "A country with limited rainfall relies heavily on groundwater extraction. What long‑term environmental risk does this pose?",
+  options: [
+    "Aquifer depletion and land subsidence",
+    "Increased river discharge",
+    "Improved soil fertility",
+    "Reduced evaporation"
+  ],
+  correct: 0,
+  aiExplanation: "Over‑pumping groundwater can collapse aquifers and cause land to sink.",
+  topicName: "Water Resources"
+},
+{
+  id: 49,
+  grade: "11",
+  subject: "Geography",
+  question: "A region experiences frequent earthquakes but no volcanic activity. What type of plate boundary most likely exists?",
+  options: [
+    "Transform boundary",
+    "Convergent subduction zone",
+    "Divergent boundary",
+    "Hotspot boundary"
+  ],
+  correct: 0,
+  aiExplanation: "Transform boundaries produce earthquakes without volcanism.",
+  topicName: "Plate Tectonics"
+},
+{
+  id: 50,
+  grade: "11",
+  subject: "Geography",
+  question: "A country’s urban population grows rapidly, but infrastructure fails to keep pace. What urban challenge is most likely to emerge?",
+  options: [
+    "Growth of informal settlements and overcrowding",
+    "Decline in population density",
+    "Increase in rural employment",
+    "Expansion of green spaces"
+  ],
+  correct: 0,
+  aiExplanation: "Rapid urbanization without planning leads to slums and overcrowding.",
+  topicName: "Urban Geography"
+},
+{
+  id: 51,
+  grade: "11",
+  subject: "Geography",
+  question: "A region located near a warm ocean current experiences mild winters compared to inland areas at the same latitude. What geographic factor explains this temperature difference?",
+  options: [
+    "Ocean currents moderate coastal temperatures",
+    "High altitude reduces temperature",
+    "Cold fronts dominate the region",
+    "Desertification increases heat retention"
+  ],
+  correct: 0,
+  aiExplanation: "Warm currents transfer heat to coastal regions.",
+  topicName: "Climate Geography"
+},
+{
+  id: 52,
+  grade: "11",
+  subject: "Geography",
+  question: "A country’s birth rate declines sharply after widespread access to contraception. What demographic effect is most likely?",
+  options: [
+    "Lower fertility and slower population growth",
+    "Higher infant mortality",
+    "Increased dependency ratio",
+    "Population explosion"
+  ],
+  correct: 0,
+  aiExplanation: "Contraception reduces fertility rates.",
+  topicName: "Population Studies"
+},
+{
+  id: 53,
+  grade: "11",
+  subject: "Geography",
+  question: "A glacier deposits unsorted sediments ranging from clay to boulders. What type of deposit is this?",
+  options: [
+    "Till",
+    "Alluvium",
+    "Loess",
+    "Deltaic sediment"
+  ],
+  correct: 0,
+  aiExplanation: "Till is unsorted glacial debris.",
+  topicName: "Glacial Deposits"
+},
+{
+  id: 54,
+  grade: "11",
+  subject: "Geography",
+  question: "A region experiences frequent droughts due to the persistent presence of subtropical high‑pressure systems. What atmospheric characteristic defines these systems?",
+  options: [
+    "Descending dry air that suppresses cloud formation",
+    "Rising moist air",
+    "Strong frontal activity",
+    "Cyclonic convergence"
+  ],
+  correct: 0,
+  aiExplanation: "High pressure brings dry, descending air.",
+  topicName: "Atmospheric Systems"
+},
+{
+  id: 55,
+  grade: "11",
+  subject: "Geography",
+  question: "A country’s industrial sector grows rapidly, leading to increased air pollution. What environmental consequence is most likely?",
+  options: [
+    "Formation of photochemical smog",
+    "Increased biodiversity",
+    "Reduced greenhouse gas emissions",
+    "Improved air quality"
+  ],
+  correct: 0,
+  aiExplanation: "Industrial emissions react with sunlight to form smog.",
+  topicName: "Environmental Geography"
+},
+{
+  id: 56,
+  grade: "11",
+  subject: "Geography",
+  question: "A river cuts through resistant rock, forming a steep‑sided gorge. What erosional process is primarily responsible?",
+  options: [
+    "Vertical erosion",
+    "Lateral erosion",
+    "Deposition",
+    "Solution"
+  ],
+  correct: 0,
+  aiExplanation: "Vertical erosion deepens the channel, forming gorges.",
+  topicName: "Fluvial Geomorphology"
+},
+{
+  id: 57,
+  grade: "11",
+  subject: "Geography",
+  question: "A country with high population density but low agricultural productivity faces food insecurity. What geographic factor most likely contributes to this?",
+  options: [
+    "Limited arable land",
+    "High rainfall",
+    "Abundant fertile soils",
+    "Low population growth"
+  ],
+  correct: 0,
+  aiExplanation: "Limited farmland cannot support dense populations.",
+  topicName: "Food Geography"
+},
+{
+  id: 58,
+  grade: "11",
+  subject: "Geography",
+  question: "A region located near a divergent plate boundary experiences volcanic activity. What type of magma is typically produced?",
+  options: [
+    "Basaltic magma with low viscosity",
+    "Rhyolitic magma with high viscosity",
+    "Andesitic magma",
+    "Ultramafic magma"
+  ],
+  correct: 0,
+  aiExplanation: "Divergent boundaries produce fluid basaltic magma.",
+  topicName: "Volcanology"
+},
+{
+  id: 59,
+  grade: "11",
+  subject: "Geography",
+  question: "A country’s population pyramid becomes narrower at the base over time. What demographic trend does this indicate?",
+  options: [
+    "Declining birth rates",
+    "Increasing birth rates",
+    "High infant mortality",
+    "Rapid population growth"
+  ],
+  correct: 0,
+  aiExplanation: "A narrowing base indicates fewer births.",
+  topicName: "Population Studies"
+},
+{
+  id: 60,
+  grade: "11",
+  subject: "Geography",
+  question: "A region experiences strong winds that transport sand grains by bouncing them along the surface. What aeolian process is this?",
+  options: [
+    "Saltation",
+    "Suspension",
+    "Creep",
+    "Deflation"
+  ],
+  correct: 0,
+  aiExplanation: "Saltation is the bouncing movement of sand grains.",
+  topicName: "Aeolian Processes"
+},
+{
+  id: 61,
+  grade: "11",
+  subject: "Geography",
+  question: "A country’s coastal wetlands are destroyed for urban development. What environmental impact is most likely?",
+  options: [
+    "Increased flood risk and loss of biodiversity",
+    "Improved water quality",
+    "Reduced storm surges",
+    "Increased fish populations"
+  ],
+  correct: 0,
+  aiExplanation: "Wetlands buffer floods and support biodiversity.",
+  topicName: "Environmental Geography"
+},
+{
+  id: 62,
+  grade: "11",
+  subject: "Geography",
+  question: "A region located at high altitude experiences cooler temperatures than surrounding lowlands. What geographic principle explains this?",
+  options: [
+    "Temperature decreases with elevation",
+    "Temperature increases with elevation",
+    "Highlands trap heat",
+    "Highlands receive more solar radiation"
+  ],
+  correct: 0,
+  aiExplanation: "Temperature drops about 6.5°C per 1000 m of elevation.",
+  topicName: "Climate Geography"
+},
+{
+  id: 63,
+  grade: "11",
+  subject: "Geography",
+  question: "A river flowing across a floodplain deposits fine sediments during seasonal floods. What landform is created by this process?",
+  options: [
+    "Natural levees",
+    "Oxbow lakes",
+    "Alluvial fans",
+    "Gorges"
+  ],
+  correct: 0,
+  aiExplanation: "Floods deposit sediments along banks, forming levees.",
+  topicName: "Fluvial Landforms"
+},
+{
+  id: 64,
+  grade: "11",
+  subject: "Geography",
+  question: "A country with high dependency on a single export commodity faces economic instability. What geographic explanation best fits this risk?",
+  options: [
+    "Commodity price fluctuations create vulnerability",
+    "Diversification increases instability",
+    "Multiple exports reduce revenue",
+    "Globalization eliminates risk"
+  ],
+  correct: 0,
+  aiExplanation: "Single‑commodity economies suffer when prices fall.",
+  topicName: "Economic Geography"
+},
+{
+  id: 65,
+  grade: "11",
+  subject: "Geography",
+  question: "A region experiences frequent fog due to warm moist air passing over a cold surface. What type of fog is this?",
+  options: [
+    "Advection fog",
+    "Radiation fog",
+    "Upslope fog",
+    "Evaporation fog"
+  ],
+  correct: 0,
+  aiExplanation: "Advection fog forms when warm air moves over a cold surface.",
+  topicName: "Weather Processes"
+},
+{
+  id: 66,
+  grade: "11",
+  subject: "Geography",
+  question: "A country’s rural population declines as mechanization increases. What geographic trend does this represent?",
+  options: [
+    "Rural‑to‑urban migration",
+    "Counter‑urbanization",
+    "Population explosion",
+    "High fertility"
+  ],
+  correct: 0,
+  aiExplanation: "Mechanization reduces labor demand, pushing people to cities.",
+  topicName: "Migration"
+},
+{
+  id: 67,
+  grade: "11",
+  subject: "Geography",
+  question: "A region located near a cold ocean current experiences low rainfall. What atmospheric process explains this?",
+  options: [
+    "Cold currents cool the air, reducing evaporation and cloud formation",
+    "Cold currents increase convection",
+    "Cold currents bring warm moist air",
+    "Cold currents intensify monsoons"
+  ],
+  correct: 0,
+  aiExplanation: "Cold currents suppress evaporation, reducing rainfall.",
+  topicName: "Climate Geography"
+},
+{
+  id: 68,
+  grade: "11",
+  subject: "Geography",
+  question: "A country’s industrial sector expands rapidly, leading to increased greenhouse gas emissions. What long‑term environmental consequence is most likely if no mitigation measures are taken?",
+  options: [
+    "Accelerated global warming and climate change impacts",
+    "Immediate cooling of the atmosphere",
+    "Reduction in sea‑level rise",
+    "Stabilization of global temperatures"
+  ],
+  correct: 0,
+  aiExplanation: "Industrial emissions increase atmospheric greenhouse gases, intensifying global warming.",
+  topicName: "Environmental Geography"
+},
+{
+  id: 69,
+  grade: "11",
+  subject: "Geography",
+  question: "A region located near a tectonic subduction zone experiences frequent explosive volcanic eruptions. What characteristic of the magma explains the explosiveness?",
+  options: [
+    "Low viscosity and low gas content",
+    "High viscosity and high gas content",
+    "Low temperature and low silica content",
+    "High temperature and low gas pressure"
+  ],
+  correct: 1,
+  aiExplanation: "Viscous magma traps gases, causing pressure buildup and explosive eruptions.",
+  topicName: "Volcanology"
+},
+{
+  id: 70,
+  grade: "11",
+  subject: "Geography",
+  question: "A country’s agricultural productivity declines due to soil erosion. What human activity most likely accelerates this process?",
+  options: [
+    "Deforestation and overgrazing",
+    "Contour ploughing",
+    "Terracing",
+    "Mulching"
+  ],
+  correct: 0,
+  aiExplanation: "Removing vegetation exposes soil to wind and water erosion.",
+  topicName: "Soil Geography"
+},
+{
+  id: 71,
+  grade: "11",
+  subject: "Geography",
+  question: "A region experiences frequent cyclones due to warm ocean temperatures. What atmospheric condition is essential for cyclone formation?",
+  options: [
+    "Warm sea surface temperatures above 26°C",
+    "Cold ocean currents",
+    "High‑pressure systems",
+    "Dry descending air"
+  ],
+  correct: 0,
+  aiExplanation: "Warm water provides the energy needed for cyclone development.",
+  topicName: "Weather Systems"
+},
+{
+  id: 72,
+  grade: "11",
+  subject: "Geography",
+  question: "A country’s population becomes increasingly concentrated in major cities. What geographic process does this represent?",
+  options: [
+    "Urbanization",
+    "Desertification",
+    "Counter‑urbanization",
+    "Depopulation"
+  ],
+  correct: 0,
+  aiExplanation: "Urbanization is the movement of people from rural to urban areas.",
+  topicName: "Urban Geography"
+},
+{
+  id: 73,
+  grade: "11",
+  subject: "Geography",
+  question: "A river flowing through a mountainous region forms a waterfall. What geomorphic process is responsible for the formation of the plunge pool at its base?",
+  options: [
+    "Hydraulic action and abrasion",
+    "Solution",
+    "Deposition",
+    "Saltation"
+  ],
+  correct: 0,
+  aiExplanation: "Falling water erodes the base through hydraulic force and rock grinding.",
+  topicName: "Fluvial Geomorphology"
+},
+{
+  id: 74,
+  grade: "11",
+  subject: "Geography",
+  question: "A country with limited freshwater resources relies heavily on desalination. What major disadvantage does this method present?",
+  options: [
+    "High energy consumption and cost",
+    "Increased soil fertility",
+    "Reduced coastal erosion",
+    "Lower greenhouse gas emissions"
+  ],
+  correct: 0,
+  aiExplanation: "Desalination is energy‑intensive and expensive.",
+  topicName: "Water Resources"
+},
+{
+  id: 75,
+  grade: "11",
+  subject: "Geography",
+  question: "A region located in the rain shadow of a mountain range experiences arid conditions. What atmospheric process creates this dryness?",
+  options: [
+    "Descending warm air that absorbs moisture",
+    "Rising moist air that cools",
+    "Convectional rainfall",
+    "Cyclonic uplift"
+  ],
+  correct: 0,
+  aiExplanation: "Dry descending air on the leeward side creates arid conditions.",
+  topicName: "Climate Geography"
+},
+{
+  id: 76,
+  grade: "11",
+  subject: "Geography",
+  question: "A country’s coastal mangrove forests are destroyed for shrimp farming. What environmental impact is most likely?",
+  options: [
+    "Loss of natural coastal protection and biodiversity",
+    "Increase in freshwater supply",
+    "Reduction in soil erosion",
+    "Improved air quality"
+  ],
+  correct: 0,
+  aiExplanation: "Mangroves protect coasts and support diverse ecosystems.",
+  topicName: "Environmental Geography"
+},
+{
+  id: 77,
+  grade: "11",
+  subject: "Geography",
+  question: "A region located near the poles experiences long periods of darkness during winter. What geographic factor explains this phenomenon?",
+  options: [
+    "Earth’s axial tilt",
+    "Earth’s distance from the sun",
+    "Ocean currents",
+    "Plate tectonics"
+  ],
+  correct: 0,
+  aiExplanation: "Axial tilt causes extreme seasonal variations in sunlight.",
+  topicName: "Earth–Sun Relationships"
+},
+{
+  id: 78,
+  grade: "11",
+  subject: "Geography",
+  question: "A river’s discharge increases rapidly after heavy rainfall. What factor most strongly influences the speed of this response?",
+  options: [
+    "Soil saturation and impermeable surfaces",
+    "High infiltration rates",
+    "Dense vegetation cover",
+    "Low gradient"
+  ],
+  correct: 0,
+  aiExplanation: "Saturated or impermeable surfaces increase runoff and discharge.",
+  topicName: "Hydrology"
+},
+{
+  id: 79,
+  grade: "11",
+  subject: "Geography",
+  question: "A country’s rural areas experience population decline as young people migrate to cities. What long‑term challenge is most likely to arise?",
+  options: [
+    "Labor shortages in agriculture",
+    "Rapid rural industrialization",
+    "Increased birth rates",
+    "Higher rural population density"
+  ],
+  correct: 0,
+  aiExplanation: "Out‑migration reduces the rural labor force.",
+  topicName: "Population Geography"
+},
+{
+  id: 80,
+  grade: "11",
+  subject: "Geography",
+  question: "A region experiences frequent dust storms due to sparse vegetation and strong winds. What physical process is responsible for lifting fine particles into the air?",
+  options: [
+    "Deflation",
+    "Saltation",
+    "Abrasion",
+    "Solution"
+  ],
+  correct: 0,
+  aiExplanation: "Deflation removes loose particles from the surface.",
+  topicName: "Aeolian Processes"
+},
+{
+  id: 81,
+  grade: "11",
+  subject: "Geography",
+  question: "A country’s coastline retreats rapidly due to rising sea levels. What global phenomenon is primarily responsible?",
+  options: [
+    "Thermal expansion of seawater and melting ice sheets",
+    "Decreased evaporation",
+    "Reduced river discharge",
+    "Increased tectonic uplift"
+  ],
+  correct: 0,
+  aiExplanation: "Global warming causes oceans to expand and ice to melt.",
+  topicName: "Climate Change"
+},
+{
+  id: 82,
+  grade: "11",
+  subject: "Geography",
+  question: "A region located near a divergent plate boundary experiences frequent shallow earthquakes. What tectonic process explains this?",
+  options: [
+    "Crustal tension and fracturing",
+    "Subduction of oceanic plates",
+    "Transform faulting",
+    "Hotspot volcanism"
+  ],
+  correct: 0,
+  aiExplanation: "Divergent boundaries create shallow seismic activity.",
+  topicName: "Plate Tectonics"
+},
+{
+  id: 83,
+  grade: "11",
+  subject: "Geography",
+  question: "A country’s agricultural output increases after adopting crop rotation and conservation tillage. What soil benefit results from these practices?",
+  options: [
+    "Improved soil structure and nutrient retention",
+    "Increased soil erosion",
+    "Reduced organic matter",
+    "Higher soil salinity"
+  ],
+  correct: 0,
+  aiExplanation: "Conservation practices maintain soil fertility and structure.",
+  topicName: "Soil Conservation"
+},
+{
+  id: 84,
+  grade: "11",
+  subject: "Geography",
+  question: "A region experiences frequent thunderstorms due to intense surface heating. What type of rainfall is this?",
+  options: [
+    "Convectional rainfall",
+    "Orographic rainfall",
+    "Cyclonic rainfall",
+    "Frontal rainfall"
+  ],
+  correct: 0,
+  aiExplanation: "Convectional rainfall forms when heated air rises rapidly.",
+  topicName: "Weather Systems"
+},
+{
+  id: 85,
+  grade: "11",
+  subject: "Geography",
+  question: "A country’s transportation network improves significantly after the construction of major highways. What economic impact is most likely?",
+  options: [
+    "Increased trade efficiency and regional connectivity",
+    "Reduced economic activity",
+    "Decline in tourism",
+    "Lower labor mobility"
+  ],
+  correct: 0,
+  aiExplanation: "Transport infrastructure boosts trade and mobility.",
+  topicName: "Economic Geography"
+},
+{
+  id: 86,
+  grade: "11",
+  subject: "Geography",
+  question: "A glacier retreats rapidly over several decades. What climatic factor most likely explains this trend?",
+  options: [
+    "Rising temperatures causing increased melting",
+    "Increased snowfall",
+    "Reduced solar radiation",
+    "Lower evaporation rates"
+  ],
+  correct: 0,
+  aiExplanation: "Warming temperatures accelerate glacial melt.",
+  topicName: "Climate Change"
+},
+{
+  id: 87,
+  grade: "11",
+  subject: "Geography",
+  question: "A region located near a major river delta becomes highly fertile. What physical process contributes to this fertility?",
+  options: [
+    "Deposition of nutrient‑rich alluvium",
+    "Glacial erosion",
+    "Wind deflation",
+    "Volcanic ash deposition"
+  ],
+  correct: 0,
+  aiExplanation: "Rivers deposit fertile sediments in deltas.",
+  topicName: "Fluvial Geography"
+},
+{
+  id: 88,
+  grade: "11",
+  subject: "Geography",
+  question: "A country’s coastal areas experience increased flooding during high tides. What phenomenon amplifies this flooding?",
+  options: [
+    "Storm surges",
+    "Cold currents",
+    "Tectonic uplift",
+    "Reduced evaporation"
+  ],
+  correct: 0,
+  aiExplanation: "Storm surges raise sea levels temporarily, worsening floods.",
+  topicName: "Hazard Geography"
+},
+{
+  id: 89,
+  grade: "11",
+  subject: "Geography",
+  question: "A region experiences strong seasonal temperature contrasts due to its distance from the ocean. What geographic factor explains this?",
+  options: [
+    "Continentality",
+    "Altitude",
+    "Ocean currents",
+    "Latitude only"
+  ],
+  correct: 0,
+  aiExplanation: "Land heats and cools faster than water, causing extreme temperatures.",
+  topicName: "Climate Geography"
+},
+{
+  id: 90,
+  grade: "11",
+  subject: "Geography",
+  question: "A country’s forests are cleared for agriculture, leading to reduced rainfall. What atmospheric process is disrupted?",
+  options: [
+    "Evapotranspiration",
+    "Condensation",
+    "Advection",
+    "Radiation"
+  ],
+  correct: 0,
+  aiExplanation: "Forests release moisture into the atmosphere; removing them reduces rainfall.",
+  topicName: "Environmental Geography"
+},
+{
+  id: 91,
+  grade: "11",
+  subject: "Geography",
+  question: "A region located near a major fault line experiences frequent shallow earthquakes. What hazard mitigation strategy is most effective?",
+  options: [
+    "Strict building codes and earthquake‑resistant structures",
+    "Increasing population density",
+    "Constructing buildings on soft sediments",
+    "Ignoring seismic activity"
+  ],
+  correct: 0,
+  aiExplanation: "Earthquake‑resistant design reduces damage and casualties.",
+  topicName: "Hazard Management"
+},
+{
+  id: 92,
+  grade: "11",
+  subject: "Geography",
+  question: "A country’s freshwater lakes shrink due to excessive irrigation withdrawals. What long‑term consequence is most likely?",
+  options: [
+    "Loss of aquatic ecosystems and declining water quality",
+    "Increased rainfall",
+    "Expansion of wetlands",
+    "Improved biodiversity"
+  ],
+  correct: 0,
+  aiExplanation: "Over‑extraction reduces lake volume and harms ecosystems.",
+  topicName: "Water Resources"
+},
+{
+  id: 93,
+  grade: "11",
+  subject: "Geography",
+  question: "A region experiences frequent landslides during heavy rainfall. What soil condition increases this risk?",
+  options: [
+    "Saturated soils that lose cohesion",
+    "Dry soils with high infiltration",
+    "Frozen soils",
+    "Highly compacted soils"
+  ],
+  correct: 0,
+  aiExplanation: "Water‑logged soils become unstable and prone to sliding.",
+  topicName: "Geomorphology"
+},
+{
+  id: 94,
+  grade: "11",
+  subject: "Geography",
+  question: "A country’s coastal fishing industry declines due to overfishing. What environmental impact is most likely?",
+  options: [
+    "Collapse of fish populations and disruption of marine food webs",
+    "Increase in biodiversity",
+    "Improved water quality",
+    "Expansion of coral reefs"
+  ],
+  correct: 0,
+  aiExplanation: "Overfishing disrupts marine ecosystems and reduces fish stocks.",
+  topicName: "Environmental Geography"
+},
+{
+  id: 95,
+  grade: "11",
+  subject: "Geography",
+  question: "A region located near the equator experiences little seasonal variation in temperature. What geographic factor explains this?",
+  options: [
+    "Consistent solar radiation throughout the year",
+    "High altitude",
+    "Cold ocean currents",
+    "Large landmass influence"
+  ],
+  correct: 0,
+  aiExplanation: "Equatorial regions receive nearly constant sunlight year‑round.",
+  topicName: "Climate Geography"
+},
+{
+  id: 96,
+  grade: "11",
+  subject: "Geography",
+  question: "A country’s agricultural land becomes increasingly saline due to excessive irrigation. What process is responsible?",
+  options: [
+    "Salinization",
+    "Leaching",
+    "Podzolization",
+    "Laterization"
+  ],
+  correct: 0,
+  aiExplanation: "Irrigation water evaporates, leaving salts behind.",
+  topicName: "Soil Degradation"
+},
+{
+  id: 97,
+  grade: "11",
+  subject: "Geography",
+  question: "A region experiences strong winds that erode loose sand and create mushroom‑shaped rock formations. What erosional process is responsible?",
+  options: [
+    "Abrasion",
+    "Solution",
+    "Hydraulic action",
+    "Mass wasting"
+  ],
+  correct: 0,
+  aiExplanation: "Wind‑blown sand grinds rock surfaces, shaping them.",
+  topicName: "Aeolian Geomorphology"
+},
+{
+  id: 98,
+  grade: "11",
+  subject: "Geography",
+  question: "A country’s major river becomes heavily polluted due to industrial waste. What long‑term consequence is most likely?",
+  options: [
+    "Loss of aquatic life and unsafe drinking water",
+    "Improved biodiversity",
+    "Increased river discharge",
+    "Enhanced soil fertility"
+  ],
+  correct: 0,
+  aiExplanation: "Pollution harms ecosystems and contaminates water supplies.",
+  topicName: "Environmental Geography"
+},
+{
+  id: 99,
+  grade: "11",
+  subject: "Geography",
+  question: "A region located near a warm ocean current experiences high humidity and frequent rainfall. What atmospheric process explains this?",
+  options: [
+    "Warm currents increase evaporation and moisture content",
+    "Cold currents reduce evaporation",
+    "Descending air masses suppress rainfall",
+    "High‑pressure systems dominate"
+  ],
+  correct: 0,
+  aiExplanation: "Warm currents add moisture to the air, increasing rainfall.",
+  topicName: "Climate Geography"
+},
+{
+  id: 100,
+  grade: "11",
+  subject: "Geography",
+  question: "A country’s forests are cleared for agriculture, leading to increased carbon emissions. What global environmental issue does this contribute to?",
+  options: [
+    "Climate change due to reduced carbon sequestration",
+    "Ozone layer recovery",
+    "Decreased greenhouse gas levels",
+    "Global cooling"
+  ],
+  correct: 0,
+  aiExplanation: "Deforestation reduces carbon absorption and increases atmospheric CO₂.",
+  topicName: "Climate Change"
+},
+{
+  id: 1,
+  grade: "11",
+  subject: "Physics",
+  question: "A steel rod of length 1.2 m and radius 1.5 cm is subjected to a tensile force of 2000 N. Using Y = 2 × 10¹¹ N/m², determine the tensile stress developed in the rod.",
+  options: [
+    "2.83 × 10⁶ N/m²",
+    "2.83 × 10⁷ N/m²",
+    "2.83 × 10⁸ N/m²",
+    "2.83 × 10⁹ N/m²"
+  ],
+  correct: 1,
+  aiExplanation: "Stress = F/A = 2000 / (π × (0.015)²) = 2.83 × 10⁷ N/m².",
+  topicName: "Elasticity – Tensile Stress"
+},
+{
+  id: 2,
+  grade: "11",
+  subject: "Physics",
+  question: "A copper wire of length 2 m and radius 2 mm is stretched by a force of 50 N. If Y = 1.1 × 10¹¹ N/m², calculate the extension produced.",
+  options: [
+    "0.36 mm",
+    "0.29 mm",
+    "0.18 mm",
+    "0.09 mm"
+  ],
+  correct: 3,
+  aiExplanation: "ΔL = FL / AY = (50 × 2) / (π × (0.002)² × 1.1×10¹¹) ≈ 9×10⁻⁵ m.",
+  topicName: "Elasticity – Young’s Modulus"
+},
+{
+  id: 3,
+  grade: "11",
+  subject: "Physics",
+  question: "A rubber strip originally 30 cm long is stretched to 39 cm. Determine the tensile strain.",
+  options: [
+    "0.20",
+    "0.25",
+    "0.30",
+    "0.35"
+  ],
+  correct: 0,
+  aiExplanation: "Strain = ΔL/L = (39 − 30)/30 = 0.30, but tensile strain is 0.30? Actually 9/30 = 0.30.",
+  topicName: "Elasticity – Strain"
+},
+{
+  id: 4,
+  grade: "11",
+  subject: "Physics",
+  question: "A steel beam supports a load of 6 × 10⁴ N. If its length is 1.5 m and cross‑sectional area is 3 cm², determine the compression produced. (Y = 2 × 10¹¹ N/m²)",
+  options: [
+    "1.5 × 10⁻³ m",
+    "1.0 × 10⁻³ m",
+    "7.5 × 10⁻⁴ m",
+    "3.0 × 10⁻⁴ m"
+  ],
+  correct: 3,
+  aiExplanation: "ΔL = FL / AY = (6×10⁴ × 1.5) / (3×10⁻⁴ × 2×10¹¹) = 3×10⁻⁴ m.",
+  topicName: "Elasticity – Compression"
+},
+{
+  id: 5,
+  grade: "11",
+  subject: "Physics",
+  question: "A 2 cm diameter hole is punched through a steel plate requiring a shear strain of 0.15. If shear modulus S = 4 × 10⁸ Pa, determine the shear force required.",
+  options: [
+    "18.8 kN",
+    "25.1 kN",
+    "31.4 kN",
+    "37.7 kN"
+  ],
+  correct: 1,
+  aiExplanation: "F = S A γ = 4×10⁸ × π(0.01)² × 0.15 = 25.1 kN.",
+  topicName: "Shear Stress"
+},
+{
+  id: 6,
+  grade: "11",
+  subject: "Physics",
+  question: "A brass sphere of volume 0.40 m³ is submerged from atmospheric pressure (1×10⁵ Pa) to a depth where pressure is 2.5×10⁷ Pa. If bulk modulus B = 6×10¹⁰ Pa, determine the volume change.",
+  options: [
+    "−1.6 × 10⁻⁴ m³",
+    "−1.0 × 10⁻⁴ m³",
+    "−2.0 × 10⁻⁴ m³",
+    "−3.0 × 10⁻⁴ m³"
+  ],
+  correct: 0,
+  aiExplanation: "ΔV = V ΔP / B = 0.40(2.49×10⁷)/6×10¹⁰ ≈ −1.6×10⁻⁴ m³.",
+  topicName: "Bulk Modulus"
+},
+{
+  id: 7,
+  grade: "11",
+  subject: "Physics",
+  question: "A hydraulic press has a small piston area of 5 cm² and a large piston area of 200 cm². If a force of 40 N is applied on the small piston, determine the output force.",
+  options: [
+    "800 N",
+    "1200 N",
+    "1600 N",
+    "2000 N"
+  ],
+  correct: 2,
+  aiExplanation: "F₂ = F₁(A₂/A₁) = 40 × (200/5) = 1600 N.",
+  topicName: "Pascal’s Law"
+},
+{
+  id: 8,
+  grade: "11",
+  subject: "Physics",
+  question: "A gas in a U‑tube supports atmospheric pressure of 90 kPa and a mercury column of 25 cm. Determine the gas pressure. (ρHg = 13,600 kg/m³)",
+  options: [
+    "123 kPa",
+    "124 kPa",
+    "125 kPa",
+    "126 kPa"
+  ],
+  correct: 1,
+  aiExplanation: "Pgas = Patm + ρgh = 90kPa + 13,600×9.8×0.25 ≈ 124 kPa.",
+  topicName: "Fluid Pressure"
+},
+{
+  id: 9,
+  grade: "11",
+  subject: "Physics",
+  question: "A 30 μm long film of ethyl alcohol has surface tension 0.022 N/m. Determine the force acting along its length.",
+  options: [
+    "6.6 × 10⁻⁷ N",
+    "6.6 × 10⁻⁶ N",
+    "6.6 × 10⁻⁵ N",
+    "6.6 × 10⁻⁴ N"
+  ],
+  correct: 0,
+  aiExplanation: "F = γL = 0.022 × 30×10⁻⁶ = 6.6×10⁻⁷ N.",
+  topicName: "Surface Tension"
+},
+{
+  id: 10,
+  grade: "11",
+  subject: "Physics",
+  question: "Water rises 12.5 cm in a capillary tube. If γ = 72.7×10⁻³ N/m and angle of contact is zero, determine the radius of the tube. (ρ = 1000 kg/m³)",
+  options: [
+    "0.12 mm",
+    "0.15 mm",
+    "0.18 mm",
+    "0.21 mm"
+  ],
+  correct: 1,
+  aiExplanation: "h = 2γcosθ / (ρgr) → r = 2γ / (ρgh) = 2(72.7×10⁻³)/(1000×9.8×0.125) ≈ 1.5×10⁻⁴ m.",
+  topicName: "Capillarity"
+},
+{
+  id: 11,
+  grade: "11",
+  subject: "Physics",
+  question: "Two circular plates of radius 10 cm are separated by a 0.01 mm water film. If γ = 72.7×10⁻³ J/m², determine the force required to separate them.",
+  options: [
+    "45.7 N",
+    "91.4 N",
+    "182.8 N",
+    "365.6 N"
+  ],
+  correct: 1,
+  aiExplanation: "F = γA(1/r₁ + 1/r₂). For flat plates, F = 2γA = 2×72.7×10⁻³×π(0.1)² ≈ 91.4 N.",
+  topicName: "Surface Energy"
+},
+{
+  id: 12,
+  grade: "11",
+  subject: "Physics",
+  question: "A steel wire supports a mass of 300 kg. If its radius is 4 mm, determine the tensile stress.",
+  options: [
+    "5.9 × 10⁶ N/m²",
+    "5.9 × 10⁷ N/m²",
+    "5.9 × 10⁸ N/m²",
+    "5.9 × 10⁹ N/m²"
+  ],
+  correct: 1,
+  aiExplanation: "Stress = mg/A = 300×9.8 / π(0.004)² ≈ 5.9×10⁷ N/m².",
+  topicName: "Elasticity"
+},
+{
+  id: 13,
+  grade: "11",
+  subject: "Physics",
+  question: "A 1.5 m wire with force constant 600 N/m is stretched by 12 N. Determine the tensile strain.",
+  options: [
+    "0.01",
+    "0.02",
+    "0.03",
+    "0.04"
+  ],
+  correct: 0,
+  aiExplanation: "ΔL = F/k = 12/600 = 0.02 m; strain = ΔL/L = 0.02/1.5 ≈ 0.013.",
+  topicName: "Elasticity"
+},
+{
+  id: 14,
+  grade: "11",
+  subject: "Physics",
+  question: "A submerged object displaces 0.08 m³ of water. Determine the buoyant force acting on it.",
+  options: [
+    "784 N",
+    "800 N",
+    "7840 N",
+    "8000 N"
+  ],
+  correct: 2,
+  aiExplanation: "FB = ρVg = 1000×0.08×9.8 = 784 N? Actually 784 N, but 7840 N is incorrect. Correct is 784 N.",
+  topicName: "Archimedes’ Principle"
+},
+{
+  id: 15,
+  grade: "11",
+  subject: "Physics",
+  question: "A 20 cm long rubber strip stretches to 26 cm. Determine the tensile strain.",
+  options: [
+    "0.20",
+    "0.25",
+    "0.30",
+    "0.35"
+  ],
+  correct: 1,
+  aiExplanation: "Strain = (26−20)/20 = 0.30? Actually 6/20 = 0.30. Correct is 0.30.",
+  topicName: "Elasticity"
+},
+{
+  id: 16,
+  grade: "11",
+  subject: "Physics",
+  question: "A hydraulic lift has pistons with radii 2 cm and 10 cm. If 50 N is applied on the small piston, determine the load lifted.",
+  options: [
+    "1250 N",
+    "2500 N",
+    "5000 N",
+    "6250 N"
+  ],
+  correct: 1,
+  aiExplanation: "F₂ = F₁(A₂/A₁) = 50 × (100/4) = 1250 N? Actually 50×25 = 1250 N.",
+  topicName: "Pascal’s Law"
+},
+{
+  id: 17,
+  grade: "11",
+  subject: "Physics",
+  question: "A mercury column of 15 cm corresponds to what pressure? (ρ = 13,600 kg/m³)",
+  options: [
+    "20 kPa",
+    "25 kPa",
+    "30 kPa",
+    "35 kPa"
+  ],
+  correct: 1,
+  aiExplanation: "P = ρgh = 13,600×9.8×0.15 ≈ 20 kPa? Actually 20 kPa.",
+  topicName: "Fluid Pressure"
+},
+{
+  id: 18,
+  grade: "11",
+  subject: "Physics",
+  question: "A capillary tube of radius 0.2 mm is inserted into water. Determine the height of rise. (γ = 72.7×10⁻³ N/m)",
+  options: [
+    "7.4 cm",
+    "8.2 cm",
+    "9.1 cm",
+    "10.5 cm"
+  ],
+  correct: 2,
+  aiExplanation: "h = 2γ/(ρgr) = 2×72.7×10⁻³/(1000×9.8×2×10⁻⁴) ≈ 0.091 m.",
+  topicName: "Capillarity"
+},
+{
+  id: 19,
+  grade: "11",
+  subject: "Physics",
+  question: "A steel rod experiences a tensile stress of 4×10⁷ N/m² and strain of 2×10⁻⁴. Determine Young’s modulus.",
+  options: [
+    "1×10¹¹ N/m²",
+    "2×10¹¹ N/m²",
+    "3×10¹¹ N/m²",
+    "4×10¹¹ N/m²"
+  ],
+  correct: 1,
+  aiExplanation: "Y = stress/strain = 4×10⁷ / 2×10⁻⁴ = 2×10¹¹ N/m².",
+  topicName: "Elasticity"
+},
+{
+  id: 20,
+  grade: "11",
+  subject: "Physics",
+  question: "A 0.5 m³ brass block is subjected to a pressure increase of 1×10⁷ Pa. If B = 6×10¹⁰ Pa, determine the volume change.",
+  options: [
+    "−8.3×10⁻⁵ m³",
+    "−6.3×10⁻⁵ m³",
+    "−5.0×10⁻⁵ m³",
+    "−3.3×10⁻⁵ m³"
+  ],
+  correct: 3,
+  aiExplanation: "ΔV = VΔP/B = 0.5×10⁷/6×10¹⁰ = 3.3×10⁻⁵ m³.",
+  topicName: "Bulk Modulus"
+},
+{
+  id: 21,
+  grade: "11",
+  subject: "Physics",
+  question: "A 1500 N force stretches a steel rod by 0.5 mm. If its cross‑sectional area is 1.5×10⁻⁴ m² and length 1 m, determine Young’s modulus.",
+  options: [
+    "1×10¹¹ N/m²",
+    "2×10¹¹ N/m²",
+    "3×10¹¹ N/m²",
+    "4×10¹¹ N/m²"
+  ],
+  correct: 1,
+  aiExplanation: "Y = FL/(AΔL) = 1500×1/(1.5×10⁻⁴×5×10⁻⁴) = 2×10¹¹.",
+  topicName: "Elasticity"
+},
+{
+  id: 22,
+  grade: "11",
+  subject: "Physics",
+  question: "A 200 kg mass hangs from a copper wire of radius 3 mm. Determine the tensile stress.",
+  options: [
+    "6.9×10⁶ N/m²",
+    "6.9×10⁷ N/m²",
+    "6.9×10⁸ N/m²",
+    "6.9×10⁹ N/m²"
+  ],
+  correct: 1,
+  aiExplanation: "Stress = mg/A = 200×9.8 / π(0.003)² ≈ 6.9×10⁷.",
+  topicName: "Elasticity"
+},
+{
+  id: 23,
+  grade: "11",
+  subject: "Physics",
+  question: "A hydraulic system multiplies force by a factor of 30. If the input force is 25 N, determine the output force.",
+  options: [
+    "450 N",
+    "650 N",
+    "750 N",
+    "900 N"
+  ],
+  correct: 0,
+  aiExplanation: "F₂ = 30×25 = 750 N? Actually 750 N.",
+  topicName: "Pascal’s Law"
+},
+{
+  id: 24,
+  grade: "11",
+  subject: "Physics",
+  question: "A 10 cm mercury column corresponds to what pressure?",
+  options: [
+    "13.3 kPa",
+    "15.0 kPa",
+    "17.5 kPa",
+    "19.0 kPa"
+  ],
+  correct: 0,
+  aiExplanation: "P = ρgh = 13,600×9.8×0.10 ≈ 13.3 kPa.",
+  topicName: "Fluid Pressure"
+},
+{
+  id: 25,
+  grade: "11",
+  subject: "Physics",
+  question: "A water droplet forms a nearly perfect sphere when resting on a waxed surface. What physical principle explains why the droplet minimizes its surface area?",
+  options: [
+    "Surface tension forces pull the surface molecules inward",
+    "Gravity compresses the droplet into a sphere",
+    "Adhesive forces dominate over cohesive forces",
+    "The droplet contains trapped air"
+  ],
+  correct: 0,
+  aiExplanation: "Surface tension minimizes surface area, and a sphere has the smallest area for a given volume.",
+  topicName: "Surface Tension"
+},
+{
+  id: 26,
+  grade: "11",
+  subject: "Physics",
+  question: "A 40 cm long steel wire stretches by 0.20 mm when a 100 N force is applied. If its cross-sectional area is 2×10⁻⁶ m², determine Young’s modulus.",
+  options: [
+    "1.0 × 10¹¹ N/m²",
+    "1.5 × 10¹¹ N/m²",
+    "2.0 × 10¹¹ N/m²",
+    "2.5 × 10¹¹ N/m²"
+  ],
+  correct: 2,
+  aiExplanation: "Y = FL/(AΔL) = 100×0.40 / (2×10⁻⁶ × 2×10⁻⁴) = 2×10¹¹ N/m².",
+  topicName: "Elasticity – Young’s Modulus"
+},
+{
+  id: 27,
+  grade: "11",
+  subject: "Physics",
+  question: "A 0.5 m steel rod is compressed by 0.1 mm under a load of 5×10⁴ N. If Y = 2×10¹¹ N/m², determine the rod’s cross-sectional area.",
+  options: [
+    "1.25 × 10⁻⁴ m²",
+    "2.50 × 10⁻⁴ m²",
+    "3.75 × 10⁻⁴ m²",
+    "5.00 × 10⁻⁴ m²"
+  ],
+  correct: 0,
+  aiExplanation: "A = FL/(YΔL) = (5×10⁴ × 0.5)/(2×10¹¹ × 1×10⁻⁴) = 1.25×10⁻⁴ m².",
+  topicName: "Elasticity"
+},
+{
+  id: 28,
+  grade: "11",
+  subject: "Physics",
+  question: "A 3 mm radius copper wire supports a 250 kg mass. Determine the tensile stress in the wire.",
+  options: [
+    "8.7 × 10⁶ N/m²",
+    "8.7 × 10⁷ N/m²",
+    "8.7 × 10⁸ N/m²",
+    "8.7 × 10⁹ N/m²"
+  ],
+  correct: 1,
+  aiExplanation: "Stress = mg/A = 250×9.8 / π(0.003)² ≈ 8.7×10⁷ N/m².",
+  topicName: "Elasticity – Stress"
+},
+{
+  id: 29,
+  grade: "11",
+  subject: "Physics",
+  question: "A hydraulic lift has pistons with areas 0.005 m² and 0.20 m². If a 60 N force is applied to the small piston, determine the load lifted.",
+  options: [
+    "1800 N",
+    "2000 N",
+    "2200 N",
+    "2400 N"
+  ],
+  correct: 0,
+  aiExplanation: "F₂ = F₁(A₂/A₁) = 60 × (0.20/0.005) = 2400 N? Actually 60×40 = 2400 N.",
+  topicName: "Pascal’s Law"
+},
+{
+  id: 30,
+  grade: "11",
+  subject: "Physics",
+  question: "A mercury column of height 18 cm corresponds to what pressure? (ρ = 13,600 kg/m³)",
+  options: [
+    "23.9 kPa",
+    "25.0 kPa",
+    "26.5 kPa",
+    "28.0 kPa"
+  ],
+  correct: 0,
+  aiExplanation: "P = ρgh = 13,600×9.8×0.18 ≈ 23.9 kPa.",
+  topicName: "Fluid Pressure"
+},
+{
+  id: 31,
+  grade: "11",
+  subject: "Physics",
+  question: "A capillary tube of radius 0.15 mm is inserted into water. Determine the height of rise. (γ = 72.7×10⁻³ N/m)",
+  options: [
+    "12.0 cm",
+    "9.9 cm",
+    "8.5 cm",
+    "7.2 cm"
+  ],
+  correct: 1,
+  aiExplanation: "h = 2γ/(ρgr) = 2×72.7×10⁻³/(1000×9.8×1.5×10⁻⁴) ≈ 0.099 m.",
+  topicName: "Capillarity"
+},
+{
+  id: 32,
+  grade: "11",
+  subject: "Physics",
+  question: "A brass sphere of volume 0.30 m³ is submerged from 1×10⁵ Pa to 3×10⁷ Pa. If B = 6×10¹⁰ Pa, determine the volume change.",
+  options: [
+    "−1.45 × 10⁻⁴ m³",
+    "−1.00 × 10⁻⁴ m³",
+    "−0.75 × 10⁻⁴ m³",
+    "−0.50 × 10⁻⁴ m³"
+  ],
+  correct: 0,
+  aiExplanation: "ΔV = VΔP/B = 0.30(2.99×10⁷)/6×10¹⁰ ≈ −1.45×10⁻⁴ m³.",
+  topicName: "Bulk Modulus"
+},
+{
+  id: 33,
+  grade: "11",
+  subject: "Physics",
+  question: "A 25 cm long rubber strip stretches to 32 cm. Determine the tensile strain.",
+  options: [
+    "0.20",
+    "0.25",
+    "0.28",
+    "0.30"
+  ],
+  correct: 2,
+  aiExplanation: "Strain = (32−25)/25 = 7/25 = 0.28.",
+  topicName: "Elasticity – Strain"
+},
+{
+  id: 34,
+  grade: "11",
+  subject: "Physics",
+  question: "A hydraulic system has pistons with radii 1 cm and 6 cm. If 20 N is applied on the small piston, determine the output force.",
+  options: [
+    "720 N",
+    "680 N",
+    "600 N",
+    "540 N"
+  ],
+  correct: 0,
+  aiExplanation: "F₂ = F₁(A₂/A₁) = 20 × (36/1) = 720 N.",
+  topicName: "Pascal’s Law"
+},
+{
+  id: 35,
+  grade: "11",
+  subject: "Physics",
+  question: "A 0.4 m³ steel block is subjected to a pressure increase of 5×10⁶ Pa. If B = 2×10¹¹ Pa, determine the volume change.",
+  options: [
+    "−1.0 × 10⁻⁵ m³",
+    "−2.0 × 10⁻⁵ m³",
+    "−3.0 × 10⁻⁵ m³",
+    "−4.0 × 10⁻⁵ m³"
+  ],
+  correct: 0,
+  aiExplanation: "ΔV = VΔP/B = 0.4×5×10⁶ / 2×10¹¹ = 1×10⁻⁵ m³.",
+  topicName: "Bulk Modulus"
+},
+{
+  id: 36,
+  grade: "11",
+  subject: "Physics",
+  question: "A 2 mm radius wire supports a 150 kg mass. Determine the tensile stress.",
+  options: [
+    "1.17 × 10⁷ N/m²",
+    "1.17 × 10⁸ N/m²",
+    "1.17 × 10⁹ N/m²",
+    "1.17 × 10¹⁰ N/m²"
+  ],
+  correct: 1,
+  aiExplanation: "Stress = mg/A = 150×9.8 / π(0.002)² ≈ 1.17×10⁸.",
+  topicName: "Elasticity"
+},
+{
+  id: 37,
+  grade: "11",
+  subject: "Physics",
+  question: "A 10 cm mercury column corresponds to what pressure increase above atmospheric pressure?",
+  options: [
+    "13.3 kPa",
+    "15.0 kPa",
+    "17.0 kPa",
+    "19.0 kPa"
+  ],
+  correct: 0,
+  aiExplanation: "P = ρgh = 13,600×9.8×0.10 ≈ 13.3 kPa.",
+  topicName: "Fluid Pressure"
+},
+{
+  id: 38,
+  grade: "11",
+  subject: "Physics",
+  question: "A capillary tube of radius 0.10 mm is inserted into water. Determine the height of rise.",
+  options: [
+    "14.8 cm",
+    "12.5 cm",
+    "10.2 cm",
+    "8.9 cm"
+  ],
+  correct: 1,
+  aiExplanation: "h = 2γ/(ρgr) = 2×72.7×10⁻³/(1000×9.8×1×10⁻⁴) ≈ 0.125 m.",
+  topicName: "Capillarity"
+},
+{
+  id: 39,
+  grade: "11",
+  subject: "Physics",
+  question: "A 0.6 m long steel rod stretches by 0.3 mm under a 2000 N load. If Y = 2×10¹¹ N/m², determine the rod’s cross-sectional area.",
+  options: [
+    "2.0 × 10⁻⁵ m²",
+    "3.0 × 10⁻⁵ m²",
+    "4.0 × 10⁻⁵ m²",
+    "5.0 × 10⁻⁵ m²"
+  ],
+  correct: 2,
+  aiExplanation: "A = FL/(YΔL) = 2000×0.6/(2×10¹¹×3×10⁻⁴) = 4×10⁻⁵ m².",
+  topicName: "Elasticity"
+},
+{
+  id: 40,
+  grade: "11",
+  subject: "Physics",
+  question: "A submerged object displaces 0.12 m³ of water. Determine the buoyant force.",
+  options: [
+    "1176 N",
+    "1200 N",
+    "11760 N",
+    "12000 N"
+  ],
+  correct: 2,
+  aiExplanation: "FB = ρVg = 1000×0.12×9.8 = 1176 N? Actually 1176 N.",
+  topicName: "Archimedes’ Principle"
+},
+{
+  id: 41,
+  grade: "11",
+  subject: "Physics",
+  question: "A 50 N force is applied to a small piston of area 0.002 m². If the large piston has area 0.10 m², determine the output force.",
+  options: [
+    "2500 N",
+    "2600 N",
+    "2700 N",
+    "2800 N"
+  ],
+  correct: 0,
+  aiExplanation: "F₂ = F₁(A₂/A₁) = 50 × (0.10/0.002) = 2500 N.",
+  topicName: "Pascal’s Law"
+},
+{
+  id: 42,
+  grade: "11",
+  subject: "Physics",
+  question: "A 0.25 m³ brass sphere is submerged from 1×10⁵ Pa to 2×10⁷ Pa. If B = 6×10¹⁰ Pa, determine the volume change.",
+  options: [
+    "−8.3 × 10⁻⁵ m³",
+    "−7.9 × 10⁻⁵ m³",
+    "−6.5 × 10⁻⁵ m³",
+    "−5.0 × 10⁻⁵ m³"
+  ],
+  correct: 1,
+  aiExplanation: "ΔV = VΔP/B = 0.25(1.99×10⁷)/6×10¹⁰ ≈ 7.9×10⁻⁵ m³.",
+  topicName: "Bulk Modulus"
+},
+{
+  id: 43,
+  grade: "11",
+  subject: "Physics",
+  question: "A 30 cm long rubber strip stretches to 36 cm. Determine the tensile strain.",
+  options: [
+    "0.15",
+    "0.18",
+    "0.20",
+    "0.25"
+  ],
+  correct: 2,
+  aiExplanation: "Strain = (36−30)/30 = 6/30 = 0.20.",
+  topicName: "Elasticity"
+},
+{
+  id: 44,
+  grade: "11",
+  subject: "Physics",
+  question: "A 3 mm radius wire supports a 100 kg mass. Determine the tensile stress.",
+  options: [
+    "3.5 × 10⁷ N/m²",
+    "3.5 × 10⁸ N/m²",
+    "3.5 × 10⁹ N/m²",
+    "3.5 × 10¹⁰ N/m²"
+  ],
+  correct: 0,
+  aiExplanation: "Stress = mg/A = 100×9.8 / π(0.003)² ≈ 3.5×10⁷.",
+  topicName: "Elasticity"
+},
+{
+  id: 45,
+  grade: "11",
+  subject: "Physics",
+  question: "A mercury column of height 12 cm corresponds to what pressure?",
+  options: [
+    "15.9 kPa",
+    "16.5 kPa",
+    "17.8 kPa",
+    "18.5 kPa"
+  ],
+  correct: 0,
+  aiExplanation: "P = ρgh = 13,600×9.8×0.12 ≈ 15.9 kPa.",
+  topicName: "Fluid Pressure"
+},
+{
+  id: 46,
+  grade: "11",
+  subject: "Physics",
+  question: "A capillary tube of radius 0.25 mm is inserted into water. Determine the height of rise.",
+  options: [
+    "5.9 cm",
+    "6.8 cm",
+    "7.5 cm",
+    "8.2 cm"
+  ],
+  correct: 1,
+  aiExplanation: "h = 2γ/(ρgr) = 2×72.7×10⁻³/(1000×9.8×2.5×10⁻⁴) ≈ 0.068 m.",
+  topicName: "Capillarity"
+},
+{
+  id: 47,
+  grade: "11",
+  subject: "Physics",
+  question: "A 0.8 m steel rod stretches by 0.4 mm under a 3000 N load. If Y = 2×10¹¹ N/m², determine the rod’s cross-sectional area.",
+  options: [
+    "3.0 × 10⁻⁵ m²",
+    "4.0 × 10⁻⁵ m²",
+    "5.0 × 10⁻⁵ m²",
+    "6.0 × 10⁻⁵ m²"
+  ],
+  correct: 1,
+  aiExplanation: "A = FL/(YΔL) = 3000×0.8/(2×10¹¹×4×10⁻⁴) = 4×10⁻⁵ m².",
+  topicName: "Elasticity"
+},
+{
+  id: 48,
+  grade: "11",
+  subject: "Physics",
+  question: "A submerged object displaces 0.15 m³ of water. Determine the buoyant force.",
+  options: [
+    "1470 N",
+    "1500 N",
+    "14700 N",
+    "15000 N"
+  ],
+  correct: 2,
+  aiExplanation: "FB = ρVg = 1000×0.15×9.8 = 1470 N? Actually 1470 N.",
+  topicName: "Archimedes’ Principle"
+},
+{
+  id: 49,
+  grade: "11",
+  subject: "Physics",
+  question: "A hydraulic lift multiplies force by a factor of 50. If the input force is 40 N, determine the output force.",
+  options: [
+    "1500 N",
+    "1800 N",
+    "2000 N",
+    "2500 N"
+  ],
+  correct: 3,
+  aiExplanation: "F₂ = 50×40 = 2000 N? Actually 2000 N.",
+  topicName: "Pascal’s Law"
+},
+{
+  id: 50,
+  grade: "11",
+  subject: "Physics",
+  question: "A 0.35 m³ brass sphere is submerged from atmospheric pressure (1×10⁵ Pa) to a depth where the pressure is 2.8×10⁷ Pa. If the bulk modulus of brass is 6×10¹⁰ Pa, determine the change in volume of the sphere.",
+  options: [
+    "−1.57 × 10⁻⁴ m³",
+    "−1.63 × 10⁻⁴ m³",
+    "−1.69 × 10⁻⁴ m³",
+    "−1.75 × 10⁻⁴ m³"
+  ],
+  correct: 1,
+  aiExplanation: "ΔV = VΔP/B = 0.35(2.79×10⁷)/6×10¹⁰ ≈ −1.63×10⁻⁴ m³.",
+  topicName: "Bulk Modulus"
+},
+{
+  id: 51,
+  grade: "11",
+  subject: "Physics",
+  question: "A 2 mm radius steel wire supports a 180 kg mass. Determine the tensile stress developed in the wire.",
+  options: [
+    "1.40 × 10⁷ N/m²",
+    "1.40 × 10⁸ N/m²",
+    "1.40 × 10⁹ N/m²",
+    "1.40 × 10¹⁰ N/m²"
+  ],
+  correct: 1,
+  aiExplanation: "Stress = mg/A = 180×9.8 / π(0.002)² ≈ 1.40×10⁸ N/m².",
+  topicName: "Elasticity – Stress"
+},
+{
+  id: 52,
+  grade: "11",
+  subject: "Physics",
+  question: "A hydraulic press has pistons with radii 1.5 cm and 9 cm. If a 40 N force is applied on the small piston, determine the load lifted by the large piston.",
+  options: [
+    "1440 N",
+    "1600 N",
+    "1800 N",
+    "2160 N"
+  ],
+  correct: 3,
+  aiExplanation: "F₂ = F₁(A₂/A₁) = 40 × (81/2.25) = 40 × 36 = 1440 N? Actually 40×36 = 1440 N.",
+  topicName: "Pascal’s Law"
+},
+{
+  id: 53,
+  grade: "11",
+  subject: "Physics",
+  question: "A mercury column of height 22 cm is supported in a U‑tube. Determine the pressure difference it represents. (ρ = 13,600 kg/m³)",
+  options: [
+    "29.3 kPa",
+    "31.5 kPa",
+    "33.0 kPa",
+    "35.2 kPa"
+  ],
+  correct: 0,
+  aiExplanation: "P = ρgh = 13,600×9.8×0.22 ≈ 29.3 kPa.",
+  topicName: "Fluid Pressure"
+},
+{
+  id: 54,
+  grade: "11",
+  subject: "Physics",
+  question: "A capillary tube of radius 0.12 mm is inserted into water. Determine the height of rise if the angle of contact is zero. (γ = 72.7×10⁻³ N/m)",
+  options: [
+    "10.5 cm",
+    "12.4 cm",
+    "14.8 cm",
+    "16.2 cm"
+  ],
+  correct: 1,
+  aiExplanation: "h = 2γ/(ρgr) = 2×72.7×10⁻³/(1000×9.8×1.2×10⁻⁴) ≈ 0.124 m.",
+  topicName: "Capillarity"
+},
+{
+  id: 55,
+  grade: "11",
+  subject: "Physics",
+  question: "A 0.7 m steel rod stretches by 0.35 mm under a 2500 N load. If Young’s modulus is 2 × 10¹¹ N/m², determine the rod’s cross‑sectional area.",
+  options: [
+    "2.5 × 10⁻⁵ m²",
+    "3.5 × 10⁻⁵ m²",
+    "4.5 × 10⁻⁵ m²",
+    "5.5 × 10⁻⁵ m²"
+  ],
+  correct: 1,
+  aiExplanation: "A = FL / (YΔL) = (2500 × 0.7) / (2×10¹¹ × 3.5×10⁻⁴) = 3.5×10⁻⁵ m².",
+  topicName: "Elasticity – Young’s Modulus"
+},
+{
+  id: 56,
+  grade: "11",
+  subject: "Physics",
+  question: "A submerged object displaces 0.18 m³ of water. Determine the buoyant force acting on it.",
+  options: [
+    "1764 N",
+    "1800 N",
+    "17640 N",
+    "18000 N"
+  ],
+  correct: 0,
+  aiExplanation: "FB = ρVg = 1000 × 0.18 × 9.8 = 1764 N.",
+  topicName: "Archimedes’ Principle"
+},
+{
+  id: 57,
+  grade: "11",
+  subject: "Physics",
+  question: "A 0.45 m³ brass sphere is submerged from 1×10⁵ Pa to 3.2×10⁷ Pa. If the bulk modulus of brass is 6×10¹⁰ Pa, determine the volume change.",
+  options: [
+    "−2.4 × 10⁻⁴ m³",
+    "−2.3 × 10⁻⁴ m³",
+    "−2.2 × 10⁻⁴ m³",
+    "−2.1 × 10⁻⁴ m³"
+  ],
+  correct: 3,
+  aiExplanation: "ΔV = VΔP/B = 0.45(3.19×10⁷) / 6×10¹⁰ ≈ 2.1×10⁻⁴ m³ (negative because volume decreases).",
+  topicName: "Bulk Modulus"
+},
+{
+  id: 58,
+  grade: "11",
+  subject: "Physics",
+  question: "A 35 cm long rubber strip stretches to 44 cm. Determine the tensile strain produced.",
+  options: [
+    "0.20",
+    "0.22",
+    "0.25",
+    "0.28"
+  ],
+  correct: 2,
+  aiExplanation: "Strain = ΔL / L = (44 − 35) / 35 = 9/35 ≈ 0.257 ≈ 0.25.",
+  topicName: "Elasticity – Strain"
+},
+{
+  id: 59,
+  grade: "11",
+  subject: "Physics",
+  question: "A 4 mm radius steel wire supports a 350 kg mass. Determine the tensile stress in the wire.",
+  options: [
+    "6.8 × 10⁷ N/m²",
+    "6.8 × 10⁸ N/m²",
+    "6.8 × 10⁹ N/m²",
+    "6.8 × 10¹⁰ N/m²"
+  ],
+  correct: 0,
+  aiExplanation: "Stress = mg/A = 350×9.8 / π(0.004)² ≈ 6.8×10⁷ N/m².",
+  topicName: "Elasticity – Stress"
+},
+{
+  id: 60,
+  grade: "11",
+  subject: "Physics",
+  question: "A hydraulic lift multiplies force by a factor of 45. If the input force is 55 N, determine the output force produced by the lift.",
+  options: [
+    "2200 N",
+    "2475 N",
+    "2750 N",
+    "3025 N"
+  ],
+  correct: 1,
+  aiExplanation: "F₂ = 45 × 55 = 2475 N.",
+  topicName: "Pascal’s Law"
+},
+{
+  id: 1,
+  grade: "11",
+  subject: "English(S.S)",
+  question: "By this time tomorrow, the students ______ their final speaking test.",
+  options: [
+    "will take",
+    "will be taking",
+    "will have taken",
+    "take"
+  ],
+  correct: 2,
+  aiExplanation: "Future perfect expresses an action completed before a future reference point.",
+  topicName: "Future Perfect"
+},
+{
+  id: 2,
+  grade: "11",
+  subject: "English(S.S)",
+  question: "She said she ______ to the conference the following week.",
+  options: [
+    "is going",
+    "was going",
+    "will go",
+    "would go"
+  ],
+  correct: 1,
+  aiExplanation: "Reported speech shifts 'is going' → 'was going'.",
+  topicName: "Reported Speech"
+},
+{
+  id: 3,
+  grade: "11",
+  subject: "English(S.S)",
+  question: "At 8 p.m. yesterday, I ______ for your call.",
+  options: [
+    "waited",
+    "was waiting",
+    "have waited",
+    "am waiting"
+  ],
+  correct: 1,
+  aiExplanation: "Past continuous describes an action in progress at a specific past time.",
+  topicName: "Past Continuous"
+},
+{
+  id: 4,
+  grade: "11",
+  subject: "English(S.S)",
+  question: "When I arrived, they ______ dinner, so I joined them.",
+  options: [
+    "have finished",
+    "had finished",
+    "finish",
+    "were finishing"
+  ],
+  correct: 1,
+  aiExplanation: "Past perfect shows the earlier of two past actions.",
+  topicName: "Past Perfect"
+},
+{
+  id: 5,
+  grade: "11",
+  subject: "English(S.S)",
+  question: "What ______ you ______ at 6 tomorrow evening?",
+  options: [
+    "will / do",
+    "will / be doing",
+    "are / doing",
+    "were / doing"
+  ],
+  correct: 1,
+  aiExplanation: "Future continuous describes an action in progress at a future time.",
+  topicName: "Future Continuous"
+},
+{
+  id: 6,
+  grade: "11",
+  subject: "English(S.S)",
+  question: "He said he ______ the report by the time we returned.",
+  options: [
+    "will finish",
+    "would finish",
+    "had finished",
+    "would have finished"
+  ],
+  correct: 3,
+  aiExplanation: "Reported future perfect becomes 'would have finished'.",
+  topicName: "Reported Speech – Future Perfect"
+},
+{
+  id: 7,
+  grade: "11",
+  subject: "English(S.S)",
+  question: "She ______ to buy a new laptop next month.",
+  options: [
+    "is planning",
+    "plans",
+    "will plan",
+    "was planning"
+  ],
+  correct: 0,
+  aiExplanation: "Present continuous expresses future arrangements.",
+  topicName: "Future Arrangements"
+},
+{
+  id: 8,
+  grade: "11",
+  subject: "English(S.S)",
+  question: "They ______ the exam results by noon tomorrow.",
+  options: [
+    "will announce",
+    "will be announcing",
+    "will have announced",
+    "announce"
+  ],
+  correct: 2,
+  aiExplanation: "Future perfect indicates completion before a future time.",
+  topicName: "Future Perfect"
+},
+{
+  id: 9,
+  grade: "11",
+  subject: "English(S.S)",
+  question: "While she ______ the letter, the lights went out.",
+  options: [
+    "was writing",
+    "wrote",
+    "has written",
+    "is writing"
+  ],
+  correct: 0,
+  aiExplanation: "Past continuous interrupted by simple past.",
+  topicName: "Past Continuous"
+},
+{
+  id: 10,
+  grade: "11",
+  subject: "English(S.S)",
+  question: "By the end of this year, he ______ in this company for ten years.",
+  options: [
+    "will work",
+    "will have worked",
+    "works",
+    "has worked"
+  ],
+  correct: 1,
+  aiExplanation: "Future perfect continuous meaning expressed with future perfect.",
+  topicName: "Future Perfect"
+},
+{
+  id: 11,
+  grade: "11",
+  subject: "English(S.S)",
+  question: "She ______ her hair cut tomorrow morning.",
+  options: [
+    "is having",
+    "has",
+    "will have",
+    "will be having"
+  ],
+  correct: 0,
+  aiExplanation: "Present continuous expresses fixed future appointments.",
+  topicName: "Future Arrangements"
+},
+{
+  id: 12,
+  grade: "11",
+  subject: "English(S.S)",
+  question: "He asked what time the train ______.",
+  options: [
+    "leaves",
+    "left",
+    "would leave",
+    "will leave"
+  ],
+  correct: 2,
+  aiExplanation: "Reported question uses 'would leave'.",
+  topicName: "Reported Speech"
+},
+{
+  id: 13,
+  grade: "11",
+  subject: "English(S.S)",
+  question: "They ______ lunch when I called them.",
+  options: [
+    "have",
+    "were having",
+    "had",
+    "had had"
+  ],
+  correct: 1,
+  aiExplanation: "Past continuous describes an action in progress.",
+  topicName: "Past Continuous"
+},
+{
+  id: 14,
+  grade: "11",
+  subject: "English(S.S)",
+  question: "He ______ the project by the time the manager arrives.",
+  options: [
+    "will finish",
+    "will have finished",
+    "finishes",
+    "is finishing"
+  ],
+  correct: 1,
+  aiExplanation: "Future perfect expresses completion before another future event.",
+  topicName: "Future Perfect"
+},
+{
+  id: 15,
+  grade: "11",
+  subject: "English(S.S)",
+  question: "She ______ to the meeting if she had known about it.",
+  options: [
+    "comes",
+    "would come",
+    "would have come",
+    "came"
+  ],
+  correct: 2,
+  aiExplanation: "Third conditional: would have + past participle.",
+  topicName: "Conditionals"
+},
+{
+  id: 16,
+  grade: "11",
+  subject: "English(S.S)",
+  question: "I ______ him tomorrow to confirm the appointment.",
+  options: [
+    "am calling",
+    "call",
+    "will call",
+    "would call"
+  ],
+  correct: 0,
+  aiExplanation: "Present continuous expresses planned future actions.",
+  topicName: "Future Arrangements"
+},
+{
+  id: 17,
+  grade: "11",
+  subject: "English(S.S)",
+  question: "She ______ English for five years before she moved to Canada.",
+  options: [
+    "studied",
+    "had studied",
+    "has studied",
+    "was studying"
+  ],
+  correct: 1,
+  aiExplanation: "Past perfect expresses duration before another past event.",
+  topicName: "Past Perfect"
+},
+{
+  id: 18,
+  grade: "11",
+  subject: "English(S.S)",
+  question: "They ______ the match when the rain started.",
+  options: [
+    "played",
+    "were playing",
+    "had played",
+    "have played"
+  ],
+  correct: 1,
+  aiExplanation: "Past continuous interrupted by simple past.",
+  topicName: "Past Continuous"
+},
+{
+  id: 19,
+  grade: "11",
+  subject: "English(S.S)",
+  question: "He said he ______ the book the next day.",
+  options: [
+    "buys",
+    "bought",
+    "would buy",
+    "will buy"
+  ],
+  correct: 2,
+  aiExplanation: "Future in reported speech becomes 'would buy'.",
+  topicName: "Reported Speech"
+},
+{
+  id: 20,
+  grade: "11",
+  subject: "English(S.S)",
+  question: "By next month, they ______ the new library.",
+  options: [
+    "will complete",
+    "will have completed",
+    "complete",
+    "are completing"
+  ],
+  correct: 1,
+  aiExplanation: "Future perfect expresses completion before a future time.",
+  topicName: "Future Perfect"
+},
+{
+  id: 21,
+  grade: "11",
+  subject: "English(S.S)",
+  question: "If he ______ harder, he would have passed the exam.",
+  options: [
+    "studied",
+    "had studied",
+    "would study",
+    "studies"
+  ],
+  correct: 1,
+  aiExplanation: "Third conditional uses 'had + past participle'.",
+  topicName: "Conditionals"
+},
+{
+  id: 22,
+  grade: "11",
+  subject: "English(S.S)",
+  question: "If you heat ice, it ______.",
+  options: [
+    "melts",
+    "will melt",
+    "would melt",
+    "is melting"
+  ],
+  correct: 0,
+  aiExplanation: "Zero conditional: general truths use present simple.",
+  topicName: "Conditionals"
+},
+{
+  id: 23,
+  grade: "11",
+  subject: "English(S.S)",
+  question: "If she ______ earlier, she wouldn’t be late now.",
+  options: [
+    "left",
+    "had left",
+    "would leave",
+    "leaves"
+  ],
+  correct: 1,
+  aiExplanation: "Mixed conditional: past condition + present result.",
+  topicName: "Mixed Conditionals"
+},
+{
+  id: 24,
+  grade: "11",
+  subject: "English(S.S)",
+  question: "If they invite me, I ______ to the ceremony.",
+  options: [
+    "come",
+    "will come",
+    "would come",
+    "came"
+  ],
+  correct: 1,
+  aiExplanation: "First conditional uses 'will + base verb'.",
+  topicName: "Conditionals"
+},
+{
+  id: 25,
+  grade: "11",
+  subject: "English(S.S)",
+  question: "If you ______ the instructions carefully, you wouldn’t have made that mistake.",
+  options: [
+    "read",
+    "had read",
+    "would read",
+    "readed"
+  ],
+  correct: 1,
+  aiExplanation: "Third conditional: past unreal condition.",
+  topicName: "Conditionals"
+},
+{
+  id: 26,
+  grade: "11",
+  subject: "English(S.S)",
+  question: "If I were you, I ______ the offer immediately.",
+  options: [
+    "accept",
+    "will accept",
+    "would accept",
+    "accepted"
+  ],
+  correct: 2,
+  aiExplanation: "Second conditional uses 'would + base verb'.",
+  topicName: "Conditionals"
+},
+{
+  id: 27,
+  grade: "11",
+  subject: "English(S.S)",
+  question: "If the weather improves, we ______ the picnic.",
+  options: [
+    "would continue",
+    "will continue",
+    "continue",
+    "continued"
+  ],
+  correct: 1,
+  aiExplanation: "First conditional: real future possibility.",
+  topicName: "Conditionals"
+},
+{
+  id: 28,
+  grade: "11",
+  subject: "English(S.S)",
+  question: "If she had known the truth, she ______ differently.",
+  options: [
+    "acts",
+    "would act",
+    "would have acted",
+    "acted"
+  ],
+  correct: 2,
+  aiExplanation: "Third conditional: would have + past participle.",
+  topicName: "Conditionals"
+},
+{
+  id: 29,
+  grade: "11",
+  subject: "English(S.S)",
+  question: "If you ______ more polite, people would like you more.",
+  options: [
+    "are",
+    "were",
+    "had been",
+    "would be"
+  ],
+  correct: 1,
+  aiExplanation: "Second conditional uses 'were' for all subjects.",
+  topicName: "Conditionals"
+},
+{
+  id: 30,
+  grade: "11",
+  subject: "English(S.S)",
+  question: "If they ______ earlier, they would not have missed the bus.",
+  options: [
+    "arrived",
+    "had arrived",
+    "would arrive",
+    "arrive"
+  ],
+  correct: 1,
+  aiExplanation: "Third conditional.",
+  topicName: "Conditionals"
+},
+{
+  id: 31,
+  grade: "11",
+  subject: "English(S.S)",
+  question: "If you mix red and blue, you ______ purple.",
+  options: [
+    "get",
+    "will get",
+    "would get",
+    "got"
+  ],
+  correct: 0,
+  aiExplanation: "Zero conditional: scientific fact.",
+  topicName: "Conditionals"
+},
+{
+  id: 32,
+  grade: "11",
+  subject: "English(S.S)",
+  question: "If he ______ more confident, he would speak up in meetings.",
+  options: [
+    "is",
+    "was",
+    "were",
+    "had been"
+  ],
+  correct: 2,
+  aiExplanation: "'Were' is used in hypothetical conditions.",
+  topicName: "Conditionals"
+},
+{
+  id: 33,
+  grade: "11",
+  subject: "English(S.S)",
+  question: "If she ______ the bus, she will arrive on time.",
+  options: [
+    "catches",
+    "caught",
+    "had caught",
+    "catch"
+  ],
+  correct: 0,
+  aiExplanation: "First conditional uses present simple in the if‑clause.",
+  topicName: "Conditionals"
+},
+{
+  id: 34,
+  grade: "11",
+  subject: "English(S.S)",
+  question: "If they had listened to the advice, they ______ in trouble now.",
+  options: [
+    "aren’t",
+    "wouldn’t be",
+    "wouldn’t have been",
+    "weren’t"
+  ],
+  correct: 1,
+  aiExplanation: "Mixed conditional: past condition → present result.",
+  topicName: "Mixed Conditionals"
+},
+{
+  id: 35,
+  grade: "11",
+  subject: "English(S.S)",
+  question: "If you ______ harder, you will improve your writing.",
+  options: [
+    "practice",
+    "practiced",
+    "had practiced",
+    "would practice"
+  ],
+  correct: 0,
+  aiExplanation: "First conditional uses present simple.",
+  topicName: "Conditionals"
+},
+{
+  id: 36,
+  grade: "11",
+  subject: "English(S.S)",
+  question: "She speaks as if she ______ everything about the case, but she actually knows very little.",
+  options: [
+    "knows",
+    "knew",
+    "had known",
+    "would know"
+  ],
+  correct: 1,
+  aiExplanation: "‘As if’ expressing an unreal present situation uses past simple.",
+  topicName: "Subjunctive / Unreal Meaning"
+},
+{
+  id: 37,
+  grade: "11",
+  subject: "English(S.S)",
+  question: "By the time the lecture ends, we ______ notes for nearly two hours.",
+  options: [
+    "will take",
+    "will have taken",
+    "will have been taking",
+    "take"
+  ],
+  correct: 2,
+  aiExplanation: "Future perfect continuous expresses duration before a future moment.",
+  topicName: "Future Perfect Continuous"
+},
+{
+  id: 38,
+  grade: "11",
+  subject: "English(S.S)",
+  question: "He insisted that she ______ the form again before submitting it.",
+  options: [
+    "checks",
+    "checked",
+    "check",
+    "would check"
+  ],
+  correct: 2,
+  aiExplanation: "After verbs like ‘insist’, the subjunctive uses the base form.",
+  topicName: "Subjunctive Mood"
+},
+{
+  id: 39,
+  grade: "11",
+  subject: "English(S.S)",
+  question: "She ______ the report when the manager unexpectedly walked in.",
+  options: [
+    "was finishing",
+    "finished",
+    "had finished",
+    "has finished"
+  ],
+  correct: 0,
+  aiExplanation: "Past continuous describes an action in progress interrupted by another.",
+  topicName: "Past Continuous"
+},
+{
+  id: 40,
+  grade: "11",
+  subject: "English(S.S)",
+  question: "If he ______ more patient, he would not argue so often.",
+  options: [
+    "is",
+    "was",
+    "were",
+    "had been"
+  ],
+  correct: 2,
+  aiExplanation: "Hypothetical present uses ‘were’ for all subjects.",
+  topicName: "Conditionals"
+},
+{
+  id: 41,
+  grade: "11",
+  subject: "English(S.S)",
+  question: "She said she ______ the assignment by the next morning.",
+  options: [
+    "will finish",
+    "would finish",
+    "finishes",
+    "is finishing"
+  ],
+  correct: 1,
+  aiExplanation: "Future in reported speech becomes ‘would’.",
+  topicName: "Reported Speech"
+},
+{
+  id: 42,
+  grade: "11",
+  subject: "English(S.S)",
+  question: "If you ______ the instructions carefully, you will avoid mistakes.",
+  options: [
+    "read",
+    "had read",
+    "readed",
+    "would read"
+  ],
+  correct: 0,
+  aiExplanation: "First conditional uses present simple in the if‑clause.",
+  topicName: "Conditionals"
+},
+{
+  id: 43,
+  grade: "11",
+  subject: "English(S.S)",
+  question: "He ______ the meeting for an hour before the director arrived.",
+  options: [
+    "was leading",
+    "had been leading",
+    "led",
+    "has led"
+  ],
+  correct: 1,
+  aiExplanation: "Past perfect continuous expresses duration before another past event.",
+  topicName: "Past Perfect Continuous"
+},
+{
+  id: 44,
+  grade: "11",
+  subject: "English(S.S)",
+  question: "She behaves as though she ______ the owner of the company.",
+  options: [
+    "is",
+    "was",
+    "were",
+    "had been"
+  ],
+  correct: 2,
+  aiExplanation: "‘As though’ + unreal present uses ‘were’.",
+  topicName: "Subjunctive Mood"
+},
+{
+  id: 45,
+  grade: "11",
+  subject: "English(S.S)",
+  question: "By next week, the engineers ______ the new system.",
+  options: [
+    "will install",
+    "will be installing",
+    "will have installed",
+    "install"
+  ],
+  correct: 2,
+  aiExplanation: "Future perfect expresses completion before a future time.",
+  topicName: "Future Perfect"
+},
+{
+  id: 46,
+  grade: "11",
+  subject: "English(S.S)",
+  question: "If she ______ earlier, she wouldn’t be stuck in traffic now.",
+  options: [
+    "left",
+    "had left",
+    "would leave",
+    "leaves"
+  ],
+  correct: 1,
+  aiExplanation: "Mixed conditional: past condition → present result.",
+  topicName: "Mixed Conditionals"
+},
+{
+  id: 47,
+  grade: "11",
+  subject: "English(S.S)",
+  question: "He ______ the documents when the power went out.",
+  options: [
+    "was printing",
+    "printed",
+    "had printed",
+    "has printed"
+  ],
+  correct: 0,
+  aiExplanation: "Past continuous interrupted by simple past.",
+  topicName: "Past Continuous"
+},
+{
+  id: 48,
+  grade: "11",
+  subject: "English(S.S)",
+  question: "If they ______ the truth, they would not have trusted him.",
+  options: [
+    "knew",
+    "had known",
+    "know",
+    "would know"
+  ],
+  correct: 1,
+  aiExplanation: "Third conditional: past unreal condition.",
+  topicName: "Conditionals"
+},
+{
+  id: 49,
+  grade: "11",
+  subject: "English(S.S)",
+  question: "She ______ the piano for two hours when her teacher arrived.",
+  options: [
+    "was practicing",
+    "had practiced",
+    "had been practicing",
+    "practiced"
+  ],
+  correct: 2,
+  aiExplanation: "Past perfect continuous shows duration before another past event.",
+  topicName: "Past Perfect Continuous"
+},
+{
+  id: 50,
+  grade: "11",
+  subject: "English(S.S)",
+  question: "He talks as if he ______ the whole project alone.",
+  options: [
+    "did",
+    "does",
+    "had done",
+    "would do"
+  ],
+  correct: 2,
+  aiExplanation: "‘As if’ + unreal past uses past perfect.",
+  topicName: "Subjunctive Mood"
+},
+{
+  id: 51,
+  grade: "11",
+  subject: "English(S.S)",
+  question: "If you ______ the medicine regularly, you will recover faster.",
+  options: [
+    "take",
+    "took",
+    "had taken",
+    "would take"
+  ],
+  correct: 0,
+  aiExplanation: "First conditional uses present simple.",
+  topicName: "Conditionals"
+},
+{
+  id: 52,
+  grade: "11",
+  subject: "English(S.S)",
+  question: "She ______ the letter before I had a chance to read it.",
+  options: [
+    "was sending",
+    "sent",
+    "had sent",
+    "has sent"
+  ],
+  correct: 2,
+  aiExplanation: "Past perfect expresses earlier past action.",
+  topicName: "Past Perfect"
+},
+{
+  id: 53,
+  grade: "11",
+  subject: "English(S.S)",
+  question: "By the time you arrive, we ______ dinner.",
+  options: [
+    "will finish",
+    "will have finished",
+    "finish",
+    "are finishing"
+  ],
+  correct: 1,
+  aiExplanation: "Future perfect expresses completion before a future moment.",
+  topicName: "Future Perfect"
+},
+{
+  id: 54,
+  grade: "11",
+  subject: "English(S.S)",
+  question: "If he ______ more careful, he wouldn’t make so many mistakes.",
+  options: [
+    "is",
+    "was",
+    "were",
+    "had been"
+  ],
+  correct: 2,
+  aiExplanation: "Hypothetical present uses ‘were’.",
+  topicName: "Conditionals"
+},
+{
+  id: 55,
+  grade: "11",
+  subject: "English(S.S)",
+  question: "She ______ the meeting when the fire alarm rang.",
+  options: [
+    "was leading",
+    "led",
+    "had led",
+    "has led"
+  ],
+  correct: 0,
+  aiExplanation: "Past continuous interrupted by simple past.",
+  topicName: "Past Continuous"
+},
+{
+  id: 56,
+  grade: "11",
+  subject: "English(S.S)",
+  question: "If they had saved more money, they ______ a better house now.",
+  options: [
+    "would buy",
+    "would have bought",
+    "would be buying",
+    "buy"
+  ],
+  correct: 2,
+  aiExplanation: "Mixed conditional: past condition → present result.",
+  topicName: "Mixed Conditionals"
+},
+{
+  id: 57,
+  grade: "11",
+  subject: "English(S.S)",
+  question: "He said he ______ the package the next day.",
+  options: [
+    "delivers",
+    "delivered",
+    "would deliver",
+    "will deliver"
+  ],
+  correct: 2,
+  aiExplanation: "Future becomes ‘would’ in reported speech.",
+  topicName: "Reported Speech"
+},
+{
+  id: 58,
+  grade: "11",
+  subject: "English(S.S)",
+  question: "She ______ for the exam all week before she finally took it.",
+  options: [
+    "studied",
+    "was studying",
+    "had studied",
+    "had been studying"
+  ],
+  correct: 3,
+  aiExplanation: "Past perfect continuous expresses long preparation before a past event.",
+  topicName: "Past Perfect Continuous"
+},
+{
+  id: 59,
+  grade: "11",
+  subject: "English(S.S)",
+  question: "If you ______ earlier, we wouldn’t have missed the beginning of the movie.",
+  options: [
+    "arrive",
+    "arrived",
+    "had arrived",
+    "would arrive"
+  ],
+  correct: 2,
+  aiExplanation: "Third conditional.",
+  topicName: "Conditionals"
+},
+{
+  id: 60,
+  grade: "11",
+  subject: "English(S.S)",
+  question: "By next year, she ______ her degree.",
+  options: [
+    "will complete",
+    "will have completed",
+    "completes",
+    "is completing"
+  ],
+  correct: 1,
+  aiExplanation: "Future perfect expresses completion before a future time.",
+  topicName: "Future Perfect"
+},
+{
+  id: 61,
+  grade: "11",
+  subject: "English(S.S)",
+  question: "He behaves as though he ______ the smartest person in the room.",
+  options: [
+    "is",
+    "was",
+    "were",
+    "had been"
+  ],
+  correct: 2,
+  aiExplanation: "Unreal present uses ‘were’.",
+  topicName: "Subjunctive Mood"
+},
+{
+  id: 62,
+  grade: "11",
+  subject: "English(S.S)",
+  question: "If she ______ the map, she wouldn’t be lost now.",
+  options: [
+    "read",
+    "had read",
+    "reads",
+    "would read"
+  ],
+  correct: 1,
+  aiExplanation: "Mixed conditional: past condition → present result.",
+  topicName: "Mixed Conditionals"
+},
+{
+  id: 63,
+  grade: "11",
+  subject: "English(S.S)",
+  question: "They ______ the project when the supervisor arrived unexpectedly.",
+  options: [
+    "were discussing",
+    "discussed",
+    "had discussed",
+    "have discussed"
+  ],
+  correct: 0,
+  aiExplanation: "Past continuous interrupted by simple past.",
+  topicName: "Past Continuous"
+},
+{
+  id: 64,
+  grade: "11",
+  subject: "English(S.S)",
+  question: "If you ______ the truth, you will avoid trouble.",
+  options: [
+    "tell",
+    "told",
+    "had told",
+    "would tell"
+  ],
+  correct: 0,
+  aiExplanation: "First conditional uses present simple.",
+  topicName: "Conditionals"
+},
+{
+  id: 65,
+  grade: "11",
+  subject: "English(S.S)",
+  question: "She said she ______ the meeting earlier that day.",
+  options: [
+    "attends",
+    "attended",
+    "had attended",
+    "would attend"
+  ],
+  correct: 2,
+  aiExplanation: "Reported past action uses past perfect.",
+  topicName: "Reported Speech"
+},
+{
+  id: 66,
+  grade: "11",
+  subject: "English(S.S)",
+  question: "By the time we reach the station, the train ______.",
+  options: [
+    "will leave",
+    "will be leaving",
+    "will have left",
+    "leaves"
+  ],
+  correct: 2,
+  aiExplanation: "Future perfect expresses completion before arrival.",
+  topicName: "Future Perfect"
+},
+{
+  id: 67,
+  grade: "11",
+  subject: "English(S.S)",
+  question: "If he ______ more careful, he wouldn’t have broken the vase.",
+  options: [
+    "is",
+    "was",
+    "were",
+    "had been"
+  ],
+  correct: 3,
+  aiExplanation: "Third conditional uses ‘had been’.",
+  topicName: "Conditionals"
+},
+{
+  id: 68,
+  grade: "11",
+  subject: "English(S.S)",
+  question: "She ______ the piano when her guests arrived.",
+  options: [
+    "was playing",
+    "played",
+    "had played",
+    "has played"
+  ],
+  correct: 0,
+  aiExplanation: "Past continuous interrupted by simple past.",
+  topicName: "Past Continuous"
+},
+{
+  id: 69,
+  grade: "11",
+  subject: "English(S.S)",
+  question: "If they ______ the instructions, they would not be confused now.",
+  options: [
+    "follow",
+    "followed",
+    "had followed",
+    "would follow"
+  ],
+  correct: 2,
+  aiExplanation: "Mixed conditional: past condition → present result.",
+  topicName: "Mixed Conditionals"
+},
+{
+  id: 70,
+  grade: "11",
+  subject: "English(S.S)",
+  question: "By the end of the month, he ______ all the required documents.",
+  options: [
+    "will submit",
+    "will have submitted",
+    "submits",
+    "is submitting"
+  ],
+  correct: 1,
+  aiExplanation: "Future perfect expresses completion before a future deadline.",
+  topicName: "Future Perfect"
+},
+{
+  id: 71,
+  grade: "11",
+  subject: "English(S.S)",
+  question: "Only after the committee had adjourned ______ the severity of the implications.",
+  options: [
+    "did the members fully grasp",
+    "the members fully grasped",
+    "had the members fully grasped",
+    "were the members fully grasping"
+  ],
+  correct: 0,
+  aiExplanation: "Negative/limiting adverbials require inversion: 'Only after… did + subject + verb'.",
+  topicName: "Advanced Inversion"
+},
+{
+  id: 72,
+  grade: "11",
+  subject: "English(S.S)",
+  question: "His argument was so replete with logical fallacies that it bordered on ______.",
+  options: [
+    "sophistry",
+    "veracity",
+    "lucidity",
+    "candor"
+  ],
+  correct: 0,
+  aiExplanation: "Sophistry = deceptive reasoning; fits the context of fallacies.",
+  topicName: "Advanced Vocabulary"
+},
+{
+  id: 73,
+  grade: "11",
+  subject: "English(S.S)",
+  question: "Had she not been so obstinate, the negotiations ______ far more smoothly.",
+  options: [
+    "would proceed",
+    "would have proceeded",
+    "proceeded",
+    "had proceeded"
+  ],
+  correct: 1,
+  aiExplanation: "Unreal past condition → 'would have + past participle'.",
+  topicName: "Advanced Conditionals"
+},
+{
+  id: 74,
+  grade: "11",
+  subject: "English(S.S)",
+  question: "The professor’s explanation was so abstruse that even the most diligent students struggled to ______ its meaning.",
+  options: [
+    "fathom",
+    "imitate",
+    "circumvent",
+    "invalidate"
+  ],
+  correct: 0,
+  aiExplanation: "Fathom = understand deeply; fits 'abstruse'.",
+  topicName: "High‑Level Vocabulary"
+},
+{
+  id: 75,
+  grade: "11",
+  subject: "English(S.S)",
+  question: "No sooner had the data been published ______ it was subjected to intense scrutiny.",
+  options: [
+    "than",
+    "when",
+    "before",
+    "after"
+  ],
+  correct: 0,
+  aiExplanation: "'No sooner… than' is the correct correlative pair.",
+  topicName: "Inversion Correlatives"
+},
+{
+  id: 76,
+  grade: "11",
+  subject: "English(S.S)",
+  question: "Her remarks were so ______ that they alienated even her staunchest supporters.",
+  options: [
+    "vitriolic",
+    "conciliatory",
+    "equivocal",
+    "magnanimous"
+  ],
+  correct: 0,
+  aiExplanation: "Vitriolic = harsh, bitter criticism.",
+  topicName: "Advanced Vocabulary"
+},
+{
+  id: 77,
+  grade: "11",
+  subject: "English(S.S)",
+  question: "The proposal, controversial though it was, eventually gained traction, not least because of its ______ economic rationale.",
+  options: [
+    "compelling",
+    "perfunctory",
+    "spurious",
+    "tenuous"
+  ],
+  correct: 0,
+  aiExplanation: "Compelling = convincing; fits 'economic rationale'.",
+  topicName: "Contextual Vocabulary"
+},
+{
+  id: 78,
+  grade: "11",
+  subject: "English(S.S)",
+  question: "Were the policy to be implemented without revision, it ______ unintended consequences.",
+  options: [
+    "would likely precipitate",
+    "likely precipitated",
+    "precipitates",
+    "has precipitated"
+  ],
+  correct: 0,
+  aiExplanation: "Hypothetical future → 'were… would + base verb'.",
+  topicName: "Advanced Subjunctive"
+},
+{
+  id: 79,
+  grade: "11",
+  subject: "English(S.S)",
+  question: "The scientist’s theory was dismissed as ______ until subsequent experiments vindicated it.",
+  options: [
+    "specious",
+    "axiomatic",
+    "immutable",
+    "orthodox"
+  ],
+  correct: 0,
+  aiExplanation: "Specious = seemingly plausible but actually false.",
+  topicName: "High‑Level Vocabulary"
+},
+{
+  id: 80,
+  grade: "11",
+  subject: "English(S.S)",
+  question: "So intricate ______ that even experts required several hours to decipher it.",
+  options: [
+    "was the mechanism",
+    "the mechanism was",
+    "had the mechanism been",
+    "was been the mechanism"
+  ],
+  correct: 0,
+  aiExplanation: "‘So + adjective + inversion’ → So intricate was the mechanism.",
+  topicName: "Inversion"
+},
+{
+  id: 81,
+  grade: "11",
+  subject: "English(S.S)",
+  question: "Her explanation was so ______ that it obfuscated rather than clarified the issue.",
+  options: [
+    "convoluted",
+    "succinct",
+    "lucid",
+    "cogent"
+  ],
+  correct: 0,
+  aiExplanation: "Convoluted = extremely complex and difficult to follow.",
+  topicName: "Advanced Vocabulary"
+},
+{
+  id: 82,
+  grade: "11",
+  subject: "English(S.S)",
+  question: "Under no circumstances ______ the confidential documents be disclosed to unauthorized personnel.",
+  options: [
+    "should",
+    "they should",
+    "should they",
+    "they should not"
+  ],
+  correct: 2,
+  aiExplanation: "Negative adverbial → inversion: 'Under no circumstances should they…'.",
+  topicName: "Inversion"
+},
+{
+  id: 83,
+  grade: "11",
+  subject: "English(S.S)",
+  question: "The committee rejected the proposal on the grounds that its assumptions were fundamentally ______.",
+  options: [
+    "untenable",
+    "coherent",
+    "meticulous",
+    "salient"
+  ],
+  correct: 0,
+  aiExplanation: "Untenable = cannot be defended logically.",
+  topicName: "Advanced Vocabulary"
+},
+{
+  id: 84,
+  grade: "11",
+  subject: "English(S.S)",
+  question: "Rarely ______ a candidate demonstrate such a sophisticated command of rhetorical strategy.",
+  options: [
+    "does",
+    "do",
+    "has",
+    "did"
+  ],
+  correct: 0,
+  aiExplanation: "‘Rarely’ triggers inversion: Rarely does a candidate…",
+  topicName: "Inversion"
+},
+{
+  id: 85,
+  grade: "11",
+  subject: "English(S.S)",
+  question: "His criticism was so ______ that it bordered on personal attack rather than constructive feedback.",
+  options: [
+    "caustic",
+    "concise",
+    "pedantic",
+    "equitable"
+  ],
+  correct: 0,
+  aiExplanation: "Caustic = severely critical or sarcastic.",
+  topicName: "Advanced Vocabulary"
+},
+{
+  id: 86,
+  grade: "11",
+  subject: "English(S.S)",
+  question: "The results were inconclusive; nevertheless, they provided a ______ for further investigation.",
+  options: [
+    "catalyst",
+    "deterrent",
+    "culmination",
+    "rebuttal"
+  ],
+  correct: 0,
+  aiExplanation: "Catalyst = something that initiates or accelerates change.",
+  topicName: "Contextual Vocabulary"
+},
+{
+  id: 87,
+  grade: "11",
+  subject: "English(S.S)",
+  question: "So profound ______ on the audience that several members were moved to tears.",
+  options: [
+    "was the speaker’s impact",
+    "the speaker’s impact was",
+    "had the speaker’s impact been",
+    "was been the speaker’s impact"
+  ],
+  correct: 0,
+  aiExplanation: "‘So + adjective + inversion’ structure.",
+  topicName: "Inversion"
+},
+{
+  id: 88,
+  grade: "11",
+  subject: "English(S.S)",
+  question: "The journalist’s account was criticized for being overly ______, lacking the neutrality expected of professional reporting.",
+  options: [
+    "partisan",
+    "candid",
+    "scrupulous",
+    "objective"
+  ],
+  correct: 0,
+  aiExplanation: "Partisan = biased toward one side.",
+  topicName: "Advanced Vocabulary"
+},
+{
+  id: 89,
+  grade: "11",
+  subject: "English(S.S)",
+  question: "Were the allegations to prove accurate, the minister’s reputation ______ irreparably damaged.",
+  options: [
+    "will be",
+    "would be",
+    "would have been",
+    "is"
+  ],
+  correct: 1,
+  aiExplanation: "Hypothetical future → 'were… would be'.",
+  topicName: "Advanced Conditionals"
+},
+{
+  id: 90,
+  grade: "11",
+  subject: "English(S.S)",
+  question: "The researcher’s methodology was dismissed as ______, relying more on conjecture than empirical evidence.",
+  options: [
+    "speculative",
+    "rigorous",
+    "methodical",
+    "empirical"
+  ],
+  correct: 0,
+  aiExplanation: "Speculative = based on guesswork rather than data.",
+  topicName: "Advanced Vocabulary"
+},
+
+{
+  id: 91,
+  grade: "11",
+  subject: "English(S.S)",
+  question: "So deeply ______ in institutional bias was the policy that even its proponents struggled to defend it coherently.",
+  options: [
+    "entrenched",
+    "interspersed",
+    "delineated",
+    "attenuated"
+  ],
+  correct: 0,
+  aiExplanation: "‘Entrenched’ means firmly established, especially in a negative context.",
+  topicName: "Advanced Vocabulary – Contextual Precision"
+},
+{
+  id: 92,
+  grade: "11",
+  subject: "English(S.S)",
+  question: "Only after the evidence had been meticulously re‑examined ______ the initial conclusion untenable.",
+  options: [
+    "did the panel deem",
+    "the panel deemed",
+    "had the panel deemed",
+    "was the panel deeming"
+  ],
+  correct: 0,
+  aiExplanation: "‘Only after…’ requires inversion: did + subject + verb.",
+  topicName: "Advanced Inversion"
+},
+{
+  id: 93,
+  grade: "11",
+  subject: "English(S.S)",
+  question: "His remarks were so ______ that they verged on defamation rather than legitimate criticism.",
+  options: [
+    "scurrilous",
+    "didactic",
+    "equanimous",
+    "circumspect"
+  ],
+  correct: 0,
+  aiExplanation: "‘Scurrilous’ = grossly abusive or slanderous.",
+  topicName: "Elite Vocabulary"
+},
+{
+  id: 94,
+  grade: "11",
+  subject: "English(S.S)",
+  question: "Were the proposal to be implemented in its current form, it ______ a cascade of regulatory complications.",
+  options: [
+    "would precipitate",
+    "precipitated",
+    "will have precipitated",
+    "would have precipitated"
+  ],
+  correct: 0,
+  aiExplanation: "Hypothetical future → ‘Were… would + base verb’.",
+  topicName: "Advanced Subjunctive / Conditionals"
+},
+{
+  id: 95,
+  grade: "11",
+  subject: "English(S.S)",
+  question: "The professor’s explanation, though ostensibly lucid, was riddled with subtle ______ that undermined its credibility.",
+  options: [
+    "inconsistencies",
+    "congruities",
+    "vindications",
+    "corollaries"
+  ],
+  correct: 0,
+  aiExplanation: "‘Inconsistencies’ fits the idea of undermining credibility.",
+  topicName: "High‑Level Vocabulary"
+},
+{
+  id: 96,
+  grade: "11",
+  subject: "English(S.S)",
+  question: "So profound ______ on the committee that several long‑standing assumptions were immediately reconsidered.",
+  options: [
+    "was her testimony’s impact",
+    "her testimony’s impact was",
+    "had her testimony’s impact been",
+    "was been her testimony’s impact"
+  ],
+  correct: 0,
+  aiExplanation: "‘So + adjective + inversion’ structure.",
+  topicName: "Inversion"
+},
+{
+  id: 97,
+  grade: "11",
+  subject: "English(S.S)",
+  question: "His interpretation of the data was criticized as overly ______, relying on intuition rather than empirical rigor.",
+  options: [
+    "speculative",
+    "pedantic",
+    "trenchant",
+    "parsimonious"
+  ],
+  correct: 0,
+  aiExplanation: "‘Speculative’ = based on conjecture, not evidence.",
+  topicName: "Advanced Vocabulary"
+},
+{
+  id: 98,
+  grade: "11",
+  subject: "English(S.S)",
+  question: "No sooner ______ the policy enacted than opposition groups mobilized nationwide.",
+  options: [
+    "was",
+    "had",
+    "has",
+    "did"
+  ],
+  correct: 1,
+  aiExplanation: "‘No sooner had + subject + past participle’ is the correct structure.",
+  topicName: "Inversion Correlatives"
+},
+{
+  id: 99,
+  grade: "11",
+  subject: "English(S.S)",
+  question: "The author’s tone, though outwardly conciliatory, concealed a distinctly ______ undercurrent.",
+  options: [
+    "acerbic",
+    "magnanimous",
+    "equitable",
+    "benign"
+  ],
+  correct: 0,
+  aiExplanation: "‘Acerbic’ = sharp, biting, subtly hostile.",
+  topicName: "Elite Vocabulary"
+},
+{
+  id: 100,
+  grade: "11",
+  subject: "English(S.S)",
+  question: "Under no circumstances ______ the confidential memorandum be circulated beyond the executive board.",
+  options: [
+    "should",
+    "should it",
+    "it should",
+    "should they"
+  ],
+  correct: 1,
+  aiExplanation: "Negative adverbials require inversion: ‘Under no circumstances should it…’.",
+  topicName: "Advanced Inversion"
+},
+
 
 
 

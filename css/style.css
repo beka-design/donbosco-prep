@@ -85,7 +85,7 @@ footer{padding:16px 24px; text-align:center; color:var(--muted); font-size:14px;
   .header{flex-direction:column; align-items:flex-start;}
 }
 @media(max-width:480px){
-  .grades-grid, .subjects-grid{grid-template-columns:1fr;}
+  .grades-grid, .subjects-grid{grid-template-columns:1fr 1fr;}
   .btn{width:100%; text-align:center;}
 }
 /* Page transition wrapper */
