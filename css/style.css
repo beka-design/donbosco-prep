@@ -85,7 +85,7 @@ footer{padding:16px 24px; text-align:center; color:var(--muted); font-size:14px;
   .header{flex-direction:column; align-items:flex-start;}
 }
 @media(max-width:480px){
-  .grades-grid, .subjects-grid{grid-template-columns:1fr 1fr;}
+  .grades-grid, .subjects-grid{grid-template-columns:1fr 1fr !important;}
   .btn{width:100%; text-align:center;}
 }
 /* Page transition wrapper */
@@ -153,18 +153,20 @@ footer {
 
 @media (max-width: 600px) {
   .subjects-grid {
-    display: flex !important;
+    
     flex-wrap: wrap !important;
     justify-content: center !important;
-    gap: 24px !important; /* More horizontal space between columns */
+    gap: 10px !important; /* More horizontal space between columns */
     width: 100% !important;
-    padding: 0 10px !important;
+    padding: 0 20px !important;
+    display: grid !important;
+  grid-template-columns: repeat(2, 1fr) !important;
   }
 
   .subject-card {
     width: calc(48% - 24px) !important; /* Slightly narrower to allow more gap */
-    min-width: 100px !important;
-    height: 110px !important;
+    min-width: 120px !important;
+    height: 80px !important;
     font-size: 0.8rem !important;
     display: flex !important;
     align-items: center !important;
@@ -1208,6 +1210,7 @@ body.dark-mode .grid-btn.active {
 @media (max-width: 1024px) {
     .subjects-grid {
         gap: 25px; /* Reduce gap */
+        
     }
     .subject-card {
         width: 220px; /* Slightly smaller cards */
