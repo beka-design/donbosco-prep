@@ -1,8 +1,10 @@
-document.getElementById('year').textContent = new Date().getFullYear();
+const _yearEl = document.getElementById('year');
+if (_yearEl) _yearEl.textContent = new Date().getFullYear();
 
-// 1. Get selected grade
-const grade = localStorage.getItem('selectedGrade') || '12';
-document.getElementById('grade-title').textContent = `Grade ${grade} - Select Subject`;
+// 1. Get selected grade (default to 9 if missing)
+const grade = localStorage.getItem('selectedGrade') || '9';
+const gradeTitleEl = document.getElementById('grade-title');
+if (gradeTitleEl) gradeTitleEl.textContent = `Grade ${grade} - Select Subject`;
 
 // ==================================================
 // 2. DEFINE SUBJECT LISTS SEPARATELY
@@ -30,6 +32,10 @@ const SUBJECTS_2016 = {
 const mainSection = document.querySelector('.subjects-section');
 const topGrid = document.getElementById('subjects-container');
 
+if (!topGrid) {
+    console.warn('subjects-container not found; subject cards will not be rendered.');
+}
+
 // --- HELPER FUNCTION TO CREATE CARDS ---
 function createCard(subName, yearLabel) {
     const div = document.createElement('div');
@@ -49,14 +55,13 @@ function createCard(subName, yearLabel) {
 // 4. RENDER TOP GRID (2017 / Model)
 // ==================================================
 const list2017 = SUBJECTS_2017[grade] || [];
-topGrid.innerHTML = ''; // Clear existing
-
-if (list2017.length > 0) {
-    list2017.forEach(sub => {
-        topGrid.appendChild(createCard(sub, 'Model'));
-    });
-} else {
-    topGrid.innerHTML = '<p style="color:white;">No subjects available.</p>';
+if (topGrid) {
+    topGrid.innerHTML = ''; // Clear existing
+    if (list2017.length > 0) {
+        list2017.forEach(sub => topGrid.appendChild(createCard(sub, 'Model')));
+    } else {
+        topGrid.innerHTML = '<p style="color:white;">No subjects available.</p>';
+    }
 }
 
 // ==================================================
@@ -65,7 +70,7 @@ if (list2017.length > 0) {
 const list2016 = SUBJECTS_2016[grade] || [];
 
 // Only create the 2016 section if there are subjects for this grade
-if (list2016.length > 0) {
+if (list2016.length > 0 && mainSection) {
     
     // A. Create the "2016" Divider Title
     const divider = document.createElement('h2'); 
@@ -86,4 +91,7 @@ if (list2016.length > 0) {
     });
 
     mainSection.appendChild(bottomGrid);
+}
+else if (list2016.length > 0 && !mainSection) {
+    console.warn('Main subjects section missing; cannot render 2016 grid.');
 }

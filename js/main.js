@@ -1,7 +1,9 @@
-// =======================
-// Set current year in footer
-// =======================
 document.getElementById('year').textContent = new Date().getFullYear();
+// =======================
+// Set current year in footer (guarded)
+// =======================
+const _yearEl = document.getElementById('year');
+if (_yearEl) _yearEl.textContent = new Date().getFullYear();
 
 
 // =======================
@@ -83,7 +85,9 @@ function render(path){
 }
 
 // ===== Listen to hash changes =====
-window.onhashchange = ()=> render(location.hash.slice(1));
+if (document.getElementById('view')) {
+  window.onhashchange = ()=> render(location.hash.slice(1));
+}
 
 // ===== Initialize SPA =====
 
@@ -150,5 +154,38 @@ changeBackground();
 
 // Change every 5 seconds
 setInterval(changeBackground, 5000);
+
+/* ===== Slideshow-bg crossfade (preload + layered slides) ===== */
+document.addEventListener('DOMContentLoaded', () => {
+  const slideshowBg = document.querySelector('.slideshow-bg');
+  if (!slideshowBg) return;
+
+  const slideshowImages = [
+    'assets/images/bg1.jpg',
+    'assets/images/bg2.jpg',
+    'assets/images/bg3.jpg',
+    'assets/images/bg4.jpg',
+    'assets/images/bg5.jpg'
+  ];
+
+  // Preload images
+  slideshowImages.forEach(src => { const img = new Image(); img.src = src; });
+
+  const slides = slideshowImages.map((src, i) => {
+    const s = document.createElement('div');
+    s.className = 'bg-slide';
+    s.style.backgroundImage = `url('${src}')`;
+    if (i === 0) s.classList.add('visible');
+    slideshowBg.appendChild(s);
+    return s;
+  });
+
+  let idx = 0;
+  setInterval(() => {
+    slides[idx].classList.remove('visible');
+    idx = (idx + 1) % slides.length;
+    slides[idx].classList.add('visible');
+  }, 5500);
+});
 
 render(location.hash.slice(1));

@@ -2334,3 +2334,261 @@ h1 {
         border-radius: 10px;
     }
 }
+
+/* Popup Overlay */
+  #telegramPopup {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    backdrop-filter: blur(6px); /* Blurs the background */
+    background-color: rgba(0, 0, 0, 0.4); /* Semi-transparent dark overlay */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+    overflow: auto;
+  }
+
+  /* Popup Content */
+  #telegramPopup .popup-content {
+    background-color: #ffffff;
+    padding: 40px 30px;
+    border-radius: 12px;
+    max-width: 450px;
+    text-align: center;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+    color: #0d47a1; /* Blue text */
+  }
+
+  /* Headings */
+  #telegramPopup h2 {
+    font-size: 28px;
+    margin-bottom: 15px;
+    color: #ff9800; /* Orange heading */
+  }
+
+  #telegramPopup p {
+    font-size: 16px;
+    line-height: 1.6;
+    color: #333;
+    margin-bottom: 25px;
+  }
+
+  /* Join Button */
+  .join-btn {
+    background: #0d47a1; /* Blue button */
+    color: #ffffff;
+    padding: 12px 25px;
+    font-size: 16px;
+    border-radius: 8px;
+    text-decoration: none;
+    display: inline-block;
+    transition: transform 0.3s, background 0.3s;
+  }
+
+  .join-btn:hover {
+    transform: scale(1.05);
+    background: #1565c0;
+  }
+
+  /* Popup animation */
+  @keyframes popupEnter {
+    0% { opacity: 0; transform: translateY(-30px) scale(0.9); }
+    60% { opacity: 1; transform: translateY(10px) scale(1.05); }
+    100% { opacity: 1; transform: translateY(0) scale(1); }
+  }
+
+  .animate-popup {
+    animation: popupEnter 0.7s ease-out;
+  }
+  .join-btn {
+  animation: pulse 1.5s infinite;
+}
+@keyframes pulse {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.1); }
+}
+/* COOKIE BANNER */
+.cookie-banner {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background: #0d47a1;
+  color: #fff;
+  z-index: 9999;
+  animation: slideUp 0.8s ease;
+}
+
+.cookie-content {
+  max-width: 1200px;
+  margin: auto;
+  padding: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 15px;
+}
+
+.cookie-content p {
+  flex: 1;
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+.cookie-actions {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.cookie-link {
+  color: #ffcc80;
+  font-size: 14px;
+  text-decoration: underline;
+}
+
+.cookie-actions button {
+  background: #ff9800;
+  border: none;
+  color: #fff;
+  padding: 10px 20px;
+  font-size: 14px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.cookie-actions button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 15px rgba(0,0,0,0.2);
+}
+
+/* Animation */
+@keyframes slideUp {
+  from {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+  .cookie-content {
+    flex-direction: column;
+    text-align: center;
+  }
+}
+
+/* FOOTER FLOATING ICONS */
+.footer-icons {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  z-index: 9999;
+}
+
+.footer-icons .icon {
+  width: 60px;
+  height: 60px;
+  background: #0d47a1;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+}
+
+.footer-icons .icon img {
+  width: 30px;
+  height: 30px;
+  pointer-events: none;
+}
+
+/* Bounce on hover */
+.footer-icons .icon:hover {
+  animation: bounce 0.6s;
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+}
+
+/* Bounce animation keyframes */
+@keyframes bounce {
+  0% { transform: translateY(0); }
+  30% { transform: translateY(-10px); }
+  50% { transform: translateY(0); }
+  70% { transform: translateY(-5px); }
+  100% { transform: translateY(0); }
+}
+
+/* Mobile tweak */
+@media (max-width: 600px) {
+  .footer-icons {
+    bottom: 20px;
+    right: 20px;
+    gap: 12px;
+  }
+  .footer-icons .icon {
+    width: 50px;
+    height: 50px;
+  }
+  .footer-icons .icon img {
+    width: 25px;
+    height: 25px;
+  }
+}
+
+/* Mobile: shrink "Let's Get Start" hero button for better fit */
+@media (max-width: 600px) {
+  .btn-hero {
+    width: 160px;           /* fixed narrower width on small screens */
+    max-width: 90%;         /* prevents overflow on very small devices */
+    display: inline-block;  /* keeps the button sized as set */
+    padding: 10px 18px;     /* slightly smaller padding */
+    font-size: 0.95rem;     /* keep text readable */
+  }
+}
+
+
+/* ========== Slideshow background flash fix ========== */
+/* Provide a solid fallback color and a preloaded initial image
+   so the page doesn't show a white flash while images load. */
+.slideshow-bg {
+  background-color: #04054e; /* dark brand color fallback */
+  will-change: transform, opacity;
+  transition: opacity 0.7s ease-in-out;
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  position: fixed;
+  top: 0; left: 0; right: 0; bottom: 0;
+  z-index: -1;
+  overflow: hidden;
+}
+
+/* Individual slide layers used by JS to cross-fade images */
+.slideshow-bg .bg-slide {
+  position: absolute;
+  inset: 0;
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+  will-change: opacity;
+}
+.slideshow-bg .bg-slide.visible {
+  opacity: 1;
+}

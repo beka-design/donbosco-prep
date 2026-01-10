@@ -1,21 +1,47 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>DonBoscoPrep — Select Grade</title>
-  <link rel="stylesheet" href="css/style.css">
-  <link rel="stylesheet" href="css/grades.css">
+<meta charset="UTF-8">
+<title>Terms of Service | Adari Institute</title>
+<link rel="stylesheet" href="css/style.css">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+body{
+  font-family:"Segoe UI", Arial, sans-serif;
+  background:#f9fafc;
+  margin:0;
+}
+.container{
+  max-width:900px;
+  margin:auto;
+  background:#fff;
+  padding:40px;
+}
+h1{
+  color:#0d47a1;
+}
+h2{
+  color:#1565c0;
+  margin-top:30px;
+}
+p{
+  line-height:1.8;
+  color:#333;
+}
+.note{
+  font-size:14px;
+  color:#666;
+  margin-top:40px;
+}
+</style>
 </head>
 <body>
-  <!-- Global background slideshow -->
-  <div class="slideshow-bg"></div>
 
-  <!-- HEADER -->
+    <!-- HEADER -->
 <header class="header">
   <div class="logo">
     <div class="brand-square">Ai</div>
-    <div class="site-title">Adari Institute</div>
+    <div class="site-title">Adari institute</div>
   </div>
 
   <nav class="main-nav" aria-label="Primary">
@@ -39,46 +65,53 @@
     </ul>
   </nav>
 </header>
+<div class="container">
 
-  <main class="main">
+<h1>Terms of Service</h1>
 
-  
-    
+<p>
+Welcome to <strong>Adari Institute</strong>. By accessing or using this website, you agree to
+be bound by the following terms.
+</p>
 
-  <section class="grades-section content-overlay">
-    <!-- 🔥 Background Slideshow Wrapper -->
-  
-    <h2>Select Your Grade</h2>
-    <div class="grades-grid" id="grades-container">
-      <!-- Grades will be injected here by grades.js -->
-    </div>
-  </section>
-  <!-- In grades.html, inside <div class="grid-container"> -->
+<h2>Educational Purpose</h2>
+<p>
+All content provided on this website is for educational and informational purposes only.
+While we strive to provide high-quality materials, we do not guarantee specific academic results.
+</p>
 
-<!-- ... Your existing Grade 9-12 cards ... -->
+<h2>Use of Content</h2>
+<p>
+You may use the content for personal learning purposes. Reproduction, redistribution,
+or commercial use of materials without permission is prohibited.
+</p>
 
+<h2>User Responsibility</h2>
+<p>
+Users are responsible for how they use the information on this website. Adari Institute
+is not liable for decisions made based on the content provided.
+</p>
 
+<h2>Changes to Terms</h2>
+<p>
+We reserve the right to update or modify these terms at any time. Continued use of the
+website indicates acceptance of the updated terms.
+</p>
 
-</main>
+<div class="note">
+Last updated: 2025
+</div>
 
-<!-- Ad merged directly above footer -->
-  <div class="footer-ad">
-    <ins class="adsbygoogle"
-         style="display:block; text-align:center; margin:0;"
-         data-ad-client="ca-pub-XXXXXX"
-         data-ad-slot="9333333"
-         data-ad-format="auto"
-         data-full-width-responsive="true"></ins>
-    <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
-  </div>
-  <!-- FOOTER -->
+</div>
+
+<!-- FOOTER -->
   <footer class="site-footer">
     <div class="footer-columns">
       
       <div class="footer-column">
         <h4>Resources</h4>
         <ul>
-          <li><a href="#">Past Papers</a></li>
+          <li><a href="past-papers.html">Past Papers</a></li>
           <li><a href="adari-school.html">Adari School</a></li>
           <li><a href="index.html">Text-book</a></li>
           <li><a href="videos.html">Video Lessons</a></li>
@@ -122,6 +155,7 @@
   </a>
 </div>
   </footer>
+
   <script>
 document.querySelectorAll('.footer-icons .icon').forEach(icon => {
   icon.addEventListener('click', () => {
@@ -138,6 +172,5 @@ document.querySelectorAll('.footer-icons .icon').forEach(icon => {
 }
 </style>
 
-  <script src="js/grades.js"></script>
 </body>
 </html>

@@ -1,21 +1,150 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>DonBoscoPrep — Select Grade</title>
-  <link rel="stylesheet" href="css/style.css">
-  <link rel="stylesheet" href="css/grades.css">
+    <meta charset="UTF-8">
+    <title>Videos | Coming Soon</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+
+    <style>
+        * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Segoe UI", sans-serif;
+}
+
+body {
+    min-height: 100vh;
+    background: linear-gradient(135deg, #e3f2fd, #bbdefb);
+    display: flex;
+    flex-direction: column;
+}
+
+
+.container {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 30px;
+}
+
+
+.icon {
+    font-size: 64px;
+    margin-bottom: 16px;
+    animation: bounce 2s infinite;
+}
+
+h1 {
+    font-size: 28px;
+    color: #f5f7f8;
+    margin-bottom: 20px;
+    text-decoration: underline;
+
+}
+
+.subtitle {
+    font-size: 16px;
+    color: #f8ffff;
+    margin-bottom: 6px;
+}
+
+.hint {
+    font-size: 14px;
+    color: #fa7101;
+    margin-bottom: 30px;
+}
+
+/* Loading dots animation */
+.loader {
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+}
+
+.loader span {
+    width: 10px;
+    height: 10px;
+    background-color: #1e88e5;
+    border-radius: 50%;
+    animation: pulse 1.5s infinite ease-in-out;
+}
+
+.loader span:nth-child(2) {
+    animation-delay: 0.2s;
+}
+
+.loader span:nth-child(3) {
+    animation-delay: 0.4s;
+}
+
+/* Animations */
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+        transform: translateY(0);
+    }
+    40% {
+        transform: translateY(-12px);
+    }
+    60% {
+        transform: translateY(-6px);
+    }
+}
+
+@keyframes pulse {
+    0% {
+        opacity: 0.3;
+        transform: scale(0.8);
+    }
+    50% {
+        opacity: 1;
+        transform: scale(1.2);
+    }
+    100% {
+        opacity: 0.3;
+        transform: scale(0.8);
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+html, body {
+  height: 100%;
+}
+
+
+
+
+.site-footer {
+  width: 100%;
+}
+
+
+    </style>
 </head>
 <body>
-  <!-- Global background slideshow -->
+
+    <!-- Global background slideshow -->
   <div class="slideshow-bg"></div>
 
   <!-- HEADER -->
 <header class="header">
   <div class="logo">
     <div class="brand-square">Ai</div>
-    <div class="site-title">Adari Institute</div>
+    <div class="site-title">Adari institute</div>
   </div>
 
   <nav class="main-nav" aria-label="Primary">
@@ -40,45 +169,34 @@
   </nav>
 </header>
 
-  <main class="main">
+    <div class="container">
+        <div class="icon">▶️</div>
 
-  
-    
+        <h1>Video lesson Coming Soon</h1>
 
-  <section class="grades-section content-overlay">
-    <!-- 🔥 Background Slideshow Wrapper -->
-  
-    <h2>Select Your Grade</h2>
-    <div class="grades-grid" id="grades-container">
-      <!-- Grades will be injected here by grades.js -->
+        <p class="subtitle">
+            We’re working hard to upload amazing learning videos for you.
+        </p>
+
+        <p class="hint">
+            Please check back soon — exciting content is on the way!
+        </p>
+
+        <div class="loader">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
     </div>
-  </section>
-  <!-- In grades.html, inside <div class="grid-container"> -->
 
-<!-- ... Your existing Grade 9-12 cards ... -->
-
-
-
-</main>
-
-<!-- Ad merged directly above footer -->
-  <div class="footer-ad">
-    <ins class="adsbygoogle"
-         style="display:block; text-align:center; margin:0;"
-         data-ad-client="ca-pub-XXXXXX"
-         data-ad-slot="9333333"
-         data-ad-format="auto"
-         data-full-width-responsive="true"></ins>
-    <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
-  </div>
-  <!-- FOOTER -->
+    <!-- FOOTER -->
   <footer class="site-footer">
     <div class="footer-columns">
       
       <div class="footer-column">
         <h4>Resources</h4>
         <ul>
-          <li><a href="#">Past Papers</a></li>
+          <li><a href="past-papers.html">Past Papers</a></li>
           <li><a href="adari-school.html">Adari School</a></li>
           <li><a href="index.html">Text-book</a></li>
           <li><a href="videos.html">Video Lessons</a></li>
@@ -137,7 +255,5 @@ document.querySelectorAll('.footer-icons .icon').forEach(icon => {
   animation: bounce 0.6s;
 }
 </style>
-
-  <script src="js/grades.js"></script>
 </body>
 </html>
