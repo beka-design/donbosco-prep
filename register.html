@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Register - Adari Institute</title>
+
+  <!-- Firebase v8 (IMPORTANT) -->
+  <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-auth.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-firestore.js"></script>
+
+  <script src="firebase-config.js"></script>
+
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body class="auth-body">
+
+  <div class="register-container">
+    <h2>Create Account</h2>
+
+    <input type="email" id="email" placeholder="Email">
+    <input type="password" id="password" placeholder="Password">
+    <input type="password" id="confirmPassword" placeholder="Confirm Password">
+
+    <button id="registerBtn">Register</button>
+
+    <p>Already have account? <a href="login.html">Login</a></p>
+  </div>
+
+  <script>
+    const auth = firebase.auth();
+    const db = firebase.firestore();
+
+    document.getElementById("registerBtn").addEventListener("click", async () => {
+
+      const email = document.getElementById("email").value.trim();
+      const password = document.getElementById("password").value.trim();
+      const confirmPassword = document.getElementById("confirmPassword").value.trim();
+
+      if (!email || !password || !confirmPassword) {
+        alert("Please fill in all fields");
+        return;
+      }
+
+      if (password !== confirmPassword) {
+        alert("Passwords do not match!");
+        return;
+      }
+
+      try {
+        const userCredential = await auth.createUserWithEmailAndPassword(email, password);
+        const user = userCredential.user;
+
+        await db.collection("users").doc(user.uid).set({
+          email: user.email,
+          subscription: "inactive",
+          createdAt: new Date()
+        });
+
+        alert("Account created successfully!");
+        window.location.href = "payment.html";
+
+      } catch (error) {
+        alert(error.message);
+      }
+
+    });
+  </script>
+
+</body>
+
+</html>

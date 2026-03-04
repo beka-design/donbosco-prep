@@ -1,0 +1,476 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Subscription & Approval — Adari Institute</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-firestore.js"></script>
+    <script src="firebase-config.js"></script>
+    <style>
+        body {
+            background: linear-gradient(135deg, #0d47a1 0%, #1976d2 100%);
+            color: #fff;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+            font-family: 'Inter', sans-serif;
+        }
+
+        .glass-card {
+            background: rgba(0, 0, 0, 0.4); /* Darker semi-transparent for white text contrast */
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            border-radius: 24px;
+            padding: 30px;
+            max-width: 600px;
+            width: 100%;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
+            text-align: center;
+            animation: fadeIn 0.8s ease-out;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        h1 {
+            font-size: 1.8rem;
+            margin-bottom: 20px;
+            font-weight: 800;
+            text-shadow: 0 2px 4px rgba(0,0,0,0.4);
+        }
+
+        p {
+            font-size: 1.05rem;
+            line-height: 1.5;
+            color: #ffffff; /* Solid white */
+            margin-bottom: 20px;
+            font-weight: 500;
+        }
+
+        /* Pricing Cards */
+        .plans-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+            margin-bottom: 30px;
+        }
+
+        .plan-card {
+            background: rgba(255, 255, 255, 0.15); /* More opaque */
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            border-radius: 20px;
+            padding: 25px 15px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .plan-card:hover {
+            background: rgba(255, 255, 255, 0.15);
+            transform: translateY(-5px);
+            border-color: rgba(255, 255, 255, 0.4);
+        }
+
+        .plan-card.premium {
+            border-color: #ffcc80;
+            background: rgba(255, 152, 0, 0.2); /* More visible color */
+        }
+
+        .plan-card h3 {
+            font-size: 1.4rem;
+            margin-bottom: 10px;
+            color: #ffcc80;
+        }
+
+        .plan-price {
+            font-size: 2.2rem;
+            font-weight: 800;
+            margin-bottom: 15px;
+            text-shadow: 0 2px 4px rgba(0,0,0,0.3);
+        }
+
+        .plan-price span {
+            font-size: 1rem;
+            font-weight: 400;
+            color: #ffffff;
+        }
+
+        .plan-features {
+            font-size: 0.95rem;
+            text-align: left;
+            padding: 0 10px;
+        }
+
+        .plan-features li {
+            margin-bottom: 10px;
+            list-style: none;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            color: #ffffff;
+            font-weight: 600; /* Bolder for visibility */
+        }
+
+        .plan-features li::before {
+            content: '✓';
+            color: #4caf50;
+            font-weight: 900;
+        }
+
+        /* Form Styles */
+        .form-area {
+            display: none;
+            text-align: left;
+        }
+
+        .glass-input {
+            width: 100%;
+            background: rgba(255, 255, 255, 0.2); /* Higher contrast background */
+            border: 1px solid rgba(255, 255, 255, 0.4);
+            border-radius: 12px;
+            padding: 14px;
+            color: #fff;
+            margin-bottom: 15px;
+            font-size: 1rem;
+            box-sizing: border-box;
+            font-weight: 600;
+        }
+
+        .glass-input::placeholder {
+            color: rgba(255, 255, 255, 0.8);
+        }
+
+        .file-label {
+            display: block;
+            margin-bottom: 8px;
+            font-size: 0.9rem;
+            color: #ffcc80;
+            font-weight: 600;
+        }
+
+        .btn-action {
+            background: #ff5722;
+            color: #fff;
+            border: none;
+            padding: 16px;
+            border-radius: 12px;
+            font-size: 1.1rem;
+            font-weight: 700;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            width: 100%;
+            box-shadow: 0 10px 20px rgba(255, 87, 34, 0.3);
+            margin-top: 10px;
+        }
+
+        .payment-methods {
+            background: rgba(0, 0, 0, 0.2);
+            border-radius: 12px;
+            padding: 15px;
+            margin-bottom: 20px;
+        }
+
+        .method {
+            margin-bottom: 10px;
+        }
+
+        .method:last-child {
+            margin-bottom: 0;
+        }
+
+        .method label {
+            font-size: 0.8rem;
+            color: #ffcc80;
+            display: block;
+        }
+
+        .method div {
+            font-family: monospace;
+            font-size: 1rem;
+            letter-spacing: 1px;
+        }
+
+        #status-area {
+            display: none;
+        }
+
+        .timer {
+            font-size: 2.5rem;
+            font-weight: 800;
+            color: #ffeb3b;
+            margin: 15px 0;
+        }
+
+        .telegram-link {
+            display: inline-block;
+            margin-top: 20px;
+            background: #24A1DE;
+            color: #fff;
+            padding: 10px 20px;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        @media (max-width: 600px) {
+            .plans-container {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="glass-card">
+        <!-- Step 1: Selection -->
+        <div id="step-selection">
+            <h1>Choose Your Plan</h1>
+            <p>Access all past papers and mock exams for your grade.</p>
+            <div class="plans-container">
+                <div class="plan-card" onclick="selectPlan('Basic', 200)">
+                    <h3>Basic</h3>
+                    <div class="plan-price">200 <span>ETB</span></div>
+                    <ul class="plan-features">
+                        <li>All Grade Materials</li>
+                        <li>Standard Support</li>
+                    </ul>
+                </div>
+                <div class="plan-card premium" onclick="selectPlan('Premium', 400)">
+                    <h3>Premium</h3>
+                    <div class="plan-price">400 <span>ETB</span></div>
+                    <ul class="plan-features">
+                        <li>Priority Approval</li>
+                        <li>Expert Video Guides</li>
+                        <li>Advanced Mock Tests</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- Step 2: Form -->
+        <div id="step-form" class="form-area">
+            <h2 id="form-title">Payment: Basic Plan</h2>
+            <div class="payment-methods">
+                <div class="method">
+                    <label>Telebirr</label>
+                    <div id="telebirr-no">0901705907 (Adari Institute)</div>
+                </div>
+                <div class="method">
+                    <label>CBE</label>
+                    <div>1000443797762 (Adari Institute)</div>
+                </div>
+            </div>
+
+            <form id="paymentForm">
+                <input type="text" name="name" class="glass-input" placeholder="Your Full Name" required>
+                <input type="tel" name="phone" class="glass-input" placeholder="Phone Number" required>
+
+                <label class="file-label">Upload Payment Screenshot</label>
+                <input type="file" name="screenshot" class="glass-input" accept="image/*" required>
+
+                <button type="submit" class="btn-action" id="submitBtn">Submit Payment</button>
+            </form>
+            <button onclick="goBack()"
+                style="background:none; border:none; color:rgba(255,255,255,0.6); margin-top:15px; cursor:pointer;">←
+                Change Plan</button>
+        </div>
+
+        <!-- Step 3: Pending -->
+        <div id="status-area">
+            <h2 id="status-title">Verifying Payment</h2>
+            <p id="status-desc">We are checking your screenshot. This usually takes 10-20 minutes.</p>
+            <div id="timer" class="timer">20:00</div>
+            <div id="timeout-msg" style="display: none;">
+                <p>Verify taking longer? Contact us:</p>
+                <a href="https://t.me/adariexaminstitute" target="_blank" class="telegram-link">Telegram Support</a>
+            </div>
+        </div>
+    </div>
+
+    <script>
+const auth = firebase.auth();
+const db = firebase.firestore();
+
+
+auth.onAuthStateChanged(user => {
+  if (!user) {
+    window.location.href = 'login.html';
+    return;
+  }
+
+  db.collection('users').doc(user.uid).onSnapshot(async doc => {
+
+  const data = doc.data();
+  if (!data) return;
+
+  // 🔥 If ACTIVE → check expiry
+  if (data.subscription === 'active') {
+
+    if (data.subscriptionExpiry && Date.now() > data.subscriptionExpiry) {
+
+      // Subscription expired
+      await db.collection('users').doc(user.uid).update({
+        subscription: 'inactive'
+      });
+
+      alert("Your subscription has expired. Please renew.");
+      window.location.reload();
+      return;
+
+    } else {
+      // Still valid
+      window.location.href = 'grades.html';
+      return;
+    }
+  }
+
+  // ⏳ If PENDING → show countdown
+  if (data.subscription === 'pending' && data.pendingAt) {
+    showPending(data.pendingAt);
+  }
+
+});
+});
+
+let selectedPlanName = '';
+let selectedPlanPrice = 0;
+let countdownInterval;
+
+// --- NAVIGATION ---
+function selectPlan(name, price) {
+  selectedPlanName = name;
+  selectedPlanPrice = price;
+  document.getElementById('step-selection').style.display = 'none';
+  document.getElementById('step-form').style.display = 'block';
+  document.getElementById('form-title').textContent = `Pay ${price} ETB (${name})`;
+}
+
+function goBack() {
+  document.getElementById('step-selection').style.display = 'block';
+  document.getElementById('step-form').style.display = 'none';
+}
+
+// --- FORM SUBMIT ---
+document.getElementById('paymentForm').addEventListener('submit', async (e) => {
+  e.preventDefault();
+
+  if (!selectedPlanName || !selectedPlanPrice) {
+    alert('⚠ Please select a plan first.');
+    return;
+  }
+
+  const user = auth.currentUser;
+  if (!user) {
+    alert('⚠ You must be logged in.');
+    return;
+  }
+
+  const submitBtn = document.getElementById('submitBtn');
+  submitBtn.disabled = true;
+  submitBtn.textContent = 'Uploading...';
+
+  const form = e.target;
+  const formData = new FormData();
+
+  // Append basic info
+  formData.append('uid', user.uid);
+  formData.append('plan', selectedPlanName);
+  formData.append('price', selectedPlanPrice);
+  formData.append('name', form.name.value);
+  formData.append('phone', form.phone.value);
+
+  // Append file correctly
+  const fileInput = form.querySelector('input[name="screenshot"]');
+  if (!fileInput.files[0]) {
+    alert('⚠ Please upload a screenshot.');
+    submitBtn.disabled = false;
+    submitBtn.textContent = 'Submit Payment';
+    return;
+  }
+  formData.append('screenshot', fileInput.files[0]);
+
+  try {
+    const response = await fetch('http://localhost:5000/api/payment', {
+      method: 'POST',
+      body: formData
+    });
+
+    if (!response.ok) throw new Error('Network response not ok');
+
+    const data = await response.json();
+
+    if (data.success) {
+      alert('✅ Screenshot uploaded successfully! Waiting for admin approval.');
+
+      const now = Date.now();
+
+      // Update Firestore
+      await db.collection('users').doc(user.uid).update({
+        subscription: 'pending',
+        pendingAt: now,
+        plan: selectedPlanName,
+        planPrice: selectedPlanPrice,
+        userName: form.name.value,
+        userPhone: form.phone.value,
+        screenshotUrl: data.imageUrl || null
+      });
+
+      showPending(now);
+    } else {
+      alert('Error: ' + (data.error || 'Check backend connection'));
+      submitBtn.disabled = false;
+      submitBtn.textContent = 'Submit Payment';
+    }
+  } catch (err) {
+    console.error(err);
+    alert('⚠ Server not responding. Please try again or contact Telegram support.');
+    submitBtn.disabled = false;
+    submitBtn.textContent = 'Submit Payment';
+  }
+});
+
+// --- PENDING LOGIC ---
+function showPending(startTime) {
+  document.getElementById('step-selection').style.display = 'none';
+  document.getElementById('step-form').style.display = 'none';
+  document.getElementById('status-area').style.display = 'block';
+
+  if (countdownInterval) clearInterval(countdownInterval);
+
+  countdownInterval = setInterval(() => {
+    const elapsed = Date.now() - startTime;
+    const totalTime = 20 * 60 * 1000;
+    const remaining = Math.max(0, totalTime - elapsed);
+
+    const mins = Math.floor(remaining / 60000);
+    const secs = Math.floor((remaining % 60000) / 1000);
+
+    document.getElementById('timer').textContent = `${mins}:${secs.toString().padStart(2,'0')}`;
+
+    if (remaining <= 0) {
+      clearInterval(countdownInterval);
+      document.getElementById('timeout-msg').style.display = 'block';
+    }
+  }, 1000);
+}
+</script>
+</body>
+
+</html>

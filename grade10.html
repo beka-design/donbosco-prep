@@ -133,15 +133,7 @@
         <li class="nav-item"><a href="index.html" class="nav-link btn">Home</a></li>
         <li class="nav-item"><a href="about.html" class="nav-link btn">About</a></li>
         <li class="nav-item"><a href="grades.html" class="nav-link btn">Practice</a></li>
-        <li class="nav-item dropdown">
-          <button class="dropdown-toggle">Text-book ⌵</button>
-          <ul class="dropdown-menu">
-            <li><a href="grade9.html">Grade 9</a></li>
-            <li><a href="grade10.html">Grade 10</a></li>
-            <li><a href="grade11.html">Grade 11</a></li>
-            <li><a href="grade12.html">Grade 12</a></li>
-          </ul>
-        </li>
+        <!-- Text-book dropdown removed for AdSense readiness -->
         <li class="nav-item"><a href="videos.html" class="nav-link btn">Video Lessons</a></li>
       </ul>
     </nav>
@@ -160,14 +152,14 @@
 
   <!-- Subjects -->
   <div class="subject-grid" id="subjectGrid">
-    <a href="#" class="subject" onclick="event.preventDefault(); loadPDF('pdfs/grade10-math.pdf')">Mathematics</a>
-    <a href="#" class="subject" onclick="event.preventDefault(); loadPDF('pdfs/grade10-english.pdf')">English</a>
-    <a href="#" class="subject" onclick="event.preventDefault(); loadPDF('pdfs/grade10-physics.pdf')">Physics</a>
-    <a href="#" class="subject" onclick="event.preventDefault(); loadPDF('pdfs/grade10-chemistry.pdf')">Chemistry</a>
-    <a href="#" class="subject" onclick="event.preventDefault(); loadPDF('pdfs/grade10-biology.pdf')">Biology</a>
-    <a href="#" class="subject" onclick="event.preventDefault(); loadPDF('pdfs/grade10-history.pdf')">History</a>
-    <a href="#" class="subject" onclick="event.preventDefault(); loadPDF('pdfs/grade10-geography.pdf')">Geography</a>
-    <a href="#" class="subject" onclick="event.preventDefault(); loadPDF('pdfs/grade10-civics.pdf')">Civics</a>
+    <span class="subject disabled">Mathematics (PDF removed)</span>
+    <span class="subject disabled">English (PDF removed)</span>
+    <span class="subject disabled">Physics (PDF removed)</span>
+    <span class="subject disabled">Chemistry (PDF removed)</span>
+    <span class="subject disabled">Biology (PDF removed)</span>
+    <span class="subject disabled">History (PDF removed)</span>
+    <span class="subject disabled">Geography (PDF removed)</span>
+    <span class="subject disabled">Civics (PDF removed)</span>
   </div>
 
   <!-- Ad between subjects and PDF -->
@@ -201,10 +193,9 @@
       <div class="footer-column">
         <h4>Resources</h4>
         <ul>
-          <li><a href="past-papers.html">Past Papers</a></li>
+          
           <li><a href="adari-school.html">Adari School</a></li>
-          <li><a href="index.html">Text-book</a></li>
-          <li><a href="videos.html">Video Lessons</a></li>
+          
         </ul>
       </div>
       <div class="footer-column">
@@ -261,57 +252,6 @@ document.querySelectorAll('.footer-icons .icon').forEach(icon => {
 }
 </style>
 
-  <script>
-    function loadPDF(pdfUrl) {
-      const subjectGrid = document.getElementById("subjectGrid");
-      const container = document.getElementById("pdfContainer");
-
-      subjectGrid.style.display = "none";
-      container.style.display = "block";
-
-      container.innerHTML = `
-        <button class="back-btn" onclick="goBack()">← Back to Subjects</button>
-        <iframe src="${pdfUrl}" style="width:100%; height:90vh;" frameborder="0"></iframe>
-      `;
-    }
-
-    function goBack() {
-      const subjectGrid = document.getElementById("subjectGrid");
-      const container = document.getElementById("pdfContainer");
-
-      container.style.display = "none";
-      subjectGrid.style.display = "grid";
-      container.innerHTML = "";
-    }
-  </script>
-  <script>
-  function loadPDF(pdfUrl) {
-    const subjectGrid = document.getElementById("subjectGrid");
-    const container = document.getElementById("pdfContainer");
-
-    subjectGrid.style.display = "none";
-    container.style.display = "block";
-
-    container.innerHTML = `
-      <button class="back-btn" onclick="goBack()">← Back to Subjects</button>
-      <iframe src="${pdfUrl}" style="width:100%; height:90vh;" frameborder="0"></iframe>
-    `;
-
-    // ✅ Scroll smoothly to the PDF container so users see it immediately
-    container.scrollIntoView({ behavior: "smooth", block: "start" });
-  }
-
-  function goBack() {
-    const subjectGrid = document.getElementById("subjectGrid");
-    const container = document.getElementById("pdfContainer");
-
-    container.style.display = "none";
-    subjectGrid.style.display = "grid";
-    container.innerHTML = ""; // clear iframe
-
-    // ✅ Scroll smoothly back to the subject grid
-    subjectGrid.scrollIntoView({ behavior: "smooth", block: "start" });
-  }
-</script>
+  <!-- PDF viewer scripts removed: PDF resources have been taken down for copyright compliance -->
 </body>
 </html>

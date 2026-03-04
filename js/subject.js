@@ -11,7 +11,7 @@ if (gradeTitleEl) gradeTitleEl.textContent = `Grade ${grade} - Select Subject`;
 // ==================================================
 
 // List for the TOP Section (2017 / Model)
-// ❌ I REMOVED 'chemistry(2016)' from here
+
 const SUBJECTS_2017 = {
   9:  ['Mathematics','Biology','Chemistry','Physics','English','Civics','Geography','History'],
   10: ['Mathematics','Biology','Chemistry','Physics','English','Civics','Geography','History'],
@@ -44,9 +44,12 @@ function createCard(subName, yearLabel) {
     
     // Handle Click
     div.addEventListener('click', () => {
+        // Persist selections and include them in the URL for robustness
+        localStorage.setItem('selectedGrade', grade);
         localStorage.setItem('selectedSubject', subName);
         localStorage.setItem('selectedYear', yearLabel);
-        window.location.href = 'quiz.html';
+        const params = new URLSearchParams({ grade: grade, subject: subName });
+        window.location.href = `quiz.html?${params.toString()}`;
     });
     return div;
 }
@@ -56,7 +59,7 @@ function createCard(subName, yearLabel) {
 // ==================================================
 const list2017 = SUBJECTS_2017[grade] || [];
 if (topGrid) {
-    topGrid.innerHTML = ''; // Clear existing
+    topGrid.innerHTML = ''; 
     if (list2017.length > 0) {
         list2017.forEach(sub => topGrid.appendChild(createCard(sub, 'Model')));
     } else {

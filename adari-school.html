@@ -1,361 +1,403 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Adari School – National Excellence</title>
-<link rel="stylesheet" href="css/style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Adari School – National Excellence</title>
+  <link rel="stylesheet" href="css/style.css">
 
-<style>
-/* ================= ROOT ================= */
-:root{
-  --blue:#0d47a1;
-  --orange:#ff9800;
-  --dark:#0a1f44;
-  --light:#f4f7fb;
-  --card:#ffffff;
-}
+  <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-auth.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-firestore.js"></script>
 
-*{
-  margin:0;
-  padding:0;
-  box-sizing:border-box;
-  font-family: "Segoe UI", system-ui, sans-serif;
-}
+  <script src="firebase-config.js"></script>
+  <style>
+    /* ================= ROOT ================= */
+    :root {
+      --blue: #0d47a1;
+      --orange: #ff9800;
+      --dark: #0a1f44;
+      --light: #f4f7fb;
+      --card: #ffffff;
+    }
 
-body{
-  background:var(--light);
-  color:#333;
-  line-height:1.8;
-}
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: "Segoe UI", system-ui, sans-serif;
+    }
 
-/* ================= ANIMATION SYSTEM ================= */
-.animate{
-  opacity:0;
-  transition:all 0.9s ease;
-}
+    body {
+      background: var(--light);
+      color: #333;
+      line-height: 1.8;
+    }
 
-.from-left{ transform:translateX(-80px); }
-.from-right{ transform:translateX(80px); }
-.from-top{ transform:translateY(-60px); }
-.from-bottom{ transform:translateY(60px); }
+    /* ================= ANIMATION SYSTEM ================= */
+    .animate {
+      opacity: 0;
+      transition: all 0.9s ease;
+    }
 
-.animate.show{
-  opacity:1;
-  transform:translate(0,0);
-}
+    .from-left {
+      transform: translateX(-80px);
+    }
 
-/* Reduced motion */
-@media (prefers-reduced-motion: reduce){
-  .animate{
-    opacity:1 !important;
-    transform:none !important;
-    transition:none !important;
-  }
-}
+    .from-right {
+      transform: translateX(80px);
+    }
 
-/* ================= HERO ================= */
-.hero{
-  background:linear-gradient(135deg,var(--blue),#1e88e5);
-  color:white;
-  padding:120px 20px;
-  text-align:center;
-}
+    .from-top {
+      transform: translateY(-60px);
+    }
 
-.hero h1{
-  font-size:3.2rem;
-  font-weight:800;
-  margin-bottom:25px;
-}
+    .from-bottom {
+      transform: translateY(60px);
+    }
 
-.hero p{
-  max-width:900px;
-  margin:auto;
-  font-size:1.25rem;
-  opacity:0.95;
-  color: #ffffff;
-}
+    .animate.show {
+      opacity: 1;
+      transform: translate(0, 0);
+    }
 
-/* ================= SECTION ================= */
-.section{
-  padding:90px 20px;
-}
+    /* Reduced motion */
+    @media (prefers-reduced-motion: reduce) {
+      .animate {
+        opacity: 1 !important;
+        transform: none !important;
+        transition: none !important;
+      }
+    }
 
-.container{
-  max-width:1200px;
-  margin:auto;
-}
-.container p{
-    color: #ffffff;
-}
+    /* ================= HERO ================= */
+    .hero {
+      background: linear-gradient(135deg, var(--blue), #1e88e5);
+      color: white;
+      padding: 120px 20px;
+      text-align: center;
+    }
 
-.section h2{
-  font-size:2.6rem;
-  text-align:center;
-  margin-bottom:30px;
-  color:var(--dark);
-}
+    .hero h1 {
+      font-size: 3.2rem;
+      font-weight: 800;
+      margin-bottom: 25px;
+    }
 
-.section h2 span{
-  color:var(--orange);
-}
+    .hero p {
+      max-width: 900px;
+      margin: auto;
+      font-size: 1.25rem;
+      opacity: 0.95;
+      color: #ffffff;
+    }
 
-.section .lead{
-  text-align:center;
-  max-width:950px;
-  margin:0 auto 70px;
-  font-size:1.15rem;
-  color:#ffffff;
-}
+    /* ================= SECTION ================= */
+    .section {
+      padding: 90px 20px;
+    }
 
-/* ================= GRID ================= */
-.grid{
-  display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
-  gap:45px;
-}
+    .container {
+      max-width: 1200px;
+      margin: auto;
+    }
 
-/* ================= CARD (FIXED SIZE) ================= */
-.card{
-  background:var(--card);
-  padding:45px 40px;
-  border-radius:22px;
-  box-shadow:0 18px 40px rgba(0,0,0,0.09);
-  transition:transform 0.3s ease;
-  min-height:500px;
-}
+    .container p {
+      color: #ffffff;
+    }
 
-.card:hover{
-  transform:translateY(-10px);
-}
+    .section h2 {
+      font-size: 2.6rem;
+      text-align: center;
+      margin-bottom: 30px;
+      color: var(--dark);
+    }
 
-.card h3{
-  font-size:1.5rem;
-  color:var(--blue);
-  margin-bottom:18px;
-}
+    .section h2 span {
+      color: var(--orange);
+    }
 
-.card p{
-  font-size:1.05rem;
-  color:#555;
-}
+    .section .lead {
+      text-align: center;
+      max-width: 950px;
+      margin: 0 auto 70px;
+      font-size: 1.15rem;
+      color: #ffffff;
+    }
 
-/* ================= STATS ================= */
-.stats{
-  background:var(--blue);
-  color:white;
-}
+    /* ================= GRID ================= */
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 45px;
+    }
 
-.stats-grid{
-  display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
-  gap:40px;
-  text-align:center;
-}
+    /* ================= CARD (FIXED SIZE) ================= */
+    .card {
+      background: var(--card);
+      padding: 45px 40px;
+      border-radius: 22px;
+      box-shadow: 0 18px 40px rgba(0, 0, 0, 0.09);
+      transition: transform 0.3s ease;
+      min-height: 500px;
+    }
 
-.stat h3{
-  font-size:3.2rem;
-  color:var(--orange);
-}
+    .card:hover {
+      transform: translateY(-10px);
+    }
 
-.stat p{
-  margin-top:10px;
-  font-size:1.05rem;
-}
+    .card h3 {
+      font-size: 1.5rem;
+      color: var(--blue);
+      margin-bottom: 18px;
+    }
 
-/* ================= ADVICE ================= */
-.advice{
-  background:white;
-  padding:55px;
-  border-radius:22px;
-  box-shadow:0 15px 35px rgba(0,0,0,0.08);
-  border-left:7px solid var(--orange);
-}
+    .card p {
+      font-size: 1.05rem;
+      color: #555;
+    }
 
-.advice h3{
-  font-size:1.7rem;
-  color:var(--blue);
-  margin-bottom:20px;
-}
+    /* ================= STATS ================= */
+    .stats {
+      background: var(--blue);
+      color: white;
+    }
 
-.advice ul{
-  padding-left:25px;
-}
+    .stats-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 40px;
+      text-align: center;
+    }
 
-.advice li{
-  margin-bottom:14px;
-  font-size:1.05rem;
-}
+    .stat h3 {
+      font-size: 3.2rem;
+      color: var(--orange);
+    }
 
-/* ================= FOOTER ================= */
-footer{
-  background:var(--dark);
-  color:white;
-  text-align:center;
-  padding:35px 15px;
-  font-size:0.95rem;
-}
+    .stat p {
+      margin-top: 10px;
+      font-size: 1.05rem;
+    }
 
-/* ================= STAGGER ================= */
-.grid .card:nth-child(1){ transition-delay:.1s; }
-.grid .card:nth-child(2){ transition-delay:.25s; }
-.grid .card:nth-child(3){ transition-delay:.4s; }
+    /* ================= ADVICE ================= */
+    .advice {
+      background: white;
+      padding: 55px;
+      border-radius: 22px;
+      box-shadow: 0 15px 35px rgba(0, 0, 0, 0.08);
+      border-left: 7px solid var(--orange);
+    }
 
-/* ================= RESPONSIVE ================= */
-@media(max-width:768px){
-  .hero h1{ font-size:2.4rem; }
-  .card{ padding:35px 30px; }
-  .advice{ padding:35px; }
-}
-</style>
+    .advice h3 {
+      font-size: 1.7rem;
+      color: var(--blue);
+      margin-bottom: 20px;
+    }
+
+    .advice ul {
+      padding-left: 25px;
+    }
+
+    .advice li {
+      margin-bottom: 14px;
+      font-size: 1.05rem;
+    }
+
+    /* ================= FOOTER ================= */
+    footer {
+      background: var(--dark);
+      color: white;
+      text-align: center;
+      padding: 35px 15px;
+      font-size: 0.95rem;
+    }
+
+    /* ================= STAGGER ================= */
+    .grid .card:nth-child(1) {
+      transition-delay: .1s;
+    }
+
+    .grid .card:nth-child(2) {
+      transition-delay: .25s;
+    }
+
+    .grid .card:nth-child(3) {
+      transition-delay: .4s;
+    }
+
+    /* ================= RESPONSIVE ================= */
+    @media(max-width:768px) {
+      .hero h1 {
+        font-size: 2.4rem;
+      }
+
+      .card {
+        padding: 35px 30px;
+      }
+
+      .advice {
+        padding: 35px;
+      }
+    }
+  </style>
 </head>
 
 <body>
 
-    <!-- Global background slideshow -->
+  <!-- Global background slideshow -->
   <div class="slideshow-bg"></div>
-    <!-- HEADER -->
-<header class="header">
-  <div class="logo">
-    <div class="brand-square">Ai</div>
-    <div class="site-title">Adari institute</div>
-  </div>
+  <!-- HEADER -->
+  <header class="header premium-header">
+    <div class="header-content">
+      <div class="logo">
+        <div class="brand-square">Ai</div>
+        <div class="site-title">Adari institute</div>
+      </div>
 
-  <nav class="main-nav" aria-label="Primary">
-    <ul class="navbar">
-      <li class="nav-item"><a href="index.html" class="nav-link btn">Home</a></li>
-      <li class="nav-item"><a href="about.html" class="nav-link btn">About</a></li>
-      <li class="nav-item"><a href="grades.html" class="nav-link btn">Practice</a></li>
+      <input type="checkbox" id="nav-toggle" class="nav-toggle">
+      <label for="nav-toggle" class="nav-toggle-label">
+        <span></span>
+      </label>
 
-      <li class="nav-item dropdown">
-        <button class="dropdown-toggle" aria-expanded="false" aria-haspopup="true">Text-book ⌵</button>
-        <ul class="dropdown-menu" role="menu">
-          <li><a href="grade9.html" class="dropdown-link">Grade 9</a></li>
-          <li><a href="grade10.html" class="dropdown-link">Grade 10</a></li>
-          <li><a href="grade11.html" class="dropdown-link">Grade 11</a></li>
-          <li><a href="grade12.html" class="dropdown-link">Grade 12</a></li>
-        </ul>
-      </li>
+      <div class="nav-overlay"></div>
 
-      <li class="nav-item"><a href="videos.html" class="nav-link btn">Video Lessons</a></li>
-      
-    </ul>
-  </nav>
-</header>
-<!-- ================= HERO ================= -->
-<section class="hero">
-  <h1 class="animate from-top">Adari School of Excellence</h1>
-  <p class="animate from-bottom">
-    Adari School is nationally recognized for producing top-scoring students.
-    Our graduates consistently succeed in university entrance exams and meet
-    international academic standards.
-  </p>
-</section>
+      <div class="nav-container">
+        <nav class="main-nav" aria-label="Primary">
+          <ul class="navbar">
+            <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
+            <li class="nav-item"><a href="about.html" class="nav-link">About</a></li>
+            <li class="nav-item"><a href="javascript:void(0)" onclick="checkAccess('grades.html')"
+                class="nav-link">Entrance Exams</a></li>
+            <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
+            <li class="nav-item"><a href="privacy.html" class="nav-link">Privacy-policy</a></li>
+          </ul>
+        </nav>
 
-<!-- ================= ABOUT ================= -->
-<section class="section">
-  <div class="container">
-    <h2 class="animate from-top"><span>Why</span> Adari School?</h2>
-    <p class="lead animate from-bottom">
-      Almost all Adari School students successfully attend university.
-      Many go further, qualifying for programs aligned with international
-      university standards. Our question bank reflects this excellence.
+        <div class="header-actions">
+          <a href="login.html" class="action-link login-btn" id="loginLink">Login</a>
+          <a href="register.html" class="action-link register-btn" id="registerLink">Register</a>
+          <a href="payment.html" class="action-link subscribe-btn">Subscribe</a>
+          <a href="#" class="action-link logout-btn" id="logoutLink" style="display:none;">Logout</a>
+        </div>
+      </div>
+    </div>
+  </header>
+  <!-- ================= HERO ================= -->
+  <section class="hero">
+    <h1 class="animate from-top">Adari School of Excellence</h1>
+    <p class="animate from-bottom">
+      Adari School is nationally recognized for producing top-scoring students.
+      Our graduates consistently succeed in university entrance exams and meet
+      international academic standards.
     </p>
+  </section>
 
-    <div class="grid">
-      <div class="card animate from-left">
-        <h3>Top Scorers Nationwide</h3>
-        <p>
-          Adari School students consistently rank among the highest performers
-          across the country in national and university entrance examinations.
-        </p>
-      </div>
-
-      <div class="card animate from-bottom">
-        <h3>University & Global Readiness</h3>
-        <p>
-          Graduates not only enter universities successfully but also adapt
-          quickly to demanding academic environments, including international
-          institutions.
-        </p>
-      </div>
-
-      <div class="card animate from-right">
-        <h3>Elite Academic Sources</h3>
-        <p>
-          Questions are collected from leading institutions, Addis Ababa’s
-          highest-performing schools, and internationally benchmarked curricula.
-        </p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ================= STATS ================= -->
-<section class="section stats">
-  <div class="container stats-grid">
-    <div class="stat animate from-bottom">
-      <h3 class="counter" data-target="98">0</h3>
-      <p>% University Admission Rate</p>
-    </div>
-    <div class="stat animate from-bottom">
-      <h3 class="counter" data-target="15">0</h3>
-      <p>Years of Academic Excellence</p>
-    </div>
-    <div class="stat animate from-bottom">
-      <h3 class="counter" data-target="1200">0</h3>
-      <p>High-Quality Exam Questions</p>
-    </div>
-    <div class="stat animate from-bottom">
-      <h3 class="counter" data-target="30">0</h3>
-      <p>Partner Institutions</p>
-    </div>
-  </div>
-</section>
-
-<!-- ================= ADVICE ================= -->
-<section class="section">
-  <div class="container">
-    <div class="advice animate from-left">
-      <h3>The Real Secret Behind Adari Students’ Success</h3>
-      <ul>
-        <li>Success is not about solving the hardest questions.</li>
-        <li>It is about <strong>consistent, repeated practice</strong>.</li>
-        <li>Mastering fundamentals before advanced problems.</li>
-        <li>Practicing real exam-level questions regularly.</li>
-        <li>Building confidence through disciplined revision.</li>
-      </ul>
-      <p style="margin-top:20px;">
-        At Adari School, students learn that excellence is built through habit,
-        persistence, and preparation — not shortcuts.
+  <!-- ================= ABOUT ================= -->
+  <section class="section">
+    <div class="container">
+      <h2 class="animate from-top"><span>Why</span> Adari School?</h2>
+      <p class="lead animate from-bottom">
+        Almost all Adari School students successfully attend university.
+        Many go further, qualifying for programs aligned with international
+        university standards. Our question bank reflects this excellence.
       </p>
-    </div>
-  </div>
-</section>
 
-<!-- FOOTER -->
+      <div class="grid">
+        <div class="card animate from-left">
+          <h3>Top Scorers Nationwide</h3>
+          <p>
+            Adari School students consistently rank among the highest performers
+            across the country in national and university entrance examinations.
+          </p>
+        </div>
+
+        <div class="card animate from-bottom">
+          <h3>University & Global Readiness</h3>
+          <p>
+            Graduates not only enter universities successfully but also adapt
+            quickly to demanding academic environments, including international
+            institutions.
+          </p>
+        </div>
+
+        <div class="card animate from-right">
+          <h3>Elite Academic Sources</h3>
+          <p>
+            Questions are collected from leading institutions, Addis Ababa’s
+            highest-performing schools, and internationally benchmarked curricula.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= STATS ================= -->
+  <section class="section stats">
+    <div class="container stats-grid">
+      <div class="stat animate from-bottom">
+        <h3 class="counter" data-target="98">0</h3>
+        <p>% University Admission Rate</p>
+      </div>
+      <div class="stat animate from-bottom">
+        <h3 class="counter" data-target="15">0</h3>
+        <p>Years of Academic Excellence</p>
+      </div>
+      <div class="stat animate from-bottom">
+        <h3 class="counter" data-target="1200">0</h3>
+        <p>High-Quality Exam Questions</p>
+      </div>
+      <div class="stat animate from-bottom">
+        <h3 class="counter" data-target="30">0</h3>
+        <p>Partner Institutions</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= ADVICE ================= -->
+  <section class="section">
+    <div class="container">
+      <div class="advice animate from-left">
+        <h3>The Real Secret Behind Adari Students’ Success</h3>
+        <ul>
+          <li>Success is not about solving the hardest questions.</li>
+          <li>It is about <strong>consistent, repeated practice</strong>.</li>
+          <li>Mastering fundamentals before advanced problems.</li>
+          <li>Practicing real exam-level questions regularly.</li>
+          <li>Building confidence through disciplined revision.</li>
+        </ul>
+        <p style="margin-top:20px;">
+          At Adari School, students learn that excellence is built through habit,
+          persistence, and preparation — not shortcuts.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
   <footer class="site-footer">
     <div class="footer-columns">
-      
+
       <div class="footer-column">
         <h4>Resources</h4>
         <ul>
-          <li><a href="past-papers.html">Past Papers</a></li>
+
           <li><a href="adari-school.html">Adari School</a></li>
-          <li><a href="index.html">Text-book</a></li>
-          <li><a href="videos.html">Video Lessons</a></li>
+
+
         </ul>
       </div>
       <div class="footer-column">
-  <h4>Company</h4>
-  <ul>
-    <li><a href="index.html">Home</a></li>
-    <li><a href="grades.html">Practice</a></li>
-    <li><a href="team.html">Our Team</a></li>
-    <li><a href="about.html">About Us</a></li>
-    <li><a href="contact.html">Contact</a></li>
-  </ul>
-</div>
+        <h4>Company</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="javascript:void(0)" onclick="checkAccess('grades.html')">Entrance Exams</a></li>
+          <li><a href="team.html">Our Team</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
 
       <div class="footer-column">
         <h4>Legal</h4>
@@ -372,62 +414,67 @@ footer{
     </div>
 
     <!-- FOOTER FLOATING ICONS -->
-<div class="footer-icons">
-  <!-- Telegram -->
-  <a href="https://t.me/adariexaminstitute" target="_blank" class="icon telegram" title="Join Telegram">
-    <img src="https://cdn-icons-png.flaticon.com/512/2111/2111646.png" alt="Telegram">
-  </a>
+    <div class="footer-icons">
+      <!-- Telegram -->
+      <a href="https://t.me/adariexaminstitute" target="_blank" class="icon telegram" title="Join Telegram">
+        <img src="https://cdn-icons-png.flaticon.com/512/2111/2111646.png" alt="Telegram">
+      </a>
 
-  <!-- Call -->
-  <a href="tel:+251901705907" class="icon call" title="Call Us">
-    <img src="https://cdn-icons-png.flaticon.com/512/724/724664.png" alt="Call">
-  </a>
-</div>
+      <!-- Call -->
+      <a href="tel:+251901705907" class="icon call" title="Call Us">
+        <img src="https://cdn-icons-png.flaticon.com/512/724/724664.png" alt="Call">
+      </a>
+    </div>
   </footer>
 
-<!-- ================= SCRIPT ================= -->
-<script>
-/* Reveal Animations */
-const animated = document.querySelectorAll('.animate');
+  <!-- ================= SCRIPT ================= -->
+  <script>
+    /* Reveal Animations */
+    const animated = document.querySelectorAll('.animate');
 
-const observer = new IntersectionObserver(entries=>{
-  entries.forEach(entry=>{
-    if(entry.isIntersecting){
-      entry.target.classList.add('show');
-      observer.unobserve(entry.target);
-    }
-  });
-},{ threshold:0.25 });
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('show');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.25 });
 
-animated.forEach(el=>observer.observe(el));
+    animated.forEach(el => observer.observe(el));
 
-/* Counter Animation */
-document.querySelectorAll('.counter').forEach(counter=>{
-  const speed = 120;
+    /* Counter Animation */
+    document.querySelectorAll('.counter').forEach(counter => {
+      const speed = 120;
 
-  const update = ()=>{
-    const target = +counter.dataset.target;
-    const count = +counter.innerText;
-    const inc = target / speed;
+      const update = () => {
+        const target = +counter.dataset.target;
+        const count = +counter.innerText;
+        const inc = target / speed;
 
-    if(count < target){
-      counter.innerText = Math.ceil(count + inc);
-      setTimeout(update, 20);
-    } else {
-      counter.innerText = target;
-    }
-  };
+        if (count < target) {
+          counter.innerText = Math.ceil(count + inc);
+          setTimeout(update, 20);
+        } else {
+          counter.innerText = target;
+        }
+      };
 
-  const obs = new IntersectionObserver(entries=>{
-    if(entries[0].isIntersecting){
-      update();
-      obs.unobserve(counter);
-    }
-  },{ threshold:0.6 });
+      const obs = new IntersectionObserver(entries => {
+        if (entries[0].isIntersecting) {
+          update();
+          obs.unobserve(counter);
+        }
+      }, { threshold: 0.6 });
 
-  obs.observe(counter);
-});
-</script>
+      obs.observe(counter);
+    });
+  </script>
 
+
+  <!-- SCRIPTS -->
+  <script src="js/main.js" defer></script>
+  <script src="js/features.js" defer></script>
 </body>
+
 </html>

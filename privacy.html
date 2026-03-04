@@ -1,142 +1,162 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-<meta charset="UTF-8">
-<title>Privacy Policy | Adari Institute</title>
-<link rel="stylesheet" href="css/style.css">
 
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<style>
-body{
-  font-family: "Segoe UI", Arial, sans-serif;
-  background:#f9fafc;
-  margin:0;
-  padding:0;
-}
-.container{
-  max-width:900px;
-  margin:auto;
-  background:#fff;
-  padding:40px;
-}
-h1{
-  color:#0d47a1;
-  margin-bottom:20px;
-}
-h2{
-  color:#1565c0;
-  margin-top:30px;
-}
-p{
-  line-height:1.8;
-  color:#333;
-}
-.footer-note{
-  margin-top:40px;
-  font-size:14px;
-  color:#666;
-}
-</style>
+<head>
+  <meta charset="UTF-8">
+  <title>Privacy Policy | Adari Institute</title>
+  <link rel="stylesheet" href="css/style.css">
+
+  <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-auth.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-firestore.js"></script>
+
+  <script src="firebase-config.js"></script>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body {
+      font-family: "Segoe UI", Arial, sans-serif;
+      background: #f9fafc;
+      margin: 0;
+      padding: 0;
+    }
+
+    .container {
+      max-width: 900px;
+      margin: auto;
+      background: #fff;
+      padding: 40px;
+    }
+
+    h1 {
+      color: #0d47a1;
+      margin-bottom: 20px;
+    }
+
+    h2 {
+      color: #1565c0;
+      margin-top: 30px;
+    }
+
+    p {
+      line-height: 1.8;
+      color: #333;
+    }
+
+    .footer-note {
+      margin-top: 40px;
+      font-size: 14px;
+      color: #666;
+    }
+  </style>
 </head>
+
 <body>
 
-    <!-- HEADER -->
-<header class="header">
-  <div class="logo">
-    <div class="brand-square">Ai</div>
-    <div class="site-title">Adari institute</div>
+  <!-- HEADER -->
+  <header class="header premium-header">
+    <div class="header-content">
+      <div class="logo">
+        <div class="brand-square">Ai</div>
+        <div class="site-title">Adari institute</div>
+      </div>
+
+      <input type="checkbox" id="nav-toggle" class="nav-toggle">
+      <label for="nav-toggle" class="nav-toggle-label">
+        <span></span>
+      </label>
+
+      <div class="nav-overlay"></div>
+
+      <div class="nav-container">
+        <nav class="main-nav" aria-label="Primary">
+          <ul class="navbar">
+            <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
+            <li class="nav-item"><a href="about.html" class="nav-link">About</a></li>
+            <li class="nav-item"><a href="javascript:void(0)" onclick="checkAccess('grades.html')"
+                class="nav-link">Entrance Exams</a></li>
+            <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
+            <li class="nav-item"><a href="privacy.html" class="nav-link">Privacy-policy</a></li>
+          </ul>
+        </nav>
+
+        <div class="header-actions">
+          <a href="login.html" class="action-link login-btn" id="loginLink">Login</a>
+          <a href="register.html" class="action-link register-btn" id="registerLink">Register</a>
+          <a href="payment.html" class="action-link subscribe-btn">Subscribe</a>
+          <a href="#" class="action-link logout-btn" id="logoutLink" style="display:none;">Logout</a>
+        </div>
+      </div>
+    </div>
+  </header>
+  <div class="container">
+
+    <h1>Privacy Policy</h1>
+
+    <p>
+      At <strong>Adari Institute</strong>, your privacy is important to us. This Privacy Policy explains
+      how we collect, use, and protect information when you visit our website.
+    </p>
+
+    <h2>Information We Collect</h2>
+    <p>
+      We may collect non-personal information such as browser type, device information,
+      pages visited, and time spent on the website. This data helps us improve our services.
+    </p>
+
+    <h2>Cookies and Advertising</h2>
+    <p>
+      Adari Institute uses cookies to enhance user experience and to display advertisements.
+      Third-party vendors, including Google, may use cookies to serve ads based on users’
+      previous visits to this or other websites.
+    </p>
+
+    <h2>Google AdSense</h2>
+    <p>
+      Google uses the DoubleClick cookie, which enables it and its partners to serve ads to
+      users based on their visit to this site. Users may opt out of personalized advertising
+      by visiting Google Ads Settings.
+    </p>
+
+    <h2>Data Protection</h2>
+    <p>
+      We do not sell, trade, or share personal information with third parties. Any information
+      collected is used strictly to improve website performance and content quality.
+    </p>
+
+    <h2>Your Consent</h2>
+    <p>
+      By using our website, you agree to this Privacy Policy and its terms.
+    </p>
+
+    <div class="footer-note">
+      Last updated: 2026
+    </div>
+
   </div>
 
-  <nav class="main-nav" aria-label="Primary">
-    <ul class="navbar">
-      <li class="nav-item"><a href="index.html" class="nav-link btn">Home</a></li>
-      <li class="nav-item"><a href="about.html" class="nav-link btn">About</a></li>
-      <li class="nav-item"><a href="grades.html" class="nav-link btn">Practice</a></li>
-
-      <li class="nav-item dropdown">
-        <button class="dropdown-toggle" aria-expanded="false" aria-haspopup="true">Text-book ⌵</button>
-        <ul class="dropdown-menu" role="menu">
-          <li><a href="grade9.html" class="dropdown-link">Grade 9</a></li>
-          <li><a href="grade10.html" class="dropdown-link">Grade 10</a></li>
-          <li><a href="grade11.html" class="dropdown-link">Grade 11</a></li>
-          <li><a href="grade12.html" class="dropdown-link">Grade 12</a></li>
-        </ul>
-      </li>
-
-      <li class="nav-item"><a href="videos.html" class="nav-link btn">Video Lessons</a></li>
-      
-    </ul>
-  </nav>
-</header>
-<div class="container">
-
-<h1>Privacy Policy</h1>
-
-<p>
-At <strong>Adari Institute</strong>, your privacy is important to us. This Privacy Policy explains
-how we collect, use, and protect information when you visit our website.
-</p>
-
-<h2>Information We Collect</h2>
-<p>
-We may collect non-personal information such as browser type, device information,
-pages visited, and time spent on the website. This data helps us improve our services.
-</p>
-
-<h2>Cookies and Advertising</h2>
-<p>
-Adari Institute uses cookies to enhance user experience and to display advertisements.
-Third-party vendors, including Google, may use cookies to serve ads based on users’
-previous visits to this or other websites.
-</p>
-
-<h2>Google AdSense</h2>
-<p>
-Google uses the DoubleClick cookie, which enables it and its partners to serve ads to
-users based on their visit to this site. Users may opt out of personalized advertising
-by visiting Google Ads Settings.
-</p>
-
-<h2>Data Protection</h2>
-<p>
-We do not sell, trade, or share personal information with third parties. Any information
-collected is used strictly to improve website performance and content quality.
-</p>
-
-<h2>Your Consent</h2>
-<p>
-By using our website, you agree to this Privacy Policy and its terms.
-</p>
-
-<div class="footer-note">
-Last updated: 2025
-</div>
-
-</div>
-
-<!-- FOOTER -->
+  <!-- FOOTER -->
   <footer class="site-footer">
     <div class="footer-columns">
-      
+
       <div class="footer-column">
         <h4>Resources</h4>
         <ul>
-          <li><a href="past-papers.html">Past Papers</a></li>
+
           <li><a href="adari-school.html">Adari School</a></li>
-          <li><a href="index.html">Text-book</a></li>
-          <li><a href="videos.html">Video Lessons</a></li>
+
         </ul>
       </div>
       <div class="footer-column">
-  <h4>Company</h4>
-  <ul>
-    <li><a href="index.html">Home</a></li>
-    <li><a href="grades.html">Practice</a></li>
-    <li><a href="team.html">Our Team</a></li>
-    <li><a href="about.html">About Us</a></li>
-    <li><a href="contact.html">Contact</a></li>
-  </ul>
-</div>
+        <h4>Company</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="javascript:void(0)" onclick="checkAccess('grades.html')">Entrance Exams</a></li>
+          <li><a href="team.html">Our Team</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
 
       <div class="footer-column">
         <h4>Legal</h4>
@@ -153,33 +173,37 @@ Last updated: 2025
     </div>
 
     <!-- FOOTER FLOATING ICONS -->
-<div class="footer-icons">
-  <!-- Telegram -->
-  <a href="https://t.me/adariexaminstitute" target="_blank" class="icon telegram" title="Join Telegram">
-    <img src="https://cdn-icons-png.flaticon.com/512/2111/2111646.png" alt="Telegram">
-  </a>
+    <div class="footer-icons">
+      <!-- Telegram -->
+      <a href="https://t.me/adariexaminstitute" target="_blank" class="icon telegram" title="Join Telegram">
+        <img src="https://cdn-icons-png.flaticon.com/512/2111/2111646.png" alt="Telegram">
+      </a>
 
-  <!-- Call -->
-  <a href="tel:+251901705907" class="icon call" title="Call Us">
-    <img src="https://cdn-icons-png.flaticon.com/512/724/724664.png" alt="Call">
-  </a>
-</div>
+      <!-- Call -->
+      <a href="tel:+251901705907" class="icon call" title="Call Us">
+        <img src="https://cdn-icons-png.flaticon.com/512/724/724664.png" alt="Call">
+      </a>
+    </div>
   </footer>
-<script>
-document.querySelectorAll('.footer-icons .icon').forEach(icon => {
-  icon.addEventListener('click', () => {
-    icon.classList.remove('clicked');
-    void icon.offsetWidth; // trigger reflow
-    icon.classList.add('clicked');
-  });
-});
-</script>
+  <script>
+    document.querySelectorAll('.footer-icons .icon').forEach(icon => {
+      icon.addEventListener('click', () => {
+        icon.classList.remove('clicked');
+        void icon.offsetWidth; // trigger reflow
+        icon.classList.add('clicked');
+      });
+    });
+  </script>
 
-<style>
-.footer-icons .icon.clicked {
-  animation: bounce 0.6s;
-}
-</style>
+  <style>
+    .footer-icons .icon.clicked {
+      animation: bounce 0.6s;
+    }
+  </style>
 
+  <!-- SCRIPTS -->
+  <script src="js/main.js" defer></script>
+  <script src="js/features.js" defer></script>
 </body>
+
 </html>

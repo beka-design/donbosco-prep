@@ -1,5 +1,3 @@
-document.getElementById('year').textContent = new Date().getFullYear();
-// =======================
 // Set current year in footer (guarded)
 // =======================
 const _yearEl = document.getElementById('year');
@@ -11,82 +9,113 @@ if (_yearEl) _yearEl.textContent = new Date().getFullYear();
 // =======================
 const view = document.getElementById('view');
 
-const GRADES = [9,10,11,12];
+const GRADES = [9, 10, 11, 12];
 const SUBJECTS = {
-  9:['Mathematics','Biology','Chemistry','Physics','English','Civics','Geography','History','IT','PE'],
-  10:['Mathematics','Biology','Chemistry','Physics','English','Civics','Geography','History','IT','PE'],
-  11:['Mathematics','Biology','Chemistry','Physics','English','Civics','Economics','Geography','History'],
-  12:['Mathematics','Biology','Chemistry','Physics','English','Civics','Economics','Geography','History']
+  9: ['Mathematics', 'Biology', 'Chemistry', 'Physics', 'English', 'Civics', 'Geography', 'History', 'IT', 'PE'],
+  10: ['Mathematics', 'Biology', 'Chemistry', 'Physics', 'English', 'Civics', 'Geography', 'History', 'IT', 'PE'],
+  11: ['Mathematics', 'Biology', 'Chemistry', 'Physics', 'English', 'Civics', 'Economics', 'Geography', 'History'],
+  12: ['Mathematics', 'Biology', 'Chemistry', 'Physics', 'English', 'Civics', 'Economics', 'Geography', 'History']
 };
 
 // ===== Router helper =====
-function router(path){
+function router(path) {
   location.hash = path;
 }
 
+// ===== Access Control =====
+async function checkAccess(targetPath = 'grades.html') {
+  const user = firebase.auth().currentUser;
+
+  if (!user) {
+    window.location.href = 'login.html';
+    return;
+  }
+
+  try {
+    const doc = await firebase.firestore().collection('users').doc(user.uid).get();
+    const data = doc.data();
+
+    if (!data || data.subscription === 'inactive' || !data.subscription) {
+      window.location.href = 'payment.html';
+    } else if (data.subscription === 'pending') {
+      window.location.href = 'payment.html';
+    } else if (data.subscription === 'active') {
+      window.location.href = targetPath;
+    }
+  } catch (error) {
+    console.error("Error checking access:", error);
+    // Fallback to payment if error
+    window.location.href = 'payment.html';
+  }
+}
+window.checkAccess = checkAccess; // Make it global
+
 // ===== Subject Selection =====
-function selectSubject(grade, subject){
+function selectSubject(grade, subject) {
   localStorage.setItem('selectedGrade', grade);
   localStorage.setItem('selectedSubject', subject);
   router('/quiz');
 }
 
 // ===== Render Pages with Fade-In Animation =====
-function render(path){
+function render(path) {
   path = path || '/';
   let content = '';
 
-  if(path === '/' || path === ''){
+  if (path === '/' || path === '') {
     content = `
       <section class="card">
-        <h1>Welcome to DonBoscoPrep</h1>
+        <h1>Welcome to Adari Institute</h1>
         <p>Practice past papers and mock exams for Grades 9–12.</p>
         <div class="grades-grid">
-          ${GRADES.map(g=>`<div class="grade-card" onclick='router("/grade/${g}")'>Grade ${g}</div>`).join('')}
+          ${GRADES.map(g => `<div class="grade-card" onclick='router("/grade/${g}")'>Grade ${g}</div>`).join('')}
         </div>
       </section>
     `;
-  } 
-  else if(path.startsWith('/grade/')){
+  }
+  else if (path.startsWith('/grade/')) {
     const gradeNum = parseInt(path.split('/')[2]);
     const subjects = SUBJECTS[gradeNum] || [];
     content = `
       <section class="card">
         <h2>Grade ${gradeNum} - Select Subject</h2>
         <div class="subjects-grid">
-          ${subjects.map(s=>`<div class="subject-card" onclick='selectSubject(${gradeNum},"${s}")'>${s}</div>`).join('')}
+          ${subjects.map(s => `<div class="subject-card" onclick='selectSubject(${gradeNum},"${s}")'>${s}</div>`).join('')}
         </div>
       </section>
     `;
-  } 
-  else if(path === '/quiz'){
+  }
+  else if (path === '/quiz') {
     content = `
       <section class="card">
         <h2>Grade ${localStorage.getItem('selectedGrade')} - ${localStorage.getItem('selectedSubject')} Quiz</h2>
         <div class="quiz-container" id="quiz-container"></div>
       </section>
     `;
-  } 
+  }
   else {
     content = `<section class="card"><h2>Page Not Found</h2></section>`;
   }
 
   // Inject content wrapped in .page
-  view.innerHTML = `<div class="page">${content}</div>`;
+  if (view) {
+    view.innerHTML = `<div class="page">${content}</div>`;
 
-  // Trigger fade-in animation
-  const pageDiv = view.querySelector('.page');
-  requestAnimationFrame(()=> pageDiv.classList.add('active'));
+    // Trigger fade-in animation
+    const pageDiv = view.querySelector('.page');
+    requestAnimationFrame(() => pageDiv.classList.add('active'));
 
-  // If quiz page, initialize quiz.js
-  if(path === '/quiz' && typeof initQuiz === 'function'){
-    initQuiz();
+    // If quiz page, initialize quiz.js
+    if (path === '/quiz' && typeof initQuiz === 'function') {
+      initQuiz();
+    }
   }
 }
 
 // ===== Listen to hash changes =====
-if (document.getElementById('view')) {
-  window.onhashchange = ()=> render(location.hash.slice(1));
+const viewEl = document.getElementById('view');
+if (viewEl) {
+  window.onhashchange = () => render(location.hash.slice(1));
 }
 
 // ===== Initialize SPA =====
@@ -109,27 +138,27 @@ document.addEventListener("DOMContentLoaded", () => {
   const typedElement = document.getElementById("typed");
 
   function type() {
-    if (charIndex < typedText[index].length) {
+    if (typedElement && charIndex < typedText[index].length) {
       typedElement.textContent += typedText[index].charAt(charIndex);
       charIndex++;
       setTimeout(type, typingSpeed);
-    } else {
+    } else if (typedElement) {
       setTimeout(erase, delayBetweenTexts);
     }
   }
 
   function erase() {
-    if (charIndex > 0) {
+    if (typedElement && charIndex > 0) {
       typedElement.textContent = typedText[index].substring(0, charIndex - 1);
       charIndex--;
       setTimeout(erase, erasingSpeed);
-    } else {
+    } else if (typedElement) {
       index = (index + 1) % typedText.length;
       setTimeout(type, 400);
     }
   }
 
-  type();
+  if (typedElement) type();
 });
 const hero = document.querySelector('.hero');
 
@@ -145,8 +174,10 @@ const images = [
 let current = 0;
 
 function changeBackground() {
-  hero.style.backgroundImage = `url('${images[current]}')`;
-  current = (current + 1) % images.length;
+  if (hero) {
+    hero.style.backgroundImage = `url('${images[current]}')`;
+    current = (current + 1) % images.length;
+  }
 }
 
 // Initial background
@@ -188,4 +219,14 @@ document.addEventListener('DOMContentLoaded', () => {
   }, 5500);
 });
 
-render(location.hash.slice(1));
+if (viewEl) {
+  render(location.hash.slice(1));
+}
+
+const auth = firebase.auth();
+
+auth.onAuthStateChanged(user => {
+  if (user && user.email === "berekettesfaye137@gmail.com") {
+    document.getElementById("adminLink").style.display = "inline";
+  }
+});

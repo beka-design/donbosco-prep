@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Contact Us — Adari Institute</title>
+  <link rel="stylesheet" href="css/style.css">
+
+  <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-auth.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-firestore.js"></script>
+
+  <script src="firebase-config.js"></script>
+</head>
+
+<body>
+  <!-- HEADER -->
+  <header class="header premium-header">
+    <div class="header-content">
+      <div class="logo">
+        <div class="brand-square">Ai</div>
+        <div class="site-title">Adari institute</div>
+      </div>
+
+      <input type="checkbox" id="nav-toggle" class="nav-toggle">
+      <label for="nav-toggle" class="nav-toggle-label">
+        <span></span>
+      </label>
+
+      <div class="nav-overlay"></div>
+
+      <div class="nav-container">
+        <nav class="main-nav" aria-label="Primary">
+          <ul class="navbar">
+            <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
+            <li class="nav-item"><a href="about.html" class="nav-link">About</a></li>
+            <li class="nav-item"><a href="javascript:void(0)" onclick="checkAccess('grades.html')"
+                class="nav-link">Entrance Exams</a></li>
+            <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
+            <li class="nav-item"><a href="privacy.html" class="nav-link">Privacy-policy</a></li>
+          </ul>
+        </nav>
+
+        <div class="header-actions">
+          <a href="login.html" class="action-link login-btn" id="loginLink">Login</a>
+          <a href="register.html" class="action-link register-btn" id="registerLink">Register</a>
+          <a href="payment.html" class="action-link subscribe-btn">Subscribe</a>
+          <a href="#" class="action-link logout-btn" id="logoutLink" style="display:none;">Logout</a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="contact-hero">
+      <div class="contact-grid">
+        <div class="contact-card">
+          <h1>Contact Adari Institute</h1>
+          <p>We welcome feedback and questions about our exam materials and services. For faster responses, include your
+            grade, subject, and a short description of your request.</p>
+          <div class="contact-list">
+            <div class="contact-item">
+              <div class="icon-wrap">
+                <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                  <path d="M4 4h16v16H4z" fill="#E9F1FF" />
+                  <path
+                    d="M3 6.5A2.5 2.5 0 0 1 5.5 4h13A2.5 2.5 0 0 1 21 6.5v11A2.5 2.5 0 0 1 18.5 20h-13A2.5 2.5 0 0 1 3 17.5v-11z"
+                    fill="#0d47a1" opacity="0.08" />
+                  <path d="M4.5 6.75L12 11.25l7.5-4.5" stroke="#0d47a1" stroke-width="1.2" stroke-linecap="round"
+                    stroke-linejoin="round" />
+                </svg>
+              </div>
+              <div>
+                <div class="contact-strong">Email</div>
+                <div><a href="mailto:contact@adari-institute.com">contact@adari-institute.com</a></div>
+              </div>
+            </div>
+
+            <div class="contact-item">
+              <div class="icon-wrap">
+                <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                  <path
+                    d="M12 2C6.48 2 2 6.48 2 12c0 3.04 1.33 5.78 3.45 7.6L6 22l2.6-0.7C10.2 21.64 11.09 22 12 22c5.52 0 10-4.48 10-10S17.52 2 12 2z"
+                    fill="#E8F5FF" />
+                  <path d="M7.2 14.2l.9 3.3 3.3-.9L18 10.7 13.7 6.4 7.2 14.2z" fill="#0088cc" />
+                </svg>
+              </div>
+              <div>
+                <div class="contact-strong">Telegram</div>
+                <div><a href="https://t.me/adariexaminstitute" target="_blank" rel="noopener">@adariexaminstitute</a>
+                </div>
+              </div>
+            </div>
+
+            <div class="contact-item">
+              <div class="icon-wrap">
+                <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                  <circle cx="12" cy="12" r="10" fill="#fff0e6" />
+                  <path d="M7 7v10l6-5-6-5z" fill="#ff9800" />
+                </svg>
+              </div>
+              <div>
+                <div class="contact-strong">Office Hours</div>
+                <div>Mon–Fri 09:00–17:00 (EAT)</div>
+              </div>
+            </div>
+          </div>
+          <form id="contactForm" class="contact-form" action="https://formsubmit.co/berekettesfaye137@gmail.com"
+            method="POST" novalidate>
+            <!-- 🔒 FormSubmit settings -->
+            <input type="hidden" name="_subject" value="New Contact Form Message">
+            <input type="hidden" name="_template" value="table">
+            <input type="hidden" name="_captcha" value="false">
+            <input type="hidden" name="_next" value="thank-you.html">
+
+            <div class="row">
+              <div style="flex:1">
+                <label for="fromName">Your name</label>
+                <input id="fromName" name="fromName" type="text" placeholder="Optional">
+              </div>
+              <div style="width:260px">
+                <label for="fromEmail">Your email</label>
+                <input id="fromEmail" name="email" type="email" placeholder="you@example.com" required>
+              </div>
+            </div>
+
+            <div>
+              <label for="reason">Reason</label>
+              <select id="reason" name="reason">
+                <option value="general">General question</option>
+                <option value="feedback">Feedback</option>
+                <option value="incorrect">Report incorrect answer</option>
+              </select>
+            </div>
+
+            <div class="row">
+              <div style="flex:1">
+                <label for="subjectInput">Subject (if reporting)</label>
+                <input id="subjectInput" name="subject" type="text" placeholder="e.g. Chemistry or Chemistry (2016)">
+              </div>
+              <div style="width:160px">
+                <label for="questionId">Question ID</label>
+                <input id="questionId" name="question_id" type="text" placeholder="e.g. q-123">
+              </div>
+            </div>
+
+            <div>
+              <label for="message">Message</label>
+              <textarea id="message" name="message" required
+                placeholder="Describe the issue or your question"></textarea>
+            </div>
+
+            <div class="muted-note">
+              If you are reporting an incorrect answer, please include the Question ID and
+              Subject so we can verify and correct it promptly.
+            </div>
+
+            <div class="actions">
+              <button type="submit" class="contact-cta">Send Email</button>
+              <button type="reset" class="btn-secondary">Clear</button>
+            </div>
+          </form>
+
+        </div>
+
+        <aside class="contact-aside">
+          <h3 class="contact-strong">Quick Help</h3>
+          <p class="contact-subtle">If you report an incorrect answer, include the question ID and subject so we can
+            verify and correct it promptly.</p>
+          <p class="contact-subtle">You can also join our Telegram channel for announcements and updates.</p>
+        </aside>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="footer-columns">
+
+      <div class="footer-column">
+        <h4>Resources</h4>
+        <ul>
+
+
+          <li><a href="adari-school.html">Adari School</a></li>
+
+        </ul>
+      </div>
+      <div class="footer-column">
+        <h4>Company</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="grades.html">Practice</a></li>
+          <li><a href="team.html">Our Team</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-column">
+        <h4>Legal</h4>
+        <ul>
+          <li><a href="privacy.html">Privacy Policy</a></li>
+          <li><a href="terms.html">Terms of Service</a></li>
+          <li><a href="cookies.html">Cookie Policy</a></li>
+
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2026 Adari Institute. All rights reserved.</p>
+    </div>
+    <!-- FOOTER FLOATING ICONS -->
+    <div class="footer-icons">
+      <!-- Telegram -->
+      <a href="https://t.me/adariexaminstitute" target="_blank" class="icon telegram" title="Join Telegram">
+        <img src="https://cdn-icons-png.flaticon.com/512/2111/2111646.png" alt="Telegram">
+      </a>
+
+      <!-- Call -->
+      <a href="tel:+251901705907" class="icon call" title="Call Us">
+        <img src="https://cdn-icons-png.flaticon.com/512/724/724664.png" alt="Call">
+      </a>
+    </div>
+
+  </footer>
+  <script>
+    (function () {
+      var FORMSUBMIT_EMAIL = 'berekettesfaye137@gmail.com';
+      var form = document.getElementById('contactForm');
+      var clearBtn = document.getElementById('clearBtn');
+      var errorEl = document.getElementById('formError');
+      var successEl = document.getElementById('formSuccess');
+
+      clearBtn.addEventListener('click', function () { form.reset(); errorEl.textContent = ''; successEl.textContent = ''; });
+
+      function serializeForm(formEl) {
+        var fd = new FormData(formEl); return fd;
+      }
+
+      function postToFormsubmit(fd) {
+        var url = 'https://formsubmit.co/ajax/' + encodeURIComponent(FORMSUBMIT_EMAIL);
+        return fetch(url, { method: 'POST', body: fd, headers: { 'Accept': 'application/json' } });
+      }
+
+      form.addEventListener('submit', function (e) {
+        e.preventDefault(); errorEl.textContent = ''; successEl.textContent = '';
+        var email = document.getElementById('fromEmail').value.trim();
+        var message = document.getElementById('message').value.trim();
+        var reason = document.getElementById('reason').value;
+        var subjectInput = document.getElementById('subjectInput').value.trim();
+        var questionId = document.getElementById('questionId').value.trim();
+
+        if (!email) { errorEl.textContent = 'Please provide your email.'; return; }
+        if (!message) { errorEl.textContent = 'Please enter a message.'; return; }
+        if (reason === 'incorrect' && (!questionId || !subjectInput)) { errorEl.textContent = 'When reporting an incorrect answer, include both Question ID and Subject.'; return; }
+
+        if (FORMSUBMIT_EMAIL && FORMSUBMIT_EMAIL !== 'berekettesfaye137@gmail.com') {
+          var fd = serializeForm(form);
+          fd.append('_subject', reason === 'incorrect' ? 'Report incorrect answer' : 'Site contact: ' + reason);
+          fd.append('_captcha', 'false');
+          postToFormsubmit(fd).then(function (res) {
+            if (res.ok) { res.json().then(function () { successEl.textContent = 'Thanks — your report was submitted.'; form.reset(); }); }
+            else { res.json().then(function (j) { errorEl.textContent = (j && j.message) ? j.message : 'Submission failed'; }).catch(function () { errorEl.textContent = 'Submission failed'; }); }
+          }).catch(function () { errorEl.textContent = 'Network error — please try again.'; });
+          return;
+        }
+
+        var mailto = 'mailto:contact@adari-institute.com';
+        var mailSub = encodeURIComponent('Site contact: ' + (reason === 'incorrect' ? 'Report incorrect answer' : reason));
+        var body = [];
+        body.push('From: ' + (document.getElementById('fromName').value.trim() || 'Anonymous'));
+        body.push('Email: ' + email);
+        if (subjectInput) body.push('Subject: ' + subjectInput);
+        if (questionId) body.push('Question ID: ' + questionId);
+        body.push('Reason: ' + reason);
+        body.push('---');
+        body.push(message);
+
+        var mailBody = encodeURIComponent(body.join('\n'));
+        window.location.href = mailto + '?subject=' + mailSub + '&body=' + mailBody;
+      });
+    })();
+  </script>
+
+  <!-- SCRIPTS -->
+  <script src="js/main.js" defer></script>
+  <script src="js/features.js" defer></script>
+</body>
+
+</html>

@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Login - Adari Institute</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body class="auth-body">
+
+  <div class="register-container">
+
+
+    <h2 data-translate="login">Login</h2>
+
+    <input type="email" id="email" placeholder="Email">
+    <input type="password" id="password" placeholder="Password">
+
+    <button id="loginBtn">Login</button>
+
+    <div class="auth-separator">OR</div>
+
+    <div class="social-auth">
+      <button id="googleLoginBtn" class="social-btn google">
+        <img src="https://www.gstatic.com/firebasejs/ui/2.0.0/images/auth/google.svg" alt="Google">
+        Login with Google
+      </button>
+      <button id="facebookLoginBtn" class="social-btn facebook">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/0/05/Facebook_Logo_%282019%29.png" alt="Facebook">
+        Login with Facebook
+      </button>
+    </div>
+
+    <p>Don't have account? <a href="register.html">Register</a></p>
+  </div>
+
+  <!-- Firebase v8 -->
+  <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-auth.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-firestore.js"></script>
+  <script src="firebase-config.js"></script>
+
+  <script>
+    const auth = firebase.auth();
+
+    // Traditional Email/Password Login
+    document.getElementById("loginBtn").onclick = async () => {
+      const email = document.getElementById("email").value.trim();
+      const password = document.getElementById("password").value.trim();
+
+      if (!email || !password) {
+        alert("Please enter email and password");
+        return;
+      }
+
+      try {
+        await auth.signInWithEmailAndPassword(email, password);
+        window.location.href = "payment.html";
+      } catch (error) {
+        alert(error.message);
+      }
+    };
+
+    // Social Login (Google)
+    document.getElementById("googleLoginBtn").onclick = async () => {
+      const provider = new firebase.auth.GoogleAuthProvider();
+      try {
+        await auth.signInWithPopup(provider);
+        window.location.href = "payment.html";
+      } catch (error) {
+        alert(error.message);
+      }
+    };
+
+    // Social Login (Facebook)
+    document.getElementById("facebookLoginBtn").onclick = async () => {
+      const provider = new firebase.auth.FacebookAuthProvider();
+      try {
+        await auth.signInWithPopup(provider);
+        window.location.href = "payment.html";
+      } catch (error) {
+        alert(error.message);
+      }
+    };
+  </script>
+
+  <script src="js/theme.js"></script>
+  <script src="js/translator.js"></script>
+</body>
+
+</html>

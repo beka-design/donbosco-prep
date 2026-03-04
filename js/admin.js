@@ -1,5 +1,5 @@
 // =======================
-// DonBoscoPrep Admin Panel (FINAL FIXED VERSION)
+// adaristudy Admin Panel (FINAL FIXED VERSION)
 // Saves everything into "quizQuestions"
 // =======================
 

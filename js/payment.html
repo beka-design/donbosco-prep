@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Payment - Adari Institute</title>
+  <script src="https://www.gstatic.com/firebasejs/10.12.0/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.12.0/firebase-auth.js"></script>
+  <script src="firebase.js"></script>
+</head>
+<body>
+
+<h2>Upload Payment Screenshot</h2>
+
+<form id="paymentForm">
+  <input type="text" name="name" placeholder="Full Name" required />
+  <br><br>
+
+  <input type="text" name="phone" placeholder="Phone Number" required />
+  <br><br>
+
+  <input type="file" name="screenshot" accept="image/*" required />
+  <br><br>
+
+  <button type="submit">Submit Payment</button>
+</form>
+
+<p>
+If upload fails, send screenshot to our Telegram group:
+<a href="https://t.me/+TYg-jX0mXrhjM2M0" target="_blank">
+Join Telegram
+</a>
+</p>
+
+<script>
+
+const auth = firebase.auth();
+
+// 🔐 Check if user logged in
+auth.onAuthStateChanged(user => {
+  if (!user) {
+    alert("Please login first");
+    window.location.href = "login.html";
+  }
+});
+
+document.getElementById("paymentForm").addEventListener("submit", async (e) => {
+  e.preventDefault();
+
+  const user = auth.currentUser;
+
+  if (!user) {
+    alert("Not authenticated");
+    return;
+  }
+
+  const formData = new FormData(e.target);
+  formData.append("uid", user.uid);
+
+  try {
+    const res = await fetch("http://localhost:5000/api/payment", {
+      method: "POST",
+      body: formData
+    });
+
+    const data = await res.json();
+
+    if (data.success) {
+      alert("Payment submitted successfully! Wait for approval.");
+      window.location.href = "index.html";
+    } else {
+      alert("Error: " + data.error);
+    }
+
+  } catch (err) {
+    alert("Server not responding.");
+  }
+
+});
+</script>
+
+</body>
+</html>
